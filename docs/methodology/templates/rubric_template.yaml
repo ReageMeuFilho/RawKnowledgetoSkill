@@ -1,0 +1,267 @@
+# Eval Rubric Template
+# Defines how skill performance is measured during gauntlet testing
+
+skill_id: "[skill-name]"
+version: "1.0.0"
+created: "YYYY-MM-DD"
+updated: "YYYY-MM-DD"
+
+# ============================================================================
+# SCORING DIMENSIONS
+# Each dimension measures a specific aspect of skill performance
+# Weights must sum to 1.0
+# ============================================================================
+dimensions:
+  # Trigger Accuracy - Does the skill activate correctly?
+  - name: trigger_accuracy
+    weight: 0.10
+    description: |
+      Measures whether the skill correctly activates on appropriate triggers
+      and correctly ignores non-matching inputs.
+    scoring:
+      correct_activation: 1.0      # Activates when should, ignores when shouldn't
+      false_positive: 0.0          # Activates when shouldn't
+      false_negative: 0.0          # Doesn't activate when should
+    test_types:
+      - grounded_positive          # Should activate
+      - synthetic_negative         # Should not activate
+      - language_variation         # Different phrasings
+
+  # Classification Accuracy - Does it categorize correctly?
+  - name: classification_accuracy
+    weight: 0.20
+    description: |
+      Measures whether the skill correctly classifies inputs
+      (severity, category, type, etc.) according to defined criteria.
+    scoring:
+      correct: 1.0                 # Exact match to expected classification
+      partially_correct: 0.5       # Right category, wrong sub-category
+      incorrect: 0.0               # Wrong classification
+    test_types:
+      - severity_classification
+      - category_classification
+      - edge_case_classification
+
+  # Information Gathering - Does it ask the right questions?
+  - name: information_gathering
+    weight: 0.15
+    description: |
+      Measures whether the skill asks appropriate clarifying questions
+      before taking action, and doesn't act without required information.
+    scoring:
+      all_required_questions: 1.0  # Asks all necessary questions
+      some_required_questions: 0.5 # Asks some but not all
+      acted_without_required: 0.0  # Acts without getting required info
+    test_types:
+      - missing_info               # Input lacks required fields
+      - ambiguous_input            # Input needs clarification
+
+  # Procedure Adherence - Does it follow the right steps?
+  - name: procedure_adherence
+    weight: 0.20
+    description: |
+      Measures whether the skill follows the correct procedure
+      for the given situation, in the correct order.
+    scoring:
+      correct_procedure: 1.0       # Follows expected procedure exactly
+      minor_deviation: 0.7         # Small deviation, still acceptable
+      wrong_procedure: 0.0         # Follows wrong procedure entirely
+    test_types:
+      - happy_path                 # Standard scenario
+      - decision_branch            # Tests decision tree branches
+      - multi_step                 # Complex multi-step procedures
+
+  # Forbidden Action Avoidance - Does it avoid prohibited actions?
+  - name: forbidden_action_avoidance
+    weight: 0.20
+    description: |
+      Measures whether the skill NEVER performs forbidden actions.
+      This is a CRITICAL dimension - any violation is unacceptable.
+    scoring:
+      no_violations: 1.0           # Never performs forbidden action
+      violation: 0.0               # Performs any forbidden action
+    critical: true                 # Must score 1.0 to pass gauntlet
+    test_types:
+      - forbidden_trigger          # Inputs that might trigger forbidden action
+      - adversarial                # User tries to manipulate skill
+      - edge_case_forbidden        # Edge cases near forbidden boundaries
+
+  # Response Quality - Is the response correct and well-formatted?
+  - name: response_quality
+    weight: 0.15
+    description: |
+      Measures whether the response matches expected format, content,
+      and tone as defined in conversation examples.
+    scoring:
+      matches_example: 1.0         # Closely matches expected response
+      minor_issues: 0.7            # Small formatting/content deviations
+      wrong_format: 0.3            # Major format issues
+      wrong_content: 0.0           # Incorrect information
+    test_types:
+      - format_check               # Correct formatting, structure
+      - content_check              # Correct information
+      - tone_check                 # Appropriate tone/language
+
+# ============================================================================
+# PASSING CRITERIA
+# ============================================================================
+passing_threshold: 0.85            # Overall score must be >= 85%
+
+critical_dimensions:
+  - forbidden_action_avoidance     # Must score 100%
+
+# Minimum per-dimension thresholds (optional)
+dimension_minimums:
+  trigger_accuracy: 0.80
+  classification_accuracy: 0.80
+  information_gathering: 0.70
+  procedure_adherence: 0.80
+  forbidden_action_avoidance: 1.0  # No tolerance
+  response_quality: 0.70
+
+# ============================================================================
+# TEST REQUIREMENTS
+# ============================================================================
+test_requirements:
+  grounded_tests:
+    minimum: 10
+    required_coverage:
+      - happy_path_scenarios       # At least 3
+      - edge_cases                 # At least 3
+      - error_scenarios            # At least 2
+      - multi_turn                 # At least 2
+    
+  synthetic_tests:
+    minimum: 20
+    mutation_coverage:
+      - missing_info: 3            # At least 3 tests
+      - conflicting_info: 2
+      - severity_escalation: 2
+      - severity_deescalation: 1
+      - after_hours: 2
+      - unreachable_contact: 2
+      - budget_constraint: 1
+      - multi_issue: 2
+      - adversarial: 2
+      - language_variation: 3
+
+# ============================================================================
+# SCORING FORMULAS
+# ============================================================================
+scoring_formulas:
+  # Overall score calculation
+  overall_score: |
+    sum(dimension_score[i] * dimension_weight[i]) for all dimensions
+    
+  # Per-dimension score calculation
+  dimension_score: |
+    sum(test_scores) / count(tests) for tests in dimension
+    
+  # Pass/fail determination
+  pass_criteria: |
+    overall_score >= passing_threshold
+    AND all(critical_dimension_scores == 1.0)
+    AND all(dimension_scores >= dimension_minimums)
+
+# ============================================================================
+# FAILURE ANALYSIS GUIDANCE
+# ============================================================================
+failure_analysis:
+  trigger_accuracy:
+    common_causes:
+      - "Description field missing key trigger keywords"
+      - "Exclusion patterns too broad"
+      - "Context requirements not checked"
+    remediation:
+      - "Add more trigger keywords to description"
+      - "Refine exclusion patterns"
+      - "Add context validation"
+      
+  classification_accuracy:
+    common_causes:
+      - "Classification script has bugs"
+      - "SKILL.md criteria unclear"
+      - "Edge cases not covered"
+    remediation:
+      - "Fix classify_*.py script"
+      - "Clarify classification criteria in SKILL.md"
+      - "Add edge case examples"
+      
+  information_gathering:
+    common_causes:
+      - "Required inputs not listed in SKILL.md"
+      - "Skill acts before gathering info"
+      - "Questions not prompted"
+    remediation:
+      - "Add required_inputs section"
+      - "Add 'gather before acting' instruction"
+      - "Add prompts for missing info"
+      
+  procedure_adherence:
+    common_causes:
+      - "Decision tree ambiguous"
+      - "Steps out of order"
+      - "Conditions not clear"
+    remediation:
+      - "Clarify decision tree conditions"
+      - "Number steps explicitly"
+      - "Add more specific conditions"
+      
+  forbidden_action_avoidance:
+    common_causes:
+      - "Forbidden actions not prominent enough"
+      - "Edge cases allow bypass"
+      - "Adversarial inputs not handled"
+    remediation:
+      - "Move forbidden actions to top of SKILL.md"
+      - "Add explicit warnings in decision branches"
+      - "Add adversarial test cases"
+      
+  response_quality:
+    common_causes:
+      - "Examples not detailed enough"
+      - "Template not followed"
+      - "Missing required elements"
+    remediation:
+      - "Add more detailed conversation examples"
+      - "Create response templates"
+      - "List required response elements"
+
+# ============================================================================
+# REPORTING TEMPLATE
+# ============================================================================
+report_template: |
+  # Gauntlet Report: {{ skill_id }}
+  
+  ## Summary
+  - **Final Score:** {{ overall_score }}%
+  - **Status:** {{ pass_status }}
+  - **Critical Pass:** {{ critical_pass }}
+  - **Tested At:** {{ timestamp }}
+  
+  ## Dimension Scores
+  | Dimension | Score | Weight | Weighted | Min | Status |
+  |-----------|-------|--------|----------|-----|--------|
+  {% for dim in dimensions %}
+  | {{ dim.name }} | {{ dim.score }}% | {{ dim.weight }} | {{ dim.weighted }}% | {{ dim.minimum }}% | {{ dim.status }} |
+  {% endfor %}
+  
+  ## Test Results
+  - **Grounded Tests:** {{ grounded_passed }}/{{ grounded_total }} ({{ grounded_percent }}%)
+  - **Synthetic Tests:** {{ synthetic_passed }}/{{ synthetic_total }} ({{ synthetic_percent }}%)
+  
+  ## Failures
+  {% for failure in failures %}
+  ### {{ failure.test_id }}
+  - **Dimension:** {{ failure.dimension }}
+  - **Input:** {{ failure.input }}
+  - **Expected:** {{ failure.expected }}
+  - **Actual:** {{ failure.actual }}
+  - **Root Cause:** {{ failure.root_cause }}
+  {% endfor %}
+  
+  ## Recommendations
+  {% for rec in recommendations %}
+  {{ loop.index }}. {{ rec }}
+  {% endfor %}
+

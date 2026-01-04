@@ -1,0 +1,130 @@
+# Source Manifest Template
+# This file catalogs all raw knowledge sources with traceability information
+
+manifest_id: MANIFEST-YYYY-MM-DD
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+author: "[Author Name]"
+vertical: "[LTR | STR | HOA | Health | BILT | Treasury]"
+
+# List all source materials
+sources:
+  # VIDEO SOURCE TEMPLATE
+  - id: VID-001
+    type: video
+    title: "[Video Title]"
+    path: "01-sources/videos/[filename].mp4"
+    transcript_path: "01-sources/transcripts/[filename].json"
+    duration: "HH:MM:SS"
+    date_recorded: YYYY-MM-DD
+    subject_matter_expert: "[Name]"
+    language: "[en | pt-BR | es]"
+    
+    # Procedures identified in this video
+    procedures_identified:
+      - name: "[Procedure Name]"
+        timestamp_start: "HH:MM:SS"
+        timestamp_end: "HH:MM:SS"
+        description: "[Brief description]"
+        
+      - name: "[Another Procedure]"
+        timestamp_start: "HH:MM:SS"
+        timestamp_end: "HH:MM:SS"
+        description: "[Brief description]"
+    
+    # Key quotes captured (with timestamps)
+    key_quotes:
+      - timestamp: "HH:MM:SS"
+        speaker: "[Name]"
+        quote: "[Exact quote]"
+        relevance: "[Why this is important]"
+    
+    status: normalized | pending | needs_review
+
+  # DOCUMENT SOURCE TEMPLATE
+  - id: DOC-001
+    type: document
+    title: "[Document Title]"
+    path: "01-sources/documents/[filename].pdf"
+    extracted_path: "02-references/[category]/[filename].md"
+    version: "[Document version]"
+    effective_date: YYYY-MM-DD
+    expiration_date: YYYY-MM-DD  # if applicable
+    document_type: "[policy | SOP | contract | manual | guide]"
+    
+    # Sections extracted and their purposes
+    sections_extracted:
+      - section_id: "1.2"
+        title: "[Section Title]"
+        extracted_to: "02-references/[file].md#section-anchor"
+        relevance: "[What this section provides]"
+        
+      - section_id: "4.2.1"
+        title: "[Section Title]"
+        extracted_to: "02-references/[file].md#section-anchor"
+        relevance: "[What this section provides]"
+    
+    status: normalized | pending | needs_review
+
+  # INTERVIEW SOURCE TEMPLATE
+  - id: INT-001
+    type: interview
+    title: "[Interview Topic] with [Interviewee]"
+    path: "01-sources/interviews/[filename].md"
+    date_conducted: YYYY-MM-DD
+    interviewer: "[Name]"
+    interviewee: "[Name]"
+    interviewee_role: "[Role/Title]"
+    interviewee_experience: "[Years/description of expertise]"
+    duration: "HH:MM:SS"
+    
+    # Topics covered in interview
+    topics_covered:
+      - topic: "[Topic Name]"
+        start_time: "HH:MM:SS"  # if recorded
+        summary: "[Brief summary]"
+        
+    # Key insights extracted
+    key_insights:
+      - insight: "[Key insight]"
+        quote: "[Supporting quote]"
+        relevance: "[Why this matters]"
+    
+    status: normalized | pending | needs_review
+
+  # CONVERSATION/CHAT LOG SOURCE TEMPLATE  
+  - id: CHAT-001
+    type: conversation
+    title: "[Conversation Topic]"
+    path: "01-sources/conversations/[filename].md"
+    date: YYYY-MM-DD
+    participants:
+      - name: "[Name]"
+        role: "[Role]"
+    platform: "[WhatsApp | Slack | Email | Other]"
+    
+    # Key exchanges
+    key_exchanges:
+      - timestamp: "YYYY-MM-DD HH:MM"
+        summary: "[What was discussed]"
+        relevance: "[Why this matters]"
+    
+    status: normalized | pending | needs_review
+
+# Summary statistics
+summary:
+  total_sources: 0
+  videos: 0
+  documents: 0
+  interviews: 0
+  conversations: 0
+  procedures_identified: 0
+  normalized: 0
+  pending: 0
+  needs_review: 0
+
+# Notes and observations
+notes: |
+  [Any general notes about the source materials, gaps identified, 
+  conflicting information found, etc.]
+

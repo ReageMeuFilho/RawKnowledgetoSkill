@@ -1,0 +1,378 @@
+# Procedure Card Template
+# Machine-readable representation of a discrete workflow procedure
+# Every field must have source_citation for traceability
+
+# ============================================================================
+# IDENTIFICATION
+# ============================================================================
+procedure_id: "[VERTICAL]-[SEQ]"  # e.g., LTR-001, STR-005, HOA-003
+version: "1.0.0"
+name: "[Descriptive Procedure Name]"
+category: workflow  # policy | workflow | tool-use
+
+# Metadata
+metadata:
+  created: "YYYY-MM-DD"
+  updated: "YYYY-MM-DD"
+  author: "[Author]"
+  vertical: "[LTR | STR | HOA | Health | BILT | Treasury]"
+  status: draft | review | approved | deployed | deprecated
+
+# ============================================================================
+# TRIGGER SIGNALS
+# What activates this procedure
+# ============================================================================
+trigger_signals:
+  # User intent patterns (keywords and phrases)
+  user_intent:
+    - "keyword1"
+    - "keyword2"
+    - "multi-word phrase"
+    - "another trigger phrase"
+  
+  # System events that can trigger
+  system_events:
+    - event_type: "[event_type]"
+      source: "[system/sensor name]"
+      condition: "[expression]"
+  
+  # Required context for activation
+  context_requirements:
+    - requirement: "[e.g., user has active lease]"
+      validation: "[how to check]"
+  
+  # When NOT to activate (prevent false positives)
+  exclusions:
+    - pattern: "[pattern to exclude]"
+      route_to: "[other-skill-name]"
+      reason: "[why this shouldn't activate]"
+  
+  source_citations:
+    - source_id: "SRC-XXX"
+      location: "[timestamp or section]"
+      description: "Triggers derived from [source description]"
+
+# ============================================================================
+# REQUIRED INPUTS
+# Information needed before proceeding
+# ============================================================================
+required_inputs:
+  - field: "field_name"
+    type: string  # string | enum | number | boolean | date | image[] | file[]
+    required: true
+    prompt: "Question to ask user if not provided"
+    validation: "[validation rules]"
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - field: "severity"
+    type: enum
+    values:
+      - emergency
+      - urgent
+      - standard
+    required: true
+    determination: "Use classification criteria"
+    determination_reference: "references/[policy].md#classification"
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - field: "photos"
+    type: "image[]"
+    required: false
+    prompt: "Can you share any photos of the issue?"
+    helps_with: "severity classification confidence"
+
+# ============================================================================
+# DECISION TREE
+# Branching logic based on conditions
+# ============================================================================
+decision_tree:
+  - id: decision_1
+    condition: "severity == 'emergency'"
+    description: "Emergency path"
+    actions:
+      - dispatch_vendor_immediately
+      - notify_management
+      - contact_owner_concurrent
+    escalation_time: immediate
+    sla_minutes: 5
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - id: decision_2
+    condition: "severity == 'urgent' AND owner_unreachable_after_15min"
+    description: "Urgent path - owner unreachable"
+    actions:
+      - dispatch_vendor
+      - notify_management
+    escalation_time: "15min"
+    sla_minutes: 15
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - id: decision_3
+    condition: "severity == 'urgent' AND owner_reachable"
+    description: "Urgent path - owner reachable"
+    actions:
+      - confirm_with_owner
+      - schedule_vendor_if_approved
+    escalation_time: "2h"
+    sla_minutes: 120
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - id: decision_4
+    condition: "severity == 'standard'"
+    description: "Standard/routine path"
+    actions:
+      - contact_owner
+      - schedule_maintenance_upon_approval
+    escalation_time: "24h"
+    sla_minutes: 1440
+    source_citation: "SRC-XXX @ timestamp/section"
+
+# ============================================================================
+# STEPS
+# Ordered sequence of actions
+# ============================================================================
+steps:
+  - id: step_1
+    name: "[Step Name]"
+    action: "[Description of what to do]"
+    inputs:
+      - field_name_1
+      - field_name_2
+    outputs:
+      - output_field_1
+    tools: []  # APIs/scripts to invoke
+    reference: "references/[file].md#section"
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - id: step_2
+    name: "[Step Name]"
+    action: "[Description]"
+    inputs:
+      - previous_output
+    outputs:
+      - new_output
+    tools:
+      - "script_name.py"
+      - "api_endpoint"
+    skip_if: "[condition to skip this step]"
+    max_attempts: 2
+    timeout: "15min"
+    on_failure: "[what to do if step fails]"
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - id: step_3
+    name: "[Step Name]"
+    action: "[Description]"
+    inputs:
+      - all_previous
+    outputs:
+      - final_output
+    tools:
+      - "create_ticket.py"
+    required: true
+    source_citation: "SRC-XXX @ timestamp/section"
+
+# ============================================================================
+# OUTPUTS
+# What gets produced by this procedure
+# ============================================================================
+outputs:
+  - type: ticket
+    name: "[Output Name]"
+    template: "assets/templates/[template_name].md"
+    required: true
+    fields:
+      - field_name_1
+      - field_name_2
+    destination: "[system/database]"
+    
+  - type: notification
+    name: "[Notification Name]"
+    channels:
+      - whatsapp
+      - slack
+      - email
+    template: "assets/templates/[template_name].md"
+    recipients:
+      - role: owner
+        condition: always
+      - role: management
+        condition: "severity in ['emergency', 'urgent']"
+    required_if: "[condition]"
+    
+  - type: dispatch
+    name: "[Dispatch Order]"
+    template: "assets/templates/[template_name].md"
+    required_if: "dispatch_required == true"
+
+# ============================================================================
+# FORBIDDEN ACTIONS
+# What must NEVER be done
+# ============================================================================
+forbidden_actions:
+  - action: "Never dispatch vendor for routine issues without owner approval"
+    severity: critical
+    consequence: "Unauthorized expense, owner complaint"
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - action: "Never share owner personal contact with third parties"
+    severity: critical
+    consequence: "Privacy violation, LGPD/GDPR breach"
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - action: "Never approve expenses over $500 without management approval"
+    severity: high
+    consequence: "Budget overrun"
+    threshold: 500
+    currency: USD
+    source_citation: "SRC-XXX @ timestamp/section"
+
+# ============================================================================
+# REQUIRED ACTIONS (ALWAYS DO)
+# What must ALWAYS be done
+# ============================================================================
+required_actions:
+  - action: "Always create a ticket for tracking"
+    condition: any_issue_reported
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - action: "Always verify user identity before sharing sensitive info"
+    condition: sensitive_info_requested
+    source_citation: "SRC-XXX @ timestamp/section"
+
+# ============================================================================
+# CONVERSATION EXAMPLES
+# Exact wording for responses (most important section!)
+# ============================================================================
+conversation_examples:
+  - id: EX-001
+    scenario: "[Scenario Name - e.g., Emergency with fire]"
+    urgency: emergency
+    user_input: "[Exact user message in original language]"
+    expected_response: |
+      [Exact response with:
+      - Formatting (bold, lists, etc.)
+      - Emoji where appropriate
+      - All required information
+      - Call to action
+      - Confirmation request]
+    response_elements:
+      - element: safety_warning
+        present: true
+      - element: emergency_number
+        present: true
+      - element: vendor_contact
+        present: true
+      - element: ticket_number
+        present: true
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - id: EX-002
+    scenario: "[Another Scenario]"
+    urgency: urgent
+    user_input: "[Exact user message]"
+    expected_response: |
+      [Exact response]
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  # Include 10-15 examples covering all scenarios
+
+# ============================================================================
+# EDGE CASES
+# Unusual situations and how to handle them
+# ============================================================================
+edge_cases:
+  - id: EDGE-001
+    name: "Missing Data"
+    scenario: "[e.g., No vendor on file for property]"
+    detection: "[How to detect this edge case]"
+    handling:
+      - step: "Apologize to user"
+        action: "[Exact action]"
+      - step: "Escalate"
+        action: "Notify property manager immediately"
+      - step: "Follow up"
+        action: "Confirm resolution within [time]"
+    escalation_required: true
+    source_citation: "SRC-XXX @ timestamp/section"
+    
+  - id: EDGE-002
+    name: "After Hours"
+    scenario: "Issue reported between 10 PM and 6 AM"
+    detection: "current_time not between 06:00 and 22:00"
+    handling:
+      - step: "Check severity"
+        action: "Only dispatch for emergency"
+      - step: "Use emergency contact"
+        action: "Call vendor_emergency_phone"
+      - step: "Notify owner"
+        action: "Send SMS for awareness"
+    special_pricing: true
+    source_citation: "SRC-XXX @ timestamp/section"
+
+# ============================================================================
+# SUCCESS METRICS
+# How to measure if this procedure is working
+# ============================================================================
+success_metrics:
+  - metric: "response_time"
+    description: "Time from user message to first response"
+    target_emergency: "< 5 minutes"
+    target_urgent: "< 15 minutes"
+    target_standard: "< 60 minutes"
+    measurement: "timestamp_first_response - timestamp_user_message"
+    
+  - metric: "classification_accuracy"
+    description: "Correctly classifies severity"
+    target: "> 95%"
+    measurement: "correct_classifications / total_classifications"
+    
+  - metric: "resolution_time"
+    description: "Time from report to issue resolved"
+    target_emergency: "< 4 hours"
+    target_urgent: "< 24 hours"
+    target_standard: "< 72 hours"
+    
+  - metric: "user_satisfaction"
+    description: "Post-resolution survey score"
+    target: "> 4.5/5"
+
+# ============================================================================
+# SOURCE CITATIONS (MASTER LIST)
+# All sources referenced in this procedure card
+# ============================================================================
+source_citations:
+  - source_id: SRC-001
+    type: video
+    title: "[Video Title]"
+    timestamps:
+      - "00:12:34-00:15:22"
+      - "00:28:10-00:29:45"
+    description: "Main procedure explanation and owner contact protocol"
+    
+  - source_id: SRC-002
+    type: document
+    title: "[Document Title]"
+    sections:
+      - "4.2.1"
+      - "4.2.3"
+    description: "Policy requirements and escalation matrix"
+    
+  - source_id: SRC-003
+    type: interview
+    title: "[Interview with SME]"
+    date: "YYYY-MM-DD"
+    description: "Edge cases and real-world scenarios"
+
+# ============================================================================
+# CHANGELOG
+# Version history
+# ============================================================================
+changelog:
+  - version: "1.0.0"
+    date: "YYYY-MM-DD"
+    author: "[Author]"
+    changes: "Initial version"
+    
+  # Future versions will be added here
+
