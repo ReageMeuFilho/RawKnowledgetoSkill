@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 2 (Guesty, Host OS)
-> **Total Skills**: 79
+> **Competitors Analyzed**: 3 (Guesty, Host OS, Mews)
+> **Total Skills**: 94
 
 ---
 
@@ -11,14 +11,15 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 79 |
-| MVP Skills (P0) | 27 |
-| Phase 1 Skills (P1) | 29 |
-| Phase 2 Skills (P2) | 17 |
-| Phase 3 Skills (P3) | 6 |
-| Universal Skills (both competitors) | 26 |
+| Total Skills | 94 |
+| MVP Skills (P0) | 30 |
+| Phase 1 Skills (P1) | 36 |
+| Phase 2 Skills (P2) | 21 |
+| Phase 3 Skills (P3) | 7 |
+| Universal Skills (all 3) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
+| Unique Skills (Mews only) | 15 |
 
 ---
 
@@ -37,6 +38,7 @@
 | `analytics` | 4 | Performance, forecasting, insights |
 | `cross-cutting` | 3 | Notifications, permissions, audit |
 | `inventory` | 1 | Polymorphic inventory management |
+| `hospitality` | 8 | Hotel-grade kiosk, digital key, concierge |
 
 ---
 
@@ -1669,6 +1671,466 @@ Answer guest questions using property-specific knowledge base (house manuals, lo
 
 ---
 
+<!-- MEWS UNIQUE SKILLS (080-094) -->
+
+### SKILL-080: self-service-checkin-kiosk
+
+**Category**: hospitality
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Tablet-based self-service check-in with payment processing, upselling, and key activation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No kiosk |
+| Host OS | ❌ | - | - | No kiosk |
+| Mews | ✅ | Digital Check-In Kiosk | ⭐⭐⭐⭐⭐ | 2.6x upsell conversion |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Hardware integration (iPad/Android)
+- [x] Card reader for payments
+- [x] NFC for Digital Key activation
+- [x] Camera for photo capture
+- [x] Thermal printer for receipts
+- [x] Accessibility features
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-001 (Kiosk Hardware)
+- Secondary: KG-MEWS-002 (Kiosk Upsell)
+
+---
+
+### SKILL-081: digital-key-apple-wallet
+
+**Category**: hospitality
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Contactless room access via smartphone with BLE/NFC and Apple Wallet integration.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | LocksManager | ⭐⭐⭐⭐ | Code-based only |
+| Host OS | ⚠️ | Smart Lock | ⭐⭐⭐⭐ | Code-based only |
+| Mews | ✅ | Digital Key | ⭐⭐⭐⭐⭐ | Apple Wallet + BLE |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] App clip (no app store required)
+- [x] Apple Wallet integration
+- [x] Key sharing between guests
+- [x] Auto-revocation at checkout
+- [x] Offline BLE operation
+- [x] Access audit logging
+- [x] Remote lock control
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-003 (Digital Key Hardware)
+- Secondary: KG-MEWS-004 (Apple Wallet Integration)
+
+---
+
+### SKILL-082: hourly-flexible-booking
+
+**Category**: booking
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Price and book spaces by hour, day, week, or month (not just nightly).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | Nightly only |
+| Host OS | ❌ | - | - | Nightly only |
+| Mews | ✅ | Flexible Booking | ⭐⭐⭐⭐⭐ | Hourly to monthly |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Hourly rate plans
+- [x] Day-use bookings
+- [x] Weekly/monthly rates
+- [x] Meeting room booking
+- [x] Co-working desk booking
+- [x] Event space rentals
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-005 (Flexible Pricing Models)
+
+---
+
+### SKILL-083: ml-revenue-management
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Machine learning-powered pricing with demand forecasting (Atomize RMS).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | PriceOptimizer | ⭐⭐⭐ | Rules-based |
+| Host OS | ⚠️ | Revenue Agent | ⭐⭐⭐⭐ | Gap nights |
+| Mews | ✅ | Atomize RMS | ⭐⭐⭐⭐⭐ | Full ML, 20-37% RevPAR |
+
+**Best Implementation**: Mews (Atomize)
+
+**Capabilities**:
+- [x] Real-time demand forecasting
+- [x] Automated 24/7 rate recommendations
+- [x] Competitive intelligence
+- [x] 90-day forward forecasting
+- [x] Sensitivity analysis
+- [x] 20-37% RevPAR improvement
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-006 (ML Revenue Management)
+
+---
+
+### SKILL-084: conversion-optimized-booking-engine
+
+**Category**: channel
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Direct booking website with A/B testing, smart recommendations, and upsell orchestration.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Guesty Websites | ⭐⭐⭐ | Basic templates |
+| Host OS | ⚠️ | Website Builder | ⭐⭐⭐ | SEO focus |
+| Mews | ✅ | Booking Engine | ⭐⭐⭐⭐⭐ | A/B testing, conversion |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Mobile-first (<2s load on 3G)
+- [x] Built-in A/B testing
+- [x] Resume booking after 48h
+- [x] Social proof notifications
+- [x] Dynamic bundling
+- [x] Gift card integration
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-007 (Booking Conversion)
+
+---
+
+### SKILL-085: no-app-guest-messaging
+
+**Category**: communication
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Real-time guest messaging via SMS/email link without app download required.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Guest App | ⭐⭐⭐ | App required |
+| Host OS | ⚠️ | Guest App | ⭐⭐⭐ | App required |
+| Mews | ✅ | Virtual Concierge | ⭐⭐⭐⭐⭐ | No app, SMS link |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] SMS link access (no app)
+- [x] WebSocket (<2s latency)
+- [x] FAQ bot automation
+- [x] Bulk room announcements
+- [x] In-stay service ordering
+
+**Knowledge Sources**:
+- Primary: KG-001 (Guest Message Response) - ENHANCED
+
+---
+
+### SKILL-086: pre-arrival-data-capture
+
+**Category**: compliance
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Collect payment info, ID, signatures, and preferences digitally before arrival.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Pre-Check-in | ⭐⭐⭐ | Basic form |
+| Host OS | ⚠️ | Pre-Check-in Link | ⭐⭐⭐ | ID + selfie |
+| Mews | ✅ | Online Check-In | ⭐⭐⭐⭐⭐ | Full data capture |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Digital signature capture
+- [x] Passport/ID scan
+- [x] Card pre-authorization
+- [x] Emergency contact collection
+- [x] Group member management
+- [x] GDPR compliance
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-008 (Pre-Arrival Data)
+
+---
+
+### SKILL-087: front-desk-command-center
+
+**Category**: hospitality
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Centralized reception interface with occupancy map, queues, and alerts.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No front desk focus |
+| Host OS | ❌ | - | - | No front desk focus |
+| Mews | ✅ | Front Office | ⭐⭐⭐⭐⭐ | Hotel-grade |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Visual occupancy map
+- [x] Arrival/departure queues
+- [x] Wait time tracking
+- [x] Priority alerts
+- [x] 3-5 min check-in vs 10-15
+- [x] Offline capability
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-009 (Front Desk Workflow)
+
+---
+
+### SKILL-088: overbooking-management
+
+**Category**: booking
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Controlled overbooking with waitlist and relocation tools.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No overbooking |
+| Host OS | ❌ | - | - | No overbooking |
+| Mews | ✅ | Overbooking Mgmt | ⭐⭐⭐⭐ | Full workflow |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Overbooking thresholds
+- [x] Waitlist functionality
+- [x] Cancellation prediction
+- [x] Relocation workflow
+- [x] Compensation tracking
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-010 (Overbooking Strategies)
+
+---
+
+### SKILL-089: staff-shift-planning
+
+**Category**: operations
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Housekeeping shift scheduling with capacity planning.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No shift planning |
+| Host OS | ❌ | - | - | No shift planning |
+| Mews | ✅ | Shift Planning | ⭐⭐⭐⭐ | Full scheduling |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Shift creation/assignment
+- [x] Capacity planning
+- [x] Shift swapping
+- [x] Overtime alerts
+- [x] Payroll integration
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-011 (Staff Scheduling)
+
+---
+
+### SKILL-090: housekeeping-performance-analytics
+
+**Category**: analytics
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Track cleaner performance with metrics and leaderboards.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Task Reports | ⭐⭐ | Basic metrics |
+| Host OS | ⚠️ | Task Analytics | ⭐⭐⭐ | Photo verification |
+| Mews | ✅ | HK Performance | ⭐⭐⭐⭐⭐ | Full analytics |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Rooms per shift per cleaner
+- [x] Average turnover time
+- [x] Quality scores
+- [x] Guest satisfaction correlation
+- [x] Leaderboards
+- [x] Labor cost per room
+
+**Knowledge Sources**:
+- Primary: KG-003 (Cleaning Workflow) - ENHANCED
+
+---
+
+### SKILL-091: goppar-reporting
+
+**Category**: analytics
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Gross Operating Profit Per Available Room including costs.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Analytics | ⭐⭐⭐ | Revenue only |
+| Host OS | ❌ | - | - | No GOPPAR |
+| Mews | ✅ | GOPPAR Reports | ⭐⭐⭐⭐⭐ | True profitability |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Revenue minus operational costs
+- [x] Property profitability
+- [x] Expense breakdown
+- [x] Trend analysis
+- [x] Benchmark comparison
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-012 (Hotel Financial Metrics)
+
+---
+
+### SKILL-092: integration-marketplace
+
+**Category**: channel
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+1000+ certified integrations with no connection fees.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Marketplace | ⭐⭐⭐ | 200+ integrations |
+| Host OS | ❌ | - | - | Limited |
+| Mews | ✅ | Marketplace | ⭐⭐⭐⭐⭐ | 1000+ no fees |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] 1000+ integrations
+- [x] No connection fees
+- [x] Partner certification
+- [x] Native SDKs
+- [x] Zapier integration
+
+---
+
+### SKILL-093: loyalty-tier-management
+
+**Category**: communication
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+VIP tier management with automatic recognition.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | CRM Segments | ⭐⭐⭐ | Manual tagging |
+| Host OS | ❌ | - | - | No loyalty tiers |
+| Mews | ✅ | Loyalty Management | ⭐⭐⭐⭐ | Full tier system |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Loyalty program integration
+- [x] VIP flagging on arrival
+- [x] Tier-based service
+- [x] Repeat guest recognition
+- [x] Lifetime value tracking
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-013 (Loyalty Program Design)
+
+---
+
+### SKILL-094: package-deal-bundling
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Bundle rooms with services as packages.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Upsells | ⭐⭐⭐ | Add-ons only |
+| Host OS | ⚠️ | Upsells | ⭐⭐⭐ | Add-ons only |
+| Mews | ✅ | Package Deals | ⭐⭐⭐⭐⭐ | True bundling |
+
+**Best Implementation**: Mews
+
+**Capabilities**:
+- [x] Room + service bundles
+- [x] Dynamic bundle pricing
+- [x] Occupancy-based bundling
+- [x] Package promotions
+- [x] Bundle revenue tracking
+
+**Knowledge Sources**:
+- Primary: KG-MEWS-014 (Package Pricing)
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -1689,31 +2151,38 @@ When processing a new competitor PRD:
 
 ## 📊 Priority Breakdown
 
-### P0 - MVP (27 skills)
+### P0 - MVP (30 skills)
 Core functionality for basic STR management
 - Includes: Polymorphic Inventory, Magic Link App, Multi-Stakeholder Splits
+- NEW: Booking Engine, No-App Messaging, Pre-Arrival Data
 
-### P1 - Phase 1 (29 skills)
+### P1 - Phase 1 (36 skills)
 Enhanced features for professional managers
 - Includes: Gap Night, Upgrades, RAG, Party Prevention, Police Reporting
+- NEW: Digital Key, Kiosk, ML Pricing, GOPPAR, Package Bundling
 
-### P2 - Phase 2 (17 skills)
+### P2 - Phase 2 (21 skills)
 Advanced features for scaling operations
 - Includes: Bad Review Defense
+- NEW: Front Desk, Overbooking, Shift Planning, HK Performance, Loyalty
 
-### P3 - Phase 3 (6 skills)
+### P3 - Phase 3 (7 skills)
 Enterprise and specialized features
+- NEW: Hourly Bookings
 
 ---
 
 ## 🏆 Best-of-Breed Sources
 
-| Feature Area | Best Source | Competitor |
-|--------------|-------------|------------|
-| Operations | Guesty | Comprehensive task management |
-| Distribution | Cloudbeds | Multi-channel sync |
-| Hospitality | Mews | Guest folios |
-| AI Automation | BoomAI | Agentic workforce |
-| Revenue Ops | BestyAI | Gap nights, upgrades |
-| Compliance | CheKin | ID + Police reporting |
-| Protection | Minut | Noise monitoring |
+| Feature Area | Best Source | Why |
+|--------------|-------------|-----|
+| STR Operations | Guesty | Comprehensive task management, OTA sync |
+| Agentic AI | Host OS (BoomAI) | Autonomous agents, RAG |
+| Revenue Ops | Host OS (BestyAI) | Gap nights, upgrades |
+| Compliance | Host OS (CheKin) | ID + Police reporting |
+| Protection | Host OS (Minut) | Noise monitoring |
+| Digital Key | Mews | Apple Wallet, BLE |
+| Booking Engine | Mews | A/B testing, conversion |
+| Analytics | Mews | GOPPAR, performance |
+| Revenue ML | Mews (Atomize) | ML-powered pricing |
+| Guest Portal | Mews | No-app messaging |
