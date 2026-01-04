@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 3 (Guesty, Host OS, Mews)
-> **Total Skills**: 94
+> **Competitors Analyzed**: 4 (Guesty, Host OS, Mews, Besty AI)
+> **Total Skills**: 105
 
 ---
 
@@ -11,15 +11,16 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 94 |
-| MVP Skills (P0) | 30 |
-| Phase 1 Skills (P1) | 36 |
-| Phase 2 Skills (P2) | 21 |
-| Phase 3 Skills (P3) | 7 |
-| Universal Skills (all 3) | 26 |
+| Total Skills | 105 |
+| MVP Skills (P0) | 34 |
+| Phase 1 Skills (P1) | 40 |
+| Phase 2 Skills (P2) | 23 |
+| Phase 3 Skills (P3) | 8 |
+| Universal Skills (all 4) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
+| Unique Skills (Besty only) | 11 |
 
 ---
 
@@ -39,6 +40,8 @@
 | `cross-cutting` | 3 | Notifications, permissions, audit |
 | `inventory` | 1 | Polymorphic inventory management |
 | `hospitality` | 8 | Hotel-grade kiosk, digital key, concierge |
+| `revenue` | 4 | Inquiry winback, direct booking, extended stay |
+| `ai-control` | 4 | Confidence, co-pilot, brand voice |
 
 ---
 
@@ -2131,6 +2134,330 @@ Bundle rooms with services as packages.
 
 ---
 
+<!-- BESTY AI UNIQUE SKILLS (095-105) -->
+
+### SKILL-095: inquiry-winback-automation
+
+**Category**: revenue
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Automatically follow up on abandoned inquiries to recover lost bookings with 3-message sequence.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No winback |
+| Host OS | ❌ | - | - | No winback |
+| Mews | ❌ | - | - | No winback |
+| Besty | ✅ | Inquiry Winback | ⭐⭐⭐⭐⭐ | 8-20% recovery |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] Track inquiry dropoff points
+- [x] 3-message sequence (24h, 48h, 72h)
+- [x] Objection-based messaging
+- [x] Progressive escalation
+- [x] Stop after 3 (avoid spam)
+
+**Knowledge Sources**:
+- Primary: KG-BESTY-001 (Inquiry Objection Patterns)
+
+---
+
+### SKILL-096: direct-booking-conversion
+
+**Category**: revenue
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Convert OTA inquiries to direct bookings to save 15% commission.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No conversion |
+| Host OS | ❌ | - | - | No conversion |
+| Mews | ⚠️ | Booking Engine | ⭐⭐⭐ | For hotels |
+| Besty | ✅ | Direct Conversion | ⭐⭐⭐⭐⭐ | OTA → Direct |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] Respond on OTA first
+- [x] Suggest direct with discount
+- [x] Show savings calculation
+- [x] WhatsApp pivot
+- [x] 5-15% conversion rate
+
+**Knowledge Sources**:
+- Primary: KG-BESTY-002 (Direct Booking Tactics)
+
+---
+
+### SKILL-097: confidence-threshold-system
+
+**Category**: ai-control
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Route messages to human when AI confidence is below threshold.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | AI Suite | ⭐⭐ | Basic filtering |
+| Host OS | ⚠️ | Agent Control | ⭐⭐⭐ | Some control |
+| Mews | ❌ | - | - | No AI control |
+| Besty | ✅ | Confidence System | ⭐⭐⭐⭐⭐ | Production-ready |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] 0-100% confidence scoring
+- [x] Configurable threshold by message type
+- [x] Auto-escalation logic
+- [x] Learning curve tracking
+- [x] Safety categories always escalate
+
+**Knowledge Sources**:
+- Primary: KG-BESTY-006 (Confidence Threshold Tuning)
+
+---
+
+### SKILL-098: visual-journey-builder
+
+**Category**: automation
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Drag-and-drop builder for multi-step guest communication sequences.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Automation Rules | ⭐⭐⭐ | Basic rules |
+| Host OS | ⚠️ | Workflows | ⭐⭐⭐ | Less visual |
+| Mews | ⚠️ | Journeys | ⭐⭐⭐⭐ | Hotel-focused |
+| Besty | ✅ | Journey Builder | ⭐⭐⭐⭐⭐ | No-code, 30+ templates |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] No coding required
+- [x] Branching logic (if/then)
+- [x] A/B testing built-in
+- [x] 30+ pre-built templates
+- [x] Multi-channel delivery
+
+**Knowledge Sources**:
+- Primary: KG-BESTY-005 (Journey Timing)
+
+---
+
+### SKILL-099: review-response-by-sentiment
+
+**Category**: communication
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Generate contextual review responses matched to sentiment level.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Review Response | ⭐⭐⭐ | Basic |
+| Host OS | ⚠️ | Auto-Review | ⭐⭐⭐⭐ | Template-based |
+| Mews | ⚠️ | Review Management | ⭐⭐⭐⭐ | Hotel-grade |
+| Besty | ✅ | Sentiment Response | ⭐⭐⭐⭐⭐ | 100% rate |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] Templates per sentiment (5★ to 1★)
+- [x] Reference specific review details
+- [x] Maintain brand voice
+- [x] Auto-post or queue
+- [x] 100% response rate
+
+**Knowledge Sources**:
+- Primary: KG-BESTY-004 (Review Response Templates)
+
+---
+
+### SKILL-100: copilot-to-autopilot-progression
+
+**Category**: ai-control
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Graduated automation from human-review (Co-Pilot) to full automation (Autopilot).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No progression |
+| Host OS | ⚠️ | Agent Control | ⭐⭐⭐ | Some control |
+| Mews | ❌ | - | - | No AI control |
+| Besty | ✅ | Co-Pilot/Autopilot | ⭐⭐⭐⭐⭐ | Trust-building |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] AI drafts, human reviews
+- [x] Feedback trains model
+- [x] Progressive trust-building
+- [x] Override always available
+- [x] Audit trail
+
+---
+
+### SKILL-101: real-time-sentiment-alerts
+
+**Category**: communication
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Detect negative guest sentiment and alert property manager immediately.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | AI Suite | ⭐⭐ | Limited |
+| Host OS | ⚠️ | Sentiment | ⭐⭐⭐ | Basic |
+| Mews | ❌ | - | - | No alerts |
+| Besty | ✅ | Sentiment Alerts | ⭐⭐⭐⭐⭐ | Real-time |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] 0-100 sentiment scoring
+- [x] Emotion detection
+- [x] Automatic flag < 40
+- [x] Alert to manager
+- [x] Tone adaptation
+
+---
+
+### SKILL-102: brand-voice-training
+
+**Category**: ai-control
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Train AI to match property's unique communication style.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Templates | ⭐⭐ | Manual |
+| Host OS | ❌ | - | - | No training |
+| Mews | ⚠️ | Brand Settings | ⭐⭐⭐ | Basic |
+| Besty | ✅ | Voice Training | ⭐⭐⭐⭐⭐ | Learning |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] Tone setting (formal/casual)
+- [x] Example message learning
+- [x] Signature greetings
+- [x] Phrases to avoid
+- [x] Per-property customization
+
+---
+
+### SKILL-103: extended-stay-discount-automation
+
+**Category**: revenue
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Proactively offer tiered discounts for 7+ night stays.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Length Discount | ⭐⭐⭐ | Manual setup |
+| Host OS | ⚠️ | Long Stay | ⭐⭐⭐ | Basic |
+| Mews | ⚠️ | Weekly Rates | ⭐⭐⭐⭐ | Hotel-grade |
+| Besty | ✅ | Extended Stay | ⭐⭐⭐⭐⭐ | Proactive offers |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] Tiered discounts (7d=10%, 14d=20%, 30d=30%)
+- [x] Mid-stay extension offers
+- [x] Prospect targeting
+- [x] Dynamic pricing integration
+
+---
+
+### SKILL-104: knowledge-base-auto-population
+
+**Category**: ai-control
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Auto-populate AI knowledge from PMS property data.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Property Sync | ⭐⭐⭐ | Partial |
+| Host OS | ⚠️ | Knowledge Sync | ⭐⭐⭐ | Limited |
+| Mews | ⚠️ | Property Data | ⭐⭐⭐⭐ | Hotel-focused |
+| Besty | ✅ | Auto-Population | ⭐⭐⭐⭐⭐ | Full PMS sync |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] Auto-import from PMS
+- [x] Amenities, rules, rates
+- [x] House manual upload
+- [x] Local guide upload
+- [x] Brand voice examples
+
+---
+
+### SKILL-105: conversation-summary-intelligence
+
+**Category**: analytics
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Auto-generate summaries of conversation threads with issue identification.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | AI Summary | ⭐⭐⭐ | Basic |
+| Host OS | ⚠️ | Thread Summary | ⭐⭐⭐ | Some |
+| Mews | ❌ | - | - | No summary |
+| Besty | ✅ | Conv Intelligence | ⭐⭐⭐⭐⭐ | Actionable |
+
+**Best Implementation**: Besty AI
+
+**Capabilities**:
+- [x] Key points extraction
+- [x] Issue identification
+- [x] Pattern detection across properties
+- [x] Resolution tracking
+- [x] Actionable insights
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -2178,7 +2505,6 @@ Enterprise and specialized features
 |--------------|-------------|-----|
 | STR Operations | Guesty | Comprehensive task management, OTA sync |
 | Agentic AI | Host OS (BoomAI) | Autonomous agents, RAG |
-| Revenue Ops | Host OS (BestyAI) | Gap nights, upgrades |
 | Compliance | Host OS (CheKin) | ID + Police reporting |
 | Protection | Host OS (Minut) | Noise monitoring |
 | Digital Key | Mews | Apple Wallet, BLE |
@@ -2186,3 +2512,8 @@ Enterprise and specialized features
 | Analytics | Mews | GOPPAR, performance |
 | Revenue ML | Mews (Atomize) | ML-powered pricing |
 | Guest Portal | Mews | No-app messaging |
+| **Gap Nights** | **Besty AI** | **Full workflow, 40-60% fill rate** |
+| **Inquiry Winback** | **Besty AI** | **8-20% recovery rate** |
+| **AI Control** | **Besty AI** | **Confidence thresholds, Co-Pilot** |
+| **Guest Journeys** | **Besty AI** | **Visual builder, 30+ templates** |
+| **Review Response** | **Besty AI** | **100% rate, sentiment-matched** |
