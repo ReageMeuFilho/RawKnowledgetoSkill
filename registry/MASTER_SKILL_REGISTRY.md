@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 1 (Guesty)
-> **Total Skills**: 67
+> **Competitors Analyzed**: 2 (Guesty, Host OS)
+> **Total Skills**: 79
 
 ---
 
@@ -11,13 +11,14 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 67 |
-| MVP Skills (P0) | 24 |
-| Phase 1 Skills (P1) | 22 |
-| Phase 2 Skills (P2) | 15 |
+| Total Skills | 79 |
+| MVP Skills (P0) | 27 |
+| Phase 1 Skills (P1) | 29 |
+| Phase 2 Skills (P2) | 17 |
 | Phase 3 Skills (P3) | 6 |
-| Unique Skills (1 competitor) | 67 |
-| Universal Skills (all competitors) | TBD |
+| Universal Skills (both competitors) | 26 |
+| Unique Skills (Guesty only) | 41 |
+| Unique Skills (Host OS only) | 12 |
 
 ---
 
@@ -25,16 +26,17 @@
 
 | Category | Skills | Description |
 |----------|--------|-------------|
-| `communication` | 10 | Guest messaging, inquiries, reviews |
+| `communication` | 13 | Guest messaging, inquiries, reviews |
 | `booking` | 8 | Reservations, calendar, availability |
-| `pricing` | 6 | Rates, revenue management, discounts |
-| `operations` | 10 | Cleaning, maintenance, vendors |
-| `financial` | 12 | Payments, payouts, accounting |
-| `compliance` | 4 | Taxes, ID verification, regulations |
+| `pricing` | 8 | Rates, revenue management, discounts |
+| `operations` | 12 | Cleaning, maintenance, vendors |
+| `financial` | 14 | Payments, payouts, accounting |
+| `compliance` | 6 | Taxes, ID verification, regulations |
 | `channel` | 6 | OTA integrations, calendar sync |
 | `owner` | 4 | Statements, reporting, communication |
 | `analytics` | 4 | Performance, forecasting, insights |
 | `cross-cutting` | 3 | Notifications, permissions, audit |
+| `inventory` | 1 | Polymorphic inventory management |
 
 ---
 
@@ -1329,6 +1331,344 @@ Request and track guest reviews post-checkout.
 
 ---
 
+<!-- HOST OS UNIQUE SKILLS (068-079) -->
+
+### SKILL-068: polymorphic-inventory-management
+
+**Category**: inventory
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Manage multiple inventory types (accommodation, parking, meeting rooms, event spaces) with parent/child dependency rules where booking a parent blocks children and vice versa.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | Flat inventory only |
+| Host OS | ✅ | Polymorphic Inventory | ⭐⭐⭐⭐⭐ | Full hierarchy |
+
+**Best Implementation**: Host OS (Derived from Cloudbeds & Mews)
+
+**Capabilities**:
+- [x] Multiple inventory types (Accommodation, Parking, Meeting, Event)
+- [x] Parent/Child unit dependency
+- [x] Booking parent blocks all children
+- [x] Booking child blocks parent
+- [x] Multi-unit clustering
+
+**Knowledge Sources**:
+- Primary: KG-NEW-001 (Split Inventory Management Patterns)
+
+---
+
+### SKILL-069: gap-night-revenue-optimization
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automatically detect "orphan" 1-2 night gaps between bookings and message adjacent guests with extension offers at discounted rates.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No gap detection |
+| Host OS | ✅ | Gap Night Logic | ⭐⭐⭐⭐⭐ | BestyAI derived |
+
+**Best Implementation**: Host OS (Derived from BestyAI)
+
+**Capabilities**:
+- [x] Orphan night detection
+- [x] Adjacent guest messaging
+- [x] Discount calculation
+- [x] Acceptance tracking
+
+**Knowledge Sources**:
+- Primary: KG-NEW-002 (Gap Night Discount Optimization)
+
+---
+
+### SKILL-070: attribute-based-room-upgrade
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Proactively offer room upgrades 72h pre-arrival based on vacant superior room inventory.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Upsells | ⭐⭐⭐ | Generic upsells only |
+| Host OS | ✅ | Attribute-Based Upselling | ⭐⭐⭐⭐⭐ | Vacancy-aware |
+
+**Best Implementation**: Host OS
+
+**Capabilities**:
+- [x] Vacant superior room detection
+- [x] Optimal upgrade price calculation
+- [x] Timed offer delivery (72h pre-arrival)
+- [x] Conversion tracking
+
+**Knowledge Sources**:
+- Primary: KG-NEW-003 (Room Upgrade Timing/Pricing)
+
+---
+
+### SKILL-071: auto-review-posting
+
+**Category**: communication
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automatically post 5-star review for guest immediately to trigger Airbnb's "review blind" mechanism.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | Request only, no auto-post |
+| Host OS | ✅ | Auto-Review Posting | ⭐⭐⭐⭐ | Review blind optimization |
+
+**Best Implementation**: Host OS
+
+**Capabilities**:
+- [x] Randomized review template generation
+- [x] Automatic posting timing
+- [x] Review blind trigger optimization
+
+**Knowledge Sources**:
+- Primary: KG-NEW-004 (Airbnb Review Blind Mechanics)
+
+---
+
+### SKILL-072: bad-review-defense-drafting
+
+**Category**: communication
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+AI drafts professional, factual rebuttals for reviews < 4 stars for manager approval.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No rebuttal assistance |
+| Host OS | ✅ | Bad Review Defense | ⭐⭐⭐⭐ | AI-drafted |
+
+**Best Implementation**: Host OS
+
+**Capabilities**:
+- [x] Sentiment-aware rebuttal drafting
+- [x] Fact-based response generation
+- [x] Manager approval workflow
+
+**Knowledge Sources**:
+- Primary: KG-NEW-005 (Negative Review Response Patterns)
+
+---
+
+### SKILL-073: magic-link-housekeeping-app
+
+**Category**: operations
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Cleaners access task app via SMS magic link without username/password, with GPS geofencing validation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Task App | ⭐⭐⭐ | Login required |
+| Host OS | ✅ | No-Login App | ⭐⭐⭐⭐⭐ | Magic link + GPS |
+
+**Best Implementation**: Host OS (Derived from Breezeway)
+
+**Capabilities**:
+- [x] Magic link authentication (no login)
+- [x] GPS geofence validation for clock-in
+- [x] Photo gate (cannot mark ready without photos)
+- [x] Automatic payment calculation on clock-out
+
+**Knowledge Sources**:
+- Primary: KG-003 (Cleaning Task Workflow) - ENHANCED
+
+---
+
+### SKILL-074: emergency-guest-relocation
+
+**Category**: operations
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automatic protocol when critical maintenance issue detected with incoming guest - reassign unit and communicate.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | Manual process |
+| Host OS | ✅ | Emergency Relocation | ⭐⭐⭐⭐ | Automated protocol |
+
+**Best Implementation**: Host OS
+
+**Capabilities**:
+- [x] Critical issue detection
+- [x] Guest arrival check
+- [x] Alternative unit assignment
+- [x] Automated guest communication
+- [x] Compensation calculation
+
+**Knowledge Sources**:
+- Primary: KG-NEW-006 (Emergency Relocation Protocols)
+
+---
+
+### SKILL-075: guest-folio-management
+
+**Category**: financial
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Hotel-style tab allowing charges to be added after initial booking (minibar, room service, damage fees).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No post-booking charges |
+| Host OS | ✅ | Guest Folio | ⭐⭐⭐⭐⭐ | Full folio (Mews derived) |
+
+**Best Implementation**: Host OS (Derived from Mews)
+
+**Capabilities**:
+- [x] Post-booking charge addition
+- [x] Card-on-file tokenization
+- [x] Pre-authorization holds ($200)
+- [x] Auto-release timing (24h post-checkout)
+
+**Knowledge Sources**:
+- Primary: KG-NEW-007 (Hotel Folio Management)
+
+---
+
+### SKILL-076: multi-stakeholder-payment-split
+
+**Category**: financial
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Automatically split each payment into Tax, Vendor, Manager, and Owner portions with segregated accounts.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Trust Accounting | ⭐⭐⭐⭐ | Basic splits |
+| Host OS | ✅ | Auto-Split Payments | ⭐⭐⭐⭐⭐ | 4-way real-time |
+
+**Best Implementation**: Host OS
+
+**Capabilities**:
+- [x] Real-time split calculation
+- [x] Segregated liability accounts
+- [x] Auto-routing to recipient wallets
+- [x] Audit trail per split
+
+**Knowledge Sources**:
+- Primary: KG-004 (Owner Statement Format) - ENHANCED
+
+---
+
+### SKILL-077: police-reporting-api
+
+**Category**: compliance
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Auto-generate and submit guest registration reports to local authorities (e.g., Schede Alloggiati in Italy, EU requirements).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No police reporting |
+| Host OS | ✅ | Police Reporting | ⭐⭐⭐⭐ | CheKin derived |
+
+**Best Implementation**: Host OS (Derived from CheKin)
+
+**Capabilities**:
+- [x] Country-specific report generation
+- [x] API submission to authorities
+- [x] Compliance tracking
+- [x] Record retention
+
+**Knowledge Sources**:
+- Primary: KG-NEW-008 (Country Guest Registration Requirements)
+
+---
+
+### SKILL-078: party-prevention-grid
+
+**Category**: compliance
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Noise monitoring with automated escalation sequence (SMS → Voice Call → Security Dispatch).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No noise monitoring |
+| Host OS | ✅ | Party Prevention Grid | ⭐⭐⭐⭐⭐ | Full escalation |
+
+**Best Implementation**: Host OS (Derived from Minut)
+
+**Capabilities**:
+- [x] Minut/NoiseAware integration
+- [x] WiFi device counting (crowd detection)
+- [x] 3-step escalation (SMS → Call → Dispatch)
+- [x] Security dispatch integration
+
+**Knowledge Sources**:
+- Primary: KG-NEW-009 (Party Prevention Thresholds)
+
+---
+
+### SKILL-079: knowledge-graph-rag-answers
+
+**Category**: communication
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Answer guest questions using property-specific knowledge base (house manuals, local guides) with RAG retrieval.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | AI Suite | ⭐⭐⭐ | Generic responses |
+| Host OS | ✅ | Knowledge Graph RAG | ⭐⭐⭐⭐⭐ | Property-specific |
+
+**Best Implementation**: Host OS (Derived from BoomAI)
+
+**Capabilities**:
+- [x] Property-specific document retrieval
+- [x] Context-aware answers with photos
+- [x] Multi-document synthesis
+- [x] Source citation
+
+**Knowledge Sources**:
+- Primary: KG-001 (Guest Message Response) - ENHANCED
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -1349,14 +1689,31 @@ When processing a new competitor PRD:
 
 ## 📊 Priority Breakdown
 
-### P0 - MVP (24 skills)
+### P0 - MVP (27 skills)
 Core functionality for basic STR management
+- Includes: Polymorphic Inventory, Magic Link App, Multi-Stakeholder Splits
 
-### P1 - Phase 1 (22 skills)
+### P1 - Phase 1 (29 skills)
 Enhanced features for professional managers
+- Includes: Gap Night, Upgrades, RAG, Party Prevention, Police Reporting
 
-### P2 - Phase 2 (15 skills)
+### P2 - Phase 2 (17 skills)
 Advanced features for scaling operations
+- Includes: Bad Review Defense
 
 ### P3 - Phase 3 (6 skills)
 Enterprise and specialized features
+
+---
+
+## 🏆 Best-of-Breed Sources
+
+| Feature Area | Best Source | Competitor |
+|--------------|-------------|------------|
+| Operations | Guesty | Comprehensive task management |
+| Distribution | Cloudbeds | Multi-channel sync |
+| Hospitality | Mews | Guest folios |
+| AI Automation | BoomAI | Agentic workforce |
+| Revenue Ops | BestyAI | Gap nights, upgrades |
+| Compliance | CheKin | ID + Police reporting |
+| Protection | Minut | Noise monitoring |
