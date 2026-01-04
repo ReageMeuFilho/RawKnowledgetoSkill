@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 4 (Guesty, Host OS, Mews, Besty AI)
-> **Total Skills**: 105
+> **Competitors Analyzed**: 5 (Guesty, Host OS, Mews, Besty AI, Boom AI)
+> **Total Skills**: 112
 
 ---
 
@@ -11,16 +11,17 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 105 |
-| MVP Skills (P0) | 34 |
-| Phase 1 Skills (P1) | 40 |
-| Phase 2 Skills (P2) | 23 |
+| Total Skills | 112 |
+| MVP Skills (P0) | 35 |
+| Phase 1 Skills (P1) | 44 |
+| Phase 2 Skills (P2) | 25 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 4) | 26 |
+| Universal Skills (all 5) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
 | Unique Skills (Besty only) | 11 |
+| Unique Skills (Boom only) | 7 |
 
 ---
 
@@ -42,6 +43,8 @@
 | `hospitality` | 8 | Hotel-grade kiosk, digital key, concierge |
 | `revenue` | 4 | Inquiry winback, direct booking, extended stay |
 | `ai-control` | 4 | Confidence, co-pilot, brand voice |
+| `voice` | 3 | Voice AI, call recording, voicemail |
+| `agentic` | 2 | Multi-function agent, predictive outreach |
 
 ---
 
@@ -2458,6 +2461,210 @@ Auto-generate summaries of conversation threads with issue identification.
 
 ---
 
+<!-- BOOM AI UNIQUE SKILLS (106-112) -->
+
+### SKILL-106: voice-ai-concierge
+
+**Category**: voice
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+24/7 AI-powered phone answering for guest support and reservations.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No voice AI |
+| Host OS | ⚠️ | Voice mention | ⭐⭐⭐ | Concept only |
+| Mews | ❌ | - | - | No voice AI |
+| Besty | ❌ | - | - | Coming Q1 2026 |
+| Boom | ✅ | Voice AI Concierge | ⭐⭐⭐⭐⭐ | Full implementation |
+
+**Best Implementation**: Boom AI (BAM)
+
+**Capabilities**:
+- [x] 24/7 call answering
+- [x] Natural language understanding
+- [x] Make reservations via phone
+- [x] Process payments by voice
+- [x] 5+ language support
+- [x] Sentiment detection
+- [x] Human escalation
+- [x] Call transcription
+
+**Knowledge Sources**:
+- Primary: KG-BOOM-001 (Voice AI Implementation)
+
+---
+
+### SKILL-107: multi-function-agentic-execution
+
+**Category**: agentic
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+AI agent that handles messaging, reviews, and reporting simultaneously.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | Isolated tasks |
+| Host OS | ⚠️ | Agentic | ⭐⭐⭐⭐ | Concept aligned |
+| Mews | ❌ | - | - | No agentic |
+| Besty | ⚠️ | Automation | ⭐⭐⭐ | Sequential |
+| Boom | ✅ | BAM | ⭐⭐⭐⭐⭐ | True agentic |
+
+**Best Implementation**: Boom AI (BAM)
+
+**Capabilities**:
+- [x] Simultaneous multi-function execution
+- [x] Cross-function context awareness
+- [x] Pattern learning across operations
+- [x] Autonomous decision-making
+- [x] Transparent reasoning
+- [x] Continuous learning
+
+**Knowledge Sources**:
+- Primary: KG-BOOM-002 (Agentic Architecture)
+
+---
+
+### SKILL-108: predictive-guest-outreach
+
+**Category**: agentic
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Proactively reach guests with offers based on profile analysis.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Segments | ⭐⭐⭐ | Manual triggers |
+| Host OS | ⚠️ | AI Outreach | ⭐⭐⭐⭐ | Some prediction |
+| Mews | ⚠️ | Upselling | ⭐⭐⭐⭐ | At kiosk |
+| Besty | ⚠️ | Journeys | ⭐⭐⭐⭐ | Time-based |
+| Boom | ✅ | Predictive | ⭐⭐⭐⭐⭐ | Profile-based |
+
+**Best Implementation**: Boom AI (BAM)
+
+**Capabilities**:
+- [x] Predict guest needs before asking
+- [x] Timing optimization
+- [x] Content personalization
+- [x] Dynamic pricing per segment
+
+---
+
+### SKILL-109: call-recording-transcription
+
+**Category**: voice
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Automatic call recording with searchable transcription.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| All Others | ❌ | - | - | No call recording |
+| Boom | ✅ | Call Recording | ⭐⭐⭐⭐⭐ | Full implementation |
+
+**Best Implementation**: Boom AI
+
+**Capabilities**:
+- [x] Compliance-aware recording
+- [x] Real-time transcription
+- [x] Searchable history
+- [x] Sentiment analysis
+- [x] Follow-up task creation
+
+---
+
+### SKILL-110: voicemail-to-sms-email
+
+**Category**: voice
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Convert voicemails to text and route to appropriate channel.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| All Others | ❌ | - | - | No voicemail handling |
+| Boom | ✅ | Voicemail Conversion | ⭐⭐⭐⭐⭐ | Full implementation |
+
+**Best Implementation**: Boom AI
+
+**Capabilities**:
+- [x] Voicemail transcription
+- [x] SMS delivery
+- [x] Email backup
+- [x] Priority routing
+- [x] Callback scheduling
+
+---
+
+### SKILL-111: beyond-dynamic-pricing-integration
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Native integration with Beyond for ML-powered dynamic pricing.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | PriceOptimizer | ⭐⭐⭐ | Basic |
+| Host OS | ⚠️ | Pricing Agent | ⭐⭐⭐⭐ | Gap focus |
+| Mews | ✅ | Atomize RMS | ⭐⭐⭐⭐⭐ | ML pricing |
+| Besty | ❌ | - | - | Relies on PMS |
+| Boom | ✅ | Beyond | ⭐⭐⭐⭐⭐ | STR-specific |
+
+**Best Implementation**: Boom + Beyond (STR) or Mews + Atomize (Hotels)
+
+**Capabilities**:
+- [x] Direct data flow
+- [x] <15 min rate sync
+- [x] Decade of STR data
+- [x] Competitor monitoring
+- [x] Seasonal optimization
+
+---
+
+### SKILL-112: causal-ai-understanding
+
+**Category**: agentic
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+AI that understands cause-and-effect, not just correlations.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| All Others | ❌ | - | - | Correlation only |
+| Boom | ✅ | Causal AI | ⭐⭐⭐⭐ | Advanced |
+
+**Best Implementation**: Boom AI
+
+**Capabilities**:
+- [x] Understand WHY guests ask
+- [x] Predict impact of actions
+- [x] Root cause analysis
+- [x] Outcome forecasting
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -2517,3 +2724,6 @@ Enterprise and specialized features
 | **AI Control** | **Besty AI** | **Confidence thresholds, Co-Pilot** |
 | **Guest Journeys** | **Besty AI** | **Visual builder, 30+ templates** |
 | **Review Response** | **Besty AI** | **100% rate, sentiment-matched** |
+| **Voice AI** | **Boom AI** | **24/7 phone answering, 5+ languages** |
+| **Agentic Architecture** | **Boom AI** | **Multi-function simultaneous execution** |
+| **Predictive Outreach** | **Boom AI** | **Proactive offers based on profile** |
