@@ -8,6 +8,15 @@
 
 ## 🚀 GETTING STARTED (For Any Agent)
 
+### Step 0: Sync Your Local Repository ⚠️
+```bash
+# ALWAYS RUN THIS FIRST - Before doing anything else!
+cd [your-local-repo-path]
+git pull origin main
+```
+
+> **CRITICAL**: Multiple agents may be working on this repo. Always pull the latest changes before starting any work to avoid conflicts and ensure you have the most current state.
+
 ### Step 1: Read the Status File
 ```
 ALWAYS START BY READING: STATUS.md (in repo root)
@@ -257,7 +266,11 @@ When handing off to another agent:
 
 2. Commit and push to GitHub
 
-3. The next agent reads `STATUS.md` and knows exactly where to start
+3. **Tell the next agent to run `git pull` first!**
+
+4. The next agent reads `STATUS.md` and knows exactly where to start
+
+> ⚠️ **Reminder for Users**: When switching agents, always instruct the new agent to **sync their local repo** with `git pull origin main` before starting work.
 
 ---
 
