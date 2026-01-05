@@ -431,22 +431,55 @@ AI generates action request   →    Policy engine validates
 
 ## 4.3 Technical Foundation: What We Leverage
 
-We don't build everything from scratch. We leverage:
+We don't build everything from scratch. We leverage **industry standards** and **production-ready open source**:
 
-### Suna (Open Source Agent Framework)
-- **What it provides**: Agent runtime, browser/tool integration, task orchestration
-- **Why**: Production-ready agent infrastructure without reinventing the wheel
-- **Our contribution**: Domain-specific skills, knowledge, and evaluation
+### 1. Agent Skills Standard ([agentskills.io](https://agentskills.io))
 
-### LangGraph (Workflow Orchestration)
+**The Industry Standard for AI Agent Capabilities**
+
+We align with the [Anthropic Agent Skills Framework](https://github.com/anthropics/skills) (33.6k GitHub stars)—the emerging standard for AI agent capabilities.
+
+| Benefit | Traditional Approach | Agent Skills Approach |
+|---------|---------------------|----------------------|
+| **Time to Market** | 6-8 weeks per feature | **1-2 weeks per skill** |
+| **Who Can Author** | Engineers only | **Product, Ops, Engineers** |
+| **Context Efficiency** | Load everything | **Progressive Disclosure (~20x less)** |
+| **Portability** | Vendor lock-in | **Open standard, any runtime** |
+| **Testing** | Unit tests | **Skill evaluation sets** |
+
+**Our Implementation**:
+- Skills stored as **folders with SKILL.md** + scripts + references
+- **Progressive Disclosure**: Router scans headers → loads only needed skills
+- **Localization overrides**: `/localization/br/` overrides `/global/`
+- **Full specification**: `docs/architecture/LAYER4_SKILLS_ARCHITECTURE.md`
+
+### 2. Suna (Open Source Agent Framework)
+
+- **What it provides**: Agent runtime, browser/tool integration, multi-modal (voice, text)
+- **Why**: Production-ready agent infrastructure—we extend, not rebuild
+- **Our contribution**: Domain-specific skills, knowledge, evaluation, MCP servers
+
+### 3. LangGraph (Workflow Orchestration)
+
 - **What it provides**: State management, multi-agent coordination, branching logic
-- **Why**: Handles complex workflows with checkpointing and resumption
-- **Our contribution**: Property management workflow definitions
+- **Why**: Handles complex workflows with checkpointing, resumption, HITL hooks
+- **Our contribution**: Property management workflow definitions, skill routing
 
-### Claude Code Skills Framework
-- **What it provides**: Skill abstraction, meta-knowledge, context management
-- **Why**: The "OS + Apps + RAM" model for composable capabilities
-- **Our contribution**: 265+ domain-specific skills
+### 4. MCP Protocol (Model Context Protocol)
+
+- **What it provides**: Secure bridge between AI (Hot Path) and systems (Cold Path)
+- **Why**: AI cannot directly access databases—MCP servers enforce boundaries
+- **Our servers**: `mcp-treasury-read`, `mcp-treasury-write`, `mcp-temporal-trigger`
+
+### 5. Treasury OS Core (Already Built)
+
+| Component | Technology | Status | What It Does |
+|-----------|------------|--------|--------------|
+| **Financial DB** | TigerBeetle | ✅ Production | 384+ TPS, ACID, immutable audit |
+| **Ledger Engine** | Formance | ✅ Production | Multi-currency, double-entry |
+| **Workflows** | Temporal | ✅ Production | Durable execution, saga patterns |
+| **Events** | Redpanda | ✅ Production | Event sourcing, CDC |
+| **Gateway** | Rust/Axum | ✅ Production | Zero-GC, idempotency |
 
 ### Combined Architecture
 

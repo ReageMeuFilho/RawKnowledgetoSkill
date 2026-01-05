@@ -764,30 +764,43 @@ result = await mcp://treasury/transfer({
 
 ## 🎯 Why This Architecture Wins
 
-### 1. **Separation of Concerns**
+### 1. **Agent Skills Standard Alignment**
+
+We align with the [Anthropic Agent Skills Framework](https://github.com/anthropics/skills) (33.6k stars)—the emerging industry standard:
+
+| Advantage | Impact |
+|-----------|--------|
+| **Time to Market** | 4x faster (skills = markdown, not code) |
+| **Non-Engineer Authoring** | Product/Ops can write SKILL.md |
+| **Progressive Disclosure** | 20x less context per task |
+| **Ecosystem Compatibility** | Can publish to skill marketplaces |
+
+**Full specification**: See `docs/architecture/LAYER4_SKILLS_ARCHITECTURE.md`
+
+### 2. **Separation of Concerns**
 - **Hot Path** (AI) handles uncertainty, reasoning, generation
 - **Cold Path** (Finance) handles guarantees, audit, compliance
 - **Hybrid Path** combines them intelligently per task
 
-### 2. **Production-Ready Finance**
+### 3. **Production-Ready Finance (Treasury OS)**
 - **384+ TPS** sustained (tested)
 - **Strict serializability** (TigerBeetle)
 - **Double-entry accounting** (Formance)
 - **Event sourcing** (Redpanda)
 - **Durable workflows** (Temporal)
 
-### 3. **AI Without Lock-in**
+### 4. **AI Without Lock-in**
 - **Model agnostic** (Claude, GPT-4, Gemini, Llama)
-- **Skill portability** (Markdown format)
+- **Skill portability** (Markdown files in Git)
 - **Tool abstraction** (MCP protocol)
 - **Automatic failover**
 
-### 4. **Composable Platform**
+### 5. **Composable Platform**
 - **Socket architecture** (swap any component)
 - **Adapter pattern** (thin wrappers)
 - **Zero vendor lock-in**
 
-### 5. **Global Scale**
+### 6. **Global Scale**
 - **Granular localization** (Global → Unit)
 - **Multi-currency** (fiat + crypto)
 - **Multi-language** (AI-powered)
