@@ -2,9 +2,9 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 15 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, **Lodgify**)
-> **Total Skills**: 192
-> **BENCHMARKS**: EliseAI (LTR), Guesty/Hostaway (STR Enterprise), Lodgify (STR SMB)
+> **Competitors Analyzed**: 16 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, **Hospitable**)
+> **Total Skills**: 199
+> **BENCHMARKS**: EliseAI (LTR), Guesty/Hostaway (Enterprise), Lodgify/Hospitable (SMB)
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 192 |
-| MVP Skills (P0) | 61 |
-| Phase 1 Skills (P1) | 86 |
-| Phase 2 Skills (P2) | 37 |
+| Total Skills | 199 |
+| MVP Skills (P0) | 65 |
+| Phase 1 Skills (P1) | 88 |
+| Phase 2 Skills (P2) | 38 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 15) | 26 |
+| Universal Skills (all 16) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -32,6 +32,7 @@
 | Unique Skills (EliseAI only) | 10 |
 | Unique Skills (Hostaway only) | 9 |
 | Unique Skills (Lodgify only) | 6 |
+| Unique Skills (Hospitable only) | 7 |
 
 ---
 
@@ -97,6 +98,11 @@
 | `direct-booking` | 2 | Widgets, booking engine |
 | `smb-pricing` | 1 | Booking fee model |
 | `statement-strategies` | 1 | Owner statement templates |
+| `ai-knowledge` | 1 | Knowledge hub, RAG |
+| `iot-automation` | 1 | Smart lock/thermostat |
+| `ai-safety` | 1 | Sentiment escalation |
+| `guest-intelligence` | 1 | Guest summaries |
+| `automation-orchestration` | 1 | Cross-system workflows |
 
 ---
 
@@ -4920,6 +4926,208 @@ Configurable "strategies" for owner statements defining fee/tax allocation and r
 - Revenue split configuration
 - Monthly/quarterly generation
 - Email directly to owners
+
+---
+
+<!-- HOSPITABLE UNIQUE SKILLS (193-199) - SMB AI LEADER -->
+
+### SKILL-193: knowledge-hub-ai-answers
+
+**Category**: ai-knowledge
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Central repository of host guidebooks, rules, and policies that AI reads to automatically answer guest FAQs.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| EliseAI | ✅ | 30M training | ⭐⭐⭐⭐⭐ |
+| Besty AI | ⚠️ | Templates | ⭐⭐⭐⭐ |
+| **Hospitable** | ✅ | **Guidebook RAG** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hospitable (guidebook-aware), EliseAI (scale)
+
+**How It Works**:
+1. Host uploads guidebooks/house rules
+2. AI indexes and understands content
+3. Guest asks question → AI searches knowledge
+4. AI drafts response using guidebook info
+5. Host can override or approve
+
+**Key Differentiator**: AI **reads actual guidebooks**, not just templates.
+
+---
+
+### SKILL-194: smart-device-orchestration
+
+**Category**: iot-automation
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Native management of smart locks and thermostats tied directly to booking events.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Hostaway | ⚠️ | Via partners | ⭐⭐⭐ |
+| Guesty | ⚠️ | Via partners | ⭐⭐⭐ |
+| **Hospitable** | ✅ | **Native integration** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hospitable (NATIVE!)
+
+**Orchestration Flow**:
+1. Booking confirmed → Generate unique door code
+2. Pre-arrival → Send code to guest
+3. Check-in → Adjust thermostat to comfort
+4. Check-out → Expire code + energy-saving mode
+
+---
+
+### SKILL-195: ai-orphan-night-detection
+
+**Category**: revenue-optimization
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI automatically detects "orphan nights" (gap nights between bookings) and sends targeted offers.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Besty AI | ⚠️ | Inquiry winback | ⭐⭐⭐⭐ |
+| **Hospitable** | ✅ | **Proactive gap-fill** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hospitable
+
+**How It Works**:
+1. AI scans calendar for 1-2 night gaps
+2. Identifies guests who could extend
+3. Calculates optimal discount
+4. Sends personalized offer
+5. Tracks conversion
+
+---
+
+### SKILL-196: sentiment-escalation
+
+**Category**: ai-safety
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+AI detects guest frustration or issues and automatically flags for human escalation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| EliseAI | ✅ | Human handoff | ⭐⭐⭐⭐⭐ |
+| **Hospitable** | ✅ | **Sentiment detection** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Both excellent
+
+**Trigger Signals**:
+- Negative sentiment words
+- Complaint patterns
+- Urgent language
+- Safety concerns
+
+**Actions**:
+- Flag as "needs-review"
+- Pause automated responses
+- Notify host immediately
+
+**Critical**: **Safety net** for AI automation!
+
+---
+
+### SKILL-197: ai-guest-summaries
+
+**Category**: guest-intelligence
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI generates pre-check-in summaries of guest profiles to help hosts prepare.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Inntelo AI | ⚠️ | CDP profiles | ⭐⭐⭐⭐ |
+| **Hospitable** | ✅ | **Pre-arrival summaries** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hospitable
+
+**Summary Contents**:
+- Booking details
+- Previous stays (if any)
+- Communication analysis
+- Preferences mentioned
+- Concerns flagged
+- Personalization suggestions
+
+---
+
+### SKILL-198: cross-system-workflows
+
+**Category**: automation-orchestration
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Combined triggers that span messaging, devices, and tasks in a single automated workflow.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Hostaway | ⚠️ | Workflow builder | ⭐⭐⭐⭐ |
+| **Hospitable** | ✅ | **Cross-system** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hospitable
+
+**Example Workflow**:
+```
+Booking Confirmed →
+  1. Send welcome message
+  2. Create cleaning task
+  3. Generate door code
+  4. Schedule code delivery
+  5. Set thermostat schedule
+  6. Schedule review request
+```
+
+**Key**: **Single workflow** spans ALL systems.
+
+---
+
+### SKILL-199: ai-review-pattern-detection
+
+**Category**: analytics
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI analyzes guest reviews to identify recurring issues and improvement opportunities.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ⚠️ | Basic review mgmt | ⭐⭐⭐ |
+| **Hospitable** | ✅ | **Pattern detection** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hospitable
+
+**Analysis Types**:
+- Common complaint themes
+- Recurring praise areas
+- Property-specific issues
+- Seasonal patterns
+- Cross-property comparison
+
+**Output**: Proactive improvement suggestions, not just reactive alerts.
 
 ---
 
