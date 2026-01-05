@@ -1,10 +1,10 @@
-# Master Skill Registry: STR/LTR PMS + Fintech + Consumer + Hybrid + Investment + HOA
+# Master Skill Registry: STR/LTR PMS + Fintech + Consumer + Hybrid + Investment + HOA + AI Workforce
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 22 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, BILT, Hemlane, GuestWisely, **AppFolio**)
-> **Total Skills**: 257 📈 9 CATEGORIES: PMS, AI, Accounting, Enterprise, Fintech, Consumer, Hybrid, **Investment Mgmt**, **HOA Mgmt**
-> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez/GuestWisely), Enterprise (Guesty/Hostaway/**AppFolio**), Fintech (Baselane), Consumer (BILT), Hybrid (Hemlane), **Investment (AppFolio)**, **HOA (AppFolio)**
+> **Competitors Analyzed**: 23 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, BILT, Hemlane, GuestWisely, AppFolio, **HOAi**)
+> **Total Skills**: 265 📈 9 CATEGORIES: PMS, AI, Accounting, Enterprise, Fintech, Consumer, Hybrid, Investment Mgmt, HOA Mgmt
+> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez/GuestWisely), Enterprise (Guesty/Hostaway/AppFolio), Fintech (Baselane), Consumer (BILT), Hybrid (Hemlane), Investment (AppFolio), HOA (AppFolio/**HOAi**), **AI Workforce (HOAi)**
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 257 |
-| MVP Skills (P0) | 76 |
-| Phase 1 Skills (P1) | 123 |
-| Phase 2 Skills (P2) | 50 |
+| Total Skills | 265 |
+| MVP Skills (P0) | 79 |
+| Phase 1 Skills (P1) | 127 |
+| Phase 2 Skills (P2) | 51 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 22) | 26 |
+| Universal Skills (all 23) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -39,6 +39,7 @@
 | Unique Skills (Hemlane only) | 8 |
 | Unique Skills (GuestWisely only) | 6 |
 | Unique Skills (AppFolio only) | 20 |
+| Unique Skills (HOAi only) | 8 |
 
 ---
 
@@ -144,6 +145,10 @@
 | `student-housing` | 1 | Rent-by-bed leasing |
 | `mobile` | 1 | Offline mode |
 | `unit-turn` | 1 | Make-ready board |
+| `ai-workforce` | 4 | Specialized AI agents as digital employees |
+| `ai-workflow` | 2 | HITL dashboard, configurable coverage |
+| `ai-accounting` | 1 | AP automation agent |
+| `ai-budgeting` | 1 | Budget generation agent |
 
 ---
 
@@ -6817,6 +6822,238 @@ Mobile app functionality for key tasks when offline, syncing when connectivity r
 
 ---
 
+<!-- HOAI SKILLS (261-268) - AI WORKFORCE MODEL -->
+
+### SKILL-261: ai-voice-agent-multichannel
+
+**Category**: ai-workforce
+**Priority**: P0
+**Status**: CRITICAL
+
+**Description**: 
+24/7 AI voice agent handling inbound/outbound calls, SMS, web chat, and email with resident identification and action execution.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Boom AI | ✅ | Voice AI | ⭐⭐⭐⭐ |
+| EliseAI | ✅ | Leasing AI | ⭐⭐⭐⭐⭐ |
+| **HOAi** | ✅ | **Multi-Channel Voice Agent** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi (most comprehensive)
+
+**Metrics**:
+- Response time: <3 seconds
+- Resolution rate: >70% without human
+- CSAT: >4.5/5
+
+**Channels**:
+- Phone (inbound + outbound)
+- SMS (two-way)
+- Web chat (embeddable)
+- Email (ingestion + response)
+
+**Features**:
+- Natural Language Understanding (industry-specific)
+- Resident identification (PMS cross-reference)
+- Contextual conversation (cross-channel)
+- Action execution (not just information)
+- Intelligent escalation (transcript + summary)
+
+---
+
+### SKILL-262: ai-ap-agent
+
+**Category**: ai-workforce
+**Priority**: P0
+**Status**: CRITICAL
+
+**Description**: 
+Full accounts payable automation from invoice receipt to payment processing.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| AppFolio | ✅ | Smart Bill Entry | ⭐⭐⭐⭐ |
+| **HOAi** | ✅ | **AI AP Agent** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi (end-to-end)
+
+**Metrics**:
+- Processing time: >90% reduction
+- Accuracy: >99% data extraction
+- Cost: >75% reduction per invoice
+
+**Features**:
+- Invoice ingestion (email, vendor portals)
+- OCR + AI data extraction
+- GL coding (history + rules based)
+- Duplicate detection
+- Approval routing
+
+---
+
+### SKILL-263: ai-budget-agent
+
+**Category**: ai-budgeting
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI agent that automatically generates annual budgets with variance analysis and scenario modeling.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **HOAi** | ✅ | **AI Budget Agent** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi (UNIQUE!)
+
+**Metrics**:
+- Budget creation: >90% time reduction
+- Accuracy: 100% adherence to rules
+
+**Features**:
+- Data aggregation (historical, contracts, reserve studies)
+- Draft generation (meeting-ready)
+- Variance analysis (flagging + explanations)
+- Scenario modeling (real-time impact)
+
+---
+
+### SKILL-264: ai-research-agent
+
+**Category**: ai-workforce
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI agent providing instant answers from governing documents with semantic search and source citation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Visito AI | ✅ | Knowledge Hub | ⭐⭐⭐⭐ |
+| **HOAi** | ✅ | **AI Research Agent** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi (HOA document specialized)
+
+**Metrics**:
+- Response time: <5 seconds
+- Accuracy: >95% correct source
+
+**Features**:
+- Document ingestion (PDF, Word, scanned)
+- Semantic search (natural language)
+- Source citation (link + highlighted passage)
+
+---
+
+### SKILL-265: managerial-hub-hitl
+
+**Category**: ai-workflow
+**Priority**: P0
+**Status**: CRITICAL
+
+**Description**: 
+Human-in-the-loop dashboard for reviewing, approving, and managing AI agent work.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Basic dashboards | ⭐⭐⭐ |
+| **HOAi** | ✅ | **Managerial Hub** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi (PURPOSE-BUILT!)
+
+**Features**:
+- Unified task list (all agents)
+- One-click approval
+- Drill-down capability
+- Feedback mechanism (continuous improvement)
+- Customizable workflows
+
+**Why Critical**: Foundation for AI workforce trust model.
+
+---
+
+### SKILL-266: ai-scenario-modeling
+
+**Category**: analytics
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Real-time budget scenario modeling to see impact of different assumptions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **HOAi** | ✅ | **Scenario Modeling** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi
+
+**Features**:
+- Adjust variables (inflation, reserves, assessments)
+- Real-time impact visualization
+- Compare multiple scenarios
+- Export for board presentation
+
+---
+
+### SKILL-267: ai-outbound-calling
+
+**Category**: ai-voice
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI agent capability to make proactive outbound calls (reminders, follow-ups).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Boom AI | ⚠️ | Inbound only | ⭐⭐⭐ |
+| **HOAi** | ✅ | **Outbound Calling** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi
+
+**Use Cases**:
+- Payment reminders
+- Meeting notifications
+- Request follow-ups
+- Survey calls
+
+---
+
+### SKILL-268: configurable-ai-coverage
+
+**Category**: ai-workflow
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Configure when AI agents are active (after-hours, overflow, full front line).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | On/off only | ⭐⭐ |
+| **HOAi** | ✅ | **Configurable Coverage** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: HOAi
+
+**Coverage Modes**:
+| Mode | Description |
+|------|-------------|
+| After Hours | AI handles nights/weekends only |
+| Overflow | AI handles when humans busy |
+| Full Front Line | AI handles all inquiries |
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -6925,3 +7162,10 @@ Enterprise and specialized features
 | **Unit Turn Board** | **AppFolio** | **Visual make-ready dashboard (Kanban)** |
 | **Smart Bill Entry** | **AppFolio** | **AI invoice OCR + data extraction** |
 | **Mobile Offline** | **AppFolio** | **Full offline functionality with sync** |
+| **AI Workforce Model** | **HOAi** | **Specialized AI agents as digital employees (NEW PARADIGM!)** |
+| **Multi-Channel Voice Agent** | **HOAi** | **Phone + SMS + Chat + Email unified agent** |
+| **AI AP Agent** | **HOAi** | **Full invoice-to-payment automation** |
+| **AI Budget Agent** | **HOAi** | **Automated budget generation (UNIQUE!)** |
+| **Human-in-the-Loop Dashboard** | **HOAi** | **AI work approval hub (CRITICAL!)** |
+| **Configurable AI Coverage** | **HOAi** | **After-hours / overflow / full front line** |
+| **AI Outbound Calling** | **HOAi** | **Proactive AI calls (reminders, follow-ups)** |
