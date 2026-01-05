@@ -368,6 +368,7 @@ RawKnowledgetoSkill/
 ├── docs/
 │   ├── PIPELINE_TRACKER.md              ← THIS FILE
 │   ├── MVP_PRIORITY_GAPS.md             ← Gap definitions
+│   ├── OPEN_ITEMS_TRACKER.md            ← Open questions & areas needing attention
 │   ├── KNOWLEDGE_TO_SKILL_WORKFLOW.md   ← Process documentation
 │   ├── RESEARCH_ANALYST_GUIDE.md        ← Stage 1 guide
 │   └── prompts/

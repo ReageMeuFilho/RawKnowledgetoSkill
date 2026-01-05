@@ -289,6 +289,7 @@ You ◀──receive───────┘
 - [ ] Prompt requests state machines
 - [ ] Prompt requests API specs
 - [ ] Quality checklist included
+- [ ] Areas needing attention logged to `OPEN_ITEMS_TRACKER.md`
 
 ### Gate 3: After Stage 3 (Engineering Spec)
 - [ ] All prompt sections completed
