@@ -300,3 +300,5 @@ EliseAI's architecture validates our approach:
 3. **Delinquency Scripts** - Empathetic collection message templates
 4. **Fair Housing Rules** - What phrases/topics trigger compliance checks?
 
+
+

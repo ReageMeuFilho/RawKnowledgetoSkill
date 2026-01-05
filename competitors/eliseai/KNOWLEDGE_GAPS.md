@@ -338,3 +338,5 @@ EliseAI's **fair housing compliance** (GAP-EAI-004) is a regulatory requirement 
 - Unified platform (not just housing)
 - Better pricing intelligence (PriceLabs-level)
 
+
+

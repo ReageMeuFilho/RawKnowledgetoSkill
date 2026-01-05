@@ -474,3 +474,5 @@ When processing a PRD, now extract:
 PRD → SKILLS → TOOLS → INTEGRATIONS → DATA → MEMORY → MCP SERVERS
 ```
 
+
+

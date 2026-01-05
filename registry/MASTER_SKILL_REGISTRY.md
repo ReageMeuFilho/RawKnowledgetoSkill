@@ -2,9 +2,9 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 13 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, **EliseAI**)
-> **Total Skills**: 177
-> **BENCHMARK**: EliseAI (60%+ of top 50 operators, 30M+ conversations)
+> **Competitors Analyzed**: 14 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, **Hostaway**)
+> **Total Skills**: 186
+> **BENCHMARKS**: EliseAI (LTR leader), Guesty & Hostaway (STR enterprise leaders)
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 177 |
-| MVP Skills (P0) | 56 |
-| Phase 1 Skills (P1) | 80 |
-| Phase 2 Skills (P2) | 33 |
+| Total Skills | 186 |
+| MVP Skills (P0) | 60 |
+| Phase 1 Skills (P1) | 83 |
+| Phase 2 Skills (P2) | 35 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 13) | 26 |
+| Universal Skills (all 14) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -30,6 +30,7 @@
 | Unique Skills (PriceLabs only) | 12 |
 | Unique Skills (Vendoroo only) | 11 |
 | Unique Skills (EliseAI only) | 10 |
+| Unique Skills (Hostaway only) | 9 |
 
 ---
 
@@ -83,6 +84,14 @@
 | `ai-collaboration` | 2 | Human handoff, status updates |
 | `training-data` | 1 | Conversation training moat |
 | `enterprise-ops` | 1 | Centralized multi-portfolio |
+| `white-label` | 1 | Reseller, custom branding |
+| `trust-accounting` | 1 | Legal fund separation |
+| `cleaner-ops` | 1 | Mobile portal, checklists |
+| `workflow-builder` | 1 | Visual automation builder |
+| `multi-engine` | 1 | Multiple booking sites |
+| `rbac` | 1 | Granular permissions |
+| `ai-messaging` | 1 | Suggestions, sentiment |
+| `scale` | 1 | 1000+ property proven |
 
 ---
 
@@ -4495,6 +4504,255 @@ Proactive notifications to residents at every work order milestone.
 5. Completed
 
 **Impact**: Reduces "where's my repair?" calls by proactively communicating.
+
+---
+
+<!-- HOSTAWAY UNIQUE SKILLS (178-186) - ENTERPRISE STR COMPETITOR -->
+
+### SKILL-178: 93-percent-message-automation
+
+**Category**: communication
+**Priority**: P0
+**Status**: NEEDS VALIDATION
+
+**Description**: 
+Platform claims 93% of guest communications can be automated (vs competitors' 30-50%).
+
+**Competitor Coverage**:
+| Competitor | Has | Claim | Quality |
+|------------|-----|-------|---------|
+| EliseAI | ✅ | ~99% work orders | ⭐⭐⭐⭐⭐ |
+| All Others | ⚠️ | 30-50% | ⭐⭐⭐ |
+| **Hostaway** | ✅ | **93%** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway (claimed)
+
+**How Achieved**:
+- AI message suggestions and auto-replies
+- Trigger-based scheduled messages
+- Auto-responses for common inquiries
+- AI classification by intent/type
+- Sentiment analysis
+- Smart quick replies
+
+**Validation Needed**: How is 93% measured? What's in the 7%?
+
+---
+
+### SKILL-179: white-label-platform
+
+**Category**: white-label
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Full white-label capabilities for agencies and resellers to build custom branded solutions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| **Hostaway** | ✅ | **Full white-label** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway (UNIQUE!)
+
+**Features**:
+- Rebrand with client logos/colors
+- Host on custom domain
+- Multi-tenant support
+- Reseller program with markup
+- Custom branding throughout
+
+**Strategic Note**: Our open-source approach = infinite customization (better than white-label?)
+
+---
+
+### SKILL-180: trust-accounting
+
+**Category**: trust-accounting
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Separate trust accounts for owner funds, maintaining legal separation from operating funds.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❓ | Unknown | N/A |
+| **Hostaway** | ✅ | **Full trust** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway
+
+**Features**:
+- Separate owner trust accounts
+- Commission holds for expenses/damages
+- Full reconciliation
+- Legal compliance
+- Automated owner payouts
+
+**COMPLIANCE NOTE**: Required in many US states and jurisdictions!
+
+---
+
+### SKILL-181: cleaner-portal-mobile
+
+**Category**: cleaner-ops
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Dedicated mobile portal for cleaners/vendors with task management, checklists, and photo documentation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| EliseAI | ✅ | Maintenance App | ⭐⭐⭐⭐⭐ |
+| Vendoroo | ⚠️ | Vendor portal | ⭐⭐⭐⭐ |
+| **Hostaway** | ✅ | **Cleaner portal** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway (cleaner-specific), EliseAI (technician-specific)
+
+**Features**:
+- Task assignment with notifications
+- Digital checklists
+- Required photo uploads
+- Time tracking per task
+- Quality rating system
+
+---
+
+### SKILL-182: custom-workflow-builder
+
+**Category**: workflow-builder
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Visual workflow builder for complex business process automation with conditional logic.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Templates | ⭐⭐⭐⭐ |
+| All Others | ⚠️ | Basic rules | ⭐⭐⭐ |
+| **Hostaway** | ✅ | **Visual builder** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway
+
+**Capabilities**:
+- Define triggers (booking created, payment, etc.)
+- Perform actions (message, task, field update)
+- Complex conditional logic (if/then/else)
+- Multi-step sequential workflows
+- Approval chains
+- Escalation rules
+
+---
+
+### SKILL-183: multi-booking-engine
+
+**Category**: multi-engine
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Create multiple separate booking websites for different property groups.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ⚠️ | Single site | ⭐⭐⭐ |
+| **Hostaway** | ✅ | **Multiple engines** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway (UNIQUE!)
+
+**Use Cases**:
+- Different brands for locations
+- Separate sites for property types
+- White-label sites for different owners
+
+---
+
+### SKILL-184: granular-rbac
+
+**Category**: rbac
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Fine-grained role-based access control at property, feature, and action level.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Role-based | ⭐⭐⭐⭐ |
+| EliseAI | ⚠️ | Multi-portfolio | ⭐⭐⭐⭐ |
+| **Hostaway** | ✅ | **Granular** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway
+
+**Permission Levels**:
+- Property-level (assign to specific properties)
+- Feature-level (which features per role)
+- Action-level (CRUD per feature)
+- Data visibility controls
+- **Custom Roles** (create your own)
+
+---
+
+### SKILL-185: ai-message-generation
+
+**Category**: ai-messaging
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+AI-powered message suggestions, auto-drafting, and sentiment analysis.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Besty AI | ✅ | AI responses | ⭐⭐⭐⭐⭐ |
+| EliseAI | ✅ | 30M trained | ⭐⭐⭐⭐⭐ |
+| **Hostaway** | ✅ | **Full AI suite** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Tied (Besty, EliseAI, Hostaway all strong)
+
+**Capabilities**:
+- AI suggestions for response content
+- Auto-generate response drafts
+- AI classification by intent
+- Sentiment analysis
+- Smart reply suggestions
+
+---
+
+### SKILL-186: 1000-property-scale
+
+**Category**: scale
+**Priority**: P1
+**Status**: DOCUMENTED
+
+**Description**: 
+Platform tested and proven to handle 1000+ property portfolios.
+
+**Competitor Coverage**:
+| Competitor | Has | Scale | Quality |
+|------------|-----|-------|---------|
+| Guesty | ✅ | 5000+ | ⭐⭐⭐⭐⭐ |
+| EliseAI | ✅ | Enterprise | ⭐⭐⭐⭐⭐ |
+| **Hostaway** | ✅ | **1000+** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Guesty (largest scale documented)
+
+**Enterprise Features**:
+- Sub-second channel sync
+- Database optimized for large datasets
+- Multi-region deployment
+- Auto-scaling
+- 99.9% uptime SLA
+- SOC 2 Type II
 
 ---
 

@@ -244,3 +244,5 @@ status: Enum (Held, Paid, Refunded)
 | **Upsell Attach Rate** | \> 15% | Percentage of bookings adding Early Check-in or Gap Night. |
 | **Turnover Compliance** | 100% | Percentage of cleanings with verified photos before Check-in. |
 
+
+

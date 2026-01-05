@@ -388,3 +388,5 @@ AI detects issues from patterns and proactively offers help.
 | **Booking Engine** | Mews | A/B testing |
 | **Analytics** | Mews | GOPPAR |
 
+
+

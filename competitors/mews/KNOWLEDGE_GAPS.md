@@ -269,3 +269,5 @@
 3. Staff shifts (STR uses contractors)
 4. Hourly bookings (niche for STR)
 
+
+

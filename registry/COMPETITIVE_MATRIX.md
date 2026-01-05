@@ -115,3 +115,5 @@
 ### Gaps in Market
 [What skills does NO competitor have well?]
 
+
+
