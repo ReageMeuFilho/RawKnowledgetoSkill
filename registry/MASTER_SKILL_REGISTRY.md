@@ -2,9 +2,9 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 16 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, **Hospitable**)
-> **Total Skills**: 199
-> **BENCHMARKS**: EliseAI (LTR), Guesty/Hostaway (Enterprise), Lodgify/Hospitable (SMB)
+> **Competitors Analyzed**: 17 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, **OwnerRez**)
+> **Total Skills**: 206 🎉 MILESTONE: 200+ SKILLS!
+> **BENCHMARKS**: By Segment - SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway/EliseAI)
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 199 |
-| MVP Skills (P0) | 65 |
-| Phase 1 Skills (P1) | 88 |
-| Phase 2 Skills (P2) | 38 |
+| Total Skills | 206 |
+| MVP Skills (P0) | 67 |
+| Phase 1 Skills (P1) | 91 |
+| Phase 2 Skills (P2) | 40 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 16) | 26 |
+| Universal Skills (all 17) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -33,6 +33,7 @@
 | Unique Skills (Hostaway only) | 9 |
 | Unique Skills (Lodgify only) | 6 |
 | Unique Skills (Hospitable only) | 7 |
+| Unique Skills (OwnerRez only) | 7 |
 
 ---
 
@@ -103,6 +104,11 @@
 | `ai-safety` | 1 | Sentiment escalation |
 | `guest-intelligence` | 1 | Guest summaries |
 | `automation-orchestration` | 1 | Cross-system workflows |
+| `accounting-integration` | 2 | QuickBooks-first, deposit sync |
+| `commercial-model` | 1 | Modular pricing |
+| `pricing-optimization` | 1 | Channel rate testing |
+| `booking-operations` | 1 | Quote-to-booking |
+| `legal-compliance` | 1 | Digital rental agreements |
 
 ---
 
@@ -5128,6 +5134,208 @@ AI analyzes guest reviews to identify recurring issues and improvement opportuni
 - Cross-property comparison
 
 **Output**: Proactive improvement suggestions, not just reactive alerts.
+
+---
+
+<!-- OWNERREZ UNIQUE SKILLS (200-206) - MID-MARKET ACCOUNTING LEADER -->
+<!-- 🎉 MILESTONE: SKILL-200 = 200TH SKILL IN REGISTRY! -->
+
+### SKILL-200: quickbooks-first-accounting 🎉
+
+**Category**: accounting-integration
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Platform designed to offload full accounting to QuickBooks Online while providing detailed sync rules and deposit syncing.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Hostaway | ⚠️ | QB integration | ⭐⭐⭐⭐ |
+| Guesty | ⚠️ | QB integration | ⭐⭐⭐⭐ |
+| **OwnerRez** | ✅ | **QB-FIRST design** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: OwnerRez (DESIGNED for QB, not just integrates)
+
+**Philosophy**:
+- OwnerRez = operational ledger
+- QuickBooks = double-entry accounting
+- Deposit syncing = to-the-penny reconciliation
+- Owner payouts sync as checks/bills in QB
+
+**Critical For**: US mid-market PMCs with accounting requirements.
+
+---
+
+### SKILL-201: deposit-syncing-reconciliation
+
+**Category**: accounting-integration
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Deposit syncing for to-the-penny bank reconciliations in QuickBooks Online.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Hostaway | ⚠️ | Basic sync | ⭐⭐⭐ |
+| **OwnerRez** | ✅ | **To-the-penny** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: OwnerRez
+
+**How It Works**:
+1. Guest makes payment
+2. OwnerRez records in ledger
+3. Auto-sync to QuickBooks
+4. QB matches bank deposit exactly
+5. Reconciliation complete
+
+**Critical For**: Audit compliance, owner trust, accountant efficiency.
+
+---
+
+### SKILL-202: modular-pricing-architecture
+
+**Category**: commercial-model
+**Priority**: P1
+**Status**: OPTIONAL
+
+**Description**: 
+Base PMS plus add-on modules allowing granular control over cost structure.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Tiered plans | ⭐⭐⭐ |
+| **OwnerRez** | ✅ | **Modular add-ons** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: OwnerRez
+
+**Modules**:
+- **Base PMS**: Calendar, reservations, basic features
+- **PM Module**: Owner statements, commissions
+- **QuickBooks Integration**: Premium sync features
+- **Hosted Websites**: Direct booking sites
+- **WordPress Plugin**: WP integration
+- **SMS Messaging**: Metered/add-on
+
+**Key**: Pay only for what you need.
+
+---
+
+### SKILL-203: channel-rate-testing
+
+**Category**: pricing-optimization
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Tools to compare actual OTA listings vs expected nightly prices to verify rate accuracy.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| PriceLabs | ⚠️ | Rate analysis | ⭐⭐⭐⭐ |
+| **OwnerRez** | ✅ | **Rate testing** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: OwnerRez
+
+**Use Cases**:
+- Verify channel sync is working
+- Compare markup across channels
+- Identify pricing discrepancies
+- Test before going live
+
+**Key**: **Audit capability** for pricing integrity.
+
+---
+
+### SKILL-204: quote-to-booking-workflow
+
+**Category**: booking-operations
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Create quotes with taxes/fees, send to guests, and convert to bookings upon acceptance.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Booking flow | ⭐⭐⭐⭐ |
+| **OwnerRez** | ✅ | **Formal quotes** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: OwnerRez
+
+**Flow**:
+1. Guest inquires
+2. PM creates quote with all charges
+3. Quote sent to guest
+4. Guest reviews and accepts
+5. Quote converts to booking
+6. Payment collected
+
+**Use Cases**: Custom pricing, groups, long-stays, corporate.
+
+---
+
+### SKILL-205: digital-rental-agreements
+
+**Category**: legal-compliance
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Custom rental agreements per property/channel with digital signature collection and booking automation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Basic contracts | ⭐⭐⭐⭐ |
+| Hostaway | ⚠️ | E-sign | ⭐⭐⭐⭐ |
+| **OwnerRez** | ✅ | **Full workflow** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: OwnerRez
+
+**Features**:
+- Custom agreements per property
+- Different agreements per channel
+- Digital signature collection
+- Auto-send on booking creation
+- Require signature before check-in
+- Store signed agreements
+
+**Critical For**: **Legal protection** in booking flow.
+
+---
+
+### SKILL-206: owner-stay-tracking
+
+**Category**: owner-management
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Special reservation status for owner stays that appear appropriately in calendars and financials.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Manual blocks | ⭐⭐⭐ |
+| **OwnerRez** | ✅ | **Owner stay status** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: OwnerRez
+
+**How It Works**:
+- Owner stay blocks calendar
+- No revenue recorded
+- Separate from guest bookings
+- Appears in owner reports
+- Cleaning tasks can still trigger
+
+**Key**: **Clean accounting** for owner use vs rental income.
 
 ---
 
