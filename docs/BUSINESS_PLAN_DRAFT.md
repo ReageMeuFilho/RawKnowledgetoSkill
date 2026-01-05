@@ -1,17 +1,47 @@
-# Unified Treasury OS: Business Plan
+# Citadel OS: Business Plan
+## The Global Real Estate Operating System
 
-> **Version**: Draft 1.0
+> **Version**: Draft 2.0 (Enhanced)
 > **Date**: January 2026
 > **Author**: [Founder]
 > **Status**: Working Document
+> **Target Markets**: US, Brazil, Spain, Portugal, Italy, Argentina
 
 ---
 
 ## Executive Summary
 
-We are building **Unified Treasury OS**—a next-generation property management operating system that combines the best capabilities from 23+ market leaders into a single, AI-native platform. Unlike competitors who bolt AI onto legacy systems, we're building from first principles: a **skill-based architecture** where every capability is systematically researched, specified, and implemented to production-ready standards.
+We are building **Citadel OS**—a vertically integrated Real Estate Operating System that serves three interconnected fronts: **Landlords**, **HOA/Condos**, and **Residents**. By becoming the **financial operating system** for residential real estate, we capture transaction economics, data advantage, network effects, and switching costs that create a durable competitive moat.
 
-**Our Moat**: A proprietary **Knowledge-to-Skill Methodology** that transforms competitive intelligence into shippable product capabilities at unprecedented speed and quality. This methodology combines **probabilistic AI** (agents, LLMs, retrieval) with **deterministic workflows** (state machines, policies, data contracts) to create reliable, auditable, and scalable systems.
+### Strategic Thesis
+
+> **"Own the payment, own the relationship."**
+
+Unlike competitors who offer siloed tools (landlord-only or resident-only), we're building a **unified platform** where:
+- Landlords get banking + automation + AI
+- HOAs get governance + financial operations + AI concierge
+- Residents get rewards + credit building + homeownership pathway
+
+This **three-front architecture** creates network effects that neither side can achieve alone.
+
+### Three Moats
+
+| Moat | Description | Defensibility |
+|------|-------------|---------------|
+| **1. Fintech Integration** | Real FDIC-insured accounts, not just payment processing | Regulatory barriers, switching costs |
+| **2. Three-Front Network Effects** | Landlords ↔ Residents ↔ Merchants | Viral growth, data compounding |
+| **3. Knowledge-to-Skill Methodology** | Systematic pipeline for production-ready capabilities | Speed, quality, compounding IP |
+
+### Key Metrics Targets (Year 3)
+
+| Metric | Target |
+|--------|--------|
+| Properties Under Management | 250,000+ units |
+| Active Resident Users | 500,000+ |
+| Annual Payment Volume | $5B+ |
+| Annual Revenue | $75-100M |
+| Gross Margin | 65-75% |
+| LTV/CAC Ratio | 6-19x (by segment) |
 
 ---
 
@@ -19,18 +49,51 @@ We are building **Unified Treasury OS**—a next-generation property management 
 
 ## 1.1 What We're Building
 
-**Unified Treasury OS** is a comprehensive property management platform that spans:
+**Citadel OS** is a vertically integrated Real Estate Operating System with **three interconnected fronts**:
 
-| Vertical | Capabilities | Target Users |
-|----------|--------------|--------------|
-| **Short-Term Rental (STR)** | Channel management, dynamic pricing, guest communication, operations | Airbnb hosts, vacation rental managers |
-| **Long-Term Rental (LTR)** | Leasing, tenant management, maintenance, accounting | Property managers, landlords |
-| **Fintech** | Banking, payments, tax automation, compliance | All property owners/managers |
-| **Consumer** | Rent rewards, credit building, loyalty | Renters, residents |
-| **Investment** | Portfolio analytics, investor relations, capital management | Real estate investors, funds |
-| **HOA/Community** | Association management, architectural review, violations | HOA managers, board members |
+| Front | Target User | Core Value Proposition |
+|-------|-------------|----------------------|
+| **Landlord OS** | Individual landlords & small property managers (1-100 units) | End-to-end rental property automation: banking, bookkeeping, rent collection, tenant management, AI-powered communications |
+| **HOA/Condo OS** | Community associations, condo boards, property managers | Complete association management: dues collection, vendor coordination, document management, board governance, AI concierge |
+| **Resident Rewards + Digital Account** | Renters, condo owners, mortgage payers | Rewards on housing payments, credit building, digital banking, merchant offers, pathway to homeownership |
 
-**The Vision**: One platform that handles **any property type** with **AI-native operations**—from a single Airbnb host to a 50,000-unit institutional portfolio.
+### The Platform Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           CITADEL OS PLATFORM                                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────────────────┐  │
+│  │   LANDLORD OS   │  │   HOA/CONDO OS  │  │  RESIDENT REWARDS + ACCOUNT │  │
+│  │                 │  │                 │  │                             │  │
+│  │ • Banking       │  │ • Dues Collect  │  │ • Points Engine             │  │
+│  │ • Rent Collect  │  │ • Board Portal  │  │ • Digital Account           │  │
+│  │ • Bookkeeping   │  │ • Vendor Mgmt   │  │ • Credit Building           │  │
+│  │ • Tenant Mgmt   │  │ • Documents     │  │ • Merchant Rewards          │  │
+│  │ • Maintenance   │  │ • AI Concierge  │  │ • Debit Card                │  │
+│  │ • AI Comms      │  │ • Compliance    │  │ • Homeownership Path        │  │
+│  └────────┬────────┘  └────────┬────────┘  └──────────────┬──────────────┘  │
+│           │                    │                          │                  │
+│           └────────────────────┼──────────────────────────┘                  │
+│                                │                                             │
+│  ┌─────────────────────────────┴─────────────────────────────────────────┐  │
+│  │                        SHARED PLATFORM LAYER                           │  │
+│  │                                                                        │  │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌────────────┐ │  │
+│  │  │   AI ENGINE  │  │   PAYMENTS   │  │   BANKING    │  │    DATA    │ │  │
+│  │  │              │  │              │  │              │  │            │ │  │
+│  │  │ • LLM Layer  │  │ • ACH/Cards  │  │ • BaaS       │  │ • Identity │ │  │
+│  │  │ • Voice AI   │  │ • Processing │  │ • Accounts   │  │ • Payments │ │  │
+│  │  │ • Automation │  │ • Rewards    │  │ • Cards      │  │ • Credit   │ │  │
+│  │  │ • Insights   │  │ • Ledger     │  │ • Savings    │  │ • Behavior │ │  │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘  └────────────┘ │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+**The Vision**: One platform that handles **any residential property type** with **AI-native operations** and **embedded fintech**—creating a three-sided network where landlords, associations, and residents all benefit from participation.
 
 ## 1.2 Why Now?
 
@@ -378,32 +441,82 @@ AI generates action request   →    Policy engine validates
 
 ## 5.1 Why We Win
 
-### Moat 1: The Skill Registry (Data Asset)
+### The Unique Competitive Position
+
+Our position in the market is the **convergence of three critical pillars** that no single competitor addresses:
+
+```
+                    AI-POWERED OPERATIONS
+                         ↑
+                         |
+    EliseAI, HOAi/Vantaca  |     [CITADEL OS]
+    (Enterprise AI)        |     (Full-Stack AI + Banking + Rewards)
+                         |
+    ←--------------------+--------------------→
+    NO EMBEDDED BANKING  |          EMBEDDED
+    OR RESIDENT REWARDS  |          BANKING & REWARDS
+                         |
+    AppFolio, Buildium     |     Stessa, BILT
+    (Traditional PMS)      |     (Fintech/Rewards Point Solutions)
+                         |
+                         ↓
+                    LIMITED AI OPERATIONS
+```
+
+**Our Unique Value Proposition**: The only platform that combines an **AI-powered workforce**, **integrated banking/finance**, and a **resident rewards engine** into a single, unified operating system for the underserved small-to-mid-market.
+
+### The Five Compounding Moats
+
+#### Moat 1: Fintech Integration (Switching Cost Moat)
+- Real FDIC-insured bank accounts (not just payment processing)
+- Property-specific banking with high-yield savings
+- Resident digital accounts with debit cards
+- **Compounds**: Banking relationships are sticky; credit history locks in users
+
+#### Moat 2: Three-Front Network Effects (Network Moat)
+```
+                    ┌─────────────────────┐
+                    │   More Landlords    │
+                    │   Join Platform     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+┌─────────────────────┐       ┌─────────────────────┐
+│   Better Rewards    │◄──────│   More Residents    │
+│   for Residents     │       │   Eligible          │
+└──────────┬──────────┘       └──────────┬──────────┘
+           │                             │
+           ▼                             ▼
+┌─────────────────────┐       ┌─────────────────────┐
+│   More Merchant     │       │   More Residents    │
+│   Partners          │       │   Enroll            │
+└──────────┬──────────┘       └──────────┬──────────┘
+           │                             │
+           └──────────────┬──────────────┘
+                          │
+                          ▼
+                ┌─────────────────────┐
+                │   Higher Retention  │──────▶ More Landlords Join
+                └─────────────────────┘
+```
+
+#### Moat 3: The Skill Registry (Data Asset)
 - **265 skills** mapped across 23 competitors
 - Normalized taxonomy with IDs, categories, priorities
 - Coverage matrix showing who does what
 - **Compounds**: Every new competitor analyzed adds to the registry
 
-### Moat 2: The Specification Library (IP Asset)
-- Production-ready specs for each skill
-- Data schemas, state machines, APIs, user stories
-- **Compounds**: Each spec informs the next; patterns emerge
-
-### Moat 3: The Methodology (Process Asset)
+#### Moat 4: The Knowledge-to-Skill Methodology (Process Asset)
 - 4-stage pipeline with quality gates
 - Agent prompts tuned for property management domain
+- Combines probabilistic AI with deterministic workflows
 - **Compounds**: Pipeline gets faster/better with each cycle
 
-### Moat 4: The Evaluation Sets (Quality Asset)
+#### Moat 5: The Evaluation Framework (Quality Asset)
 - Test cases for AI accuracy
 - Integration test scenarios
-- Compliance verification
+- Compliance verification (Fair Housing, FCRA, etc.)
 - **Compounds**: Every bug fixed becomes a test case
-
-### Moat 5: The Open Items Tracker (Knowledge Asset)
-- 42+ open questions logged per major skill
-- Prioritized backlog of decisions needed
-- **Compounds**: Nothing gets lost; every edge case captured
 
 ## 5.2 Defensibility Over Time
 
@@ -429,40 +542,92 @@ AI generates action request   →    Policy engine validates
 
 # PART 6: GO-TO-MARKET
 
-## 6.1 Market Entry: STR Professional Managers
+## 6.1 Market Entry Strategy: Hybrid Landlord + Resident
 
-**Why STR First**:
-- Highest pain (fragmented tools, channel management complexity)
-- Highest willingness to pay for automation
-- Most innovation happening (pricing, AI, operations)
-- Natural expansion to LTR (many managers do both)
+**Strategic Approach**: Launch Landlord OS and Resident Rewards **simultaneously** as interconnected products, with HOA expansion in Phase 2.
 
-**Target Segment**: 50-500 unit professional STR managers
+**Rationale**:
+1. **Symbiotic Value Creation**: Landlord OS provides property-side infrastructure for fee-free rent payments; Resident Rewards provides immediate value to tenants
+2. **Differentiated Positioning**: Unlike BILT (large multifamily) or Stessa (landlord-only), we serve individual landlords + resident rewards—a unique combination
+3. **Faster Network Effects**: Launching both sides simultaneously accelerates the flywheel
+4. **Banking as Connective Tissue**: Property accounts for landlords and digital accounts for residents share infrastructure
 
-**Wedge Product**: AI-powered unified inbox + smart pricing + operations automation
+**Target Segments**:
+- **Landlords**: Individual investors (1-50 units), self-managing
+- **Residents**: Tenants at participating properties seeking rewards and credit building
 
 ## 6.2 Expansion Path
 
 ```
-Year 1: STR Professional (50-500 units)
+Year 1: Landlord OS + Resident Rewards (US) + Brazil MVP
         ↓
-Year 2: STR Enterprise (500+ units) + LTR Entry
+Year 2: HOA/Condo OS + Scale to 100K+ units
         ↓
-Year 3: Multi-family + HOA + Investment Management
+Year 3: International (Spain, Portugal, Italy) + Enterprise tier
         ↓
-Year 4: Full platform + Fintech + Consumer
+Year 4: Platform effects (marketplace, white-label, API)
         ↓
-Year 5: Platform (marketplace, white-label, API)
+Year 5: Full financial services (lending, insurance, investment)
 ```
 
-## 6.3 Pricing Model
+## 6.3 Revenue Model
 
-| Tier | Target | Price | Includes |
-|------|--------|-------|----------|
-| **Starter** | 1-10 units | Free / $29/mo | Core PMS, limited AI |
-| **Professional** | 11-50 units | $99-199/mo | Full AI, pricing, ops |
-| **Business** | 51-200 units | $299-499/mo | Advanced analytics, API |
-| **Enterprise** | 200+ units | Custom | White-label, dedicated support |
+### Diversified Revenue Streams
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         REVENUE MODEL ARCHITECTURE                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌───────────┐           │
+│  │    SaaS     │  │ Transaction │  │  Financial  │  │ Marketplace│          │
+│  │Subscriptions│  │    Fees     │  │  Services   │  │ Commissions│          │
+│  │             │  │             │  │             │  │            │          │
+│  │ • Landlord  │  │ • Payment   │  │ • Interest  │  │ • Screening│          │
+│  │   tiers     │  │   processing│  │   income    │  │ • Insurance│          │
+│  │ • HOA tiers │  │ • Card fees │  │ • Interchange│ │ • Vendors  │          │
+│  │             │  │             │  │ • Card rev  │  │            │          │
+│  │             │  │             │  │   share     │  │            │          │
+│  │   ~25%      │  │   ~30%      │  │   ~35%      │  │   ~10%     │          │
+│  └─────────────┘  └─────────────┘  └─────────────┘  └───────────┘           │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Landlord OS Pricing
+
+| Tier | Units | Monthly Price | Key Features |
+|------|-------|---------------|--------------|
+| **Starter** | 1-3 | **$0** | Banking, basic rent collection, document storage |
+| **Growth** | 4-20 | **$15/unit** | + AI bookkeeping, tenant screening, maintenance |
+| **Professional** | 21-100 | **$12/unit** | + Voice AI, workflow automation, owner portal |
+| **Enterprise** | 100+ | **Custom** | + White-label, API access, dedicated support |
+
+### Resident Rewards Pricing
+
+| Product | Price | Revenue Model |
+|---------|-------|---------------|
+| **Rewards Program** | **$0** | Funded by interchange, merchant commissions |
+| **Digital Account** | **$0** | Funded by interest spread, interchange |
+| **Debit Card** | **$0** | Funded by interchange |
+| **Credit Reporting** | **$0** | Funded by property fees |
+| **Premium Tier** | **$9.99/month** | Enhanced rewards, priority support |
+
+### Unit Economics by Segment
+
+| Segment | ARPU | Gross Margin | CAC | Payback | LTV (3yr) | LTV/CAC |
+|---------|------|--------------|-----|---------|-----------|---------|
+| **Landlord OS** | $150/mo | 70% | $200 | 2 mo | $3,780 | **19x** |
+| **HOA/Condo OS** | $300/mo | 75% | $1,500 | 7 mo | $8,100 | **5.4x** |
+| **Resident Rewards** | $15/mo | 60% | $50 | 6 mo | $324 | **6.5x** |
+
+### Revenue Projection
+
+| Year | Landlord OS | HOA/Condo OS | Resident Rewards | **Total** |
+|------|-------------|--------------|------------------|-----------|
+| **Year 1** | $2.5M | $0.5M | $2.0M | **$5.0M** |
+| **Year 2** | $10M | $5M | $10M | **$25M** |
+| **Year 3** | $25M | $15M | $35M | **$75M** |
 
 ---
 
@@ -521,29 +686,54 @@ Year 5: Platform (marketplace, white-label, API)
 ## 8.1 Current State
 
 - **Founder**: Product vision, methodology design, orchestration
-- **AI Agents**: Research, engineering specification
+- **AI Agents**: Research, engineering specification (Knowledge-to-Skill pipeline)
 - **Cursor AI**: Quality gates, prompt engineering, final specs
 
-## 8.2 Hiring Plan
+## 8.2 Team Structure
 
-| Role | When | Purpose |
-|------|------|---------|
-| **Founding Engineer (Full-stack)** | Month 1 | Core platform build |
-| **AI/ML Engineer** | Month 2 | Agent development, fine-tuning |
-| **Frontend Engineer** | Month 3 | HITL dashboard, customer UI |
-| **DevOps/Platform** | Month 4 | Infrastructure, CI/CD |
-| **Product Designer** | Month 4 | UX for complex workflows |
+### Year 1 Team (25-30 FTEs)
 
-## 8.3 Funding Needs
+| Function | Headcount | Key Roles |
+|----------|-----------|-----------|
+| **Engineering** | 12-15 | CTO, Backend (5), Frontend (3), Mobile (2), DevOps (2), Data (2) |
+| **Product** | 3-4 | CPO, Product Managers (2), Designer (1) |
+| **Operations** | 3-4 | COO, Customer Success (2), Support (1) |
+| **Growth** | 4-5 | CMO, Content (1), Paid (1), Partnerships (1), Community (1) |
+| **Finance/Legal** | 2-3 | CFO, Finance (1), Compliance (1) |
+| **Executive** | 2 | CEO, Chief of Staff |
 
-| Use | Amount | Timeline |
-|-----|--------|----------|
-| Team (5 engineers, 12 months) | $750K | Year 1 |
-| Infrastructure (cloud, APIs) | $100K | Year 1 |
-| Tools & Services | $50K | Year 1 |
-| Legal & Compliance | $50K | Year 1 |
-| Buffer | $50K | Year 1 |
-| **Total Seed** | **$1M** | 18-month runway |
+### Year 3 Team (80-100 FTEs)
+
+| Function | Headcount | Growth Areas |
+|----------|-----------|--------------|
+| **Engineering** | 35-40 | AI/ML team, platform team, security |
+| **Product** | 10-12 | Dedicated PMs per front, research |
+| **Operations** | 15-20 | Scaled support, implementation, success |
+| **Growth** | 15-18 | Sales team (HOA), expanded marketing |
+| **Finance/Legal** | 8-10 | Accounting, compliance, legal |
+
+## 8.3 Funding Ask
+
+**Funding Ask**: $10-15M Seed/Series A
+
+**Runway**: 18-24 months
+
+| Category | Allocation | Purpose |
+|---|---:|---|
+| **Team (60%)** | $6.0M | Hire key engineering, product, and growth talent |
+| **Marketing & Sales (20%)** | $2.0M | Fund initial GTM, content, and paid acquisition |
+| **Technology & Infrastructure (10%)** | $1.0M | BaaS, cloud, AI, and other platform costs |
+| **Operations & G&A (5%)** | $0.5M | Legal, compliance, and operational overhead |
+| **Contingency (5%)** | $0.5M | Unforeseen expenses and opportunities |
+| **Total** | **$10.0M** | |
+
+## 8.4 Milestones
+
+| Milestone | Timeline | Metrics |
+|-----------|----------|---------|
+| **MVP Launch** | Month 6 | 500+ landlords, 2,500+ residents |
+| **PMF Signals** | Month 12 | NPS >40, 30%+ landlord-to-resident conversion |
+| **Series B Ready** | Month 18 | $5M ARR, 15,000+ landlords, 100,000+ residents |
 
 ---
 
@@ -583,6 +773,53 @@ Year 5: Platform (marketplace, white-label, API)
 - Design partner program
 - Influence product direction
 - Early access pricing
+
+---
+
+# PART 11: INTERNATIONAL EXPANSION - BRAZIL
+
+## 11.1 Market Opportunity
+
+Brazil represents a massive, underserved market with unique characteristics:
+
+| Metric | Value |
+|--------|-------|
+| **Total Condomínios** | 520,000+ (2024), up from 420,000 in 2016 |
+| **Brazilians living in condos** | 14-15% of population |
+| **Market opportunity** | R$250 billion |
+| **Professional síndicos growth** | 200%+ |
+
+## 11.2 Localization Requirements
+
+| Characteristic | Implication |
+|----------------|-------------|
+| **WhatsApp-first operations** | Platform must be WhatsApp-native for landlords and residents |
+| **PIX payment integration** | PIX handles 80%+ of rent payments; must be primary method |
+| **Hybrid DIY + managed services** | Brazilian landlords want flexibility between self-service and full-service |
+| **Local legal requirements** | Specific lease templates, eviction processes, compliance |
+
+## 11.3 Brazil Pricing Model
+
+| Plan | Base Fee/mo | Per Unit/mo | Key Features |
+|------|-------------|-------------|--------------|
+| **Starter** | R$ 0 | R$ 0 | Listings, screening, basic accounting |
+| **Basic** | R$ 49 | R$ 5 | + Rent collection, leases, messaging |
+| **Essential** | R$ 49 | R$ 35 | + 24/7 repair coordination, legal templates |
+| **Complete** | R$ 49 | R$ 89 | + Full tenant communication handling |
+
+## 11.4 Competitive Positioning in Brazil
+
+| Player | Position | Our Differentiation |
+|--------|----------|---------------------|
+| **Superlógica** | Market leader, ERP + fintech | We add rewards layer + AI automation |
+| **TownSq** | Global, resident experience | We add banking + landlord tools |
+| **Acolweb** | "IA-powered" | We have deeper AI workforce model |
+
+## 11.5 Go-to-Market Strategy
+
+**Phase 1 - Proof of Concept**: One city, one ERP integration, 2-3 administrators (~10-20K units)
+**Phase 2 - Verticalization**: Add AI collections assistant (WhatsApp + email), condo-specific rewards
+**Phase 3 - Platform**: Roll out via more ERPs as embedded module, white-label cards for large portfolios
 
 ---
 
