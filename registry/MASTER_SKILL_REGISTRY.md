@@ -1,10 +1,10 @@
-# Master Skill Registry: STR/LTR PMS + Maintenance + Housing Ops + FINTECH + CONSUMER LOYALTY
+# Master Skill Registry: STR/LTR PMS + Fintech + Consumer + HYBRID PM
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 19 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, **BILT Rewards**)
-> **Total Skills**: 223 📈 NOW WITH: Fintech + Consumer Loyalty Categories!
-> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway), Fintech (Baselane), **Consumer (BILT)**
+> **Competitors Analyzed**: 20 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, BILT, **Hemlane**)
+> **Total Skills**: 231 📈 7 CATEGORIES: PMS, AI, Accounting, Enterprise, Fintech, Consumer, **Hybrid**
+> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway), Fintech (Baselane), Consumer (BILT), **Hybrid (Hemlane)**
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 223 |
-| MVP Skills (P0) | 72 |
-| Phase 1 Skills (P1) | 101 |
-| Phase 2 Skills (P2) | 42 |
+| Total Skills | 231 |
+| MVP Skills (P0) | 74 |
+| Phase 1 Skills (P1) | 106 |
+| Phase 2 Skills (P2) | 43 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 19) | 26 |
+| Universal Skills (all 20) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -36,6 +36,7 @@
 | Unique Skills (OwnerRez only) | 7 |
 | Unique Skills (Baselane only) | 8 |
 | Unique Skills (BILT only) | 9 |
+| Unique Skills (Hemlane only) | 8 |
 
 ---
 
@@ -119,6 +120,12 @@
 | `consumer-loyalty` | 4 | Rent rewards, credit boost, neighborhood, down payment |
 | `platform-architecture` | 1 | Three-sided marketplace |
 | `consumer-engagement` | 1 | Rent Day promotions |
+| `hybrid-pm` | 1 | Flexible service tiers |
+| `turnover-services` | 1 | Rent ready service |
+| `risk-management` | 1 | Eviction shield |
+| `leasing-services` | 2 | Agent connection, self-showings |
+| `financial-management` | 1 | Split allocation |
+| `legal-services` | 1 | Rocket Lawyer integration |
 
 ---
 
@@ -5809,6 +5816,216 @@ Automatic rewards when paying with any linked card at participating merchants.
 4. No receipts, no codes
 
 **Key**: Frictionless earning with existing payment habits.
+
+---
+
+<!-- HEMLANE UNIQUE SKILLS (224-231) - HYBRID PM MODEL PIONEER -->
+<!-- 🔄 NEW CATEGORY: HYBRID PM - Software + Services, Pick Your Level! -->
+
+### SKILL-224: flexible-service-tiers
+
+**Category**: hybrid-pm
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Ability to switch between service tiers at any time, with different tiers per property.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Traditional PM | ❌ | Lock-in contracts | N/A |
+| Software-only | ⚠️ | Single tier | ⭐⭐⭐ |
+| **Hemlane** | ✅ | **Flexible tiers** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane (85-90% retention proves it)
+
+**Tier Structure**:
+| Tier | Price | Features |
+|------|-------|----------|
+| Basic | ~$2.50/unit | DIY software |
+| Essential | $24/unit | + Coordination |
+| Complete | $80/unit | + Full service |
+
+**Key Differentiator**: Switch anytime, different per property.
+
+---
+
+### SKILL-225: rent-ready-turnover-service
+
+**Category**: turnover-services
+**Priority**: P1
+**Status**: OPTIONAL
+
+**Description**: 
+Flat-fee ($495) service for preparing vacant properties for market.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Traditional PM | ⚠️ | % markup | ⭐⭐⭐ |
+| **Hemlane** | ✅ | **$495 flat fee** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane
+
+**Features**:
+- Dedicated coordinator
+- 4.6+ star vendors
+- Minor to full rehab
+- Fixed, predictable cost
+
+---
+
+### SKILL-226: eviction-shield-protection
+
+**Category**: risk-management
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Insurance-like service ($4.95/unit/month) handling delinquent tenant situations.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | No equivalent | N/A |
+| **Hemlane** | ✅ | **Eviction Shield** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane (UNIQUE!)
+
+**Three-Step Process**:
+1. Mediation (**90% resolution**)
+2. Legal notices (3 notices)
+3. Attorney connection
+
+**Key**: "Apple Care for your rental" - removes landlord fear.
+
+---
+
+### SKILL-227: in-house-repair-coordination
+
+**Category**: maintenance
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+In-house (NOT outsourced) repair coordination with strict SLAs.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Outsourced | ⭐⭐⭐ |
+| Vendoroo | ✅ | AI Roos | ⭐⭐⭐⭐⭐ |
+| **Hemlane** | ✅ | **In-house team** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane (human), Vendoroo (AI)
+
+**Key Metrics**:
+- 2-hour response time
+- 24-hour vendor SLA
+- 10% resolved via troubleshooting
+- No markups
+
+---
+
+### SKILL-228: agent-connection-service
+
+**Category**: leasing-services
+**Priority**: P1
+**Status**: OPTIONAL
+
+**Description**: 
+Service connecting landlords with vetted local agents for showings.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | No equivalent | N/A |
+| **Hemlane** | ✅ | **Agent network** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane
+
+**How It Works**:
+- Hemlane matches with local agent
+- Agent handles showings
+- Platform handles marketing/screening
+- Hybrid DIY + professional
+
+---
+
+### SKILL-229: digital-lockbox-self-showings
+
+**Category**: leasing-services
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Digital lockbox with biometric + ID verification for secure self-guided tours.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Basic codes | ⭐⭐⭐ |
+| **Hemlane** | ✅ | **Biometric + ID** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane
+
+**Security Features**:
+- Digital lockbox shipped
+- Biometric scans required
+- Government ID verification
+- Access logging
+
+**Result**: 19-day average placement.
+
+---
+
+### SKILL-230: split-allocation-income
+
+**Category**: financial-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automatic distribution of rent to multiple parties based on predefined rules.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Manual | ⭐⭐⭐ |
+| **Hemlane** | ✅ | **Auto-split** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane
+
+**Use Cases**:
+- Co-owners (50/50)
+- Partnerships (by %)
+- PM fee allocation
+- Investor distributions
+
+---
+
+### SKILL-231: rocket-lawyer-integration
+
+**Category**: legal-services
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Partnership providing state-regulated legal templates and discounted attorney access.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Basic templates | ⭐⭐⭐ |
+| **Hemlane** | ✅ | **Rocket Lawyer** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Hemlane
+
+**Features**:
+- 40% off legal services
+- Free consultation
+- State-regulated templates (leases, evictions)
 
 ---
 
