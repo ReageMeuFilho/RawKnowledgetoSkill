@@ -1,10 +1,10 @@
-# Master Skill Registry: STR/LTR PMS + Fintech + Consumer + HYBRID PM
+# Master Skill Registry: STR/LTR PMS + Fintech + Consumer + Hybrid PM + Professional
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 20 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, BILT, **Hemlane**)
-> **Total Skills**: 231 📈 7 CATEGORIES: PMS, AI, Accounting, Enterprise, Fintech, Consumer, **Hybrid**
-> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway), Fintech (Baselane), Consumer (BILT), **Hybrid (Hemlane)**
+> **Competitors Analyzed**: 21 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, BILT, Hemlane, **GuestWisely**)
+> **Total Skills**: 237 📈 7 CATEGORIES: PMS, AI, Accounting, Enterprise, Fintech, Consumer, Hybrid
+> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez/**GuestWisely**), Enterprise (Guesty/Hostaway), Fintech (Baselane), Consumer (BILT), Hybrid (Hemlane)
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 231 |
+| Total Skills | 237 |
 | MVP Skills (P0) | 74 |
-| Phase 1 Skills (P1) | 106 |
-| Phase 2 Skills (P2) | 43 |
+| Phase 1 Skills (P1) | 111 |
+| Phase 2 Skills (P2) | 44 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 20) | 26 |
+| Universal Skills (all 21) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -37,6 +37,7 @@
 | Unique Skills (Baselane only) | 8 |
 | Unique Skills (BILT only) | 9 |
 | Unique Skills (Hemlane only) | 8 |
+| Unique Skills (GuestWisely only) | 6 |
 
 ---
 
@@ -126,6 +127,12 @@
 | `leasing-services` | 2 | Agent connection, self-showings |
 | `financial-management` | 1 | Split allocation |
 | `legal-services` | 1 | Rocket Lawyer integration |
+| `sales-automation` | 1 | Quote chaser automation |
+| `guest-app` | 1 | Branded white-label app |
+| `document-collection` | 1 | Guest document upload portal |
+| `report-builder` | 1 | Custom report creation |
+| `report-automation` | 1 | Scheduled report delivery |
+| `api-platform` | 1 | Webhooks, real-time events |
 
 ---
 
@@ -6029,6 +6036,208 @@ Partnership providing state-regulated legal templates and discounted attorney ac
 
 ---
 
+<!-- GUESTWISELY SKILLS (232-237) -->
+
+### SKILL-232: quote-chaser-automation
+
+**Category**: sales-automation
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automated follow-up system for quotes that haven't converted to bookings.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Manual follow-up | ⭐⭐ |
+| Hostaway | ⚠️ | Manual follow-up | ⭐⭐ |
+| **GuestWisely** | ✅ | **Quote Chaser** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: GuestWisely
+
+**Features**:
+- Quote tracking (sent vs converted)
+- Automatic follow-up sequences
+- Configurable timing and frequency
+- Conversion rate analytics
+- Personalized follow-up templates
+
+**Why Valuable**:
+- Inquiries often lost without follow-up
+- Automation increases conversion rate
+- "Set and forget" revenue recovery
+- Proactive lead nurturing
+
+---
+
+### SKILL-233: branded-guest-app
+
+**Category**: guest-app
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+White-label mobile application for guests with property manager branding.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Basic guest portal | ⭐⭐⭐ |
+| Hostaway | ⚠️ | Basic guest portal | ⭐⭐⭐ |
+| **GuestWisely** | ✅ | **Branded Guest App** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: GuestWisely
+
+**Features**:
+- **Branded**: Manager's logo, colors
+- **Pre-Check-in**: Forms, document upload
+- **Messaging**: Direct in-app communication
+- **Payments**: View balance, pay in-app
+- **Guides**: Property info, local recommendations
+- **Upselling**: Late checkout, cleaning, tours
+
+**Why Valuable**:
+- Professional guest experience
+- Reduces inbound support requests
+- Upselling revenue opportunity
+- Brand reinforcement
+
+---
+
+### SKILL-234: guest-document-collection
+
+**Category**: document-collection
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Secure portal for guests to upload required documents (ID, vaccination, insurance).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | ID verification only | ⭐⭐⭐ |
+| Host OS | ⚠️ | CheKin integration | ⭐⭐⭐⭐ |
+| **GuestWisely** | ✅ | **Document Portal** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: GuestWisely
+
+**Features**:
+- Secure upload portal
+- Multiple document types supported
+- Linked to booking and guest profile
+- Automated reminders if not submitted
+- Compliance tracking
+
+**Use Cases**:
+- ID verification (KYC)
+- Rental agreement acknowledgment
+- Vaccination proof (where required)
+- Insurance certificates
+
+---
+
+### SKILL-235: custom-report-builder
+
+**Category**: report-builder
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+User interface to build custom reports by selecting data points, filters, and dimensions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Pre-built only | ⭐⭐⭐ |
+| Hostaway | ⚠️ | Pre-built only | ⭐⭐⭐ |
+| **GuestWisely** | ✅ | **Custom Report Builder** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: GuestWisely
+
+**Features**:
+- Select data fields (drag-and-drop)
+- Apply filters (date, property, channel)
+- Choose dimensions (grouping)
+- Save report templates
+- Share with team
+- Multiple visualization types
+
+**Why Valuable**:
+- Every business has unique reporting needs
+- Reduces "can you add this report" requests
+- Self-service analytics
+- Empowers power users
+
+---
+
+### SKILL-236: scheduled-report-delivery
+
+**Category**: report-automation
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Auto-generate and email reports to stakeholders on recurring schedule.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Manual export | ⭐⭐ |
+| OwnerRez | ⚠️ | Owner statements only | ⭐⭐⭐ |
+| **GuestWisely** | ✅ | **Scheduled Reports** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: GuestWisely
+
+**Features**:
+- Schedule frequency (daily, weekly, monthly)
+- Select recipients (owners, managers, accountants)
+- Choose report types
+- Auto-generate at scheduled time
+- Email with attachment (PDF, CSV)
+
+**Use Cases**:
+- Monthly owner statements (auto-send)
+- Weekly performance reports to management
+- Daily booking summaries to operations
+
+---
+
+### SKILL-237: webhook-event-notifications
+
+**Category**: api-platform
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Real-time push notifications to external systems when events occur in PMS.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ✅ | Webhooks | ⭐⭐⭐⭐ |
+| Hostaway | ✅ | Webhooks | ⭐⭐⭐⭐ |
+| **GuestWisely** | ✅ | **Webhooks** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: GuestWisely (comprehensive documentation)
+
+**Supported Events**:
+- New booking created
+- Booking cancelled
+- Booking modified
+- New message received
+- Payment received
+- Check-in/check-out
+
+**Why Valuable**:
+- Real-time integrations (vs polling)
+- Lower API overhead
+- Faster automations
+- Modern API best practice
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -6125,3 +6334,7 @@ Enterprise and specialized features
 | **Pacing Analysis** | **PriceLabs** | **YoY trajectory forecasting** |
 | **Revenue Estimation** | **PriceLabs** | **Investment analysis tool** |
 | **PMS Integrations Count** | **PriceLabs** | **161+ systems (MOST!)** |
+| **Quote Chaser** | **GuestWisely** | **Auto follow-up on unconverted quotes (UNIQUE!)** |
+| **Branded Guest App** | **GuestWisely** | **White-label mobile app for guests** |
+| **Custom Report Builder** | **GuestWisely** | **Self-service analytics builder** |
+| **Document Collection** | **GuestWisely** | **Guest document upload portal** |
