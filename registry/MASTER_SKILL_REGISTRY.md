@@ -6625,29 +6625,53 @@ Native AI platform embedded throughout with Assistant, Flows, and Messages compo
 
 ---
 
-### SKILL-253: ai-leasing-assistant
+### SKILL-253: ai-leasing-assistant ✅ SPECIFIED
 
-**Category**: leasing-ai
+**Category**: leasing-ai / communication
 **Priority**: P0
-**Status**: CRITICAL
+**Status**: ✅ SPECIFIED
+**Specification**: `specs/communication/SPEC-SKILL-253.md`
+**Gap ID**: GAP-AF-001
 
 **Description**: 
-AI agent that autonomously responds to leads, nurtures them, and schedules tours 24/7.
+Autonomous conversational AI for multifamily leasing that handles prospect inquiries across web chat, SMS, email, and voice. Qualifies leads, schedules tours (in-person, self-guided, virtual), and escalates to humans when needed. Achieves 95-97% autonomous handling with <5 second response times.
 
 **Competitor Coverage**:
 | Competitor | Has | Feature | Quality |
 |------------|-----|---------|---------|
-| EliseAI | ✅ | Leasing AI | ⭐⭐⭐⭐⭐ |
-| **AppFolio** | ✅ | **AI Leasing Assistant** | ⭐⭐⭐⭐⭐ |
+| EliseAI | ✅ | LeasingAI | ⭐⭐⭐⭐⭐ |
+| **AppFolio** | ✅ | **Lisa AI / Realm-X** | ⭐⭐⭐⭐⭐ |
+| Funnel Leasing | ✅ | Virtual Assistant | ⭐⭐⭐⭐ |
+| MRI Software | ✅ | AI Leasing | ⭐⭐⭐⭐ |
 
-**Best Implementation**: AppFolio + EliseAI (compare)
+**Best Implementation**: EliseAI + AppFolio (combined patterns)
 
-**Features**:
-- Immediate personalized response
-- Lead nurturing sequences
-- Tour scheduling
-- After-hours coverage
-- Question answering
+**Core Features** (from Specification):
+- [x] F-001: Multi-channel conversation (chat, SMS, email, voice)
+- [x] F-002: Intent recognition (20+ intents, 95% accuracy)
+- [x] F-003: Lead qualification engine (scoring, criteria, status)
+- [x] F-004: Tour scheduling (in-person, self-guided, virtual)
+- [x] F-005: Knowledge bank & semantic retrieval
+- [x] F-006: Human handoff protocol (context transfer)
+
+**Technical Architecture**:
+- Conversation Engine: OpenAI/Claude for NLP
+- Lead Scoring: Configurable criteria (timeline, budget, income)
+- Tour Types: In-person, self-guided (smart lock), virtual
+- Knowledge: Vector DB (Pinecone) for semantic search
+- Integrations: Yardi, RealPage, AppFolio, CRM, Calendar
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Chat Response | <5 seconds P99 |
+| Autonomous Rate | 95% |
+| Intent Accuracy | 95% |
+| Lead-to-Tour Lift | +73% |
+
+**Implementation Timeline**: 18 weeks (4 phases)
+
+**Research Sources**: EliseAI, AppFolio, Funnel Leasing, MRI Software
 
 ---
 
