@@ -1,10 +1,10 @@
-# Master Skill Registry: STR/LTR PMS + Fintech + Consumer + Hybrid PM + Professional
+# Master Skill Registry: STR/LTR PMS + Fintech + Consumer + Hybrid + Investment + HOA
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 21 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, BILT, Hemlane, **GuestWisely**)
-> **Total Skills**: 237 📈 7 CATEGORIES: PMS, AI, Accounting, Enterprise, Fintech, Consumer, Hybrid
-> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez/**GuestWisely**), Enterprise (Guesty/Hostaway), Fintech (Baselane), Consumer (BILT), Hybrid (Hemlane)
+> **Competitors Analyzed**: 22 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, BILT, Hemlane, GuestWisely, **AppFolio**)
+> **Total Skills**: 257 📈 9 CATEGORIES: PMS, AI, Accounting, Enterprise, Fintech, Consumer, Hybrid, **Investment Mgmt**, **HOA Mgmt**
+> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez/GuestWisely), Enterprise (Guesty/Hostaway/**AppFolio**), Fintech (Baselane), Consumer (BILT), Hybrid (Hemlane), **Investment (AppFolio)**, **HOA (AppFolio)**
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 237 |
-| MVP Skills (P0) | 74 |
-| Phase 1 Skills (P1) | 111 |
-| Phase 2 Skills (P2) | 44 |
+| Total Skills | 257 |
+| MVP Skills (P0) | 76 |
+| Phase 1 Skills (P1) | 123 |
+| Phase 2 Skills (P2) | 50 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 21) | 26 |
+| Universal Skills (all 22) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -38,6 +38,7 @@
 | Unique Skills (BILT only) | 9 |
 | Unique Skills (Hemlane only) | 8 |
 | Unique Skills (GuestWisely only) | 6 |
+| Unique Skills (AppFolio only) | 20 |
 
 ---
 
@@ -133,6 +134,16 @@
 | `report-builder` | 1 | Custom report creation |
 | `report-automation` | 1 | Scheduled report delivery |
 | `api-platform` | 1 | Webhooks, real-time events |
+| `investment-management` | 7 | Investor CRM, portal, syndication, waterfall |
+| `hoa-management` | 7 | Association, architectural, violations |
+| `ai-platform` | 1 | Native AI platform (Realm-X) |
+| `leasing-ai` | 1 | Autonomous leasing agent |
+| `maintenance-ai` | 1 | Autonomous maintenance coordinator |
+| `accounting-ai` | 1 | Smart bill entry, OCR |
+| `commercial-accounting` | 1 | CAM tracking |
+| `student-housing` | 1 | Rent-by-bed leasing |
+| `mobile` | 1 | Offline mode |
+| `unit-turn` | 1 | Make-ready board |
 
 ---
 
@@ -6238,6 +6249,574 @@ Real-time push notifications to external systems when events occur in PMS.
 
 ---
 
+<!-- APPFOLIO SKILLS (238-257) - INVESTMENT MANAGEMENT -->
+
+### SKILL-238: investor-crm
+
+**Category**: investment-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Specialized CRM for managing investor relationships, tracking communications, and organizing investment documents.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Investor CRM** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Single view of all investor interactions
+- Investment history per investor
+- Capital raising pipeline
+- Communication logging
+- Investor segmentation
+
+---
+
+### SKILL-239: investor-portal
+
+**Category**: investment-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Branded, secure portal for investors to access real-time investment data, performance dashboards, and documents.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Investor Portal** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Real-time performance dashboards
+- K-1 tax document access
+- Investment reports
+- Capital contribution tracking
+- Document library
+
+---
+
+### SKILL-240: capital-raising-syndication
+
+**Category**: investment-management
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Tools to streamline capital raising from capturing leads to collecting capital for new offerings.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Capital Raising** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Deal interest capture
+- Investor interest tracking
+- Capital commitment collection (ACH)
+- Deal documentation
+- Investor communication
+
+---
+
+### SKILL-241: distribution-management
+
+**Category**: investment-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automated workflows for calculating and processing investor distributions, including waterfall calculations.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Distribution Mgmt** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Distribution calculation engine
+- **Waterfall calculations** (complex fund structures)
+- Electronic distribution payments
+- Distribution history
+- Tax reporting integration
+
+---
+
+### SKILL-242: asset-portfolio-ai
+
+**Category**: investment-management
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+AI-powered module (AppFolio Alpha™) for aggregating data across portfolios to provide insights and optimization.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Alpha™** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Multi-portfolio aggregation
+- Data normalization
+- AI performance insights
+- Optimization recommendations
+- Benchmarking
+
+---
+
+### SKILL-243: fund-entity-visualization
+
+**Category**: investment-management
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Tools to visualize complex fund structures and ownership hierarchies.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Fund Visualization** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Fund structure diagrams
+- Ownership hierarchy
+- Cash flow mapping
+- Entity relationships
+
+---
+
+### SKILL-244: investor-reporting
+
+**Category**: investment-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Customizable, branded investor reports with secure document sharing.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Investor Reports** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+---
+
+<!-- HOA MANAGEMENT SKILLS -->
+
+### SKILL-245: hoa-association-management
+
+**Category**: hoa-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Core functionality for managing community associations including board, committees, and rules.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Association Mgmt** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Multi-association management
+- Board member tracking
+- Committee management
+- Rules/CC&R repository
+- Meeting management
+
+---
+
+### SKILL-246: homeowner-portal
+
+**Category**: hoa-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Dedicated portal for homeowners to pay dues, submit architectural requests, and access documents.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Homeowner Portal** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Dues payment online
+- Architectural request submission
+- Community document access
+- Account history
+
+---
+
+### SKILL-247: architectural-review-workflow
+
+**Category**: hoa-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Workflow for managing architectural review requests from submission to approval.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Architectural Review** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Online submission form
+- Photo/document upload
+- Board review interface
+- Approval/denial workflow
+- Status tracking
+
+---
+
+### SKILL-248: violation-management
+
+**Category**: hoa-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Tools for tracking and managing community rule violations with mobile submission and automated letters.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Violation Mgmt** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- **Mobile violation submission** (photos + GPS)
+- Violation tracking
+- Automated letter generation
+- Escalation workflows
+- Fine management
+
+---
+
+### SKILL-249: multiple-fund-accounting
+
+**Category**: hoa-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Specialized accounting to manage multiple funds and cost centers within an association.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Multiple Fund Acct** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Reserve fund tracking
+- Operating fund tracking
+- Fund separation
+- Transfer between funds
+- Fund-specific reporting
+
+---
+
+### SKILL-250: board-approvals-workflow
+
+**Category**: hoa-management
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Workflow for board members to approve invoices, bids, and other items requiring authorization.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Board Approvals** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+---
+
+### SKILL-251: association-calendar
+
+**Category**: hoa-management
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Shared calendar for community events, meetings, and important dates.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Association Calendar** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+---
+
+<!-- AI & AUTOMATION SKILLS -->
+
+### SKILL-252: realm-x-ai-platform
+
+**Category**: ai-platform
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Native AI platform embedded throughout with Assistant, Flows, and Messages components.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Point solutions | ⭐⭐⭐ |
+| **AppFolio** | ✅ | **Realm-X** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Components**:
+- **Realm-X Assistant**: AI chatbot for navigation
+- **Realm-X Flows**: Visual workflow automation
+- **Realm-X Messages**: Auto-response to inquiries
+
+---
+
+### SKILL-253: ai-leasing-assistant
+
+**Category**: leasing-ai
+**Priority**: P0
+**Status**: CRITICAL
+
+**Description**: 
+AI agent that autonomously responds to leads, nurtures them, and schedules tours 24/7.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| EliseAI | ✅ | Leasing AI | ⭐⭐⭐⭐⭐ |
+| **AppFolio** | ✅ | **AI Leasing Assistant** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio + EliseAI (compare)
+
+**Features**:
+- Immediate personalized response
+- Lead nurturing sequences
+- Tour scheduling
+- After-hours coverage
+- Question answering
+
+---
+
+### SKILL-254: ai-maintenance-coordinator
+
+**Category**: maintenance-ai
+**Priority**: P0
+**Status**: CRITICAL
+
+**Description**: 
+AI agent managing entire maintenance workflow from request to vendor dispatch and follow-up.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Vendoroo | ✅ | Maintenance AI | ⭐⭐⭐⭐⭐ |
+| **AppFolio** | ✅ | **AI Maintenance** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio + Vendoroo (compare)
+
+**Features**:
+- Immediate resident response
+- Troubleshooting guidance
+- Vendor dispatch
+- Status updates
+- Follow-up automation
+
+---
+
+### SKILL-255: smart-bill-entry
+
+**Category**: accounting-ai
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI-powered data extraction from invoices to automate accounts payable.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Manual entry | ⭐⭐ |
+| **AppFolio** | ✅ | **Smart Bill Entry** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Invoice OCR
+- Data field extraction
+- Vendor matching
+- GL code suggestion
+- Approval routing
+
+---
+
+<!-- SPECIALIZED PM SKILLS -->
+
+### SKILL-256: dynamic-leasing-pricing
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automated pricing tool (Leasing Signals) suggesting optimal rental rates based on market data.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| PriceLabs | ✅ | STR pricing | ⭐⭐⭐⭐⭐ |
+| **AppFolio** | ✅ | **Leasing Signals** | ⭐⭐⭐⭐⭐ |
+
+**Note**: Similar to PriceLabs but for LTR/multifamily.
+
+---
+
+### SKILL-257: unit-turn-board
+
+**Category**: unit-turn
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Visual dashboard to manage unit turn process, tracking all make-ready tasks.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Basic tasks | ⭐⭐⭐ |
+| **AppFolio** | ✅ | **Unit Turn Board** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Visual status board (Kanban)
+- Task assignment
+- Progress tracking
+- Vendor coordination
+- Vacancy minimization metrics
+
+---
+
+### SKILL-258: cam-tracking-reconciliation
+
+**Category**: commercial-accounting
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Specialized tools for tracking and reconciling Common Area Maintenance expenses for commercial properties.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **CAM Tracking** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Note**: Only needed for commercial property management.
+
+---
+
+### SKILL-259: rent-by-bed-leasing
+
+**Category**: student-housing
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Specialized functionality for by-the-bed leasing in student housing properties.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ❌ | None | - |
+| **AppFolio** | ✅ | **Rent-By-Bed** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Individual bed leases
+- Per-bed ledgers
+- Roommate matching
+- Academic year cycles
+
+---
+
+### SKILL-260: mobile-offline-mode
+
+**Category**: mobile
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Mobile app functionality for key tasks when offline, syncing when connectivity restored.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| RentalReady | ✅ | Offline support | ⭐⭐⭐⭐ |
+| **AppFolio** | ✅ | **Offline Mode** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: AppFolio
+
+**Features**:
+- Offline data access
+- Offline task completion
+- Queue for sync
+- Conflict resolution
+- Sync status indicator
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -6338,3 +6917,11 @@ Enterprise and specialized features
 | **Branded Guest App** | **GuestWisely** | **White-label mobile app for guests** |
 | **Custom Report Builder** | **GuestWisely** | **Self-service analytics builder** |
 | **Document Collection** | **GuestWisely** | **Guest document upload portal** |
+| **Investment Management** | **AppFolio** | **Complete investor CRM, portal, syndication, waterfall (NEW CATEGORY!)** |
+| **HOA Management** | **AppFolio** | **Full association, violations, architectural review (NEW CATEGORY!)** |
+| **AI Platform** | **AppFolio** | **Realm-X - native AI across all modules** |
+| **AI Leasing Assistant** | **AppFolio + EliseAI** | **24/7 autonomous lead response + tour scheduling** |
+| **AI Maintenance Coordinator** | **AppFolio + Vendoroo** | **Full workflow automation** |
+| **Unit Turn Board** | **AppFolio** | **Visual make-ready dashboard (Kanban)** |
+| **Smart Bill Entry** | **AppFolio** | **AI invoice OCR + data extraction** |
+| **Mobile Offline** | **AppFolio** | **Full offline functionality with sync** |
