@@ -1,10 +1,10 @@
-# Master Skill Registry: STR/LTR PMS + Maintenance + Housing Ops
+# Master Skill Registry: STR/LTR PMS + Maintenance + Housing Ops + FINTECH
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 17 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, **OwnerRez**)
-> **Total Skills**: 206 🎉 MILESTONE: 200+ SKILLS!
-> **BENCHMARKS**: By Segment - SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway/EliseAI)
+> **Competitors Analyzed**: 18 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, **Baselane**)
+> **Total Skills**: 214 📈 NEW CATEGORY: FINTECH!
+> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway), **Fintech (Baselane)**
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 206 |
-| MVP Skills (P0) | 67 |
-| Phase 1 Skills (P1) | 91 |
-| Phase 2 Skills (P2) | 40 |
+| Total Skills | 214 |
+| MVP Skills (P0) | 70 |
+| Phase 1 Skills (P1) | 95 |
+| Phase 2 Skills (P2) | 41 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 17) | 26 |
+| Universal Skills (all 18) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -34,6 +34,7 @@
 | Unique Skills (Lodgify only) | 6 |
 | Unique Skills (Hospitable only) | 7 |
 | Unique Skills (OwnerRez only) | 7 |
+| Unique Skills (Baselane only) | 8 |
 
 ---
 
@@ -109,6 +110,11 @@
 | `pricing-optimization` | 1 | Channel rate testing |
 | `booking-operations` | 1 | Quote-to-booking |
 | `legal-compliance` | 1 | Digital rental agreements |
+| `fintech` | 2 | Banking platform, savings tiers |
+| `tax-automation` | 2 | Schedule E, tax package |
+| `ecosystem` | 1 | Partner marketplace |
+| `tenant-management` | 1 | Tenant screening |
+| `business-structure` | 1 | Multi-entity onboarding |
 
 ---
 
@@ -5336,6 +5342,233 @@ Special reservation status for owner stays that appear appropriately in calendar
 - Cleaning tasks can still trigger
 
 **Key**: **Clean accounting** for owner use vs rental income.
+
+---
+
+<!-- BASELANE UNIQUE SKILLS (207-214) - FINTECH + PM PIONEER -->
+<!-- 🏦 NEW CATEGORY: FINTECH - First platform with integrated banking! -->
+
+### SKILL-207: integrated-banking-platform
+
+**Category**: fintech
+**Priority**: P1
+**Status**: RESEARCH
+
+**Description**: 
+Full banking services (checking + savings) integrated directly into property management platform.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | External only | N/A |
+| **Baselane** | ✅ | **NATIVE BANKING** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane (ONLY PLATFORM!)
+
+**Features**:
+- Unlimited checking accounts
+- Unlimited savings accounts
+- Physical + virtual debit cards
+- ACH transfers (instant internal)
+- FDIC insured up to $250K
+
+**Why Revolutionary**: **No other PM platform offers actual banking**.
+
+---
+
+### SKILL-208: high-yield-savings-tiers
+
+**Category**: fintech
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Tiered interest rates on savings accounts based on balance.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | No banking | N/A |
+| **Baselane** | ✅ | **Up to 2.63% APY** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane (ONLY PLATFORM!)
+
+**Tier Structure**:
+| Tier | APY |
+|------|-----|
+| Base | 0.95% |
+| Maximum | 2.63% |
+
+**Strategic**: Creates **stickiness** - users keep money for interest.
+
+---
+
+### SKILL-209: schedule-e-auto-categorization
+
+**Category**: tax-automation
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Automatic categorization of transactions to IRS Schedule E line items for rental property tax reporting.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| OwnerRez | ⚠️ | QB export | ⭐⭐⭐⭐ |
+| **Baselane** | ✅ | **Native Schedule E** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane
+
+**Schedule E Categories Built-In**:
+- **Revenue**: Rents, fees, deposits
+- **Expenses**: All 13 Schedule E expense categories
+
+**How It Works**:
+1. Transaction imported
+2. AI suggests Schedule E category
+3. User confirms/corrects
+4. Rules learned for future
+5. Tax reports pre-populated
+
+**Why Critical**: **#1 US landlord pain point** = tax preparation.
+
+---
+
+### SKILL-210: property-account-association
+
+**Category**: fintech
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Link specific bank accounts to specific properties for automatic cash flow tracking.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| OwnerRez | ⚠️ | QB mapping | ⭐⭐⭐⭐ |
+| **Baselane** | ✅ | **Native linking** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane
+
+**Account Types per Property**:
+| Account | Purpose |
+|---------|---------|
+| Operating | Rent deposits, expenses |
+| Security Deposit | Legal separation (required in many states) |
+| Reserve | Capital expenditure savings |
+
+**Why Critical**: **Legal requirement** in many states for security deposit separation.
+
+---
+
+### SKILL-211: tax-package-generation
+
+**Category**: tax-automation
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Generate complete tax preparation package from categorized transactions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| OwnerRez | ⚠️ | Export only | ⭐⭐⭐ |
+| **Baselane** | ✅ | **Full package** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane
+
+**Generated Documents**:
+- Schedule E Summary (pre-filled)
+- 1099 Forms (for contractors)
+- Year-End Summary
+
+**Key**: **Tax-ready from day one**, not year-end scramble.
+
+---
+
+### SKILL-212: partner-marketplace
+
+**Category**: ecosystem
+**Priority**: P1
+**Status**: OPTIONAL
+
+**Description**: 
+Curated network of partner services integrated into platform.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | App marketplace | ⭐⭐⭐⭐ |
+| **Baselane** | ✅ | **Curated partners** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane (landlord-focused)
+
+**Partner Categories**:
+- Insurance (landlord-specific)
+- Lending (DSCR, BRRRR, portfolio loans)
+- Legal (LLC formation, templates)
+- Tax Preparation (CPA services)
+- Contractors (vetted professionals)
+
+**Revenue Model**: Referral fees from partners.
+
+---
+
+### SKILL-213: tenant-screening-integrated
+
+**Category**: tenant-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Comprehensive background checks for prospective tenants via TransUnion SmartMove.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Partner integration | ⭐⭐⭐⭐ |
+| **Baselane** | ✅ | **Native TransUnion** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane
+
+**Screening Reports**:
+- Credit Report
+- Criminal Background
+- Eviction History
+- Income Verification
+
+**Fee Model**: Landlord pays or passes to applicant.
+
+---
+
+### SKILL-214: multi-entity-onboarding
+
+**Category**: business-structure
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Support for both sole proprietor and business entity account structures with proper KYC.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Business accounts | ⭐⭐⭐⭐ |
+| **Baselane** | ✅ | **Full entity support** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Baselane
+
+**Entity Types Supported**:
+- Sole Proprietor
+- LLC
+- Corporation
+- Partnership
+- Non-Profit
+
+**Why Important**: Real estate investors often use LLCs for liability protection.
 
 ---
 
