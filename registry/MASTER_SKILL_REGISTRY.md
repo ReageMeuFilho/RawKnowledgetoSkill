@@ -1,9 +1,9 @@
-# Master Skill Registry: STR PMS
+# Master Skill Registry: STR/LTR PMS + Maintenance
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 10 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs)
-> **Total Skills**: 156
+> **Competitors Analyzed**: 12 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo)
+> **Total Skills**: 167
 
 ---
 
@@ -11,12 +11,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 156 |
-| MVP Skills (P0) | 44 |
-| Phase 1 Skills (P1) | 72 |
+| Total Skills | 167 |
+| MVP Skills (P0) | 50 |
+| Phase 1 Skills (P1) | 77 |
 | Phase 2 Skills (P2) | 32 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 10) | 26 |
+| Universal Skills (all 12) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -27,6 +27,7 @@
 | Unique Skills (Cloudbeds only) | 6 |
 | Unique Skills (RentalReady only) | 9 |
 | Unique Skills (PriceLabs only) | 12 |
+| Unique Skills (Vendoroo only) | 11 |
 
 ---
 
@@ -66,6 +67,12 @@
 | `pacing` | 1 | YoY trajectory analysis |
 | `investment` | 1 | Revenue estimation |
 | `integrations-mgmt` | 1 | 161+ PMS sync management |
+| `maintenance-agents` | 2 | Specialized maintenance AI agents |
+| `maintenance-intelligence` | 3 | Brain, memory, troubleshooting |
+| `emergency-handling` | 2 | Classification, after-hours flow |
+| `invoice-compliance` | 1 | AI validation, fraud detection |
+| `policy-engine` | 1 | Granular rules with simulation |
+| `work-orchestration` | 2 | State machine, campaigns |
 
 ---
 
@@ -3898,6 +3905,313 @@ Free competitive benchmarking and market analysis dashboards.
 6. Occupancy Heatmap
 7. ADR Trends
 8. Competitive Positioning
+
+---
+
+<!-- VENDOROO UNIQUE SKILLS (157-167) - MAINTENANCE SPECIALIZED -->
+
+### SKILL-157: specialized-maintenance-agents
+
+**Category**: maintenance-agents
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Role-based AI agent architecture with 5 specialized "Roos" for maintenance operations.
+
+**Competitor Coverage**:
+| Competitor | Has | Approach | Quality |
+|------------|-----|----------|---------|
+| Guesty | ⚠️ | General AI | ⭐⭐⭐ |
+| All Others | ⚠️ | Generic chatbot | ⭐⭐ |
+| **Vendoroo** | ✅ | **5 specialized agents** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo (ONLY ONE!)
+
+**5 Agent Types**:
+| Agent | Role | Hard Constraints |
+|-------|------|------------------|
+| Receptionist Roo | Intake, identity verify | Cannot promise times/costs |
+| Triage Roo | Classification, urgency | Cannot downgrade emergency |
+| Coordinator Roo | Vendor, scheduling | Cannot exceed budget |
+| Invoice Roo | Validation, compliance | Cannot auto-approve > threshold |
+| Assistant Roo | NL queries | Read-only, cannot mutate |
+
+---
+
+### SKILL-158: maintenance-brain-memory
+
+**Category**: maintenance-intelligence
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Persistent per-property/unit maintenance knowledge base that learns over time.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| **Vendoroo** | ✅ | **MaintenanceBook** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo (UNIQUE!)
+
+**Components**:
+- MaintenanceBookEntry per property/unit/system
+- Asset info: model, age, warranty_expiry
+- Recurring issues and patterns
+- Recommendations and last service date
+- Preferred vendor per system type
+- Historical decision training
+
+---
+
+### SKILL-159: emergency-classification-engine
+
+**Category**: emergency-handling
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+High-accuracy emergency detection with <0.5% false negative rate target.
+
+**Competitor Coverage**:
+| Competitor | Has | Accuracy Target | Quality |
+|------------|-----|-----------------|---------|
+| All Others | ⚠️ | Undefined | ⭐⭐⭐ |
+| **Vendoroo** | ✅ | **<0.5% FN** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo (ONLY MEASURABLE TARGET!)
+
+**Features**:
+- Conservative classification (err toward emergency)
+- Auditable logic trail
+- Safety-first triage instructions
+- Post-incident review workflow
+- False negative tracking
+
+---
+
+### SKILL-160: vendor-intelligence-ranking
+
+**Category**: operations
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Multi-factor vendor scoring and tiered assignment with performance metrics.
+
+**Competitor Coverage**:
+| Competitor | Has | Depth | Quality |
+|------------|-----|-------|---------|
+| Guesty | ⚠️ | Basic list | ⭐⭐⭐ |
+| RentalReady | ⚠️ | Service providers | ⭐⭐⭐⭐ |
+| **Vendoroo** | ✅ | **Full intelligence** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Performance Metrics**:
+- jobs_completed
+- on_time_rate
+- avg_rating (tenant feedback)
+- rework_rate
+- reliability_score (composite)
+
+**Tier System**: Bronze → Silver → Gold with auto-promotion/demotion
+
+---
+
+### SKILL-161: remote-troubleshooting-flows
+
+**Category**: maintenance-intelligence
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Category-specific guided troubleshooting before dispatch.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| **Vendoroo** | ✅ | **Category scripts** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo (UNIQUE!)
+
+**Flow**:
+1. Classify issue category
+2. Check MaintenanceBook for patterns
+3. Run category-specific troubleshooting
+4. If resolved: log steps, mark "monitor"
+5. If unresolved: dispatch
+
+**Goal**: Resolve without dispatch when safe and appropriate
+
+---
+
+### SKILL-162: invoice-validation-ai
+
+**Category**: invoice-compliance
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automated invoice compliance checking against policy and history.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Manual review | ⭐⭐⭐ |
+| Cloudbeds | ⚠️ | Basic validation | ⭐⭐⭐⭐ |
+| **Vendoroo** | ✅ | **AI compliance** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Validation Checks**:
+- Line items match WorkOrder scope
+- Rates within standard for vendor
+- Parts/labor reasonable for job type
+- Historical pattern comparison
+- Fraud/waste detection signals
+
+---
+
+### SKILL-163: maintenance-policy-engine
+
+**Category**: policy-engine
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Granular, scope-based policy rules with simulation mode.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| PriceLabs | ⚠️ | Automation rules | ⭐⭐⭐⭐ |
+| **Vendoroo** | ✅ | **Full policy + simulation** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Rule Types**: budget, escalation, safety, communication
+
+**Scope Levels**:
+- Account-wide (company default)
+- Property-level override
+- Unit-level exception
+
+**Unique Feature**: Simulation mode - "Show me how this rule would change decisions"
+
+---
+
+### SKILL-164: preventive-maintenance-campaigns
+
+**Category**: work-orchestration
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Rule-based scheduled maintenance with batch vendor assignment.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| **Vendoroo** | ✅ | **Campaign system** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo (UNIQUE!)
+
+**Features**:
+- Rule: "HVAC inspection every 6 months for region X"
+- Auto-generate WorkOrders with `job_type=preventive`
+- Batch vendor assignment
+- Campaign-level tracking
+- Aggregated reporting
+
+---
+
+### SKILL-165: work-order-state-machine
+
+**Category**: work-orchestration
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Idempotent, pausable orchestration with defined state transitions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Task status | ⭐⭐⭐ |
+| **Vendoroo** | ✅ | **Formal state machine** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**States**:
+```
+received → triaged → awaiting_approval → awaiting_vendor → 
+scheduled → in_progress → completed → [rework] → cancelled
+```
+
+**Guarantees**:
+- Invariant enforcement (can't skip states)
+- Idempotency (safe to retry)
+- Pause/resume per account/property/work_order
+- AuditLog every transition
+
+---
+
+### SKILL-166: owner-cost-defensibility
+
+**Category**: financial
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Every maintenance dollar traceable and justifiable to owners.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Owner reports | ⭐⭐⭐ |
+| **Vendoroo** | ✅ | **Full defensibility** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Components**:
+- Invoice-to-policy mapping
+- Historical pattern comparison
+- Fraud/waste detection signals
+- Per-property spend analysis
+- Executive summary generation
+
+---
+
+### SKILL-167: after-hours-emergency-flow
+
+**Category**: emergency-handling
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Specialized workflow for after-hours emergency handling.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Boom AI | ⚠️ | 24/7 availability | ⭐⭐⭐⭐ |
+| **Vendoroo** | ✅ | **Dedicated flow** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Flow**:
+1. After-hours flag detection
+2. Stricter emergency classification
+3. Safety script for tenant (shut-off valves, etc.)
+4. Emergency-capable vendor dispatch
+5. PM on-call notification (Slack/SMS)
+6. Human override capability
+7. Post-incident review tagging
 
 ---
 
