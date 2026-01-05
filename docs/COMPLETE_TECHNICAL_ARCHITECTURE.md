@@ -795,6 +795,474 @@ result = await mcp://treasury/transfer({
 
 ---
 
+## 🧠 Memory Architecture: Never Starting from Scratch
+
+### The Problem: Stateless AI = Frustrated Users
+
+```
+TRADITIONAL AI (STATELESS):
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│  Day 1: Mario calls                                                              │
+│  Mario: "My toilet is overflowing!"                                             │
+│  AI: "I'm sorry to hear that. What's your unit number?"                         │
+│  Mario: "5B"                                                                     │
+│  AI: "I'll send a plumber. They'll arrive in 2 hours."                          │
+│  [Ticket created, plumber dispatched]                                            │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│  Day 8: Mario calls again                                                        │
+│  Mario: "The toilet is overflowing AGAIN!"                                      │
+│  AI: "I'm sorry to hear that. What's your unit number?" 😤                      │
+│                                                                                  │
+│  MARIO IS FURIOUS - AI doesn't remember ANYTHING                                │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### The Solution: Multi-Layer Memory Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                    CITADELOS MEMORY ARCHITECTURE                                     │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                                      │
+│   MARIO'S TOILET SCENARIO (Day 8):                                                                  │
+│                                                                                                      │
+│   ┌─────────────────────────────────────────────────────────────────────────────────────────────┐   │
+│   │  INCOMING: "The toilet is overflowing again!"                                                │   │
+│   └────────────────────────────────────────┬────────────────────────────────────────────────────┘   │
+│                                            │                                                        │
+│                                            ▼                                                        │
+│   ┌─────────────────────────────────────────────────────────────────────────────────────────────┐   │
+│   │  LAYER 1: WORKING MEMORY (Redis) - Current Conversation                                      │   │
+│   │  ─────────────────────────────────────────────────────────                                   │   │
+│   │                                                                                              │   │
+│   │  {                                                                                           │   │
+│   │    "session_id": "conv-2026-01-05-1430",                                                     │   │
+│   │    "caller_phone": "+5511999888777",                                                        │   │
+│   │    "current_message": "The toilet is overflowing again!",                                   │   │
+│   │    "emotional_state": "frustrated",      // Detected from "again!"                          │   │
+│   │    "conversation_turns": [...]                                                               │   │
+│   │  }                                                                                           │   │
+│   │                                                                                              │   │
+│   │  TTL: 2 hours (active conversation)                                                         │   │
+│   │                                                                                              │   │
+│   └────────────────────────────────────────┬────────────────────────────────────────────────────┘   │
+│                                            │                                                        │
+│                       ┌────────────────────┼────────────────────┐                                   │
+│                       ▼                    │                    ▼                                   │
+│   ┌──────────────────────────────┐         │         ┌──────────────────────────────┐              │
+│   │  LAYER 2: ENTITY MEMORY      │         │         │  LAYER 3: INTERACTION MEMORY │              │
+│   │  (PostgreSQL + pgvector)     │         │         │  (MongoDB + Vector Search)   │              │
+│   │  ──────────────────────────  │         │         │  ────────────────────────────│              │
+│   │                              │         │         │                              │              │
+│   │  WHO IS MARIO?               │         │         │  MARIO'S HISTORY:            │              │
+│   │  {                           │         │         │                              │              │
+│   │    "entity_id": "res-7291",  │         │         │  ┌──────────────────────────┐│              │
+│   │    "name": "Mario Silva",    │         │         │  │ 7 days ago               ││              │
+│   │    "unit": "5B",             │         │         │  │ Issue: Toilet overflow   ││              │
+│   │    "phone": "+5511999...",   │         │         │  │ Resolution: Plumber sent ││              │
+│   │    "email": "mario@...",     │         │         │  │ Vendor: João's Plumbing  ││              │
+│   │    "lease_start": "2024-03", │         │         │  │ Cost: R$180              ││              │
+│   │    "rent_amount": 2500.00,   │         │         │  │ Duration: 45 min         ││              │
+│   │    "payment_history": "✓✓✓", │         │         │  │ Parts: Flapper valve     ││              │
+│   │    "maintenance_count": 3,   │         │         │  │ Status: RESOLVED         ││              │
+│   │    "sentiment_avg": 0.72     │         │         │  │ Mario rating: 4/5        ││              │
+│   │  }                           │         │         │  └──────────────────────────┘│              │
+│   │                              │         │         │                              │              │
+│   │  UNIT 5B:                    │         │         │  ┌──────────────────────────┐│              │
+│   │  {                           │         │         │  │ 3 months ago             ││              │
+│   │    "appliances": [...],      │         │         │  │ Issue: AC not cooling    ││              │
+│   │    "last_inspection": "...", │         │         │  │ Resolution: Filter clean ││              │
+│   │    "known_issues": [         │         │         │  │ Cost: R$0 (DIY)          ││              │
+│   │      "old_plumbing_2018"     │         │         │  └──────────────────────────┘│              │
+│   │    ]                         │         │         │                              │              │
+│   │  }                           │         │         │  Vector similarity: 0.94    │              │
+│   │                              │         │         │  (toilet overflow queries)  │              │
+│   └──────────────────────────────┘         │         └──────────────────────────────┘              │
+│                       │                    │                    │                                   │
+│                       └────────────────────┼────────────────────┘                                   │
+│                                            │                                                        │
+│                                            ▼                                                        │
+│   ┌─────────────────────────────────────────────────────────────────────────────────────────────┐   │
+│   │  LAYER 4: KNOWLEDGE MEMORY (RAG - pgvector/MongoDB Atlas Vector Search)                      │   │
+│   │  ───────────────────────────────────────────────────────────────────────                     │   │
+│   │                                                                                              │   │
+│   │  Vector Search: "toilet overflow recurring" + "unit 5B" + "plumbing"                        │   │
+│   │                                                                                              │   │
+│   │  Retrieved Context:                                                                          │   │
+│   │  ┌────────────────────────────────────────────────────────────────────────────────────────┐ │   │
+│   │  │ • Building 5B plumbing was installed in 2018, copper pipes, known for lime buildup     │ │   │
+│   │  │ • Recurring toilet issues often indicate: 1) Clog in main line, 2) Faulty wax ring     │ │   │
+│   │  │ • If same issue <14 days: Escalate to senior plumber, check main line                  │ │   │
+│   │  │ • João's Plumbing: 4.2/5 rating, but recurring call rate is 18%                        │ │   │
+│   │  │ • Alternative: Pedro's Plumbing: 4.8/5 rating, recurring call rate is 4%               │ │   │
+│   │  └────────────────────────────────────────────────────────────────────────────────────────┘ │   │
+│   │                                                                                              │   │
+│   └────────────────────────────────────────┬────────────────────────────────────────────────────┘   │
+│                                            │                                                        │
+│                                            ▼                                                        │
+│   ┌─────────────────────────────────────────────────────────────────────────────────────────────┐   │
+│   │  LAYER 5: FINANCIAL MEMORY (Treasury OS - TigerBeetle + Formance)                            │   │
+│   │  ────────────────────────────────────────────────────────────────                            │   │
+│   │                                                                                              │   │
+│   │  Mario's Financial Context:                                                                  │   │
+│   │  ┌────────────────────────────────────────────────────────────────────────────────────────┐ │   │
+│   │  │ • Current balance: R$0.00 (rent paid on time)                                          │ │   │
+│   │  │ • Maintenance fund: R$2,450 available for unit 5B repairs                              │ │   │
+│   │  │ • Last repair cost: R$180 (7 days ago) - Transaction ID: TXN-2025-123456              │ │   │
+│   │  │ • Warranty status: ACTIVE (João's work has 30-day warranty)                            │ │   │
+│   │  │ • Escalation authority: Repairs >R$500 require owner approval                          │ │   │
+│   │  └────────────────────────────────────────────────────────────────────────────────────────┘ │   │
+│   │                                                                                              │   │
+│   └────────────────────────────────────────┬────────────────────────────────────────────────────┘   │
+│                                            │                                                        │
+│                                            ▼                                                        │
+│   ┌─────────────────────────────────────────────────────────────────────────────────────────────┐   │
+│   │  CONTEXT ASSEMBLY → LLM PROMPT                                                               │   │
+│   │  ─────────────────────────────────                                                           │   │
+│   │                                                                                              │   │
+│   │  System: You are a maintenance coordinator for Edifício Copacabana.                         │   │
+│   │                                                                                              │   │
+│   │  Context:                                                                                    │   │
+│   │  - Caller: Mario Silva (Unit 5B, resident since 2024)                                       │   │
+│   │  - CRITICAL: Same toilet overflow issue 7 days ago                                          │   │
+│   │  - Previous vendor: João's Plumbing (installed flapper valve)                               │   │
+│   │  - WARRANTY ACTIVE: João's work is under 30-day warranty                                    │   │
+│   │  - Building Note: Unit 5B has 2018 copper pipes, known lime buildup                         │   │
+│   │  - Recurring issue <14 days → Protocol: Escalate to senior plumber                          │   │
+│   │  - Alternative vendor available: Pedro's Plumbing (4.8/5, 4% recurrence)                    │   │
+│   │  - Financial: Maintenance fund has R$2,450 available                                        │   │
+│   │                                                                                              │   │
+│   │  User: "The toilet is overflowing again!"                                                   │   │
+│   │                                                                                              │   │
+│   └────────────────────────────────────────┬────────────────────────────────────────────────────┘   │
+│                                            │                                                        │
+│                                            ▼                                                        │
+│   ┌─────────────────────────────────────────────────────────────────────────────────────────────┐   │
+│   │  AI RESPONSE (Memory-Informed):                                                              │   │
+│   │  ─────────────────────────────                                                               │   │
+│   │                                                                                              │   │
+│   │  "Olá Mario! Vejo que o vaso sanitário voltou a dar problema - isso não deveria             │   │
+│   │   ter acontecido, especialmente considerando que o João esteve aí há apenas 7 dias.        │   │
+│   │                                                                                              │   │
+│   │   O serviço dele ainda está na garantia de 30 dias, então vou acionar a garantia            │   │
+│   │   para você sem custo adicional. Mas como é um problema recorrente, também vou              │   │
+│   │   escalar para nosso encanador sênior examinar a linha principal - o prédio tem            │   │
+│   │   tubulação de 2018 que às vezes acumula calcário.                                          │   │
+│   │                                                                                              │   │
+│   │   O Pedro's Plumbing pode estar aí em 1 hora. Posso confirmar?"                             │   │
+│   │                                                                                              │   │
+│   └─────────────────────────────────────────────────────────────────────────────────────────────┘   │
+│                                                                                                      │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Memory Storage Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                    MEMORY STORAGE LAYERS                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                                      │
+│   ┌───────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│   │  REDIS (Working Memory)                                                                        │ │
+│   │  ─────────────────────                                                                         │ │
+│   │                                                                                                │ │
+│   │  Purpose: Active conversation state, emotional context, real-time cache                       │ │
+│   │  TTL: 2 hours (conversation) / 24 hours (session)                                             │ │
+│   │  Pattern: Hash per conversation with sliding expiry                                           │ │
+│   │                                                                                                │ │
+│   │  Keys:                                                                                         │ │
+│   │  • conv:{session_id}       → Current conversation state                                       │ │
+│   │  • entity:{phone}:recent   → Last 5 interactions (hot cache)                                  │ │
+│   │  • context:{entity_id}     → Precomputed context for fast recall                              │ │
+│   │                                                                                                │ │
+│   └───────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                      │
+│   ┌───────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│   │  POSTGRESQL + pgvector (Entity Memory)                                                         │ │
+│   │  ─────────────────────────────────────                                                         │ │
+│   │                                                                                                │ │
+│   │  Purpose: Structured entity data, relationships, vector embeddings for semantic search        │ │
+│   │  Retention: Permanent (with archival policy)                                                  │ │
+│   │                                                                                                │ │
+│   │  Tables:                                                                                       │ │
+│   │  • residents          → Name, unit, contact, preferences, sentiment_score                     │ │
+│   │  • units              → Property details, known_issues[], appliance_manual_embeddings        │ │
+│   │  • vendors            → Performance metrics, specialty, recurrence_rate                       │ │
+│   │  • entity_embeddings  → pgvector index for semantic entity lookup                             │ │
+│   │                                                                                                │ │
+│   │  Indexes:                                                                                      │ │
+│   │  • HNSW index on entity_embeddings (cosine similarity, ef_construction=128)                  │ │
+│   │                                                                                                │ │
+│   └───────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                      │
+│   ┌───────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│   │  MONGODB + Atlas Vector Search (Interaction Memory)                                            │ │
+│   │  ──────────────────────────────────────────────────                                            │ │
+│   │                                                                                                │ │
+│   │  Purpose: Full interaction history, conversation logs, semantic search across interactions    │ │
+│   │  Retention: 7 years (compliance), hot/warm/cold tiering                                       │ │
+│   │                                                                                                │ │
+│   │  Collections:                                                                                  │ │
+│   │  • interactions                                                                                │ │
+│   │    {                                                                                           │ │
+│   │      "_id": ObjectId,                                                                          │ │
+│   │      "entity_id": "res-7291",                                                                  │ │
+│   │      "timestamp": ISODate,                                                                     │ │
+│   │      "channel": "voice" | "whatsapp" | "email",                                               │ │
+│   │      "intent": "maintenance_request",                                                          │ │
+│   │      "category": "plumbing",                                                                   │ │
+│   │      "summary": "Toilet overflow, flapper valve replaced",                                    │ │
+│   │      "summary_embedding": [0.023, -0.891, ...],  // 1536-dim                                  │ │
+│   │      "resolution": {...},                                                                      │ │
+│   │      "satisfaction_score": 4,                                                                  │ │
+│   │      "cost": 180.00,                                                                           │ │
+│   │      "vendor_id": "vendor-joao"                                                                │ │
+│   │    }                                                                                           │ │
+│   │                                                                                                │ │
+│   │  • conversation_logs   → Full transcript with turn embeddings                                 │ │
+│   │  • knowledge_chunks    → RAG document chunks with embeddings                                  │ │
+│   │                                                                                                │ │
+│   │  Vector Search Index:                                                                          │ │
+│   │  • interactions.summary_embedding (cosine, dimensions=1536)                                   │ │
+│   │  • knowledge_chunks.embedding (cosine, dimensions=1536)                                       │ │
+│   │                                                                                                │ │
+│   └───────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                      │
+│   ┌───────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│   │  TIGERBEETLE + FORMANCE (Financial Memory)                                                     │ │
+│   │  ─────────────────────────────────────────                                                     │ │
+│   │                                                                                                │ │
+│   │  Purpose: Immutable financial history, payment patterns, warranty tracking                    │ │
+│   │  Retention: Permanent (regulatory requirement)                                                │ │
+│   │                                                                                                │ │
+│   │  Already integrated via Treasury OS:                                                          │ │
+│   │  • Account balances by entity                                                                 │ │
+│   │  • Transaction history with Merkle proofs                                                     │ │
+│   │  • Maintenance fund allocations                                                               │ │
+│   │  • Warranty periods (derived from vendor payment timestamps)                                  │ │
+│   │                                                                                                │ │
+│   └───────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                      │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Memory Retrieval Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                    MEMORY RETRIEVAL PIPELINE                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                                      │
+│   STEP 1: IDENTIFY CALLER                                                                           │
+│   ────────────────────────                                                                          │
+│   Input: Phone number / Email / Session ID                                                          │
+│   Query: Redis (hot cache) → PostgreSQL (entity lookup)                                            │
+│   Output: entity_id, basic profile                                                                  │
+│   Latency: <10ms                                                                                    │
+│                                                                                                      │
+│   STEP 2: RETRIEVE RECENT CONTEXT                                                                   │
+│   ──────────────────────────────                                                                    │
+│   Query: Redis conv:{session_id} + entity:{id}:recent                                              │
+│   Output: Last 5 interactions, current conversation state                                           │
+│   Latency: <5ms                                                                                     │
+│                                                                                                      │
+│   STEP 3: SEMANTIC SIMILARITY SEARCH                                                                │
+│   ─────────────────────────────────                                                                 │
+│   Input: Current message embedding                                                                  │
+│   Query: MongoDB Vector Search (interactions collection)                                            │
+│                                                                                                      │
+│   db.interactions.aggregate([                                                                       │
+│     {                                                                                               │
+│       "$vectorSearch": {                                                                            │
+│         "index": "interaction_embeddings",                                                          │
+│         "path": "summary_embedding",                                                                │
+│         "queryVector": [0.012, -0.834, ...],                                                        │
+│         "numCandidates": 100,                                                                       │
+│         "limit": 5,                                                                                 │
+│         "filter": { "entity_id": "res-7291" }                                                       │
+│       }                                                                                             │
+│     }                                                                                               │
+│   ])                                                                                                │
+│                                                                                                      │
+│   Output: Top 5 semantically similar past interactions                                              │
+│   Latency: <50ms                                                                                    │
+│                                                                                                      │
+│   STEP 4: RAG KNOWLEDGE RETRIEVAL                                                                   │
+│   ───────────────────────────────                                                                   │
+│   Input: Message + Entity context + Unit context                                                    │
+│   Query: MongoDB Vector Search (knowledge_chunks collection)                                        │
+│   Output: Relevant policies, building info, vendor data                                             │
+│   Latency: <50ms                                                                                    │
+│                                                                                                      │
+│   STEP 5: FINANCIAL CONTEXT                                                                         │
+│   ────────────────────────                                                                          │
+│   Query: Treasury OS API (balances, recent transactions, warranties)                               │
+│   Output: Budget availability, payment status, active warranties                                    │
+│   Latency: <20ms                                                                                    │
+│                                                                                                      │
+│   STEP 6: CONTEXT ASSEMBLY                                                                          │
+│   ──────────────────────────                                                                        │
+│   Combine all layers into structured prompt context                                                 │
+│   Token budget: ~2000 tokens for context                                                            │
+│   Priority: Recent > Relevant > General                                                             │
+│                                                                                                      │
+│   TOTAL RETRIEVAL LATENCY: <150ms                                                                   │
+│                                                                                                      │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Memory Write-Back (Learning from Interactions)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                    MEMORY WRITE-BACK PIPELINE                                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                                      │
+│   After each interaction:                                                                           │
+│                                                                                                      │
+│   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐│
+│   │  1. CONVERSATION SUMMARY (Async - Temporal Workflow)                                            ││
+│   │     ─────────────────────────────────────────────────                                           ││
+│   │     • LLM generates summary of interaction                                                      ││
+│   │     • Extract: intent, category, resolution, satisfaction                                       ││
+│   │     • Generate embedding of summary                                                             ││
+│   │     • Store in MongoDB interactions collection                                                  ││
+│   └────────────────────────────────────────────────────────────────────────────────────────────────┘│
+│                                                                                                      │
+│   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐│
+│   │  2. ENTITY UPDATE (Async - Temporal Workflow)                                                   ││
+│   │     ────────────────────────────────────────────                                                ││
+│   │     • Update sentiment_score (rolling average)                                                  ││
+│   │     • Increment interaction_count                                                               ││
+│   │     • Update last_interaction_date                                                              ││
+│   │     • Add to known_issues[] if new issue type                                                   ││
+│   └────────────────────────────────────────────────────────────────────────────────────────────────┘│
+│                                                                                                      │
+│   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐│
+│   │  3. VENDOR PERFORMANCE UPDATE (Async - Temporal Workflow)                                       ││
+│   │     ──────────────────────────────────────────────────                                          ││
+│   │     • Track recurrence rate (same issue <14 days)                                               ││
+│   │     • Update average satisfaction score                                                         ││
+│   │     • Flag if recurrence_rate > threshold                                                       ││
+│   └────────────────────────────────────────────────────────────────────────────────────────────────┘│
+│                                                                                                      │
+│   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐│
+│   │  4. KNOWLEDGE ENHANCEMENT (Batch - Nightly)                                                     ││
+│   │     ───────────────────────────────────────────                                                 ││
+│   │     • Analyze interaction patterns                                                              ││
+│   │     • Identify new common issues                                                                ││
+│   │     • Update building-specific knowledge base                                                   ││
+│   │     • Retrain embeddings if significant drift                                                   ││
+│   └────────────────────────────────────────────────────────────────────────────────────────────────┘│
+│                                                                                                      │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Memory Data Model (Schemas)
+
+```typescript
+// Entity Memory (PostgreSQL)
+interface Resident {
+  entity_id: string;           // "res-7291"
+  name: string;
+  unit_id: string;
+  phone: string;
+  email: string;
+  lease_start: Date;
+  lease_end: Date | null;
+  rent_amount: number;
+  payment_history: PaymentStatus[];  // Last 12 months
+  maintenance_count: number;
+  sentiment_score: number;     // 0.0 - 1.0 rolling average
+  preferences: {
+    contact_channel: "whatsapp" | "sms" | "email" | "voice";
+    language: string;
+    quiet_hours: { start: string; end: string };
+  };
+  embedding: number[];         // 1536-dim for semantic search
+}
+
+// Interaction Memory (MongoDB)
+interface Interaction {
+  _id: ObjectId;
+  entity_id: string;
+  timestamp: Date;
+  channel: "voice" | "whatsapp" | "email" | "chat" | "app";
+  session_id: string;
+  
+  // Classification
+  intent: string;              // "maintenance_request", "payment_inquiry", etc.
+  category: string;            // "plumbing", "hvac", "electrical", etc.
+  urgency: "low" | "medium" | "high" | "emergency";
+  
+  // Content
+  summary: string;             // AI-generated summary
+  summary_embedding: number[]; // 1536-dim
+  transcript_ref: string;      // Reference to full transcript
+  
+  // Resolution
+  resolution: {
+    status: "resolved" | "pending" | "escalated";
+    action_taken: string;
+    vendor_id?: string;
+    cost?: number;
+    warranty_until?: Date;
+  };
+  
+  // Feedback
+  satisfaction_score?: number; // 1-5
+  feedback_text?: string;
+  
+  // Derived
+  is_recurring: boolean;       // Same issue type within 14 days
+  related_interaction_id?: ObjectId;
+}
+
+// Working Memory (Redis)
+interface ConversationState {
+  session_id: string;
+  entity_id: string;
+  started_at: number;          // Unix timestamp
+  last_activity: number;
+  channel: string;
+  
+  // Current state
+  current_intent: string;
+  emotional_state: "positive" | "neutral" | "frustrated" | "angry";
+  
+  // Conversation context
+  turns: {
+    role: "user" | "assistant";
+    content: string;
+    timestamp: number;
+    tools_used?: string[];
+  }[];
+  
+  // Preloaded context (for fast LLM calls)
+  preloaded_context: {
+    entity_summary: string;
+    recent_interactions: string[];
+    relevant_knowledge: string[];
+    financial_summary: string;
+  };
+}
+```
+
+### Why This Memory Architecture Wins
+
+| Aspect | Traditional Chatbot | CitadelOS Memory |
+|--------|---------------------|------------------|
+| **Caller Recognition** | Starts fresh every time | Instant: "Hi Mario!" |
+| **History Recall** | None | Full semantic search across all interactions |
+| **Context Depth** | Current conversation only | Entity + Unit + Building + Historical + Financial |
+| **Learning** | None | Sentiment tracking, vendor performance, pattern detection |
+| **Latency** | N/A | <150ms total retrieval |
+| **Personalization** | Generic responses | Tone, channel, language preferences |
+| **Financial Awareness** | None | Budget, warranties, payment status integrated |
+
+---
+
 ## Next Steps
 
 1. **Document Integration Points** between Treasury OS and AI Layer
@@ -802,6 +1270,7 @@ result = await mcp://treasury/transfer({
 3. **Define Skill-to-Workflow Mapping** (which skills trigger which Temporal workflows)
 4. **Build HITL Dashboard Prototype**
 5. **Implement First Domain Bundle** (STR or LTR)
+6. **Implement Memory Services** (Redis + pgvector + MongoDB Atlas Vector Search)
 
 ---
 
