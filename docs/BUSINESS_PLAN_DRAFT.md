@@ -15,22 +15,32 @@ We are building **Citadel OS**—a vertically integrated Real Estate Operating S
 
 ### Strategic Thesis
 
-> **"Own the payment, own the relationship."**
+> **"We don't sell automation. We deploy a Digital Workforce."**
 
-Unlike competitors who offer siloed tools (landlord-only or resident-only), we're building a **unified platform** where:
-- Landlords get banking + automation + AI
-- HOAs get governance + financial operations + AI concierge
-- Residents get rewards + credit building + homeownership pathway
+We're building a **skill-based operating system** where AI agents have the skills, tools, and knowledge to complete tasks—not rigid workflows. This is fundamentally different from traditional software:
 
-This **three-front architecture** creates network effects that neither side can achieve alone.
+| Traditional Software | Citadel OS Digital Workforce |
+|---------------------|------------------------------|
+| Fixed features & workflows | **Skills** that compose dynamically |
+| You use the software | The **agent does the work** |
+| Domain-specific tools | **Domain-agnostic skills** that bundle per vertical |
+| Build features once | **Skill factory** that compounds |
 
-### Three Moats
+### The Core Architecture
+
+**Agent = Operating System**: The AI runtime that receives tasks and orchestrates execution
+**Skills = Applications**: Discrete capabilities that can be composed
+**Context = RAM**: Domain knowledge, conversation history, working memory
+
+### The Three Moats
 
 | Moat | Description | Defensibility |
 |------|-------------|---------------|
-| **1. Fintech Integration** | Real FDIC-insured accounts, not just payment processing | Regulatory barriers, switching costs |
-| **2. Three-Front Network Effects** | Landlords ↔ Residents ↔ Merchants | Viral growth, data compounding |
-| **3. Knowledge-to-Skill Methodology** | Systematic pipeline for production-ready capabilities | Speed, quality, compounding IP |
+| **1. Skill Registry** | 265+ skills mapped, grows with every vertical | Compounding capability library |
+| **2. Knowledge-to-Skill Pipeline** | Factory that produces production-ready skills | Speed + quality at scale |
+| **3. Hot/Cold/Hybrid Architecture** | Flexibility to handle any task complexity | Technical moat + reliability |
+| **4. Fintech Layer** | Embedded banking (turn on/off per deployment) | Revenue + switching costs |
+| **5. Domain Portability** | Same core skills → different verticals | Expansion without rebuilding |
 
 ### Key Metrics Targets (Year 3)
 
@@ -290,9 +300,60 @@ Every skill specification includes evaluation criteria:
 
 # PART 4: THE ARCHITECTURE
 
-## 4.1 Two Paths: Hot Path + Cold Path
+## 4.1 The Digital Workforce Model
 
-Our architecture cleanly separates **probabilistic AI operations** from **deterministic system operations**:
+### Agent = Operating System, Skills = Applications, Context = RAM
+
+This is the foundational model (inspired by Claude Code's skill framework):
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      DIGITAL WORKFORCE ARCHITECTURE                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│   ┌───────────────────────────────────────────────────────────────────┐     │
+│   │                    AI AGENT = OPERATING SYSTEM                     │     │
+│   │                                                                    │     │
+│   │   • Receives tasks from users/systems                              │     │
+│   │   • Analyzes what skills are needed                                │     │
+│   │   • Selects execution path (Hot/Cold/Hybrid)                       │     │
+│   │   • Orchestrates skill execution                                   │     │
+│   │   • Learns from outcomes                                           │     │
+│   │                                                                    │     │
+│   └───────────────────────────────────────────────────────────────────┘     │
+│                                                                              │
+│   ┌───────────────────────────────────────────────────────────────────┐     │
+│   │                    SKILLS = APPLICATIONS                           │     │
+│   │                                                                    │     │
+│   │   Each skill is an atomic, composable capability:                  │     │
+│   │                                                                    │     │
+│   │   skill_id: SKILL-253                                              │     │
+│   │   name: lead-qualification                                         │     │
+│   │   inputs: [prospect_message, property_criteria]                    │     │
+│   │   outputs: [qualification_score, next_action]                      │     │
+│   │   tools_required: [crm_api, calendar_api]                          │     │
+│   │   knowledge_required: [property_rules, qualification_criteria]     │     │
+│   │   execution_path: hybrid                                           │     │
+│   │                                                                    │     │
+│   └───────────────────────────────────────────────────────────────────┘     │
+│                                                                              │
+│   ┌───────────────────────────────────────────────────────────────────┐     │
+│   │                    CONTEXT = RAM (Working Memory)                  │     │
+│   │                                                                    │     │
+│   │   • Domain knowledge (property rules, policies, procedures)        │     │
+│   │   • Conversation history (what's been said/done)                   │     │
+│   │   • User preferences (how they like things done)                   │     │
+│   │   • Active state (current task progress)                           │     │
+│   │   • Retrieved documents (relevant context for this task)           │     │
+│   │                                                                    │     │
+│   └───────────────────────────────────────────────────────────────────┘     │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+## 4.2 Execution Paths: Hot, Cold, and Hybrid
+
+The architecture's flexibility allows us to handle any task complexity:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────────┐
@@ -363,7 +424,74 @@ AI generates action request   →    Policy engine validates
                                    → Log audit trail
 ```
 
-## 4.2 Technology Stack
+## 4.3 Technical Foundation: What We Leverage
+
+We don't build everything from scratch. We leverage:
+
+### Suna (Open Source Agent Framework)
+- **What it provides**: Agent runtime, browser/tool integration, task orchestration
+- **Why**: Production-ready agent infrastructure without reinventing the wheel
+- **Our contribution**: Domain-specific skills, knowledge, and evaluation
+
+### LangGraph (Workflow Orchestration)
+- **What it provides**: State management, multi-agent coordination, branching logic
+- **Why**: Handles complex workflows with checkpointing and resumption
+- **Our contribution**: Property management workflow definitions
+
+### Claude Code Skills Framework
+- **What it provides**: Skill abstraction, meta-knowledge, context management
+- **Why**: The "OS + Apps + RAM" model for composable capabilities
+- **Our contribution**: 265+ domain-specific skills
+
+### Combined Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         HOW THE PIECES FIT TOGETHER                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│   USER REQUEST: "Handle this maintenance request from John"                 │
+│                              │                                               │
+│                              ▼                                               │
+│   ┌──────────────────────────────────────────────────────────────────┐      │
+│   │  SUNA AGENT RUNTIME                                               │      │
+│   │  • Receives task                                                  │      │
+│   │  • Determines context needed                                      │      │
+│   └──────────────────────────────────────────────────────────────────┘      │
+│                              │                                               │
+│                              ▼                                               │
+│   ┌──────────────────────────────────────────────────────────────────┐      │
+│   │  SKILL SELECTION (Claude Code Framework)                          │      │
+│   │  • message-understanding → understand the request                 │      │
+│   │  • maintenance-triage → classify urgency                          │      │
+│   │  • vendor-dispatch → find and contact vendor                      │      │
+│   │  • response-generation → update the resident                      │      │
+│   └──────────────────────────────────────────────────────────────────┘      │
+│                              │                                               │
+│                              ▼                                               │
+│   ┌──────────────────────────────────────────────────────────────────┐      │
+│   │  LANGGRAPH ORCHESTRATION                                          │      │
+│   │  • Execute skills in sequence                                     │      │
+│   │  • Handle branching (urgent vs. normal)                           │      │
+│   │  • Checkpoint state                                               │      │
+│   │  • Loop if needed                                                 │      │
+│   └──────────────────────────────────────────────────────────────────┘      │
+│                              │                                               │
+│                              ▼                                               │
+│   ┌──────────────────────────────────────────────────────────────────┐      │
+│   │  HOT/COLD/HYBRID EXECUTION                                        │      │
+│   │  • Hot: Understand message, generate response                     │      │
+│   │  • Cold: Create work order, log audit trail                       │      │
+│   │  • Hybrid: AI decides urgency, system dispatches vendor           │      │
+│   └──────────────────────────────────────────────────────────────────┘      │
+│                              │                                               │
+│                              ▼                                               │
+│   TASK COMPLETE: Work order created, vendor notified, resident updated      │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+## 4.4 Technology Stack Details
 
 ### AI Path (Hot)
 
@@ -434,6 +562,65 @@ AI generates action request   →    Policy engine validates
 | Vector DB | Qdrant / Milvus | Self-hosted vectors |
 | LLM | Ollama / vLLM | Self-hosted inference |
 | Auth | Keycloak | Self-hosted identity |
+
+## 4.5 Domain Portability: Skills Bundle Differently Per Vertical
+
+The **key strategic insight**: Core skills are domain-agnostic. They bundle differently per vertical.
+
+### Current Verticals
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         SKILL BUNDLING BY DOMAIN                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│   CORE SKILLS (Used Across All Verticals)                                   │
+│   ─────────────────────────────────────────                                 │
+│   • message-understanding     • calendar-scheduling                         │
+│   • response-generation       • payment-processing                          │
+│   • document-retrieval        • delinquency-management                      │
+│   • lead-qualification        • vendor-coordination                         │
+│   • invoice-coding            • compliance-checking                         │
+│                                                                              │
+│   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐            │
+│   │   STR BUNDLE    │  │   LTR BUNDLE    │  │   HOA BUNDLE    │            │
+│   │   (Phase 1)     │  │   (Phase 1)     │  │   (Phase 2)     │            │
+│   ├─────────────────┤  ├─────────────────┤  ├─────────────────┤            │
+│   │ Core Skills +   │  │ Core Skills +   │  │ Core Skills +   │            │
+│   │                 │  │                 │  │                 │            │
+│   │ • channel-sync  │  │ • lease-mgmt    │  │ • dues-collect  │            │
+│   │ • dynamic-price │  │ • tenant-screen │  │ • board-govern  │            │
+│   │ • guest-comms   │  │ • rent-collect  │  │ • violation-mgmt│            │
+│   │ • cleaning-ops  │  │ • maintenance   │  │ • vendor-bid    │            │
+│   │ • review-mgmt   │  │ • renewal-mgmt  │  │ • reserve-fund  │            │
+│   │                 │  │                 │  │                 │            │
+│   │ 85% core reuse  │  │ 80% core reuse  │  │ 75% core reuse  │            │
+│   │                 │  │                 │  │                 │            │
+│   └─────────────────┘  └─────────────────┘  └─────────────────┘            │
+│                                                                              │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │                    FINTECH CAPABILITY LAYER                          │   │
+│   │                      (Toggle On/Off Per Deployment)                  │   │
+│   ├─────────────────────────────────────────────────────────────────────┤   │
+│   │ • banking-accounts     • high-yield-savings    • card-issuing       │   │
+│   │ • payment-rails        • credit-reporting      • rewards-engine     │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Future Vertical Expansion
+
+The same skill factory applies to **any domain** where there are tasks to be done:
+
+| Future Vertical | Core Skill Reuse | New Skills Needed |
+|-----------------|------------------|-------------------|
+| **Healthcare PM** | 70% | patient-scheduling, insurance-verify, HIPAA-comply |
+| **Legal Services** | 65% | case-management, document-drafting, court-scheduling |
+| **Construction PM** | 60% | project-tracking, permit-management, safety-compliance |
+| **Fleet Management** | 65% | vehicle-tracking, maintenance-scheduling, driver-management |
+
+**The Compounding Advantage**: Every skill we build for real estate is potentially reusable in other verticals. Our skill registry becomes more valuable with each domain we enter.
 
 ---
 
