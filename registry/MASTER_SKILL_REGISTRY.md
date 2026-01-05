@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 6 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI)
-> **Total Skills**: 121
+> **Competitors Analyzed**: 7 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI)
+> **Total Skills**: 129
 
 ---
 
@@ -11,18 +11,19 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 121 |
+| Total Skills | 129 |
 | MVP Skills (P0) | 37 |
-| Phase 1 Skills (P1) | 49 |
-| Phase 2 Skills (P2) | 27 |
+| Phase 1 Skills (P1) | 54 |
+| Phase 2 Skills (P2) | 30 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 6) | 26 |
+| Universal Skills (all 7) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
 | Unique Skills (Besty only) | 11 |
 | Unique Skills (Boom only) | 7 |
 | Unique Skills (Inntelo only) | 9 |
+| Unique Skills (Visito only) | 8 |
 
 ---
 
@@ -48,6 +49,8 @@
 | `agentic` | 5 | Multi-function agent, predictive outreach, multi-agent |
 | `cdp` | 2 | Customer data platform, identity resolution |
 | `retention` | 2 | Churn prediction, proactive detection |
+| `builder` | 2 | No-code agent builder, templates |
+| `retrieval` | 2 | RAG hybrid, knowledge gap detection |
 
 ---
 
@@ -2938,6 +2941,222 @@ AI detects issues from patterns and proactively offers help.
 
 ---
 
+<!-- VISITO AI UNIQUE SKILLS (122-129) -->
+
+### SKILL-122: no-code-agent-builder
+
+**Category**: builder
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Drag-and-drop interface to create AI agents in 2 minutes without coding.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | Code required |
+| Boom | ⚠️ | Basic | ⭐⭐ | Limited |
+| Besty | ⚠️ | Quick Setup | ⭐⭐⭐⭐ | Good |
+| Inntelo | ⚠️ | Config | ⭐⭐⭐ | Limited |
+| Visito | ✅ | No-Code Builder | ⭐⭐⭐⭐⭐ | Full |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] 5-step guided wizard
+- [x] Pre-built templates (6 types)
+- [x] Personality/tone config
+- [x] Boundary settings
+- [x] One-click launch
+- [x] 95%+ no-code usage
+
+---
+
+### SKILL-123: 100-plus-language-support
+
+**Category**: communication
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Most comprehensive multilingual support (100+ languages).
+
+**Competitor Coverage**:
+| Competitor | Has | Languages | Quality |
+|------------|-----|-----------|---------|
+| Inntelo | ⚠️ | 40+ | ⭐⭐⭐⭐ |
+| Boom | ⚠️ | 5+ | ⭐⭐⭐ |
+| Guesty | ⚠️ | 10+ | ⭐⭐⭐ |
+| Visito | ✅ | **100+** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] 100+ languages native
+- [x] Auto-detection
+- [x] Native fluency
+- [x] Language-based routing
+
+---
+
+### SKILL-124: knowledge-gap-detection
+
+**Category**: retrieval
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI identifies questions it can't answer and suggests content to add.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| All Others | ❌ | - | - |
+| Visito | ✅ | Gap Detection | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] Auto-identify unanswered questions
+- [x] Suggestions for missing info
+- [x] FAQ recommendations
+- [x] Coverage metrics
+- [x] Preview before publish
+
+---
+
+### SKILL-125: back-to-bot-handoff
+
+**Category**: escalation
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+After human resolves, hand conversation back to AI with context.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| All Others | ❌ | - | - |
+| Visito | ✅ | Back-to-Bot | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] Human resolves issue
+- [x] Hands back to AI
+- [x] Full context preserved
+- [x] Prevents re-escalation
+- [x] System learns from resolution
+
+---
+
+### SKILL-126: pre-chat-survey
+
+**Category**: communication
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Collect customer information before first message.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Mews | ⚠️ | Pre-arrival | ⭐⭐⭐⭐ | Different context |
+| Visito | ✅ | Pre-Chat Survey | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] Custom survey fields
+- [x] Required vs optional
+- [x] Conditional logic
+- [x] CRM integration
+
+---
+
+### SKILL-127: widget-analytics
+
+**Category**: analytics
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Track web chat widget engagement and conversion.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Mews | ⚠️ | Booking Analytics | ⭐⭐⭐⭐ | Different |
+| Visito | ✅ | Widget Analytics | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] Open/close tracking
+- [x] Initiation vs abandonment
+- [x] Entry point analysis
+- [x] Bounce rate
+- [x] Conversion tracking
+
+---
+
+### SKILL-128: rag-hybrid-retrieval
+
+**Category**: retrieval
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Combine semantic search + keyword matching for best results.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Inntelo | ⚠️ | Semantic | ⭐⭐⭐⭐ | Semantic only |
+| Boom | ⚠️ | Basic | ⭐⭐⭐ | Basic |
+| Visito | ✅ | RAG Hybrid | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] Semantic search (embeddings)
+- [x] BM25 keyword matching
+- [x] Hybrid combination
+- [x] Source citation
+- [x] Hallucination reduction
+
+---
+
+### SKILL-129: tool-calling-custom-actions
+
+**Category**: integrations
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI agent can call external APIs autonomously during conversation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Inntelo | ⚠️ | Integrations | ⭐⭐⭐⭐ | Pre-built |
+| Boom | ⚠️ | Integrations | ⭐⭐⭐⭐ | Pre-built |
+| Visito | ✅ | Tool Calling | ⭐⭐⭐⭐⭐ | Custom |
+
+**Best Implementation**: Visito AI
+
+**Capabilities**:
+- [x] Define tools (name, params)
+- [x] AI decides when to call
+- [x] Parameter extraction
+- [x] Response parsing
+- [x] Error handling
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -3006,3 +3225,8 @@ Enterprise and specialized features
 | **40+ Languages** | **Inntelo AI** | **Most comprehensive multilingual** |
 | **Churn Prediction** | **Inntelo AI** | **Full retention AI, intervention triggers** |
 | **Upsell Conversion** | **Inntelo AI** | **30-40% rate (highest)** |
+| **100+ Languages** | **Visito AI** | **Most comprehensive multilingual (100+)** |
+| **2-Min Setup** | **Visito AI** | **Fastest agent creation** |
+| **No-Code Builder** | **Visito AI** | **Full drag-and-drop, templates** |
+| **Knowledge Gaps** | **Visito AI** | **Auto-detection of missing content** |
+| **RAG Hybrid** | **Visito AI** | **Semantic + keyword retrieval** |
