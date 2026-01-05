@@ -32,15 +32,20 @@ We're building a **skill-based operating system** where AI agents have the skill
 **Skills = Applications**: Discrete capabilities that can be composed
 **Context = RAM**: Domain knowledge, conversation history, working memory
 
-### The Three Moats
+### The Ten Competitive Moats
 
-| Moat | Description | Defensibility |
-|------|-------------|---------------|
-| **1. Skill Registry** | 265+ skills mapped, grows with every vertical | Compounding capability library |
-| **2. Knowledge-to-Skill Pipeline** | Factory that produces production-ready skills | Speed + quality at scale |
-| **3. Hot/Cold/Hybrid Architecture** | Flexibility to handle any task complexity | Technical moat + reliability |
-| **4. Fintech Layer** | Embedded banking (turn on/off per deployment) | Revenue + switching costs |
-| **5. Domain Portability** | Same core skills → different verticals | Expansion without rebuilding |
+| # | Moat | Description | Defensibility |
+|---|------|-------------|---------------|
+| 1 | **Digital Workforce** | Agent=OS, Skills=Apps, Context=RAM | Paradigm shift from software |
+| 2 | **Skill Factory** | Knowledge-to-Skill Pipeline | Compounding capability |
+| 3 | **Hot/Cold/Hybrid Architecture** | Flexible execution paths | Handles any complexity |
+| 4 | **Three-Sided Loyalty Network** | Residents ↔ Properties ↔ Merchants | Network effects compound |
+| 5 | **Embedded Fintech** | Real banking, toggle on/off | Switching costs + revenue |
+| 6 | **Developer Platform** | Others build on top, we orchestrate | Ecosystem lock-in |
+| 7 | **Granular Localization** | Country→Market→Property→Unit config | Global scale + local depth |
+| 8 | **Data Compounding** | Every interaction improves AI | Gets smarter over time |
+| 9 | **Domain Portability** | Same core → any vertical | Expand without rebuild |
+| 10 | **Continuous Evolution** | Open Items Tracker, roadmap, backlog | Systematic development |
 
 ### Key Metrics Targets (Year 3)
 
@@ -622,6 +627,85 @@ The same skill factory applies to **any domain** where there are tasks to be don
 
 **The Compounding Advantage**: Every skill we build for real estate is potentially reusable in other verticals. Our skill registry becomes more valuable with each domain we enter.
 
+## 4.6 Granular Localization Architecture
+
+Built for **global scale with local depth**—configurable at every level:
+
+```
+CONFIGURATION HIERARCHY
+───────────────────────
+
+LEVEL 1: GLOBAL DEFAULTS
+• Core skills, tools, data models
+• Base AI behaviors, universal compliance
+
+LEVEL 2: COUNTRY/MARKET (Brazil, Spain, Portugal, Italy, US)
+• Language & tone (Portuguese, Spanish, Italian, English)
+• Cultural communication style
+• Payment rails (PIX, SEPA, ACH)
+• Channel preferences (WhatsApp, Email, SMS)
+• Legal/regulatory compliance
+• Currency & tax rules
+
+LEVEL 3: PROPERTY MANAGER / ADMINISTRATOR
+• Brand voice & personality
+• Business rules (late fees, grace periods)
+• Vendor preferences, escalation policies
+• Feature toggles (which capabilities enabled)
+
+LEVEL 4: PROPERTY / CONDOMINIUM / ASSET
+• Property-specific rules (CC&Rs, bylaws)
+• Amenity configurations
+• Local merchant partnerships
+• Neighborhood-specific rewards
+• Property knowledge base
+
+LEVEL 5: UNIT / RESIDENT
+• Individual preferences (communication frequency, channel)
+• Lease/agreement terms
+• Payment history & behavior
+• Personalized rewards & offers
+```
+
+**Example**: A payment reminder skill in Brazil automatically:
+- Uses Portuguese language with formal tone
+- Sends via WhatsApp (preferred channel)
+- Offers PIX payment link
+- Applies property-specific late fee rules
+- Personalizes based on resident's payment history
+
+**The Same Skill Behaves Differently at Every Level of Granularity**
+
+## 4.7 Developer Platform & Ecosystem
+
+We become the **orchestration layer** that others build on:
+
+### Platform Capabilities
+
+| Capability | Description |
+|------------|-------------|
+| **Skill API** | Third parties can build and publish custom skills |
+| **Agent API** | Integrate our AI workforce into other systems |
+| **Data API** | Access anonymized insights and analytics |
+| **Webhook API** | Event-driven integrations |
+| **Marketplace** | Discover and install skills, integrations |
+
+### White-Label / Embedded Options
+
+| Model | Use Case |
+|-------|----------|
+| **Enterprise White-Label** | Large PMs embed under their brand |
+| **Software Vendor Integration** | Existing PMS adds our AI workforce |
+| **Bank Embedding** | Financial institutions offer property fintech |
+| **Developer Extensions** | Custom vertical-specific capabilities |
+
+### Platform Revenue Streams
+
+- API usage fees (per call, per agent)
+- Marketplace commissions (skills, integrations)
+- White-label licensing (per deployment)
+- Transaction fees on embedded fintech
+
 ---
 
 # PART 5: COMPETITIVE MOAT
@@ -660,32 +744,44 @@ Our position in the market is the **convergence of three critical pillars** that
 - Resident digital accounts with debit cards
 - **Compounds**: Banking relationships are sticky; credit history locks in users
 
-#### Moat 2: Three-Front Network Effects (Network Moat)
+#### Moat 2: Three-Sided Loyalty Network (Network Moat)
+
 ```
-                    ┌─────────────────────┐
-                    │   More Landlords    │
-                    │   Join Platform     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-┌─────────────────────┐       ┌─────────────────────┐
-│   Better Rewards    │◄──────│   More Residents    │
-│   for Residents     │       │   Eligible          │
-└──────────┬──────────┘       └──────────┬──────────┘
-           │                             │
-           ▼                             ▼
-┌─────────────────────┐       ┌─────────────────────┐
-│   More Merchant     │       │   More Residents    │
-│   Partners          │       │   Enroll            │
-└──────────┬──────────┘       └──────────┬──────────┘
-           │                             │
-           └──────────────┬──────────────┘
-                          │
-                          ▼
-                ┌─────────────────────┐
-                │   Higher Retention  │──────▶ More Landlords Join
-                └─────────────────────┘
+                         ┌─────────────────┐
+                         │    RESIDENTS    │
+                         │   (Consumers)   │
+                         ├─────────────────┤
+                         │ • Earn points   │
+                         │ • Build credit  │
+                         │ • Save for home │
+                         │ • Get rewards   │
+                         └────────┬────────┘
+                                  │
+              "I want to live     │      "I want to shop
+               where I earn"      │       where I earn"
+                                  │
+      ┌───────────────────────────┼───────────────────────────┐
+      │                           │                           │
+      ▼                           │                           ▼
+  ┌─────────────────┐             │             ┌─────────────────┐
+  │   PROPERTIES    │             │             │    MERCHANTS    │
+  │ (Landlords/HOA) │◄────────────┴────────────►│    (Local)      │
+  ├─────────────────┤    "Residents bring       ├─────────────────┤
+  │ • Attract       │     more business"        │ • Customer      │
+  │   tenants       │                           │   acquisition   │
+  │ • Reduce        │                           │ • Loyalty data  │
+  │   turnover      │                           │ • Foot traffic  │
+  │ • Lower         │                           │                 │
+  │   delinquency   │                           │                 │
+  └─────────────────┘                           └─────────────────┘
 ```
+
+**The Flywheel**:
+More Properties → More Residents Eligible → More Merchants Join →
+Better Rewards → More Residents Want It → More Properties Offer It →
+**[REPEAT - Compounding Network Effects]**
+
+**Consumer Brand Strategy**: Residents *ask* landlords to use the platform, creating **pull** for property adoption.
 
 #### Moat 3: The Skill Registry (Data Asset)
 - **265 skills** mapped across 23 competitors
@@ -709,13 +805,31 @@ Our position in the market is the **convergence of three critical pillars** that
 
 | Year | Moat Depth |
 |------|------------|
-| **Year 1** | Skill registry + initial specs + methodology validated |
-| **Year 2** | 100+ skills implemented + evaluation sets + integration patterns |
-| **Year 3** | Cross-vertical patterns + proprietary AI training data + customer data flywheel |
-| **Year 4** | Platform effects (marketplace, integrations) + brand recognition |
-| **Year 5** | Industry standard status + regulatory relationships + talent moat |
+| **Year 1** | Skill registry + methodology validated + 3-sided network seeded |
+| **Year 2** | 100+ skills implemented + evaluation sets + developer platform beta |
+| **Year 3** | Global localization live + marketplace launch + data flywheel |
+| **Year 4** | Platform dominance + white-label scale + new verticals |
+| **Year 5** | Industry standard + regulatory moat + talent ecosystem |
 
-## 5.3 Competitor Comparison
+## 5.3 Competitive Comparison Matrix
+
+| Capability | EliseAI | BILT | AppFolio | HOAi | Stessa | **CITADEL** |
+|------------|---------|------|----------|------|--------|-------------|
+| Digital Workforce | ✓ | ✗ | ✗ | ✓ | ✗ | **✓** |
+| Skill Factory | ✗ | ✗ | ✗ | ✗ | ✗ | **✓** |
+| 3-Sided Loyalty | ✗ | ✓ | ✗ | ✗ | ✗ | **✓** |
+| Embedded Fintech | ✗ | ✓ | ✗ | ✗ | ✓ | **✓** |
+| Hot/Cold/Hybrid | ? | ✗ | ✗ | ? | ✗ | **✓** |
+| Developer Platform | ✗ | ✗ | ✗ | ✗ | ✗ | **✓** |
+| Granular Localization | ✗ | ✗ | ✗ | ✗ | ✗ | **✓** |
+| Data Compounding | ✓ | ✓ | ✗ | ✓ | ✗ | **✓** |
+| Domain Portability | ✗ | ✗ | ✗ | ✗ | ✗ | **✓** |
+| Continuous Evolution | ? | ? | ✓ | ? | ✓ | **✓** |
+| **TOTAL** | **3** | **3** | **1** | **2** | **2** | **10** |
+
+**No competitor has more than 3 of our 10 pillars. We have all 10.**
+
+## 5.4 Traditional Competitor Comparison
 
 | Dimension | Legacy Players | Vertical Specialists | Point Solutions | **Us** |
 |-----------|---------------|---------------------|-----------------|--------|
