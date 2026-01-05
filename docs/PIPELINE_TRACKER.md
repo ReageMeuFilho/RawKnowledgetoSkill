@@ -14,12 +14,13 @@
 ╠═══════════════════════════════════════════════════════════════════════════════════════╣
 ║                                                                                        ║
 ║   Total MVP Gaps:     10                                                               ║
-║   ✅ Completed:        2  (GAP-HOAI-001, GAP-AF-001) ← UPDATED!                        ║
-║   🔄 In Progress:      1  (GAP-PL-001 Stage 3)                                        ║
-║   ⏳ Pending:          7                                                               ║
+║   ✅ Completed:        2  (GAP-HOAI-001, GAP-AF-001)                                   ║
+║   🔄 In Progress:      2  (GAP-PL-001 Stage 3, GAP-AF-002 Stage 3)                    ║
+║   ⏳ Pending:          6                                                               ║
 ║                                                                                        ║
 ║   Skills Specified:   9 / 79 P0 Skills (11.4%)                                        ║
-║   Next Pipeline:      GAP-PL-001 → Stage 3 (Engineering Agent)                        ║
+║   Stage 1 Complete:   4 / 10 (40%)                                                    ║
+║   Next Pipeline:      GAP-PL-001 + GAP-AF-002 → Stage 3 (Engineering Agent)           ║
 ║                                                                                        ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -104,18 +105,27 @@
 
 ---
 
-#### GAP-AF-002: AI Maintenance Coordinator Architecture
+#### GAP-AF-002: AI Maintenance Coordinator Architecture 🔄 IN PROGRESS
 
 | Stage | Status | Agent | Document | Date | Notes |
 |-------|--------|-------|----------|------|-------|
-| Stage 1 | ⏳ Pending | Research Agent | - | - | - |
-| Stage 2 | ⏳ Pending | Cursor AI | - | - | - |
-| Stage 3 | ⏳ Pending | Engineering Agent | - | - | - |
+| Stage 1 | ✅ **Complete** | Research Agent | `knowledge/operations/KD-AF-002-ai-maintenance-coordinator.md` | 2026-01-06 | **9.5/10 EXCEPTIONAL** - 48+ citations, Vendoroo deep-dive |
+| Stage 2 | ✅ **Complete** | Cursor AI | `docs/prompts/ENGINEERING_SPEC_PROMPT_AI_MAINTENANCE.md` | 2026-01-06 | 20-section detailed prompt |
+| Stage 3 | ⏳ **Pending** | Engineering Agent | - | - | Awaiting engineering spec |
 | Stage 4 | ⏳ Pending | Cursor AI | - | - | - |
 
-**Skills Covered**: SKILL-254 (ai-maintenance-coordinator)
+**Skills Covered**: SKILL-254 (ai-maintenance-coordinator) ⏳ Stage 3 Pending
 
 **Coverage Impact**: 1 P0 skill
+
+**Research Sources**: Vendoroo (primary), AppFolio Realm-X, Property Meld, Latchel, HOAi
+
+**Key Features Identified**:
+- 8-step maintenance workflow (intake → triage → troubleshoot → dispatch → coordinate → verify → billing)
+- Remote troubleshooting to avoid unnecessary truck rolls (20-35% resolution rate)
+- Intelligent vendor selection algorithm (performance, cost, proximity, history)
+- Multi-channel intake (phone, SMS, email, portal)
+- 24/7 coverage with emergency escalation protocols
 
 ---
 
@@ -240,7 +250,7 @@
 | SKILL-267 | AI Outbound Calling | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-268 | Configurable AI Coverage | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-253 | AI Leasing Assistant | GAP-AF-001 | Complete | ✅ Specified |
-| SKILL-254 | AI Maintenance Coordinator | GAP-AF-002 | Stage 1 | ⏳ Pending |
+| SKILL-254 | AI Maintenance Coordinator | GAP-AF-002 | Stage 3 | 🔄 Stage 3 Pending |
 | SKILL-257 | Unit Turn Board | GAP-AF-005 | Stage 1 | ⏳ Pending |
 | SKILL-232 | Quote Chaser Automation | GAP-GW-001 | Stage 1 | ⏳ Pending |
 | SKILL-101 | HLP Dynamic Pricing Algorithm | GAP-PL-001 | Stage 3 | 🔄 Stage 3 Pending |
@@ -260,8 +270,8 @@ TIER 1: Foundation (2 gaps)
 └── GAP-HOAI-002: [████████████████████] 100% → ↪️ Consolidated w/ HOAI-001
 
 TIER 2: Core AI (3 gaps)
-├── GAP-AF-001:   [████████████████████] 100% → ✅ COMPLETE (1 skill) ← DONE!
-├── GAP-AF-002:   [                    ]   0% → Stage 1 Pending
+├── GAP-AF-001:   [████████████████████] 100% → ✅ COMPLETE (1 skill)
+├── GAP-AF-002:   [██████████          ]  50% → Stage 3 Pending ⬅️ NEW!
 └── GAP-HOAI-004: [████████████████████] 100% → ↪️ Consolidated w/ HOAI-001
 
 TIER 3: Pricing (2 gaps)
@@ -276,7 +286,7 @@ TIER 5: Automation (1 gap)
 └── GAP-GW-001:   [                    ]   0% → Stage 1 Pending
 
 ═══════════════════════════════════════════════════════════════════════════
-OVERALL: [████                ] 20% (2/10 gaps COMPLETE | 9/79 skills specified = 11.4%)
+OVERALL: [████                ] 20% (2/10 gaps COMPLETE | 2/10 IN PROGRESS | 9/79 skills = 11.4%)
 ═══════════════════════════════════════════════════════════════════════════
 ```
 
