@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 5 (Guesty, Host OS, Mews, Besty AI, Boom AI)
-> **Total Skills**: 112
+> **Competitors Analyzed**: 6 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI)
+> **Total Skills**: 121
 
 ---
 
@@ -11,17 +11,18 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 112 |
-| MVP Skills (P0) | 35 |
-| Phase 1 Skills (P1) | 44 |
-| Phase 2 Skills (P2) | 25 |
+| Total Skills | 121 |
+| MVP Skills (P0) | 37 |
+| Phase 1 Skills (P1) | 49 |
+| Phase 2 Skills (P2) | 27 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 5) | 26 |
+| Universal Skills (all 6) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
 | Unique Skills (Besty only) | 11 |
 | Unique Skills (Boom only) | 7 |
+| Unique Skills (Inntelo only) | 9 |
 
 ---
 
@@ -44,7 +45,9 @@
 | `revenue` | 4 | Inquiry winback, direct booking, extended stay |
 | `ai-control` | 4 | Confidence, co-pilot, brand voice |
 | `voice` | 3 | Voice AI, call recording, voicemail |
-| `agentic` | 2 | Multi-function agent, predictive outreach |
+| `agentic` | 5 | Multi-function agent, predictive outreach, multi-agent |
+| `cdp` | 2 | Customer data platform, identity resolution |
+| `retention` | 2 | Churn prediction, proactive detection |
 
 ---
 
@@ -2665,6 +2668,276 @@ AI that understands cause-and-effect, not just correlations.
 
 ---
 
+<!-- INNTELO AI UNIQUE SKILLS (113-121) -->
+
+### SKILL-113: ai-customer-data-platform
+
+**Category**: cdp
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Unified first-party guest data foundation with identity resolution and predictive analytics.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Guest Profile | ⭐⭐⭐ | Basic |
+| Host OS | ⚠️ | Guest Data | ⭐⭐⭐ | Concept |
+| Mews | ⚠️ | Guest Profiles | ⭐⭐⭐⭐ | Good |
+| Besty | ❌ | - | - | No CDP |
+| Boom | ⚠️ | Unified Guest | ⭐⭐⭐ | Basic |
+| Inntelo | ✅ | AI CDP | ⭐⭐⭐⭐⭐ | Full stack |
+
+**Best Implementation**: Inntelo AI
+
+**Capabilities**:
+- [x] Identity resolution (single guest across systems)
+- [x] Deduplication and normalization
+- [x] Real-time event streaming
+- [x] Lifetime value tracking
+- [x] Price sensitivity analysis
+- [x] GDPR/CCPA compliance built-in
+
+**Knowledge Sources**:
+- Primary: KG-INN-001 (CDP Architecture)
+
+---
+
+### SKILL-114: multi-agent-architecture
+
+**Category**: agentic
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+5 specialized AI agents coordinating on complex tasks.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | Single system |
+| Host OS | ⚠️ | Agents | ⭐⭐⭐⭐ | Concept |
+| Mews | ❌ | - | - | No agents |
+| Besty | ❌ | - | - | Single AI |
+| Boom | ⚠️ | BAM | ⭐⭐⭐⭐ | Multi-function |
+| Inntelo | ✅ | Multi-Agent | ⭐⭐⭐⭐⭐ | 5 specialized |
+
+**Best Implementation**: Inntelo AI
+
+**Agent Types**:
+1. Guest Communication Agent
+2. Task Execution Agent
+3. Operations Planning Agent
+4. Revenue Optimization Agent
+5. Escalation Agent
+
+**Capabilities**:
+- [x] Agent-to-agent communication
+- [x] Shared state management
+- [x] Clean handoff protocols
+- [x] Conflict resolution
+- [x] Parallel execution
+
+**Knowledge Sources**:
+- Primary: KG-INN-002 (Multi-Agent Coordination)
+
+---
+
+### SKILL-115: cross-department-workflow-orchestration
+
+**Category**: operations
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Guest requests flow seamlessly across departments with coordinated timing.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Task Mgmt | ⭐⭐⭐⭐ | Manual |
+| Host OS | ⚠️ | Workflows | ⭐⭐⭐⭐ | Concept |
+| Mews | ⚠️ | Operations | ⭐⭐⭐⭐ | Basic |
+| Besty | ❌ | - | - | No ops |
+| Boom | ⚠️ | Operations | ⭐⭐⭐⭐ | Basic |
+| Inntelo | ✅ | Cross-Dept | ⭐⭐⭐⭐⭐ | Full |
+
+**Best Implementation**: Inntelo AI
+
+**Capabilities**:
+- [x] Single notification (all parts complete)
+- [x] Coordinated timing (sequential dependencies)
+- [x] Shared context across departments
+- [x] Real-time priority adjustment
+
+---
+
+### SKILL-116: predictive-housekeeping
+
+**Category**: operations
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+AI anticipates room needs before requests are made.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Auto Tasks | ⭐⭐⭐ | Trigger-based |
+| Mews | ⚠️ | Housekeeping | ⭐⭐⭐⭐ | Good |
+| Inntelo | ✅ | Predictive HK | ⭐⭐⭐⭐⭐ | Full AI |
+
+**Best Implementation**: Inntelo AI
+
+**Capabilities**:
+- [x] Anticipate needs from guest profile
+- [x] Schedule deep cleans optimally
+- [x] Predict linen needs
+- [x] Optimize cleaning sequences
+- [x] Dynamic re-prioritization
+
+---
+
+### SKILL-117: 40-plus-language-support
+
+**Category**: communication
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Most comprehensive multilingual support with context-aware translation.
+
+**Competitor Coverage**:
+| Competitor | Has | Languages | Quality | Notes |
+|------------|-----|-----------|---------|-------|
+| Guesty | ⚠️ | 10+ | ⭐⭐⭐ | Basic |
+| Boom | ⚠️ | 5+ | ⭐⭐⭐ | Voice focus |
+| Besty | ⚠️ | 5+ | ⭐⭐⭐ | Basic |
+| Mews | ⚠️ | 10+ | ⭐⭐⭐⭐ | Good |
+| Inntelo | ✅ | 40+ | ⭐⭐⭐⭐⭐ | Full |
+
+**Best Implementation**: Inntelo AI
+
+**Capabilities**:
+- [x] 40+ languages native
+- [x] Dialect awareness
+- [x] Context translation (intent, not words)
+- [x] Slang and colloquialism
+- [x] Hospitality terminology
+
+---
+
+### SKILL-118: churn-prediction-retention
+
+**Category**: retention
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+AI identifies at-risk guests and triggers retention interventions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| All Others | ❌ | - | - | No churn AI |
+| Inntelo | ✅ | Churn Pred | ⭐⭐⭐⭐⭐ | Full |
+
+**Best Implementation**: Inntelo AI
+
+**Capabilities**:
+- [x] Churn score per guest
+- [x] Retention intervention triggers
+- [x] Win-back campaigns
+- [x] Loyalty tier conversion
+- [x] LTV optimization
+
+---
+
+### SKILL-119: predictive-maintenance-advanced
+
+**Category**: operations
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+AI predicts equipment failures before guest impact.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Maintenance | ⭐⭐⭐ | Reactive |
+| Mews | ⚠️ | Maintenance | ⭐⭐⭐⭐ | Basic |
+| Inntelo | ✅ | Predictive | ⭐⭐⭐⭐⭐ | Full AI |
+
+**Best Implementation**: Inntelo AI
+
+**Capabilities**:
+- [x] MTBF tracking
+- [x] MTTR analytics
+- [x] Predictive failure detection
+- [x] Equipment lifecycle analysis
+- [x] Warranty tracking
+
+---
+
+### SKILL-120: intent-recognition-system
+
+**Category**: ai-control
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+50+ hospitality intents with 95% accuracy target.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ⚠️ | Basic NLU | ⭐⭐⭐ | Limited |
+| Boom | ⚠️ | BAM NLU | ⭐⭐⭐⭐ | Good |
+| Besty | ⚠️ | AI NLU | ⭐⭐⭐⭐ | Good |
+| Inntelo | ✅ | Intent System | ⭐⭐⭐⭐⭐ | 95% accuracy |
+
+**Best Implementation**: Inntelo AI
+
+**Capabilities**:
+- [x] 50+ hospitality intents
+- [x] 95% accuracy target
+- [x] Emotion detection
+- [x] Ambiguity handling
+- [x] Sarcasm detection
+- [x] Confidence thresholds
+
+---
+
+### SKILL-121: proactive-issue-detection
+
+**Category**: retention
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+AI detects issues from patterns and proactively offers help.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| All Others | ❌ | - | - | Reactive only |
+| Inntelo | ✅ | Proactive | ⭐⭐⭐⭐⭐ | Pattern-based |
+
+**Best Implementation**: Inntelo AI
+
+**Example**: "We noticed you struggled with WiFi yesterday. Can we help?"
+
+**Capabilities**:
+- [x] Pattern detection across interactions
+- [x] Proactive outreach for recurring issues
+- [x] Pre-emptive problem resolution
+- [x] Guest satisfaction protection
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -2727,3 +3000,9 @@ Enterprise and specialized features
 | **Voice AI** | **Boom AI** | **24/7 phone answering, 5+ languages** |
 | **Agentic Architecture** | **Boom AI** | **Multi-function simultaneous execution** |
 | **Predictive Outreach** | **Boom AI** | **Proactive offers based on profile** |
+| **CDP** | **Inntelo AI** | **Full stack, identity resolution, 97% capture** |
+| **Multi-Agent** | **Inntelo AI** | **5 specialized agents, clean handoffs** |
+| **Cross-Dept Orchestration** | **Inntelo AI** | **Seamless workflow coordination** |
+| **40+ Languages** | **Inntelo AI** | **Most comprehensive multilingual** |
+| **Churn Prediction** | **Inntelo AI** | **Full retention AI, intervention triggers** |
+| **Upsell Conversion** | **Inntelo AI** | **30-40% rate (highest)** |
