@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 7 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI)
-> **Total Skills**: 129
+> **Competitors Analyzed**: 8 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds)
+> **Total Skills**: 135
 
 ---
 
@@ -11,12 +11,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 129 |
-| MVP Skills (P0) | 37 |
-| Phase 1 Skills (P1) | 54 |
+| Total Skills | 135 |
+| MVP Skills (P0) | 39 |
+| Phase 1 Skills (P1) | 58 |
 | Phase 2 Skills (P2) | 30 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 7) | 26 |
+| Universal Skills (all 8) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -24,6 +24,7 @@
 | Unique Skills (Boom only) | 7 |
 | Unique Skills (Inntelo only) | 9 |
 | Unique Skills (Visito only) | 8 |
+| Unique Skills (Cloudbeds only) | 6 |
 
 ---
 
@@ -51,6 +52,8 @@
 | `retention` | 2 | Churn prediction, proactive detection |
 | `builder` | 2 | No-code agent builder, templates |
 | `retrieval` | 2 | RAG hybrid, knowledge gap detection |
+| `ai-foundation` | 3 | Foundation model, time surface, causal AI |
+| `distribution` | 2 | 300+ channels, marketplace |
 
 ---
 
@@ -3157,6 +3160,172 @@ AI agent can call external APIs autonomously during conversation.
 
 ---
 
+<!-- CLOUDBEDS UNIQUE SKILLS (130-135) -->
+
+### SKILL-130: signals-foundation-ai-model
+
+**Category**: ai-foundation
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Hospitality-specific foundation AI trained on 13+ years of data from 31,000+ hotels.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality | Notes |
+|------------|-----|--------------|---------|-------|
+| Guesty | ❌ | - | - | No foundation AI |
+| Boom | ⚠️ | BAM | ⭐⭐⭐⭐ | Multi-function |
+| Inntelo | ⚠️ | Multi-Agent | ⭐⭐⭐⭐ | Agent-based |
+| Cloudbeds | ✅ | Signals | ⭐⭐⭐⭐⭐ | True foundation |
+
+**Best Implementation**: Cloudbeds (Signals)
+
+**Capabilities**:
+- [x] 96%+ demand forecasting
+- [x] Causal AI (cause-effect)
+- [x] 4B data points/hour
+- [x] 13+ years training data
+- [x] Weekly retraining
+- [x] Multi-task learning
+
+**Knowledge Sources**:
+- Primary: KG-CB-001 (Foundation AI Architecture)
+
+---
+
+### SKILL-131: time-surface-technology
+
+**Category**: ai-foundation
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Proprietary 2D analysis of correlated booking days for higher accuracy.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| All Others | ❌ | - | - |
+| Cloudbeds | ✅ | Time Surface | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Cloudbeds
+
+**Capabilities**:
+- [x] 2D pattern analysis
+- [x] Correlated day detection
+- [x] Seasonal pattern recognition
+- [x] Higher accuracy than 1D
+
+---
+
+### SKILL-132: 180-day-demand-forecasting
+
+**Category**: pricing
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Predict booking demand for 180 days out with 96%+ accuracy.
+
+**Competitor Coverage**:
+| Competitor | Has | Horizon | Accuracy |
+|------------|-----|---------|----------|
+| Traditional | ⚠️ | 30-60 days | 50-70% |
+| Mews (Atomize) | ⚠️ | 90 days | 85% |
+| Cloudbeds | ✅ | **180 days** | **96%+** |
+
+**Best Implementation**: Cloudbeds (Signals)
+
+**Capabilities**:
+- [x] 180-day horizon
+- [x] 96%+ accuracy
+- [x] Demand peak/trough ID
+- [x] ADR potential forecast
+- [x] Segment-specific demand
+
+---
+
+### SKILL-133: 300-plus-channel-distribution
+
+**Category**: distribution
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Most comprehensive channel distribution with 300+ OTA integrations.
+
+**Competitor Coverage**:
+| Competitor | Has | Channels | Quality |
+|------------|-----|----------|---------|
+| Guesty | ⚠️ | 200+ | ⭐⭐⭐⭐ |
+| Mews | ⚠️ | 150+ | ⭐⭐⭐⭐ |
+| Boom | ⚠️ | 100+ | ⭐⭐⭐ |
+| Cloudbeds | ✅ | **300+** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Cloudbeds
+
+**Capabilities**:
+- [x] 300+ channels
+- [x] <5 min sync
+- [x] Zero commission
+- [x] 99.99% overbooking prevention
+- [x] Metasearch (Google, Kayak)
+
+---
+
+### SKILL-134: event-impact-analysis
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Predict booking surge from local events (concerts, conferences, sports).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Mews | ⚠️ | Event basic | ⭐⭐⭐ |
+| Cloudbeds | ✅ | Event Impact | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Cloudbeds
+
+**Capabilities**:
+- [x] Event detection
+- [x] Demand increase quantification
+- [x] Rate adjustment recommendations
+- [x] Weather impact correlation
+
+---
+
+### SKILL-135: integration-marketplace-200-plus
+
+**Category**: distribution
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Pre-built marketplace with 200+ partner integrations.
+
+**Competitor Coverage**:
+| Competitor | Has | Integrations | Quality |
+|------------|-----|--------------|---------|
+| Guesty | ⚠️ | 100+ | ⭐⭐⭐⭐ |
+| Mews | ⚠️ | 100+ | ⭐⭐⭐⭐ |
+| Cloudbeds | ✅ | **200+** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Cloudbeds
+
+**Categories**:
+- Accounting (QuickBooks, Xero)
+- Housekeeping (Zenvie, Alice)
+- Guest Experience (Visito, Inntelo)
+- Revenue Management
+- CRM (HubSpot, Salesforce)
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -3230,3 +3399,9 @@ Enterprise and specialized features
 | **No-Code Builder** | **Visito AI** | **Full drag-and-drop, templates** |
 | **Knowledge Gaps** | **Visito AI** | **Auto-detection of missing content** |
 | **RAG Hybrid** | **Visito AI** | **Semantic + keyword retrieval** |
+| **Foundation AI** | **Cloudbeds** | **Signals - hospitality-specific foundation model** |
+| **Demand Forecast** | **Cloudbeds** | **96% accuracy @ 180 days (BEST!)** |
+| **Time Surface** | **Cloudbeds** | **Proprietary 2D booking analysis** |
+| **Channel Distribution** | **Cloudbeds** | **300+ channels (MOST!)** |
+| **Event Impact** | **Cloudbeds** | **Automatic event detection & pricing** |
+| **Marketplace** | **Cloudbeds** | **200+ pre-built integrations** |
