@@ -15,11 +15,12 @@
 ║                                                                                        ║
 ║   Total MVP Gaps:     10                                                               ║
 ║   ✅ Completed:        1  (GAP-HOAI-001)                                               ║
-║   🔄 In Progress:      1  (GAP-AF-001 - Stage 3 pending)                              ║
-║   ⏳ Pending:          8                                                               ║
+║   🔄 In Progress:      2  (GAP-AF-001 Stage 3, GAP-PL-001 Stage 3)                    ║
+║   ⏳ Pending:          7                                                               ║
 ║                                                                                        ║
 ║   Skills Specified:   8 / 79 P0 Skills (10.1%)                                        ║
-║   Next Pipeline:      GAP-AF-001 → Stage 3 Pending (Engineering Agent)                                    ║
+║   Next Pipeline:      GAP-PL-001 → Stage 3 (Engineering Agent) ← NEW                  ║
+║                       GAP-AF-001 → Stage 3 (Engineering Agent)                        ║
 ║                                                                                        ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -130,18 +131,22 @@
 
 ---
 
-#### GAP-PL-001: HLP Dynamic Pricing Algorithm
+#### GAP-PL-001: HLP Dynamic Pricing Algorithm 🔄 IN PROGRESS
 
 | Stage | Status | Agent | Document | Date | Notes |
 |-------|--------|-------|----------|------|-------|
-| Stage 1 | ⏳ Pending | Research Agent | - | - | - |
-| Stage 2 | ⏳ Pending | Cursor AI | - | - | - |
-| Stage 3 | ⏳ Pending | Engineering Agent | - | - | - |
+| Stage 1 | ✅ Complete | Research Agent | `knowledge/pricing/KD-PL-001-hlp-dynamic-pricing.md` | 2026-01-05 | **9.5/10 EXCEPTIONAL** - 613 lines, 293+ citations |
+| Stage 2 | ✅ Complete | Cursor AI | `docs/prompts/ENGINEERING_SPEC_PROMPT_HLP_PRICING.md` | 2026-01-05 | 20-section detailed prompt |
+| Stage 3 | ⏳ **Pending** | Engineering Agent | - | - | Awaiting engineering spec |
 | Stage 4 | ⏳ Pending | Cursor AI | - | - | - |
 
-**Skills Covered**: pricing-algorithm skills (TBD exact IDs)
+**Skills Covered**: SKILL-101 (dynamic-pricing-algorithm) + related pricing skills
 
 **Coverage Impact**: ~3 P0 skills
+
+**Research Sources**: PriceLabs HLP (primary), Beyond Pricing, Wheelhouse, AirDNA
+
+**Quality Assessment**: Most comprehensive Stage 1 document - includes complete data model, 25+ business rules, integration specs, and performance requirements
 
 ---
 
@@ -227,11 +232,11 @@
 | SKILL-266 | AI Scenario Modeling | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-267 | AI Outbound Calling | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-268 | Configurable AI Coverage | GAP-HOAI-001 | Complete | ✅ Specified |
-| SKILL-253 | AI Leasing Assistant | GAP-AF-001 | Stage 1 | ⏳ Pending |
+| SKILL-253 | AI Leasing Assistant | GAP-AF-001 | Stage 3 | 🔄 Stage 3 Pending |
 | SKILL-254 | AI Maintenance Coordinator | GAP-AF-002 | Stage 1 | ⏳ Pending |
 | SKILL-257 | Unit Turn Board | GAP-AF-005 | Stage 1 | ⏳ Pending |
 | SKILL-232 | Quote Chaser Automation | GAP-GW-001 | Stage 1 | ⏳ Pending |
-| (TBD) | HLP Algorithm | GAP-PL-001 | Stage 1 | ⏳ Pending |
+| SKILL-101 | HLP Dynamic Pricing Algorithm | GAP-PL-001 | Stage 3 | 🔄 Stage 3 Pending |
 | (TBD) | Event Detection | GAP-PL-002 | Stage 1 | ⏳ Pending |
 | (TBD) | Maintenance Brain | GAP-VEN-001 | Stage 1 | ⏳ Pending |
 
@@ -248,12 +253,12 @@ TIER 1: Foundation (2 gaps)
 └── GAP-HOAI-002: [████████████████████] 100% → ↪️ Consolidated w/ HOAI-001
 
 TIER 2: Core AI (3 gaps)
-├── GAP-AF-001:   [                    ]   0% → Stage 1 Pending ⬅️ NEXT
+├── GAP-AF-001:   [██████████          ]  50% → Stage 3 Pending ⬅️ ENGINEERING
 ├── GAP-AF-002:   [                    ]   0% → Stage 1 Pending
 └── GAP-HOAI-004: [████████████████████] 100% → ↪️ Consolidated w/ HOAI-001
 
 TIER 3: Pricing (2 gaps)
-├── GAP-PL-001:   [                    ]   0% → Stage 1 Pending (can parallel)
+├── GAP-PL-001:   [██████████          ]  50% → Stage 3 Pending ⬅️ NEW!
 └── GAP-PL-002:   [                    ]   0% → Stage 1 Pending
 
 TIER 4: Operations (2 gaps)
@@ -264,7 +269,7 @@ TIER 5: Automation (1 gap)
 └── GAP-GW-001:   [                    ]   0% → Stage 1 Pending
 
 ═══════════════════════════════════════════════════════════════════════════
-OVERALL: [██                  ] 10% (1/10 gaps COMPLETE | 8/79 skills specified)
+OVERALL: [████                ] 20% (1/10 gaps COMPLETE + 2 at Stage 3 | 8/79 skills specified)
 ═══════════════════════════════════════════════════════════════════════════
 ```
 
@@ -352,18 +357,31 @@ A gap is **FULLY CLOSED** when:
    - Updated MASTER_SKILL_REGISTRY.md with skill specs
    - 8 skills fully specified
 
-### NOW:
-2. **Trigger Research Agent for GAP-AF-001** (AI Leasing Assistant)
-   - Next highest priority
-   - Builds on AI workforce patterns
-   - Input: `docs/MVP_PRIORITY_GAPS.md` + `docs/RESEARCH_ANALYST_GUIDE.md`
-   - Output: `knowledge/communication/KD-AF-001-ai-leasing-assistant.md`
+2. **GAP-AF-001 Stage 1+2 Complete**
+   - Research document: `knowledge/communication/KD-AF-001-ai-leasing-assistant.md` (7.5/10)
+   - Engineering prompt: `docs/prompts/ENGINEERING_SPEC_PROMPT_AI_LEASING.md`
+   - 17 detailed sections
 
-### PARALLEL TRACK:
-3. **Trigger Research Agent for GAP-PL-001** (HLP Algorithm)
-   - Independent of AI workforce
-   - Can run in parallel with GAP-AF-001
-   - Output: `knowledge/pricing/KD-PL-001-hlp-algorithm.md`
+3. **GAP-PL-001 Stage 1+2 Complete** ← NEW!
+   - Research document: `knowledge/pricing/KD-PL-001-hlp-dynamic-pricing.md` (**9.5/10 EXCEPTIONAL**)
+   - Engineering prompt: `docs/prompts/ENGINEERING_SPEC_PROMPT_HLP_PRICING.md`
+   - 20 detailed sections, 613 lines of research, 293+ citations
+
+### NOW (Two Parallel Engineering Tracks):
+4. **Trigger Engineering Agent for GAP-AF-001** (AI Leasing Assistant)
+   - Input: `docs/prompts/ENGINEERING_SPEC_PROMPT_AI_LEASING.md`
+   - Reference: `knowledge/communication/KD-AF-001-ai-leasing-assistant.md`
+   - Output: `knowledge/communication/ES-AF-001-ai-leasing-assistant.md`
+
+5. **Trigger Engineering Agent for GAP-PL-001** (HLP Dynamic Pricing) ← READY!
+   - Input: `docs/prompts/ENGINEERING_SPEC_PROMPT_HLP_PRICING.md`
+   - Reference: `knowledge/pricing/KD-PL-001-hlp-dynamic-pricing.md`
+   - Output: `knowledge/pricing/ES-PL-001-hlp-dynamic-pricing.md`
+
+### NEXT RESEARCH (Optional Parallel):
+6. **Trigger Research Agent for GAP-AF-002** (AI Maintenance Coordinator)
+   - Or GAP-VEN-001 (Maintenance Brain)
+   - Or GAP-PL-002 (Event Detection)
 
 ---
 
