@@ -2,9 +2,9 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 14 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, **Hostaway**)
-> **Total Skills**: 186
-> **BENCHMARKS**: EliseAI (LTR leader), Guesty & Hostaway (STR enterprise leaders)
+> **Competitors Analyzed**: 15 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, **Lodgify**)
+> **Total Skills**: 192
+> **BENCHMARKS**: EliseAI (LTR), Guesty/Hostaway (STR Enterprise), Lodgify (STR SMB)
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 186 |
-| MVP Skills (P0) | 60 |
-| Phase 1 Skills (P1) | 83 |
-| Phase 2 Skills (P2) | 35 |
+| Total Skills | 192 |
+| MVP Skills (P0) | 61 |
+| Phase 1 Skills (P1) | 86 |
+| Phase 2 Skills (P2) | 37 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 14) | 26 |
+| Universal Skills (all 15) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -31,6 +31,7 @@
 | Unique Skills (Vendoroo only) | 11 |
 | Unique Skills (EliseAI only) | 10 |
 | Unique Skills (Hostaway only) | 9 |
+| Unique Skills (Lodgify only) | 6 |
 
 ---
 
@@ -92,6 +93,10 @@
 | `rbac` | 1 | Granular permissions |
 | `ai-messaging` | 1 | Suggestions, sentiment |
 | `scale` | 1 | 1000+ property proven |
+| `website-first` | 1 | Website builder primary |
+| `direct-booking` | 2 | Widgets, booking engine |
+| `smb-pricing` | 1 | Booking fee model |
+| `statement-strategies` | 1 | Owner statement templates |
 
 ---
 
@@ -4753,6 +4758,168 @@ Platform tested and proven to handle 1000+ property portfolios.
 - Auto-scaling
 - 99.9% uptime SLA
 - SOC 2 Type II
+
+---
+
+<!-- LODGIFY UNIQUE SKILLS (187-192) - SMB MARKET LEADER -->
+
+### SKILL-187: website-first-architecture
+
+**Category**: website-first
+**Priority**: P1
+**Status**: DOCUMENTED
+
+**Description**: 
+Platform designed as website builder first, with PMS layered on top (inverse of traditional PMS-first platforms).
+
+**Competitor Coverage**:
+| Competitor | Has | Approach | Quality |
+|------------|-----|----------|---------|
+| Hostaway | ⚠️ | PMS-first, basic sites | ⭐⭐ |
+| Guesty | ⚠️ | PMS-first, no builder | ⭐ |
+| **Lodgify** | ✅ | **Website-first** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Lodgify (UNIQUE APPROACH!)
+
+**Philosophy**:
+- Website + booking engine = primary value
+- Channel manager = supporting feature
+- PMS = basic, sufficient for small portfolios
+- Direct booking focus over OTA optimization
+
+**Strategic Note**: Valid architecture for 1-50 property operators prioritizing brand.
+
+---
+
+### SKILL-188: drag-drop-website-builder
+
+**Category**: direct-booking
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Visual drag-and-drop website builder for non-technical users to create professional vacation rental sites.
+
+**Competitor Coverage**:
+| Competitor | Has | Builder | Quality |
+|------------|-----|---------|---------|
+| Hostaway | ⚠️ | Basic templates | ⭐⭐ |
+| All Others | ❌ | None | N/A |
+| **Lodgify** | ✅ | **Advanced drag-drop** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Lodgify (BEST IN CLASS!)
+
+**Features**:
+- Visual section editor (no code)
+- VR-specific templates
+- Mobile responsive + SEO-ready
+- Custom branding (colors, fonts, logos)
+- Custom domains with SSL included
+
+---
+
+### SKILL-189: embeddable-booking-widgets
+
+**Category**: direct-booking
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+External booking widgets that can be embedded into any existing website.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ⚠️ | Limited | ⭐⭐ |
+| **Lodgify** | ✅ | **Full widget suite** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Lodgify
+
+**Widget Types**:
+- Search widget (date + property)
+- Property card widgets
+- Availability calendar
+- Quote/booking widgets
+
+**Use Case**: Add booking to existing WordPress/Squarespace without migration.
+
+---
+
+### SKILL-190: google-vacation-rentals-integration
+
+**Category**: distribution
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Direct integration with Google Vacation Rentals for search exposure.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Hostaway | ⚠️ | Basic listing | ⭐⭐⭐ |
+| **Lodgify** | ✅ | **Direct integration** | ⭐⭐⭐⭐ |
+
+**Best Implementation**: Lodgify (on higher plans)
+
+**Benefits**:
+- Properties in Google Search
+- Google Maps integration
+- Direct booking from Google
+- Reduced OTA dependency
+
+---
+
+### SKILL-191: booking-fee-pricing-model
+
+**Category**: smb-pricing
+**Priority**: P2
+**Status**: DOCUMENTED
+
+**Description**: 
+Hybrid pricing with percentage booking fee on lower tiers, fee-free on higher tiers.
+
+**Competitor Coverage**:
+| Competitor | Has | Model | Quality |
+|------------|-----|-------|---------|
+| All Others | ❌ | Subscription only | N/A |
+| **Lodgify** | ✅ | **Hybrid fee model** | ⭐⭐⭐⭐ |
+
+**Best Implementation**: Lodgify (UNIQUE APPROACH!)
+
+**Model**:
+- Starter: $16/month + 1.9% per booking
+- Professional: $40/month, no fees
+- Ultimate: $59/month, no fees
+
+**Strategic Note**: Low entry barrier, incentivizes upgrade as volume grows.
+
+---
+
+### SKILL-192: owner-statement-strategies
+
+**Category**: statement-strategies
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Configurable "strategies" for owner statements defining fee/tax allocation and revenue splits.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Hostaway | ✅ | Trust accounting | ⭐⭐⭐⭐⭐ |
+| Guesty | ✅ | Full PM module | ⭐⭐⭐⭐⭐ |
+| **Lodgify** | ✅ | **Statement strategies** | ⭐⭐⭐⭐ |
+
+**Best Implementation**: Hostaway (trust accounting), Lodgify (strategy templates)
+
+**Features**:
+- Reusable statement templates
+- Fee/tax allocation rules
+- Revenue split configuration
+- Monthly/quarterly generation
+- Email directly to owners
 
 ---
 
