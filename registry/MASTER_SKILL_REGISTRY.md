@@ -1,10 +1,10 @@
-# Master Skill Registry: STR/LTR PMS + Maintenance + Housing Ops + FINTECH
+# Master Skill Registry: STR/LTR PMS + Maintenance + Housing Ops + FINTECH + CONSUMER LOYALTY
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 18 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, **Baselane**)
-> **Total Skills**: 214 📈 NEW CATEGORY: FINTECH!
-> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway), **Fintech (Baselane)**
+> **Competitors Analyzed**: 19 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, EliseAI, Hostaway, Lodgify, Hospitable, OwnerRez, Baselane, **BILT Rewards**)
+> **Total Skills**: 223 📈 NOW WITH: Fintech + Consumer Loyalty Categories!
+> **BENCHMARKS**: SMB (Lodgify/Hospitable), Mid-Market (OwnerRez), Enterprise (Guesty/Hostaway), Fintech (Baselane), **Consumer (BILT)**
 
 ---
 
@@ -12,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 214 |
-| MVP Skills (P0) | 70 |
-| Phase 1 Skills (P1) | 95 |
-| Phase 2 Skills (P2) | 41 |
+| Total Skills | 223 |
+| MVP Skills (P0) | 72 |
+| Phase 1 Skills (P1) | 101 |
+| Phase 2 Skills (P2) | 42 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 18) | 26 |
+| Universal Skills (all 19) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -35,6 +35,7 @@
 | Unique Skills (Hospitable only) | 7 |
 | Unique Skills (OwnerRez only) | 7 |
 | Unique Skills (Baselane only) | 8 |
+| Unique Skills (BILT only) | 9 |
 
 ---
 
@@ -115,6 +116,9 @@
 | `ecosystem` | 1 | Partner marketplace |
 | `tenant-management` | 1 | Tenant screening |
 | `business-structure` | 1 | Multi-entity onboarding |
+| `consumer-loyalty` | 4 | Rent rewards, credit boost, neighborhood, down payment |
+| `platform-architecture` | 1 | Three-sided marketplace |
+| `consumer-engagement` | 1 | Rent Day promotions |
 
 ---
 
@@ -5569,6 +5573,242 @@ Support for both sole proprietor and business entity account structures with pro
 - Non-Profit
 
 **Why Important**: Real estate investors often use LLCs for liability protection.
+
+---
+
+<!-- BILT REWARDS UNIQUE SKILLS (215-223) - CONSUMER LOYALTY PIONEER -->
+<!-- 👥 NEW CATEGORY: CONSUMER LOYALTY - First platform from TENANT perspective! -->
+
+### SKILL-215: rent-rewards-program
+
+**Category**: consumer-loyalty
+**Priority**: P1
+**Status**: RESEARCH
+
+**Description**: 
+Points-based rewards system allowing members to earn points on rent payments (largest monthly expense).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All PMS | ❌ | No tenant rewards | N/A |
+| **BILT** | ✅ | **Rent Rewards** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT (ONLY PLATFORM!)
+
+**How It Works**:
+- Alliance Properties: Direct PMS integration, auto points
+- BillPay: Any property, pay through BILT
+- No fees when paying from bank account
+
+**Key Insight**: Rent is largest expense for most Americans - previously "dead money".
+
+---
+
+### SKILL-216: credit-boost-rent-reporting
+
+**Category**: consumer-loyalty
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+FREE rent reporting to all three credit bureaus (Experian, Equifax, TransUnion).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Paid services | ⭐⭐⭐ |
+| **BILT** | ✅ | **FREE 3-bureau** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT
+
+**Why Critical**:
+- 45M+ Americans are "credit invisible"
+- Rent traditionally doesn't build credit
+- Free reporting is major differentiation
+
+**Implementation Note**: Could add to our platform as tenant value-add.
+
+---
+
+### SKILL-217: three-sided-marketplace
+
+**Category**: platform-architecture
+**Priority**: P0
+**Status**: RESEARCH
+
+**Description**: 
+Three-sided marketplace connecting renters (4M+), property managers (4.5M homes), and merchants (50K+).
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | Two-sided max | N/A |
+| **BILT** | ✅ | **Three-sided flywheel** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT ($10.75B valuation proves it)
+
+**The Flywheel**:
+More Properties → More Residents → More Spend → More Merchants → Revenue Share → More Properties
+
+**Why Revolutionary**: Creates **compounding value** competitors can't replicate.
+
+---
+
+### SKILL-218: rent-day-promotions
+
+**Category**: consumer-engagement
+**Priority**: P1
+**Status**: OPTIONAL
+
+**Description**: 
+Monthly promotional event on 1st of each month with limited-time benefits.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | No equivalent | N/A |
+| **BILT** | ✅ | **Rent Day®** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT
+
+**Features**:
+- Transfer bonuses to airline/hotel partners
+- Unique dining experiences
+- Free rent giveaways
+- Exclusive fitness classes
+
+**Insight**: Turns rent payment day into **celebration**, not burden.
+
+---
+
+### SKILL-219: neighborhood-benefits-network
+
+**Category**: consumer-loyalty
+**Priority**: P1
+**Status**: OPTIONAL
+
+**Description**: 
+Network of 50,000+ local merchants offering rewards within 15-mile radius.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | No equivalent | N/A |
+| **BILT** | ✅ | **50K+ merchants** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT
+
+**Categories**:
+- Dining: 20,000+ restaurants
+- Fitness: 3,000+ studios
+- Pharmacy: Walgreens
+- Rideshare: Lyft
+
+**Key Insight**: 80% consumer spending within 15 miles of home.
+
+---
+
+### SKILL-220: loyalty-transfer-partners
+
+**Category**: consumer-loyalty
+**Priority**: P1
+**Status**: OPTIONAL
+
+**Description**: 
+22 airline and hotel transfer partners for points redemption.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | No points program | N/A |
+| **BILT** | ✅ | **22 partners** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT
+
+**Partners**: United, Southwest, Alaska, Hyatt, Hilton, Marriott, etc.
+
+**Key Insight**: Rent points have **same value** as premium credit card points.
+
+---
+
+### SKILL-221: down-payment-redemption
+
+**Category**: consumer-loyalty
+**Priority**: P0
+**Status**: RESEARCH
+
+**Description**: 
+UNIQUE ability to redeem points toward a home down payment.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| ALL Others | ❌ | No equivalent anywhere | N/A |
+| **BILT** | ✅ | **Down payment redemption** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT (ONLY PROGRAM IN EXISTENCE!)
+
+**Why Revolutionary**:
+- Points from renting → help you BUY a home
+- Supports rent-to-own lifecycle
+- Creates decade-long engagement
+- Aligns with member life goals
+
+**Key Insight**: **MOST UNIQUE** redemption option in entire rewards industry.
+
+---
+
+### SKILL-222: pm-resident-incentives
+
+**Category**: property-management
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+PM tools to create point-based incentives for resident behaviors.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Others | ⚠️ | Basic campaigns | ⭐⭐⭐ |
+| **BILT** | ✅ | **Point incentives** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT Alliance
+
+**Results**:
+- 3x increase in early payments
+- 20% reduction in acquisition costs
+- 100% property partner retention
+
+**Key Insight**: Incentive tools that **pay for themselves**.
+
+---
+
+### SKILL-223: card-linked-offers
+
+**Category**: consumer-loyalty
+**Priority**: P2
+**Status**: OPTIONAL
+
+**Description**: 
+Automatic rewards when paying with any linked card at participating merchants.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | No CLO | N/A |
+| **BILT** | ✅ | **Card-linked** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: BILT
+
+**How It Works**:
+1. Link credit/debit cards to BILT
+2. Pay at merchant with linked card
+3. Points automatically credited
+4. No receipts, no codes
+
+**Key**: Frictionless earning with existing payment habits.
 
 ---
 
