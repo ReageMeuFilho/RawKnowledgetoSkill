@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 9 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady)
-> **Total Skills**: 144
+> **Competitors Analyzed**: 10 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs)
+> **Total Skills**: 156
 
 ---
 
@@ -11,12 +11,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 144 |
-| MVP Skills (P0) | 41 |
-| Phase 1 Skills (P1) | 65 |
-| Phase 2 Skills (P2) | 30 |
+| Total Skills | 156 |
+| MVP Skills (P0) | 44 |
+| Phase 1 Skills (P1) | 72 |
+| Phase 2 Skills (P2) | 32 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 9) | 26 |
+| Universal Skills (all 10) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -26,6 +26,7 @@
 | Unique Skills (Visito only) | 8 |
 | Unique Skills (Cloudbeds only) | 6 |
 | Unique Skills (RentalReady only) | 9 |
+| Unique Skills (PriceLabs only) | 12 |
 
 ---
 
@@ -59,6 +60,12 @@
 | `grouping` | 2 | Property grouping, multi-office |
 | `quality` | 2 | Quality audit, review replies |
 | `contractor` | 1 | Service provider ecosystem |
+| `pricing-algorithm` | 3 | HLP, elasticity, demand forecast |
+| `event-detection` | 1 | 4-way redundant detection |
+| `price-customization` | 2 | 12 options, stacking logic |
+| `pacing` | 1 | YoY trajectory analysis |
+| `investment` | 1 | Revenue estimation |
+| `integrations-mgmt` | 1 | 161+ PMS sync management |
 
 ---
 
@@ -3559,6 +3566,341 @@ Large portfolio management with city managers who only see/manage their properti
 
 ---
 
+<!-- PRICELABS UNIQUE SKILLS (145-156) -->
+
+### SKILL-145: hyper-local-pulse-algorithm
+
+**Category**: pricing-algorithm
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Proprietary algorithm generating optimized daily pricing based on hyper-local (0.5-5km radius) market conditions.
+
+**Competitor Coverage**:
+| Competitor | Has | Granularity | Quality |
+|------------|-----|-------------|---------|
+| Cloudbeds | ⚠️ | Market-wide | ⭐⭐⭐⭐ |
+| All Others | ⚠️ | Market-wide | ⭐⭐⭐ |
+| PriceLabs | ✅ | **0.5-5km** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs (MOST GRANULAR!)
+
+**Components**:
+- [x] Demand forecasting (365 days, <12% MAPE)
+- [x] Price elasticity estimation
+- [x] Competitive benchmarking (20-350 comps)
+- [x] 4-way event detection
+- [x] Daily market-driven recalculation
+- [x] Lead time optimization
+
+---
+
+### SKILL-146: four-way-event-detection
+
+**Category**: event-detection
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Industry-first redundant event detection using 4 independent signals.
+
+**Competitor Coverage**:
+| Competitor | Has | Detection Methods | Quality |
+|------------|-----|-------------------|---------|
+| Cloudbeds | ⚠️ | AI-based | ⭐⭐⭐⭐ |
+| Others | ⚠️ | Single source | ⭐⭐⭐ |
+| PriceLabs | ✅ | **4-way** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs
+
+**4 Detection Methods**:
+1. YoY Pacing comparison
+2. Early demand signals (booking surge)
+3. Competitor pricing spikes (60%+ raise)
+4. Hotel price indicators (Booking.com)
+
+**Confidence Scoring**:
+- 1 method: 40%
+- 2 methods: 70%
+- 3+ methods: 85%+
+
+---
+
+### SKILL-147: price-elasticity-estimation
+
+**Category**: pricing-algorithm
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Determine how sensitive demand is to price changes at neighborhood level.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| PriceLabs | ✅ | Elasticity | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs (UNIQUE!)
+
+**Output**: Elasticity coefficient (-0.5 to -2.0)
+
+**Examples**:
+- Premium beachfront: -0.4 (can raise prices)
+- Mid-tier interior: -1.2 (needs competitive pricing)
+
+---
+
+### SKILL-148: dynamic-min-stay-4-methods
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Most comprehensive min-stay optimization with 4 adjustment methods.
+
+**Competitor Coverage**:
+| Competitor | Has | Methods | Quality |
+|------------|-----|---------|---------|
+| RentalReady | ⚠️ | 1 | ⭐⭐⭐⭐ |
+| Others | ⚠️ | 1-2 | ⭐⭐⭐ |
+| PriceLabs | ✅ | **4** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs (MOST COMPLETE!)
+
+**4 Methods**:
+1. Gap-filling (detect & fill short gaps)
+2. Lead-time based (far-out vs last-minute)
+3. Demand-based (high occ → raise, low → lower)
+4. Adjacent day consideration (extension opportunity)
+
+---
+
+### SKILL-149: twelve-price-customization-options
+
+**Category**: price-customization
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Most comprehensive price customization framework with 12 options.
+
+**Competitor Coverage**:
+| Competitor | Has | Options | Quality |
+|------------|-----|---------|---------|
+| RentalReady | ⚠️ | 6-8 | ⭐⭐⭐⭐ |
+| Cloudbeds | ⚠️ | 5-6 | ⭐⭐⭐⭐ |
+| PriceLabs | ✅ | **12** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs
+
+**12 Options**:
+1. Base Price Setting
+2. Seasonal Profiles
+3. Lead-Time Pricing
+4. Day-of-Week
+5. LOS Discounts
+6. OTA-Specific Markup
+7. Event-Based
+8. Occupancy-Based
+9. Weekday/Peak Strategy
+10. Foreign Currency
+11. Cleaning Fee Factor
+12. Bulk Updates
+
+---
+
+### SKILL-150: automation-rules-engine
+
+**Category**: automation
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Conditional logic for pricing/availability without manual intervention.
+
+**Competitor Coverage**:
+| Competitor | Has | Rule Types | Quality |
+|------------|-----|------------|---------|
+| RentalReady | ⚠️ | Basic | ⭐⭐⭐⭐ |
+| PriceLabs | ✅ | **6 types** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs
+
+**Rule Types**:
+1. Occupancy-based (IF occ > 80% THEN +15%)
+2. Pacing rules (YoY comparison)
+3. Event rules (auto-apply markup)
+4. Booking window (lead-time triggers)
+5. Channel-specific (per-OTA strategy)
+6. Time-based (seasons/days active)
+
+---
+
+### SKILL-151: pacing-analysis-yoy
+
+**Category**: pacing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Forward-looking booking trajectory and YoY forecast analysis.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Cloudbeds | ⚠️ | Basic | ⭐⭐⭐ |
+| PriceLabs | ✅ | **Full** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs
+
+**Metrics**:
+- Current vs prior year booking pace
+- Booking window analysis
+- Lead-time distribution
+- Revenue projection
+- Risk zone identification
+
+---
+
+### SKILL-152: revenue-estimator-pro
+
+**Category**: investment
+**Priority**: P2
+**Status**: NEEDED
+
+**Description**: 
+Investment analysis tool for new properties or portfolio evaluation.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| PriceLabs | ✅ | Full | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs (UNIQUE!)
+
+**Features**:
+- Monthly/annual revenue projection
+- ADR recommendation
+- Occupancy forecast
+- ROI calculation
+- Payback period
+- Comp-set analysis (50-350 properties)
+
+---
+
+### SKILL-153: pms-integration-management-161
+
+**Category**: integrations-mgmt
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Most extensive PMS/channel manager integration ecosystem.
+
+**Competitor Coverage**:
+| Competitor | Has | Count | Quality |
+|------------|-----|-------|---------|
+| Cloudbeds | ✅ | 200+ | ⭐⭐⭐⭐⭐ |
+| PriceLabs | ✅ | **161+** | ⭐⭐⭐⭐⭐ |
+| Others | ⚠️ | 20-50 | ⭐⭐⭐ |
+
+**Best Implementation**: Cloudbeds (200+) + PriceLabs (161+)
+
+**Integration Types**:
+1. Native Direct (real-time)
+2. API-Based Custom
+3. Bulk Multi-PMS
+
+---
+
+### SKILL-154: team-management-6-roles
+
+**Category**: access-control
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Enterprise-grade role-based access control with 6 distinct roles.
+
+**Competitor Coverage**:
+| Competitor | Has | Roles | Quality |
+|------------|-----|-------|---------|
+| Guesty | ✅ | 4-5 | ⭐⭐⭐⭐ |
+| RentalReady | ⚠️ | 3-4 | ⭐⭐⭐ |
+| PriceLabs | ✅ | **6** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs
+
+**6 Roles**:
+1. Account Owner
+2. Account Administrator
+3. Revenue Manager
+4. Property Manager
+5. View-Only/Analyst
+6. Integration Manager
+
+---
+
+### SKILL-155: comp-set-management
+
+**Category**: competitive-intelligence
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Sophisticated comparable property selection and monitoring.
+
+**Competitor Coverage**:
+| Competitor | Has | Max Comps | Quality |
+|------------|-----|-----------|---------|
+| Cloudbeds | ⚠️ | Unknown | ⭐⭐⭐⭐ |
+| PriceLabs | ✅ | **350** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs
+
+**Selection Criteria**:
+- Proximity (0.5-15 km)
+- Property type match
+- Bedroom count (±1)
+- Amenity similarity
+- Price range (±20-30%)
+- Review score (4.5+)
+
+---
+
+### SKILL-156: market-dashboards-free
+
+**Category**: analytics
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Free competitive benchmarking and market analysis dashboards.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Cloudbeds | ⚠️ | Paid | ⭐⭐⭐⭐ |
+| PriceLabs | ✅ | **Free** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: PriceLabs (FREE!)
+
+**8 KPIs**:
+1. ADR
+2. Occupancy Rate
+3. RevPAR
+4. Annual Revenue Estimate
+5. Booking Velocity
+6. Occupancy Heatmap
+7. ADR Trends
+8. Competitive Positioning
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -3647,3 +3989,11 @@ Enterprise and specialized features
 | **Lead-Time Pricing** | **RentalReady** | **Price by booking window** |
 | **Multi-Office** | **RentalReady** | **Staff separation by city/group** |
 | **Offline Support** | **RentalReady** | **Field worker reliability (UNIQUE!)** |
+| **Dynamic Pricing Algorithm** | **PriceLabs** | **HLP - hyper-local 0.5-5km (BEST GRANULARITY!)** |
+| **Event Detection** | **PriceLabs** | **4-way redundancy (MOST RELIABLE!)** |
+| **Price Customization** | **PriceLabs** | **12 options with stacking (MOST COMPREHENSIVE!)** |
+| **Min-Stay Optimization** | **PriceLabs** | **4 methods (MOST COMPLETE!)** |
+| **Price Elasticity** | **PriceLabs** | **Economic demand modeling (UNIQUE!)** |
+| **Pacing Analysis** | **PriceLabs** | **YoY trajectory forecasting** |
+| **Revenue Estimation** | **PriceLabs** | **Investment analysis tool** |
+| **PMS Integrations Count** | **PriceLabs** | **161+ systems (MOST!)** |
