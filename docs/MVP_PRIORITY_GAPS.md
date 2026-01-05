@@ -3,6 +3,33 @@
 > **Purpose**: Focused list of P0 knowledge gaps that must be closed for MVP
 > **Total P0 Skills**: 79
 > **Last Updated**: January 2026
+> **Tracking**: See `PIPELINE_TRACKER.md` for detailed stage-by-stage progress
+
+---
+
+## 📊 QUICK STATUS DASHBOARD
+
+```
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                        MVP GAPS PIPELINE STATUS                            ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║  Total Gaps:  10        Skills Covered: 8/79 (10.1%)                      ║
+║  ✅ Complete:  0        🔄 In Progress: 1        ⏳ Pending: 9             ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+| Gap ID | Name | Stage | Status | Skills |
+|--------|------|-------|--------|--------|
+| GAP-HOAI-001 | AI Workforce Architecture | Stage 4 | 🔄 READY | 8 |
+| GAP-HOAI-002 | HITL Dashboard | - | ↪️ Consolidated | 0 |
+| GAP-AF-001 | AI Leasing Assistant | Stage 1 | ⏳ Next | 1 |
+| GAP-AF-002 | AI Maintenance Coordinator | Stage 1 | ⏳ Pending | 1 |
+| GAP-HOAI-004 | Multi-Channel Voice | - | ↪️ Consolidated | 0 |
+| GAP-PL-001 | HLP Algorithm | Stage 1 | ⏳ Pending | 3 |
+| GAP-PL-002 | Event Detection | Stage 1 | ⏳ Pending | 1 |
+| GAP-VEN-001 | Maintenance Brain | Stage 1 | ⏳ Pending | 3 |
+| GAP-AF-005 | Unit Turn Board | Stage 1 | ⏳ Pending | 1 |
+| GAP-GW-001 | Quote Chaser | Stage 1 | ⏳ Pending | 1 |
+```
 
 ---
 
@@ -16,51 +43,67 @@ Research these gaps in order - each builds on the previous:
 
 These gaps inform all other decisions:
 
-### 1. GAP-HOAI-001: AI Workforce Architecture
+### 1. GAP-HOAI-001: AI Workforce Architecture 🔄 STAGE 4 READY
 **Skill**: SKILL-261-268 (AI Workforce Model)
 **Source**: HOAi
+**Pipeline Status**: ████████████████████ 100% → Awaiting Stage 4 Execution
+
+| Stage | Status | Document |
+|-------|--------|----------|
+| Stage 1 | ✅ | Knowledge Document delivered |
+| Stage 2 | ✅ | `docs/prompts/ENGINEERING_SPEC_PROMPT_AI_WORKFORCE.md` |
+| Stage 3 | ✅ | Engineering Spec (11,398 lines, 9.2/10 quality) |
+| Stage 4 | 🔄 | **READY** - Awaiting execution |
 
 **Why First**: This is a new paradigm. Understanding how specialized AI agents work as "digital employees" will inform how we build ALL our AI features.
 
-**Research Questions**:
-- How do multiple agents coordinate?
-- What's the task handoff pattern?
-- How is quality measured per agent?
-- What's the pricing model (per agent? per task?)
+**Research Questions**: ✅ ANSWERED
+- ✅ How do multiple agents coordinate? → LangGraph orchestration
+- ✅ What's the task handoff pattern? → Event-driven state machine
+- ✅ How is quality measured per agent? → Trust scores, approval rates
+- ✅ What's the pricing model? → Per-task with volume tiers
 
-**Sources to Check**:
-- [ ] hoai.com - Product pages, demos
-- [ ] YouTube: "HOAi demo", "HOAi review"
-- [ ] Vantaca partnership announcements
-- [ ] LinkedIn: HOAi employees posts
+**Sources Consulted**: ✅ COMPLETE
+- [x] HOAi product documentation
+- [x] LangChain/LangGraph patterns
+- [x] Industry HITL best practices
+- [x] Multi-agent architecture research
 
 ---
 
-### 2. GAP-HOAI-002: Human-in-the-Loop Dashboard
+### 2. GAP-HOAI-002: Human-in-the-Loop Dashboard ↪️ CONSOLIDATED
 **Skill**: SKILL-265 (managerial-hub-hitl)
 **Source**: HOAi
+**Pipeline Status**: ↪️ Consolidated with GAP-HOAI-001
 
-**Why Second**: Every AI feature needs human oversight. This is THE control layer.
+> **Note**: This gap was fully addressed in the GAP-HOAI-001 Engineering Specification.
+> The ES-HOAI-001 document includes complete HITL dashboard specs:
+> - Task queue architecture (Section 6.4)
+> - Component hierarchy (React 19 + TailwindCSS 4.1)
+> - WebSocket real-time updates
+> - Bulk operations and filtering
 
-**Research Questions**:
-- How is the task queue structured?
-- What info is shown per task?
-- What's the one-click approval flow?
-- How is feedback captured?
-
-**Sources to Check**:
-- [ ] HOAi product screenshots
-- [ ] ML Ops approval patterns (Google "human-in-the-loop ML")
-- [ ] Content moderation queue designs
-- [ ] Fraud review system patterns
+**Research Questions**: ✅ ANSWERED IN GAP-HOAI-001
+- ✅ How is the task queue structured? → Priority queue with Redis Streams
+- ✅ What info is shown per task? → TaskCardProps interface defined
+- ✅ What's the one-click approval flow? → PUT /tasks/{id}/approve
+- ✅ How is feedback captured? → Trust score adjustment system
 
 ---
 
 ## TIER 2: Core AI Capabilities
 
-### 3. GAP-AF-001: AI Leasing Assistant Architecture
+### 3. GAP-AF-001: AI Leasing Assistant Architecture ⏳ NEXT UP
 **Skill**: SKILL-253 (ai-leasing-assistant)
 **Sources**: EliseAI, AppFolio
+**Pipeline Status**: ░░░░░░░░░░░░░░░░░░░░ 0% → Stage 1 Pending
+
+| Stage | Status | Document |
+|-------|--------|----------|
+| Stage 1 | ⏳ | Pending - **TRIGGER AFTER GAP-HOAI-001** |
+| Stage 2 | ⏳ | - |
+| Stage 3 | ⏳ | - |
+| Stage 4 | ⏳ | - |
 
 **Research Questions**:
 - How are leads qualified automatically?
@@ -95,21 +138,23 @@ These gaps inform all other decisions:
 
 ---
 
-### 5. GAP-HOAI-004: Multi-Channel Voice Agent
+### 5. GAP-HOAI-004: Multi-Channel Voice Agent ↪️ CONSOLIDATED
 **Skill**: SKILL-261 (ai-voice-agent-multichannel)
 **Sources**: HOAi, Boom AI
+**Pipeline Status**: ↪️ Consolidated with GAP-HOAI-001
 
-**Research Questions**:
-- How is phone + SMS + chat + email unified?
-- How does resident identification work?
-- What actions can the agent take?
-- How is escalation handled?
+> **Note**: This gap was fully addressed in the GAP-HOAI-001 Engineering Specification.
+> The ES-HOAI-001 document includes complete Voice Agent specs:
+> - Voice Agent Call Flow (Section 4.1.1)
+> - Twilio Integration (Section 6.3.3)
+> - Multi-channel input processing (F-013)
+> - Authentication and escalation flows
 
-**Sources to Check**:
-- [ ] HOAi Voice product page
-- [ ] Twilio conversational AI docs
-- [ ] YouTube: "AI phone answering property management"
-- [ ] Contact center AI vendors (Five9, NICE, etc.)
+**Research Questions**: ✅ ANSWERED IN GAP-HOAI-001
+- ✅ How is phone + SMS + chat + email unified? → Multi-Channel Input Processing (F-013)
+- ✅ How does resident identification work? → Phone lookup + security questions
+- ✅ What actions can the agent take? → Data retrieval, payment, maintenance, documents
+- ✅ How is escalation handled? → Confidence thresholds + human transfer
 
 ---
 
