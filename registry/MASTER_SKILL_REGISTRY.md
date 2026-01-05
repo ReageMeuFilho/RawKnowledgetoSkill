@@ -2,8 +2,8 @@
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 8 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds)
-> **Total Skills**: 135
+> **Competitors Analyzed**: 9 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady)
+> **Total Skills**: 144
 
 ---
 
@@ -11,12 +11,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 135 |
-| MVP Skills (P0) | 39 |
-| Phase 1 Skills (P1) | 58 |
+| Total Skills | 144 |
+| MVP Skills (P0) | 41 |
+| Phase 1 Skills (P1) | 65 |
 | Phase 2 Skills (P2) | 30 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 8) | 26 |
+| Universal Skills (all 9) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -25,6 +25,7 @@
 | Unique Skills (Inntelo only) | 9 |
 | Unique Skills (Visito only) | 8 |
 | Unique Skills (Cloudbeds only) | 6 |
+| Unique Skills (RentalReady only) | 9 |
 
 ---
 
@@ -54,6 +55,10 @@
 | `retrieval` | 2 | RAG hybrid, knowledge gap detection |
 | `ai-foundation` | 3 | Foundation model, time surface, causal AI |
 | `distribution` | 2 | 300+ channels, marketplace |
+| `ai-routing` | 2 | Confidence scoring, human-in-loop |
+| `grouping` | 2 | Property grouping, multi-office |
+| `quality` | 2 | Quality audit, review replies |
+| `contractor` | 1 | Service provider ecosystem |
 
 ---
 
@@ -3326,6 +3331,234 @@ Pre-built marketplace with 200+ partner integrations.
 
 ---
 
+<!-- RENTALREADY UNIQUE SKILLS (136-144) -->
+
+### SKILL-136: flexible-property-grouping
+
+**Category**: grouping
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Group properties by location, type, ownership with different rules, policies, and staff per group.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| All Others | ⚠️ | Basic groups | ⭐⭐⭐ |
+| RentalReady | ✅ | Flexible Grouping | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: RentalReady (UNIQUE!)
+
+**Capabilities**:
+- [x] Group by location (city/region)
+- [x] Group by type (villa/apt/studio)
+- [x] Group by ownership model
+- [x] Different rules per group
+- [x] Different staff per group
+- [x] Different pricing per group
+
+---
+
+### SKILL-137: ai-confidence-based-routing
+
+**Category**: ai-routing
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Route AI-generated messages based on confidence score (high/medium/low).
+
+**Competitor Coverage**:
+| Competitor | Has | Confidence | Human-in-Loop |
+|------------|-----|------------|---------------|
+| Cloudbeds | ⚠️ | Basic | ⭐⭐⭐ |
+| Visito | ⚠️ | Limited | ⭐⭐ |
+| RentalReady | ✅ | **Full** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: RentalReady (Maia AI)
+
+**Routing Logic**:
+- HIGH (>90%): Auto-send (configurable)
+- MEDIUM (70-90%): Human review OR auto+notify
+- LOW (<70%): ALWAYS human review
+
+---
+
+### SKILL-138: ai-property-quality-audit
+
+**Category**: quality
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Monitor property quality from guest reviews and generate improvement recommendations.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Cloudbeds | ⚠️ | Basic | ⭐⭐⭐ |
+| Inntelo | ⚠️ | CDP insights | ⭐⭐⭐ |
+| RentalReady | ✅ | Quality Audit | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: RentalReady
+
+**Workflow**:
+1. Review ingestion from OTAs
+2. Sentiment & issue extraction
+3. Quality scoring by category
+4. Trend detection
+5. Recommendation generation
+
+---
+
+### SKILL-139: ai-review-reply-generation
+
+**Category**: quality
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Auto-generate public replies to guest reviews on OTAs.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Others | ⚠️ | Manual | ⭐⭐ |
+| RentalReady | ✅ | Review Replies | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: RentalReady
+
+**Capabilities**:
+- [x] Positive review responses
+- [x] Negative review handling
+- [x] Tone matching
+- [x] Manager edit/approve
+
+---
+
+### SKILL-140: dynamic-min-stay-optimization
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Auto-adjust minimum stay requirements to fill calendar gaps.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Besty | ⚠️ | Gap Fill | ⭐⭐⭐⭐ |
+| RentalReady | ✅ | Min-Stay Opt | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: RentalReady + Besty combined
+
+**Result**: Fill 2-night gaps when 3-night minimum blocked
+
+---
+
+### SKILL-141: lead-time-based-pricing
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Set different prices based on booking advance window.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Cloudbeds | ⚠️ | Basic | ⭐⭐⭐⭐ |
+| RentalReady | ✅ | Lead-Time | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: RentalReady
+
+**Example**:
+- 90+ days: +20% (premium early bookers)
+- 0-14 days: -15% (last-minute fill)
+
+---
+
+### SKILL-142: service-provider-ecosystem
+
+**Category**: contractor
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Complete ecosystem for managing cleaners, maintenance, key handlers.
+
+**Competitor Coverage**:
+| Competitor | Has | Mobile App | Offline |
+|------------|-----|------------|---------|
+| Guesty | ⚠️ | Basic | ❌ |
+| Cloudbeds | ⚠️ | Good | ❌ |
+| RentalReady | ✅ | **Full** | ✅ |
+
+**Best Implementation**: RentalReady (UNIQUE offline support!)
+
+**Mobile App Features**:
+- [x] Task list (today/tomorrow/upcoming)
+- [x] Checklist execution
+- [x] Photo evidence
+- [x] Problem reporting
+- [x] Navigation/maps
+- [x] In-app messaging
+- [x] **Offline-first** (UNIQUE!)
+- [x] Payment tracking
+
+---
+
+### SKILL-143: occupancy-based-pricing-rules
+
+**Category**: pricing
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Automatically adjust rates based on portfolio occupancy.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Cloudbeds | ⚠️ | Signals | ⭐⭐⭐⭐⭐ |
+| RentalReady | ✅ | Occupancy Rules | ⭐⭐⭐⭐ |
+
+**Best Implementation**: Cloudbeds (Signals) + RentalReady (Rules)
+
+**Example**:
+- Occupancy >80%: +10% all unsold
+- Occupancy <50%: -15% discount
+
+---
+
+### SKILL-144: multi-office-staff-separation
+
+**Category**: grouping
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Large portfolio management with city managers who only see/manage their properties.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature Name | Quality |
+|------------|-----|--------------|---------|
+| Cloudbeds | ⚠️ | Multi-property | ⭐⭐⭐⭐ |
+| RentalReady | ✅ | Multi-Office | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: RentalReady
+
+**Capabilities**:
+- [x] City managers per group
+- [x] Staff visibility restricted
+- [x] Central finance read-only
+- [x] CEO aggregated dashboard
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
@@ -3405,3 +3638,12 @@ Enterprise and specialized features
 | **Channel Distribution** | **Cloudbeds** | **300+ channels (MOST!)** |
 | **Event Impact** | **Cloudbeds** | **Automatic event detection & pricing** |
 | **Marketplace** | **Cloudbeds** | **200+ pre-built integrations** |
+| **AI Confidence Routing** | **RentalReady** | **High/Medium/Low + human-in-loop (MOST CONTROL!)** |
+| **Property Grouping** | **RentalReady** | **Location/type/ownership (UNIQUE!)** |
+| **Service Provider App** | **RentalReady** | **Offline-first mobile app** |
+| **Quality Audit** | **RentalReady** | **Reviews → Scores → Recommendations** |
+| **Review Replies** | **RentalReady** | **Auto-generate public responses** |
+| **Min-Stay Optimization** | **RentalReady** | **Fill calendar gaps dynamically** |
+| **Lead-Time Pricing** | **RentalReady** | **Price by booking window** |
+| **Multi-Office** | **RentalReady** | **Staff separation by city/group** |
+| **Offline Support** | **RentalReady** | **Field worker reliability (UNIQUE!)** |
