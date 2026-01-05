@@ -40,7 +40,7 @@ We're building a **skill-based operating system** where AI agents have the skill
 | 2 | **Skill Factory** | Knowledge-to-Skill Pipeline | Compounding capability |
 | 3 | **Hot/Cold/Hybrid Architecture** | Flexible execution paths | Handles any complexity |
 | 4 | **Three-Sided Loyalty Network** | Residents ↔ Properties ↔ Merchants | Network effects compound |
-| 5 | **Embedded Fintech** | Real banking, toggle on/off | Switching costs + revenue |
+| 5 | **Hybrid Fintech + Crypto** | Traditional banking + stablecoin/on-chain | Switching costs + currency hedge |
 | 6 | **Developer Platform** | Others build on top, we orchestrate | Ecosystem lock-in |
 | 7 | **Granular Localization** | Country→Market→Property→Unit config | Global scale + local depth |
 | 8 | **Data Compounding** | Every interaction improves AI | Gets smarter over time |
@@ -604,11 +604,20 @@ The **key strategic insight**: Core skills are domain-agnostic. They bundle diff
 │   └─────────────────┘  └─────────────────┘  └─────────────────┘            │
 │                                                                              │
 │   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │                    FINTECH CAPABILITY LAYER                          │   │
+│   │              HYBRID FINTECH + CRYPTO NEOBANK LAYER                   │   │
 │   │                      (Toggle On/Off Per Deployment)                  │   │
 │   ├─────────────────────────────────────────────────────────────────────┤   │
-│   │ • banking-accounts     • high-yield-savings    • card-issuing       │   │
-│   │ • payment-rails        • credit-reporting      • rewards-engine     │   │
+│   │                                                                      │   │
+│   │  TRADITIONAL RAILS:                                                  │   │
+│   │  • banking-accounts     • high-yield-savings    • card-issuing      │   │
+│   │  • payment-rails        • credit-reporting      • rewards-engine    │   │
+│   │                                                                      │   │
+│   │  CRYPTO NEOBANK RAILS:                                               │   │
+│   │  • stablecoin-wallets   • on-chain-transfers   • defi-yield         │   │
+│   │  • on-chain-credit      • fiat-onramp          • multi-currency     │   │
+│   │                                                                      │   │
+│   │  Users see ONE unified account → Multiple rails underneath          │   │
+│   │                                                                      │   │
 │   └─────────────────────────────────────────────────────────────────────┘   │
 │                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -627,7 +636,72 @@ The same skill factory applies to **any domain** where there are tasks to be don
 
 **The Compounding Advantage**: Every skill we build for real estate is potentially reusable in other verticals. Our skill registry becomes more valuable with each domain we enter.
 
-## 4.6 Granular Localization Architecture
+## 4.6 Hybrid Fintech + Crypto Neobank Architecture
+
+### The Unified Financial Layer
+
+Users see **one account** with **multiple rails** underneath:
+
+```
+USER DASHBOARD
+─────────────────────────────────
+Total Balance: $10,000
+
+├── Traditional Finance
+│   ├── USD Checking: $4,000 (FDIC insured)
+│   └── High-Yield Savings: $2,000 (2.5% APY)
+│
+├── Crypto / Stablecoin
+│   ├── USDC: $3,000 (earning 4% DeFi yield)
+│   └── USDT: $500
+│
+└── Local Currency
+    └── BRL: R$2,500 (~$500)
+```
+
+### Capabilities by Rail
+
+| Traditional Rails | Crypto Neobank Rails |
+|-------------------|----------------------|
+| FDIC-insured accounts | Stablecoin wallets (USDC, USDT, DAI) |
+| ACH transfers | On-chain instant transfers |
+| Wire transfers | Cross-border low-cost |
+| Debit/credit cards | Crypto card (spend stablecoins) |
+| High-yield savings (2-3%) | DeFi yield access (4-8%) |
+| Traditional credit | On-chain collateralized credit |
+| Local payment rails (PIX, SEPA) | Fiat on/off ramps |
+
+### Build vs. Partner
+
+| Component | Approach | Partners |
+|-----------|----------|----------|
+| Traditional BaaS | Partner | Unit, Treasury Prime, Synapse |
+| Stablecoin Infrastructure | Partner | Circle (USDC), Fireblocks |
+| Crypto Custody | Partner | Anchorage, BitGo, Fireblocks |
+| DeFi Yield | Partner/Build | Compound, Aave integrations |
+| On/Off Ramps | Partner | MoonPay, Ramp, Circle |
+
+### Why This Matters for Property
+
+| Use Case | Traditional Only | With Crypto Rails |
+|----------|------------------|-------------------|
+| **Brazil landlord** | BRL savings lose 10%/year to inflation | Park in USDC, earn yield |
+| **International investor** | Complex FX, wire fees | Instant stablecoin transfers |
+| **HOA reserves** | 2% savings rate | 4-6% DeFi yield (with risk) |
+| **Cross-border vendor** | 3-5 day wire, $30+ fees | On-chain instant, <$1 |
+| **Currency hedging** | Open forex account | Hold stablecoins natively |
+
+### Regulatory Approach
+
+| Market | Traditional | Crypto |
+|--------|-------------|--------|
+| **US** | BaaS partner licenses | State money transmitter via partner |
+| **Brazil** | Local banking partner | Crypto exchange partnership |
+| **EU** | EMI license via partner | MiCA compliance via partner |
+
+---
+
+## 4.7 Granular Localization Architecture
 
 Built for **global scale with local depth**—configurable at every level:
 
@@ -738,11 +812,26 @@ Our position in the market is the **convergence of three critical pillars** that
 
 ### The Five Compounding Moats
 
-#### Moat 1: Fintech Integration (Switching Cost Moat)
+#### Moat 1: Hybrid Fintech + Crypto Neobank (Switching Cost Moat)
+
+**Traditional Finance Rails:**
 - Real FDIC-insured bank accounts (not just payment processing)
 - Property-specific banking with high-yield savings
 - Resident digital accounts with debit cards
-- **Compounds**: Banking relationships are sticky; credit history locks in users
+- ACH, wire, card payment processing
+
+**Crypto Neobank Rails:**
+- Stablecoin wallets (USDC, USDT, DAI)
+- On-chain finance and credit
+- DeFi yield access for reserves
+- Cross-border instant transfers
+- Multi-currency + stablecoin accounts
+
+**Why Both**: Users see ONE unified account with MULTIPLE rails underneath. They can hold USD + BRL + USDC in the same dashboard, moving between rails as needed.
+
+**International Value**: In markets with currency volatility (Brazil, Argentina), stablecoin access is a **killer feature**—residents and property owners can hedge against local currency devaluation.
+
+**Compounds**: Banking relationships + crypto wallets + accumulated rewards + credit history = massive switching costs
 
 #### Moat 2: Three-Sided Loyalty Network (Network Moat)
 
