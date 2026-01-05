@@ -13,14 +13,15 @@
 ║                        KNOWLEDGE-TO-SKILL PIPELINE STATUS                              ║
 ╠═══════════════════════════════════════════════════════════════════════════════════════╣
 ║                                                                                        ║
-║   Total MVP Gaps:     10                                                               ║
+║   Total MVP Gaps:     11 (GAP-HOAI-004 REOPENED!)                                      ║
 ║   ✅ Completed:        2  (GAP-HOAI-001, GAP-AF-001)                                   ║
-║   🔄 In Progress:      2  (GAP-PL-001 Stage 3, GAP-AF-002 Stage 3)                    ║
-║   ⏳ Pending:          6                                                               ║
+║   🔄 In Progress:      3  (GAP-HOAI-004, GAP-AF-002, GAP-PL-001 → Stage 3)            ║
+║   ⏳ Pending:          5                                                               ║
+║   ↪️ Consolidated:     1  (GAP-HOAI-002)                                               ║
 ║                                                                                        ║
-║   Skills Specified:   9 / 79 P0 Skills (11.4%)                                        ║
-║   Stage 1 Complete:   4 / 10 (40%)                                                    ║
-║   Next Pipeline:      GAP-PL-001 + GAP-AF-002 → Stage 3 (Engineering Agent)           ║
+║   Skills Specified:   9 / 80 P0 Skills (11.3%)                                        ║
+║   Stage 1 Complete:   5 / 11 (45%)                                                    ║
+║   Next Pipeline:      GAP-HOAI-004 + GAP-AF-002 + GAP-PL-001 → Stage 3                ║
 ║                                                                                        ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -129,18 +130,28 @@
 
 ---
 
-#### GAP-HOAI-004: Multi-Channel Voice Agent
+#### GAP-HOAI-004: Multi-Channel Voice Agent 🔥 REOPENED
 
 | Stage | Status | Agent | Document | Date | Notes |
 |-------|--------|-------|----------|------|-------|
-| Stage 1 | ⏳ Pending | Research Agent | - | - | - |
-| Stage 2 | ⏳ Pending | Cursor AI | - | - | - |
-| Stage 3 | ⏳ Pending | Engineering Agent | - | - | - |
+| Stage 1 | ✅ **Complete** | Research Agent | `knowledge/communication/KD-HOAI-004-multi-channel-voice.md` | 2026-01-06 | **10/10 EXCEPTIONAL** - 54 citations, 390+ lines |
+| Stage 2 | ✅ **Complete** | Cursor AI | `docs/prompts/ENGINEERING_SPEC_PROMPT_MULTI_CHANNEL_VOICE.md` | 2026-01-06 | 22-section detailed prompt |
+| Stage 3 | 🔄 **Ready** | Engineering Agent | - | - | Awaiting engineering spec |
 | Stage 4 | ⏳ Pending | Cursor AI | - | - | - |
 
-**Skills Covered**: SKILL-261 (Note: Partially covered by GAP-HOAI-001)
+**Skills Covered**: SKILL-269 (multi-channel-voice-agent) - **NEW STANDALONE SKILL**
 
-**Coverage Impact**: 0 additional skills (consolidated with GAP-HOAI-001)
+**Coverage Impact**: 1 P0 skill (deep-dive beyond SKILL-261 in HOAI-001)
+
+**Why Reopened**: The Research Agent delivered exceptional research (390+ lines, 54 citations) that goes FAR DEEPER than what was covered in GAP-HOAI-001. This includes:
+- Real-time voice pipeline (ASR/TTS with specific latency targets)
+- Twilio ConversationRelay architecture
+- Multi-channel conversation threading data model
+- Barge-in/interruption handling
+- DTMF IVR fallback
+- Emergency detection protocols
+- PCI-compliant payment collection
+- Performance SLAs (answer <3s, 99.9% uptime, 80% containment)
 
 ---
 
@@ -241,7 +252,7 @@
 
 | Skill ID | Skill Name | Gap ID | Stage | Status |
 |----------|------------|--------|-------|--------|
-| SKILL-261 | Multi-Channel Voice Agent | GAP-HOAI-001 | Complete | ✅ Specified |
+| SKILL-261 | Multi-Channel Voice Agent (Basic) | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-262 | AI AP Agent | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-263 | AI Budget Agent | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-264 | AI Research Agent | GAP-HOAI-001 | Complete | ✅ Specified |
@@ -249,11 +260,12 @@
 | SKILL-266 | AI Scenario Modeling | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-267 | AI Outbound Calling | GAP-HOAI-001 | Complete | ✅ Specified |
 | SKILL-268 | Configurable AI Coverage | GAP-HOAI-001 | Complete | ✅ Specified |
+| **SKILL-269** | **Multi-Channel Voice (Deep-Dive)** | **GAP-HOAI-004** | **Stage 3** | 🔄 **Ready** ⬅️ NEW! |
 | SKILL-253 | AI Leasing Assistant | GAP-AF-001 | Complete | ✅ Specified |
-| SKILL-254 | AI Maintenance Coordinator | GAP-AF-002 | Stage 3 | 🔄 Stage 3 Pending |
+| SKILL-254 | AI Maintenance Coordinator | GAP-AF-002 | Stage 3 | 🔄 Stage 3 Ready |
 | SKILL-257 | Unit Turn Board | GAP-AF-005 | Stage 1 | ⏳ Pending |
 | SKILL-232 | Quote Chaser Automation | GAP-GW-001 | Stage 1 | ⏳ Pending |
-| SKILL-101 | HLP Dynamic Pricing Algorithm | GAP-PL-001 | Stage 3 | 🔄 Stage 3 Pending |
+| SKILL-101 | HLP Dynamic Pricing Algorithm | GAP-PL-001 | Stage 3 | 🔄 Stage 3 Ready |
 | (TBD) | Event Detection | GAP-PL-002 | Stage 1 | ⏳ Pending |
 | (TBD) | Maintenance Brain | GAP-VEN-001 | Stage 1 | ⏳ Pending |
 
@@ -271,11 +283,11 @@ TIER 1: Foundation (2 gaps)
 
 TIER 2: Core AI (3 gaps)
 ├── GAP-AF-001:   [████████████████████] 100% → ✅ COMPLETE (1 skill)
-├── GAP-AF-002:   [██████████          ]  50% → Stage 3 Pending ⬅️ NEW!
-└── GAP-HOAI-004: [████████████████████] 100% → ↪️ Consolidated w/ HOAI-001
+├── GAP-AF-002:   [██████████          ]  50% → Stage 3 Ready 
+└── GAP-HOAI-004: [██████████          ]  50% → Stage 3 Ready ⬅️ REOPENED!
 
 TIER 3: Pricing (2 gaps)
-├── GAP-PL-001:   [██████████          ]  50% → Stage 3 Pending ⬅️ NEXT
+├── GAP-PL-001:   [██████████          ]  50% → Stage 3 Ready
 └── GAP-PL-002:   [                    ]   0% → Stage 1 Pending
 
 TIER 4: Operations (2 gaps)
@@ -286,7 +298,7 @@ TIER 5: Automation (1 gap)
 └── GAP-GW-001:   [                    ]   0% → Stage 1 Pending
 
 ═══════════════════════════════════════════════════════════════════════════
-OVERALL: [████                ] 20% (2/10 gaps COMPLETE | 2/10 IN PROGRESS | 9/79 skills = 11.4%)
+OVERALL: [████                ] 18% (2/11 gaps COMPLETE | 3/11 IN PROGRESS | 9/80 skills = 11.3%)
 ═══════════════════════════════════════════════════════════════════════════
 ```
 
