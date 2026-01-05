@@ -6823,12 +6823,15 @@ Mobile app functionality for key tasks when offline, syncing when connectivity r
 ---
 
 <!-- HOAI SKILLS (261-268) - AI WORKFORCE MODEL -->
+<!-- ✅ SPECIFIED: 2026-01-05 | Spec: specs/ai-workforce/SPEC-SKILL-261-268.md | Gap: GAP-HOAI-001 -->
 
 ### SKILL-261: ai-voice-agent-multichannel
 
 **Category**: ai-workforce
 **Priority**: P0
-**Status**: CRITICAL
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: L (8 weeks)
 
 **Description**: 
 24/7 AI voice agent handling inbound/outbound calls, SMS, web chat, and email with resident identification and action execution.
@@ -6866,7 +6869,9 @@ Mobile app functionality for key tasks when offline, syncing when connectivity r
 
 **Category**: ai-workforce
 **Priority**: P0
-**Status**: CRITICAL
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: L (8 weeks)
 
 **Description**: 
 Full accounts payable automation from invoice receipt to payment processing.
@@ -6896,8 +6901,10 @@ Full accounts payable automation from invoice receipt to payment processing.
 ### SKILL-263: ai-budget-agent
 
 **Category**: ai-budgeting
-**Priority**: P1
-**Status**: NEEDED
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: M (5 weeks)
 
 **Description**: 
 AI agent that automatically generates annual budgets with variance analysis and scenario modeling.
@@ -6925,8 +6932,10 @@ AI agent that automatically generates annual budgets with variance analysis and 
 ### SKILL-264: ai-research-agent
 
 **Category**: ai-workforce
-**Priority**: P1
-**Status**: NEEDED
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: M (5 weeks)
 
 **Description**: 
 AI agent providing instant answers from governing documents with semantic search and source citation.
@@ -6954,7 +6963,9 @@ AI agent providing instant answers from governing documents with semantic search
 
 **Category**: ai-workflow
 **Priority**: P0
-**Status**: CRITICAL
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: XL (10 weeks)
 
 **Description**: 
 Human-in-the-loop dashboard for reviewing, approving, and managing AI agent work.
@@ -6980,9 +6991,11 @@ Human-in-the-loop dashboard for reviewing, approving, and managing AI agent work
 
 ### SKILL-266: ai-scenario-modeling
 
-**Category**: analytics
-**Priority**: P2
-**Status**: OPTIONAL
+**Category**: ai-workflow
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: M (5 weeks)
 
 **Description**: 
 Real-time budget scenario modeling to see impact of different assumptions.
@@ -7005,9 +7018,11 @@ Real-time budget scenario modeling to see impact of different assumptions.
 
 ### SKILL-267: ai-outbound-calling
 
-**Category**: ai-voice
-**Priority**: P1
-**Status**: NEEDED
+**Category**: ai-workforce
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: M (5 weeks)
 
 **Description**: 
 AI agent capability to make proactive outbound calls (reminders, follow-ups).
@@ -7031,8 +7046,10 @@ AI agent capability to make proactive outbound calls (reminders, follow-ups).
 ### SKILL-268: configurable-ai-coverage
 
 **Category**: ai-workflow
-**Priority**: P1
-**Status**: NEEDED
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/ai-workforce/SPEC-SKILL-261-268.md`
+**Effort**: L (7 weeks)
 
 **Description**: 
 Configure when AI agents are active (after-hours, overflow, full front line).
