@@ -1,9 +1,10 @@
-# Master Skill Registry: STR/LTR PMS + Maintenance
+# Master Skill Registry: STR/LTR PMS + Maintenance + Housing Ops
 
 > **Single Source of Truth** for all skills across competitors
 > **Last Updated**: January 2026
-> **Competitors Analyzed**: 12 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo)
-> **Total Skills**: 167
+> **Competitors Analyzed**: 13 (Guesty, Host OS, Mews, Besty AI, Boom AI, Inntelo AI, Visito AI, Cloudbeds, RentalReady, PriceLabs, Vendoroo, **EliseAI**)
+> **Total Skills**: 177
+> **BENCHMARK**: EliseAI (60%+ of top 50 operators, 30M+ conversations)
 
 ---
 
@@ -11,12 +12,12 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Skills | 167 |
-| MVP Skills (P0) | 50 |
-| Phase 1 Skills (P1) | 77 |
-| Phase 2 Skills (P2) | 32 |
+| Total Skills | 177 |
+| MVP Skills (P0) | 56 |
+| Phase 1 Skills (P1) | 80 |
+| Phase 2 Skills (P2) | 33 |
 | Phase 3 Skills (P3) | 8 |
-| Universal Skills (all 12) | 26 |
+| Universal Skills (all 13) | 26 |
 | Unique Skills (Guesty only) | 41 |
 | Unique Skills (Host OS only) | 12 |
 | Unique Skills (Mews only) | 15 |
@@ -28,6 +29,7 @@
 | Unique Skills (RentalReady only) | 9 |
 | Unique Skills (PriceLabs only) | 12 |
 | Unique Skills (Vendoroo only) | 11 |
+| Unique Skills (EliseAI only) | 10 |
 
 ---
 
@@ -73,6 +75,14 @@
 | `invoice-compliance` | 1 | AI validation, fraud detection |
 | `policy-engine` | 1 | Granular rules with simulation |
 | `work-orchestration` | 2 | State machine, campaigns |
+| `housing-crm` | 1 | Purpose-built CRM hub |
+| `leasing` | 1 | Full funnel lead-to-lease |
+| `resident-lifecycle` | 2 | Renewals, delinquency |
+| `field-service` | 1 | Technician app, routing |
+| `compliance` | 1 | Fair housing AI guardrails |
+| `ai-collaboration` | 2 | Human handoff, status updates |
+| `training-data` | 1 | Conversation training moat |
+| `enterprise-ops` | 1 | Centralized multi-portfolio |
 
 ---
 
@@ -4212,6 +4222,279 @@ Specialized workflow for after-hours emergency handling.
 5. PM on-call notification (Slack/SMS)
 6. Human override capability
 7. Post-incident review tagging
+
+---
+
+<!-- ELISEAI UNIQUE SKILLS (168-177) - INDUSTRY BENCHMARK -->
+
+### SKILL-168: purpose-built-housing-crm
+
+**Category**: housing-crm
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+EliseCRM as the "nervous system" - a CRM purpose-built for multifamily as system-of-engagement (while PMS = system-of-record).
+
+**Competitor Coverage**:
+| Competitor | Has | Approach | Quality |
+|------------|-----|----------|---------|
+| Guesty | ⚠️ | Basic CRM | ⭐⭐⭐ |
+| All Others | ⚠️ | No CRM or generic | ⭐⭐ |
+| **EliseAI** | ✅ | **Purpose-built** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI (MARKET LEADER!)
+
+**Components**:
+- Unified inbox across all channels
+- Full prospect/resident profiles
+- Automated workflows for all modules
+- Cross-portfolio dashboards
+- Real-time AI + human collaboration
+
+---
+
+### SKILL-169: leasing-ai-full-funnel
+
+**Category**: leasing
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Complete lead-to-lease AI automation covering the entire prospect journey.
+
+**Competitor Coverage**:
+| Competitor | Has | Coverage | Quality |
+|------------|-----|----------|---------|
+| Besty AI | ⚠️ | Inquiry response | ⭐⭐⭐⭐ |
+| Inntelo AI | ⚠️ | Guest messaging | ⭐⭐⭐⭐ |
+| **EliseAI** | ✅ | **Full funnel** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI
+
+**Capabilities**:
+- 24/7 prospect response (all channels)
+- Real-time PMS availability/pricing
+- Preference capture + unit recommendation
+- Tour scheduling (including self-tours)
+- Lead nurturing campaigns
+- Pre-screening questions
+
+---
+
+### SKILL-170: resident-lifecycle-ai
+
+**Category**: resident-lifecycle
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Proactive resident engagement for renewals, questions, and lifecycle events.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| **EliseAI** | ✅ | **Full lifecycle** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI (UNIQUE!)
+
+**Capabilities**:
+- Answer resident questions (rent, policies, amenities)
+- Proactive renewal outreach
+- Explain pricing changes and terms
+- Handle inbound renewal questions
+- Escalation to human when needed
+
+---
+
+### SKILL-171: delinquency-empathy-automation
+
+**Category**: resident-lifecycle
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+AI-managed payment reminders with empathetic messaging and promises-to-pay capture.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| **EliseAI** | ✅ | **Empathy + effectiveness** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI (UNIQUE!)
+
+**Features**:
+- Payment reminders at configured intervals
+- Late fee explanations
+- Promises-to-pay capture
+- Note updates in CRM
+- Empathetic tone protection
+- Escalation for complex cases
+
+**Key Metric**: Reduces bad debt while protecting relationships
+
+---
+
+### SKILL-172: maintenance-technician-app
+
+**Category**: field-service
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Dedicated mobile/web app for technicians and supervisors with AI-powered auto-assignment.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Vendoroo | ⚠️ | Vendor portal | ⭐⭐⭐⭐ |
+| **EliseAI** | ✅ | **Full field service** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI
+
+**Features**:
+- Work order management (priority, timeline)
+- Smart auto-assignment by skills/location
+- Real-time time tracking
+- Geo-fenced location tracking (privacy-compliant)
+- Offline mode with sync
+- Supervisor dashboard
+
+---
+
+### SKILL-173: fair-housing-compliance-ai
+
+**Category**: compliance
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Built-in guardrails for fair housing and non-discrimination in all leasing interactions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| All Others | ❌ | None | N/A |
+| **EliseAI** | ✅ | **Built into AI** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI (CRITICAL FOR US MARKET!)
+
+**Components**:
+- Compliance checks in conversation flows
+- Phrasing templates for sensitive topics
+- Equal treatment enforcement
+- Audit logging for compliance review
+- Regulatory constraint enforcement
+
+---
+
+### SKILL-174: 30m-conversation-training
+
+**Category**: training-data
+**Priority**: P1
+**Status**: ASPIRATIONAL
+
+**Description**: 
+Models trained on 30+ million real conversations with prospects and residents.
+
+**Competitor Coverage**:
+| Competitor | Has | Scale | Quality |
+|------------|-----|-------|---------|
+| All Others | ⚠️ | <1M | ⭐⭐⭐ |
+| **EliseAI** | ✅ | **30M+** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI (MASSIVE MOAT!)
+
+**Training Coverage**:
+- Domain-specific NLU
+- Leasing conversations
+- Maintenance requests
+- Payment discussions
+- Community policies
+
+**Note**: This is a **data moat** - we need to start collecting conversations now.
+
+---
+
+### SKILL-175: centralized-operations-model
+
+**Category**: enterprise-ops
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Built for centralized operations across large portfolios with role specialization.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| RentalReady | ⚠️ | Multi-office | ⭐⭐⭐⭐ |
+| **EliseAI** | ✅ | **Enterprise-grade** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI
+
+**Features**:
+- Multi-portfolio support
+- Role-based access (central vs on-site)
+- Consistent service across properties
+- Standardized workflows across regions
+- Enterprise governance
+
+---
+
+### SKILL-176: ai-human-realtime-collaboration
+
+**Category**: ai-collaboration
+**Priority**: P0
+**Status**: NEEDED
+
+**Description**: 
+Humans can jump into AI conversations at any time and override decisions.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Guesty | ⚠️ | Basic escalation | ⭐⭐⭐ |
+| **EliseAI** | ✅ | **Real-time collab** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI
+
+**Capabilities**:
+- Real-time conversation handoff
+- Override AI decisions
+- Human takeover for complex cases
+- Seamless transition (resident doesn't notice)
+- Full audit trail
+
+---
+
+### SKILL-177: automated-status-updates
+
+**Category**: ai-collaboration
+**Priority**: P1
+**Status**: NEEDED
+
+**Description**: 
+Proactive notifications to residents at every work order milestone.
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| Vendoroo | ⚠️ | Basic updates | ⭐⭐⭐⭐ |
+| **EliseAI** | ✅ | **Full lifecycle** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: EliseAI
+
+**Milestones**:
+1. Work order created
+2. Assigned to technician
+3. Scheduled time
+4. In-progress
+5. Completed
+
+**Impact**: Reduces "where's my repair?" calls by proactively communicating.
 
 ---
 
