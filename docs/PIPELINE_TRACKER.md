@@ -15,13 +15,13 @@
 ║                                                                                        ║
 ║   Total MVP Gaps:     11                                                               ║
 ║   ✅ Completed:        5  (HOAI-001, AF-001, PL-001, AF-002, HOAI-004)                 ║
-║   🔄 In Progress:      1  (GAP-VEN-001 → Stage 3 Ready) ⬅️ NEW!                        ║
-║   ⏳ Pending:          4  (Need Research Agent)                                        ║
+║   🔄 In Progress:      2  (VEN-001 + PL-002 → Stage 3 Ready) ⬅️ NEW!                   ║
+║   ⏳ Pending:          3  (Need Research Agent)                                        ║
 ║   ↪️ Consolidated:     1  (GAP-HOAI-002)                                               ║
 ║                                                                                        ║
 ║   Skills Specified:   14 / 80 P0 Skills (17.5%)                                       ║
-║   Stage 1 Complete:   6 / 11 (55%) ⬅️ +1 NEW!                                         ║
-║   Next Pipeline:      Engineering Agent for GAP-VEN-001 (Maintenance Brain)           ║
+║   Stage 1 Complete:   7 / 11 (64%) ⬅️ +1 NEW! GAP-PL-002 EVENT DETECTION              ║
+║   Next Pipeline:      Engineering Agent for GAP-VEN-001 or GAP-PL-002                 ║
 ║                                                                                        ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -186,18 +186,26 @@
 
 ---
 
-#### GAP-PL-002: Event Detection
+#### GAP-PL-002: Event Detection System ⬅️ STAGE 3 READY!
 
 | Stage | Status | Agent | Document | Date | Notes |
 |-------|--------|-------|----------|------|-------|
-| Stage 1 | ⏳ Pending | Research Agent | - | - | - |
-| Stage 2 | ⏳ Pending | Cursor AI | - | - | - |
-| Stage 3 | ⏳ Pending | Engineering Agent | - | - | - |
+| Stage 1 | ✅ **Complete** | Research Agent | `knowledge/pricing/KD-PL-002-event-detection.md` | 2026-01-06 | **618 lines, 110+ citations, 9.5/10** ⭐ |
+| Stage 2 | ✅ **Complete** | Cursor AI | `docs/prompts/ENGINEERING_SPEC_PROMPT_EVENT_DETECTION.md` | 2026-01-06 | 20-section detailed prompt |
+| Stage 3 | 🔄 **Ready** | Engineering Agent | - | - | Awaiting Engineering Agent |
 | Stage 4 | ⏳ Pending | Cursor AI | - | - | - |
 
-**Skills Covered**: event-detection skills
+**Skills Covered**: SKILL-273, SKILL-274, SKILL-275 (3 event detection skills)
 
-**Coverage Impact**: ~1 P0 skill
+**Coverage Impact**: ~3 P0 skills (Four-Way Signal Architecture, Confidence Scoring, Surge Pricing)
+
+**Key Research Findings**:
+- Four-way signal architecture (YoY pacing, booking velocity, competitor pricing, hotel ADR)
+- Confidence scoring algorithm (40/30/20/10 weighting)
+- Known event detection (Eventbrite, Songkick, sports leagues)
+- Unknown event anomaly detection (z-score, percentile)
+- Surge pricing implementation (multiplicative multipliers, distance-based tiers)
+- Complete data models (Event, Signal, Price Adjustment schemas)
 
 ---
 
@@ -273,9 +281,9 @@
 | SKILL-254 | AI Maintenance Coordinator | GAP-AF-002 | Complete | ✅ Specified |
 | SKILL-257 | Unit Turn Board | GAP-AF-005 | Stage 1 | ⏳ Pending |
 | SKILL-232 | Quote Chaser Automation | GAP-GW-001 | Stage 1 | ⏳ Pending |
-| SKILL-101 | HLP Dynamic Pricing Algorithm | GAP-PL-001 | Stage 3 | 🔄 Stage 3 Ready |
-| (TBD) | Event Detection | GAP-PL-002 | Stage 1 | ⏳ Pending |
-| **SKILL-270/271/272** | **Maintenance Brain (3 skills)** | **GAP-VEN-001** | **Stage 3** | 🔄 **Stage 3 Ready** ⬅️ NEW! |
+| SKILL-101/102/103 | HLP Dynamic Pricing Algorithm | GAP-PL-001 | Complete | ✅ Specified |
+| **SKILL-273/274/275** | **Event Detection (3 skills)** | **GAP-PL-002** | **Stage 3** | 🔄 **Stage 3 Ready** ⬅️ NEW! |
+| SKILL-270/271/272 | Maintenance Brain (3 skills) | GAP-VEN-001 | Stage 3 | 🔄 Stage 3 Ready |
 
 ---
 
@@ -296,7 +304,7 @@ TIER 2: Core AI (3 gaps)
 
 TIER 3: Pricing (2 gaps)
 ├── GAP-PL-001:   [████████████████████] 100% → ✅ COMPLETE (3 skills)
-└── GAP-PL-002:   [                    ]   0% → Stage 1 Pending
+└── GAP-PL-002:   [██████████          ]  50% → 🔄 Stage 3 Ready ⬅️ NEW!
 
 TIER 4: Operations (2 gaps)
 ├── GAP-VEN-001:  [██████████          ]  50% → 🔄 Stage 3 Ready ⬅️ NEW!
@@ -306,7 +314,7 @@ TIER 5: Automation (1 gap)
 └── GAP-GW-001:   [                    ]   0% → Stage 1 Pending
 
 ═══════════════════════════════════════════════════════════════════════════
-OVERALL: [██████████          ] 50% (5/11 gaps COMPLETE | 1/11 IN PROGRESS | 14/80 skills = 17.5%)
+OVERALL: [██████████          ] 55% (5/11 gaps COMPLETE | 2/11 IN PROGRESS | 14/80 skills = 17.5%)
 ═══════════════════════════════════════════════════════════════════════════
 ```
 
