@@ -157,33 +157,35 @@ AFTER COMPLETING:
 
 ---
 
-### GAP-PL-002: Event Detection
+### GAP-PL-002: Event Detection ⭐ DETAILED PROMPT AVAILABLE
+
+> **Full Research Prompt**: `docs/prompts/RESEARCH_PROMPT_PL-002_EVENT_DETECTION.md`
 
 ```
 BEFORE STARTING:
 1. git pull origin main
 
 YOUR TASK:
-Research GAP-PL-002 (Event Detection)
+Research GAP-PL-002 (Four-Way Event Detection System)
 
 WHAT TO READ:
 1. docs/AGENT_GUIDE.md - Your step-by-step process
 2. docs/RESEARCH_ANALYST_GUIDE.md - Research methodology
-3. docs/MVP_PRIORITY_GAPS.md - Find GAP-PL-002 section for:
-   - Research questions to answer
-   - Sources to check
-   - Definition of done
+3. docs/prompts/RESEARCH_PROMPT_PL-002_EVENT_DETECTION.md - DETAILED PROMPT (10 sections)
 
 RESEARCH QUESTIONS TO ANSWER:
-- What are the 4 detection methods?
-- How is event impact quantified?
-- How far in advance are events detected?
-- How is this integrated into pricing?
+- How do the 4 detection signals work (YoY pacing, booking velocity, competitor prices, hotel ADR)?
+- How is confidence scoring calculated from multiple signals?
+- How are known events (calendar) vs unknown events (anomaly) detected?
+- How is surge pricing triggered and what multipliers are applied?
+- What event categories exist and how is impact radius determined?
 
 PRIMARY SOURCES:
-- PriceLabs help docs
-- YouTube: "PriceLabs events"
-- Conference presentations
+- PriceLabs help center - Event detection docs
+- PriceLabs blog - Event pricing best practices
+- YouTube: "PriceLabs event detection", "PriceLabs surge pricing"
+- Reddit: r/airbnb_hosts "event pricing", r/STRowners "PriceLabs events"
+- Wheelhouse, Beyond Pricing, AirDNA for competitive analysis
 
 SAVE OUTPUT TO:
 knowledge/pricing/KD-PL-002-event-detection.md
@@ -191,7 +193,7 @@ knowledge/pricing/KD-PL-002-event-detection.md
 AFTER COMPLETING:
 1. Update STATUS.md - Mark Stage 1 complete for GAP-PL-002
 2. Update docs/PIPELINE_TRACKER.md - Add completion date and document path
-3. git add -A && git commit -m "Stage 1 COMPLETE: GAP-PL-002 Event Detection" && git push
+3. git add -A && git commit -m "Stage 1 COMPLETE: GAP-PL-002 Event Detection System" && git push
 ```
 
 ---
