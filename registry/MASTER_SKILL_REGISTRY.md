@@ -7095,6 +7095,115 @@ Configure when AI agents are active (after-hours, overflow, full front line).
 
 ---
 
+<!-- VENDOROO/MAINTENANCE BRAIN SKILLS (270-272) -->
+<!-- ✅ SPECIFIED: 2026-01-06 | Spec: specs/operations/SPEC-SKILL-270-272-MAINTENANCE-BRAIN.md | Gap: GAP-VEN-001 -->
+
+### SKILL-270: predictive-maintenance-intelligence
+
+**Category**: operations
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/operations/SPEC-SKILL-270-272-MAINTENANCE-BRAIN.md`
+**Effort**: L (6 weeks)
+
+**Description**: 
+AI-powered system that learns from maintenance history, identifies patterns, predicts failures before they occur, and recommends preventive actions. Reduces emergency repairs by up to 50%.
+
+**Key Features**:
+- Pattern recognition from maintenance history
+- Failure prediction using ML + time-series analysis
+- Root cause detection via knowledge graph
+- IoT sensor integration (MQTT)
+- Preventive work order scheduling
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| AppFolio | ⚠️ | Basic AI triage | ⭐⭐⭐ |
+| Property Meld | ⚠️ | Scheduling only | ⭐⭐ |
+| **Vendoroo** | ✅ | **Learning System** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Prediction Accuracy | >80% |
+| Lead Time | 7-30 days |
+| Emergency Reduction | 50% |
+
+---
+
+### SKILL-271: vendor-performance-optimization
+
+**Category**: operations
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/operations/SPEC-SKILL-270-272-MAINTENANCE-BRAIN.md`
+**Effort**: L (6 weeks)
+
+**Description**: 
+Intelligent vendor selection, scoring, and dispatch system that optimizes for performance, cost, availability, and property familiarity. Uses weighted composite scoring algorithm.
+
+**Key Features**:
+- Multi-criteria scoring algorithm (40% perf, 25% cost, 20% familiarity, 15% avail)
+- Smart dispatch with auto-selection
+- Load balancing across vendor network
+- Owner preference handling
+- Emergency override capability
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| AppFolio | ⚠️ | Basic dispatch | ⭐⭐⭐ |
+| Property Meld | ⚠️ | Vendor matching | ⭐⭐⭐ |
+| **Vendoroo** | ✅ | **Performance Scoring** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Scoring Algorithm**:
+```
+composite_score = 0.40×performance + 0.25×cost + 0.20×familiarity + 0.15×availability
+```
+
+---
+
+### SKILL-272: maintenance-cost-forecasting
+
+**Category**: financial
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/operations/SPEC-SKILL-270-272-MAINTENANCE-BRAIN.md`
+**Effort**: M (4 weeks)
+
+**Description**: 
+AI-powered cost estimation, budget forecasting, and approval automation. Provides accurate cost predictions and manages approval workflows based on thresholds.
+
+**Key Features**:
+- ML-based cost estimation (±15% accuracy)
+- Budget forecasting (monthly/annual)
+- Auto-approval routing (<$250 auto, $250-$1K manager, >$1K owner)
+- Cost justification reporting
+- Variance analysis and tracking
+
+**Competitor Coverage**:
+| Competitor | Has | Feature | Quality |
+|------------|-----|---------|---------|
+| AppFolio | ⚠️ | Basic estimates | ⭐⭐ |
+| Property Meld | ❌ | No forecasting | ⭐ |
+| **Vendoroo** | ✅ | **Cost Intelligence** | ⭐⭐⭐⭐⭐ |
+
+**Best Implementation**: Vendoroo
+
+**Approval Thresholds**:
+| Cost | Approval Level | Timeout |
+|------|----------------|---------|
+| <$250 | Auto | Immediate |
+| $250-$1K | Manager | 24hr |
+| >$1K | Owner | 48hr |
+
+---
+
 ## 📈 How to Add New Skills
 
 When processing a new competitor PRD:
