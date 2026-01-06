@@ -282,6 +282,8 @@ AFTER COMPLETING:
 
 ### GAP-GW-001: Quote Chaser Automation
 
+**📄 DETAILED PROMPT AVAILABLE**: `docs/prompts/RESEARCH_PROMPT_GW-001_QUOTE_CHASER.md`
+
 ```
 BEFORE STARTING:
 1. git pull origin main
@@ -289,24 +291,23 @@ BEFORE STARTING:
 YOUR TASK:
 Research GAP-GW-001 (Quote Chaser Automation)
 
-WHAT TO READ:
-1. docs/AGENT_GUIDE.md - Your step-by-step process
-2. docs/RESEARCH_ANALYST_GUIDE.md - Research methodology
-3. docs/MVP_PRIORITY_GAPS.md - Find GAP-GW-001 section for:
-   - Research questions to answer
-   - Sources to check
-   - Definition of done
+DETAILED PROMPT:
+Read docs/prompts/RESEARCH_PROMPT_GW-001_QUOTE_CHASER.md for comprehensive requirements including:
+- 12 detailed sections to research
+- Quote lifecycle state machine design
+- Follow-up sequence patterns (3-5 emails)
+- Multi-channel strategy (Email → SMS → WhatsApp)
+- Message template variables
+- Conversion tracking & attribution
+- A/B testing framework
+- AI enhancement opportunities
+- Complete data model (JSON schemas)
+- Compliance requirements (CAN-SPAM, TCPA, GDPR)
+- E-commerce abandoned cart parallels
 
-RESEARCH QUESTIONS TO ANSWER:
-- How many follow-ups in sequence?
-- What timing between follow-ups?
-- What personalization options?
-- How is conversion tracked?
-
-PRIMARY SOURCES:
-- GuestWisely product pages
-- Email marketing automation patterns
-- CRM follow-up best practices
+KEY INSIGHT:
+Quote Chaser = "Abandoned Cart Recovery" for Property Management
+Research e-commerce patterns (Klaviyo, Shopify, Mailchimp) in addition to PMS sources.
 
 SAVE OUTPUT TO:
 knowledge/channel/KD-GW-001-quote-chaser.md
