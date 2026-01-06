@@ -6765,26 +6765,49 @@ Automated pricing tool (Leasing Signals) suggesting optimal rental rates based o
 ### SKILL-257: unit-turn-board
 
 **Category**: unit-turn
-**Priority**: P1
-**Status**: NEEDED
+**Priority**: P0
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/operations/SPEC-SKILL-257-UNIT-TURN-BOARD.md`
+**Effort**: L (16-20 weeks)
 
 **Description**: 
-Visual dashboard to manage unit turn process, tracking all make-ready tasks.
+Comprehensive digital platform for managing unit turnover with 7-state lifecycle, Kanban board, task dependencies, auto-assignment engine, and real-time sync across web and mobile.
 
 **Competitor Coverage**:
 | Competitor | Has | Feature | Quality |
 |------------|-----|---------|---------|
-| Others | ⚠️ | Basic tasks | ⭐⭐⭐ |
+| Yardi | ⚠️ | Basic tasks | ⭐⭐⭐ |
+| RentManager | ⚠️ | Basic tasks | ⭐⭐⭐ |
+| HappyCo | ✅ | Make Ready | ⭐⭐⭐⭐ |
 | **AppFolio** | ✅ | **Unit Turn Board** | ⭐⭐⭐⭐⭐ |
 
-**Best Implementation**: AppFolio
+**Best Implementation**: AppFolio + HappyCo
 
-**Features**:
-- Visual status board (Kanban)
-- Task assignment
-- Progress tracking
-- Vendor coordination
-- Vacancy minimization metrics
+**7-State Turn Lifecycle**:
+| State | Trigger |
+|-------|---------|
+| SCHEDULED | Lease termination |
+| MOVE_OUT | Date reached |
+| IN_PROGRESS | Inspection complete |
+| INSPECTION | All tasks done |
+| READY | QA passed |
+| LEASED | Lease signed |
+| ARCHIVED | 30 days after move-in |
+
+**Key Features**:
+- Kanban board with drag-and-drop
+- Task dependency management
+- Auto-assignment with vendor scoring (40% rating, 25% availability, 20% cost, 15% proximity)
+- Vendor portal for task acceptance
+- Mobile apps with offline capability
+- Real-time sync (<1 second)
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Board Load Time | <2 seconds |
+| Turn Time Reduction | 2-3 days |
+| Cost Savings | 15-25% per unit |
 
 ---
 
