@@ -232,9 +232,9 @@
 
 | Stage | Status | Agent | Document | Date | Notes |
 |-------|--------|-------|----------|------|-------|
-| Stage 1 | ⏳ Pending | Research Agent | - | - | - |
-| Stage 2 | ⏳ Pending | Cursor AI | - | - | - |
-| Stage 3 | ⏳ Pending | Engineering Agent | - | - | - |
+| Stage 1 | ✅ Complete | Research Agent | `knowledge/operations/KD-AF-005-unit-turn-board.md` | Jan 2026 | 26 citations, 8.5/10 |
+| Stage 2 | ✅ Complete | Cursor AI | `docs/prompts/ENGINEERING_SPEC_PROMPT_UNIT_TURN_BOARD.md` | Jan 2026 | 18 sections |
+| Stage 3 | 🔄 **READY** | Engineering Agent | - | - | Awaiting engineering |
 | Stage 4 | ⏳ Pending | Cursor AI | - | - | - |
 
 **Skills Covered**: SKILL-257 (unit-turn-board)
