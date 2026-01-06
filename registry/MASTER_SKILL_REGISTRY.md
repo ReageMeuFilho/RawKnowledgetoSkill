@@ -6068,11 +6068,14 @@ Partnership providing state-regulated legal templates and discounted attorney ac
 
 <!-- GUESTWISELY SKILLS (232-237) -->
 
-### SKILL-232: quote-chaser-automation
+### SKILL-232: quote-chaser-automation ✅ SPECIFIED
 
 **Category**: sales-automation
 **Priority**: P1
-**Status**: NEEDED
+**Status**: ✅ **SPECIFIED** (GAP-GW-001)
+**Specification**: `specs/channel/SPEC-SKILL-232-QUOTE-CHASER.md`
+**Engineering Spec**: `knowledge/channel/ES-GW-001-quote-chaser.md` (9,261 lines)
+**Quality**: 9.5/10 ⭐ EXCEPTIONAL - THE FINAL MVP GAP!
 
 **Description**: 
 Automated follow-up system for quotes that haven't converted to bookings.
@@ -6086,18 +6089,25 @@ Automated follow-up system for quotes that haven't converted to bookings.
 
 **Best Implementation**: GuestWisely
 
-**Features**:
-- Quote tracking (sent vs converted)
-- Automatic follow-up sequences
-- Configurable timing and frequency
-- Conversion rate analytics
-- Personalized follow-up templates
+**Key Features Specified**:
+- Quote State Machine (NEW → SENT → VIEWED → ACCEPTED/CANCELLED/EXPIRED)
+- Temporal Workflow Orchestration (fault-tolerant sequences)
+- Multi-Channel Dispatcher (Email + SMS + WhatsApp)
+- A/B Testing Framework with statistical confidence
+- GDPR/CAN-SPAM/TCPA Compliance workflows
+- Analytics & Attribution (50.5% open rate, 3.33% conversion target)
 
-**Why Valuable**:
-- Inquiries often lost without follow-up
-- Automation increases conversion rate
-- "Set and forget" revenue recovery
-- Proactive lead nurturing
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Quote Abandonment | Reduce from 70% |
+| Recovery Rate | ≥3.33% |
+| Email Open Rate | ≥50.5% |
+| Sequence Start Latency | <1 second |
+| Daily Message Volume | 100,000+ |
+| Monthly Time Savings | 60+ hours |
+
+**Implementation Timeline**: 14 weeks
 
 ---
 
