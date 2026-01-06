@@ -396,3 +396,4 @@ For our platform:
 3. **Property-account architecture** - Data model for linking
 4. **Partner marketplace design** - Referral and integration model
 
+

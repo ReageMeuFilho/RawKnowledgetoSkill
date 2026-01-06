@@ -334,3 +334,4 @@ For SMB market (1-50 properties), we should offer:
 3. **Sentiment detection patterns** - What triggers escalation
 4. **Cross-system workflow engine** - Single automation graph
 
+

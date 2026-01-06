@@ -238,3 +238,4 @@ If we stay enterprise-only:
 
 **Insight**: Lodgify targets 95% of operators by count (but lower % of revenue).
 
+

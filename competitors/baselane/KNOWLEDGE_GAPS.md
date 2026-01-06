@@ -318,3 +318,4 @@ With Baselane, we've added a completely new dimension to the registry:
 | **Categories** | PMS-focused | + Fintech |
 | **Knowledge Gaps** | 123+ | 130+ |
 
+

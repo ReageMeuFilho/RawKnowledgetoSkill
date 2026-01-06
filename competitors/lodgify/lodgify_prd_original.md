@@ -362,3 +362,4 @@ Lodgify is a website-first vacation rental platform that combines a drag-and-dro
 - **ROI Drivers:** Increased direct bookings (lower OTA commission), improved brand presence, and reduced admin via centralized operations.    
 - **Upgrade Paths:** As portfolios or complexity grow, users may either expand Lodgify (Ultimate + add-ons) or migrate to more advanced PMS.  
 
+

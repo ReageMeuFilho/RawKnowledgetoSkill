@@ -338,3 +338,4 @@ With Hemlane, we've added the hybrid PM dimension:
 | **Categories** | 6 | 7 (+ Hybrid PM) |
 | **Knowledge Gaps** | 137+ | 143+ |
 
+

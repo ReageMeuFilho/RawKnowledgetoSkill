@@ -237,7 +237,9 @@ AFTER COMPLETING:
 
 ---
 
-### GAP-AF-005: Unit Turn Board Design
+### GAP-AF-005: Unit Turn Board Design ⭐ DETAILED PROMPT AVAILABLE
+
+> **Full Research Prompt**: `docs/prompts/RESEARCH_PROMPT_AF-005_UNIT_TURN_BOARD.md`
 
 ```
 BEFORE STARTING:
@@ -249,21 +251,23 @@ Research GAP-AF-005 (Unit Turn Board Design)
 WHAT TO READ:
 1. docs/AGENT_GUIDE.md - Your step-by-step process
 2. docs/RESEARCH_ANALYST_GUIDE.md - Research methodology
-3. docs/MVP_PRIORITY_GAPS.md - Find GAP-AF-005 section for:
-   - Research questions to answer
-   - Sources to check
-   - Definition of done
+3. docs/prompts/RESEARCH_PROMPT_AF-005_UNIT_TURN_BOARD.md - DETAILED PROMPT (10 sections)
 
 RESEARCH QUESTIONS TO ANSWER:
-- What stages/statuses are tracked?
-- How are tasks assigned?
-- How is timeline managed?
-- How are vendors coordinated?
+- What are the standard turn stages (Move-Out → Inspection → Repairs → Paint → Clean → Final)?
+- How is the visual Kanban board structured?
+- How are tasks assigned to vendors vs in-house staff?
+- What scheduling/dependency logic optimizes parallel task execution?
+- What metrics are tracked (turn time, cost per turn, vacancy days)?
+- How does turn board integrate with PMS, vendor portal, mobile?
 
 PRIMARY SOURCES:
-- AppFolio maintenance documentation
-- YouTube: "AppFolio unit turn"
-- Multifamily operations best practices
+- AppFolio Help Center - Unit Turn Board documentation
+- AppFolio Blog - Turn management best practices
+- YouTube: "AppFolio unit turn board", "make ready process property management"
+- NARPM - National Association of Residential Property Managers
+- Multifamily Executive Magazine - Turn process articles
+- Reddit: r/PropertyManagement "unit turn"
 
 SAVE OUTPUT TO:
 knowledge/operations/KD-AF-005-unit-turn-board.md
@@ -271,7 +275,7 @@ knowledge/operations/KD-AF-005-unit-turn-board.md
 AFTER COMPLETING:
 1. Update STATUS.md - Mark Stage 1 complete for GAP-AF-005
 2. Update docs/PIPELINE_TRACKER.md - Add completion date and document path
-3. git add -A && git commit -m "Stage 1 COMPLETE: GAP-AF-005 Unit Turn Board" && git push
+3. git add -A && git commit -m "Stage 1 COMPLETE: GAP-AF-005 Unit Turn Board Design" && git push
 ```
 
 ---

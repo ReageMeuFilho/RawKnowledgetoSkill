@@ -69,3 +69,4 @@ Stage 4: Cursor AI → THIS FOLDER (SPEC-*)  ← Final output
 
 See `docs/KNOWLEDGE_TO_SKILL_WORKFLOW.md` for full process.
 
+

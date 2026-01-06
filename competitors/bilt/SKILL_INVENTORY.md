@@ -400,3 +400,4 @@ For our platform, we could:
 3. **Evaluate tenant loyalty** - Should we build or partner?
 4. **Credit reporting options** - Can we offer this independently?
 
+

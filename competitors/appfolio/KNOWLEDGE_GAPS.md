@@ -367,3 +367,4 @@ AppFolio significantly expands our registry into **full property management** be
 
 **Strategic Question**: Do we expand into these verticals or stay focused on STR?
 
+

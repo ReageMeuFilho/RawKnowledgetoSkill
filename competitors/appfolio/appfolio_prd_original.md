@@ -209,3 +209,4 @@ AppFolio is a comprehensive, cloud-based property management platform serving as
 
 *AppFolio represents an enterprise-grade, AI-native property management platform with unique Investment Management and HOA capabilities - a significant expansion beyond STR into full property management.*
 
+

@@ -341,3 +341,4 @@ With BILT, we've added the consumer loyalty dimension:
 | **Categories** | 5 | 6 (+ Consumer Loyalty) |
 | **Knowledge Gaps** | 130+ | 137+ |
 
+

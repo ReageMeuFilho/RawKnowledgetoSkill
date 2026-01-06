@@ -229,3 +229,4 @@ With GuestWisely, we've added automation and reporting features:
 | **Categories** | 7 | 7 (same) |
 | **Knowledge Gaps** | 143+ | 147+ |
 
+

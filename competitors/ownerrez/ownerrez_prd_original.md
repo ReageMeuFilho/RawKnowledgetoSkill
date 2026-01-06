@@ -445,3 +445,4 @@ OwnerRez is a mature, mid-market property management platform designed for profe
 - **Time to Financial Accuracy:** 2–4 months for fully reconciled QuickBooks flows and owner statements.    
 - **ROI Drivers:** Reduced manual accounting work, fewer channel errors, improved direct bookings, and better owner transparency.  
 
+

@@ -523,3 +523,4 @@ These open questions will guide the next steps in development and deployment str
 
 * **Integration technical note**: Likely need webhook listeners on PMS for new requests, and the ability to push updates via API. Telephony – Twilio or similar cloud communications will be needed. Ensuring data security (sensitive tenant info in calls) means encryption and compliance (like if calls are recorded, etc.). Will need to address that in implementation.
 
+

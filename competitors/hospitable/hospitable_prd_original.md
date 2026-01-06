@@ -362,3 +362,4 @@ Hospitable is an automation-first vacation rental platform that centralizes gues
 - **Time Savings:** Hosts report large reductions in manual guest messaging workload once AI is tuned.    
 - **ROI Drivers:** Less time spent on messaging, more direct bookings, improved occupancy through AI-driven upsells and dynamic pricing partnerships.  
 
+
