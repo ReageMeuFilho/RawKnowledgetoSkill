@@ -186,16 +186,16 @@
 
 ---
 
-#### GAP-PL-002: Event Detection System ⬅️ STAGE 3 READY!
+#### GAP-PL-002: Event Detection System ✅ COMPLETE!
 
 | Stage | Status | Agent | Document | Date | Notes |
 |-------|--------|-------|----------|------|-------|
 | Stage 1 | ✅ **Complete** | Research Agent | `knowledge/pricing/KD-PL-002-event-detection.md` | 2026-01-06 | **618 lines, 110+ citations, 9.5/10** ⭐ |
 | Stage 2 | ✅ **Complete** | Cursor AI | `docs/prompts/ENGINEERING_SPEC_PROMPT_EVENT_DETECTION.md` | 2026-01-06 | 20-section detailed prompt |
-| Stage 3 | 🔄 **Ready** | Engineering Agent | - | - | Awaiting Engineering Agent |
-| Stage 4 | ⏳ Pending | Cursor AI | - | - | - |
+| Stage 3 | ✅ **Complete** | Engineering Agent | `knowledge/pricing/ES-PL-002-event-detection.md` | 2026-01-06 | 7,828 lines, 9.5/10! |
+| Stage 4 | ✅ **COMPLETE** | Cursor AI | `specs/pricing/SPEC-SKILL-146-EVENT-DETECTION.md` | 2026-01-06 | 1 skill specified |
 
-**Skills Covered**: SKILL-273, SKILL-274, SKILL-275 (3 event detection skills)
+**Skills Covered**: SKILL-146 (four-way-event-detection) → ✅ SPECIFIED
 
 **Coverage Impact**: ~3 P0 skills (Four-Way Signal Architecture, Confidence Scoring, Surge Pricing)
 
@@ -290,7 +290,7 @@
 | SKILL-257 | Unit Turn Board | GAP-AF-005 | Stage 3 | 🔄 Stage 3 Ready |
 | **SKILL-232** | **Quote Chaser Automation** | **GAP-GW-001** | **Stage 3** | 🔄 **Stage 3 Ready** ⬅️ LAST! |
 | SKILL-101/102/103 | HLP Dynamic Pricing Algorithm | GAP-PL-001 | Complete | ✅ Specified |
-| **SKILL-273/274/275** | **Event Detection (3 skills)** | **GAP-PL-002** | **Stage 3** | 🔄 **Stage 3 Ready** ⬅️ NEW! |
+| **SKILL-146** | **Event Detection System** | **GAP-PL-002** | **Complete** | ✅ **Specified** ⬅️ NEW! |
 | SKILL-270/271/272 | Maintenance Brain (3 skills) | GAP-VEN-001 | Stage 3 | 🔄 Stage 3 Ready |
 
 ---
@@ -312,7 +312,7 @@ TIER 2: Core AI (3 gaps)
 
 TIER 3: Pricing (2 gaps)
 ├── GAP-PL-001:   [████████████████████] 100% → ✅ COMPLETE (3 skills)
-└── GAP-PL-002:   [██████████          ]  50% → 🔄 Stage 3 Ready ⬅️ NEW!
+└── GAP-PL-002:   [████████████████████] 100% → ✅ COMPLETE (1 skill) ⬅️ NEW!
 
 TIER 4: Operations (2 gaps)
 ├── GAP-VEN-001:  [████████████████████] 100% → ✅ COMPLETE (3 skills)

@@ -3683,30 +3683,44 @@ Proprietary algorithm generating optimized daily pricing based on hyper-local (0
 
 **Category**: event-detection
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
+**Spec**: `specs/pricing/SPEC-SKILL-146-EVENT-DETECTION.md`
+**Effort**: L (16-20 weeks)
 
 **Description**: 
-Industry-first redundant event detection using 4 independent signals.
+Industry-first redundant event detection using 4 independent signals (YoY pacing 40%, booking velocity 30%, competitor pricing 20%, hotel ADR 10%).
 
 **Competitor Coverage**:
 | Competitor | Has | Detection Methods | Quality |
 |------------|-----|-------------------|---------|
 | Cloudbeds | ⚠️ | AI-based | ⭐⭐⭐⭐ |
-| Others | ⚠️ | Single source | ⭐⭐⭐ |
+| Wheelhouse | ⚠️ | 2-way only | ⭐⭐⭐ |
+| Beyond | ⚠️ | 1.5-way | ⭐⭐⭐ |
 | PriceLabs | ✅ | **4-way** | ⭐⭐⭐⭐⭐ |
 
 **Best Implementation**: PriceLabs
 
-**4 Detection Methods**:
-1. YoY Pacing comparison
-2. Early demand signals (booking surge)
-3. Competitor pricing spikes (60%+ raise)
-4. Hotel price indicators (Booking.com)
+**Four-Way Signal Architecture**:
+| Signal | Weight | Description |
+|--------|--------|-------------|
+| YoY Pacing | 40% | Current vs historical bookings |
+| Booking Velocity | 30% | Recent booking rate vs baseline |
+| Competitor Pricing | 20% | Market rate increases |
+| Hotel ADR | 10% | Local hotel correlation |
 
-**Confidence Scoring**:
-- 1 method: 40%
-- 2 methods: 70%
-- 3+ methods: 85%+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Detection Rate | >90% |
+| False Positive Rate | <5% |
+| Signal Calculation | <5s/market |
+| ADR Lift | 10-20% during events |
+
+**Key Features**:
+- Known event detection (Eventbrite, Songkick, sports APIs)
+- Unknown event detection (ML anomaly - Isolation Forest)
+- Distance-based surge pricing (1mi +30%, 5mi +20%, 15mi +10%)
+- Confidence scoring with multi-signal bonus
 
 ---
 
