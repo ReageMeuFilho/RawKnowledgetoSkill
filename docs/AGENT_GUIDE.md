@@ -179,6 +179,7 @@ RawKnowledgetoSkill/
 1. User provides Stage 3 engineering specification
 2. Extract skills, tools, user stories
 3. Update master registry
+4. **⚠️ VERIFY ARCHITECTURE ALIGNMENT** (see below)
 
 **Your Outputs**:
 - Spec file: `specs/[category]/SPEC-SKILL-[ID].md`
@@ -190,6 +191,50 @@ RawKnowledgetoSkill/
 - Resolve any open items if possible
 - Update coverage metrics
 - Queue next gap
+
+---
+
+### ⚠️ MANDATORY: Architecture Alignment (Stage 4)
+
+**Every specification MUST include an "Architecture Alignment Notes" section.**
+
+Reference: `docs/ARCHITECTURE_ALIGNMENT_GUIDE.md`
+
+**Required Content**:
+
+```markdown
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| [Component] | Layer X | [Tech] | ✅ |
+
+### Execution Path Classification
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| [Operation] | Hot/Cold/Hybrid | [Why] |
+
+### MCP Server Requirements
+- `mcp://treasury/create_transfer` - [purpose]
+- `mcp://temporal/trigger_workflow` - [purpose]
+
+### Infrastructure Alignment
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| Kubernetes | **ECS/Fargate** | Use ECS |
+
+### Compliance Verification
+- ✅ [Check 1]
+- ✅ [Check 2]
+```
+
+**Key Rules**:
+- Use **ECS/Fargate**, NOT Kubernetes
+- Use **TigerBeetle** for financial data, NOT PostgreSQL
+- Use **Rust/Axum** for external API gateway
+- Use **Temporal** for workflow orchestration
+- Use **LangGraph** for AI agent orchestration
 
 ---
 

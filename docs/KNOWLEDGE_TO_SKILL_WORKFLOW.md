@@ -106,6 +106,7 @@ This is a **4-stage pipeline** that transforms raw competitor knowledge into eng
 2. Tool specifications (if applicable)
 3. Implementation tickets/stories
 4. Dependency mapping
+5. **Architecture Alignment Notes** ⚠️ MANDATORY
 
 **What I Produce**:
 - Formal SKILL entries with full specifications
@@ -114,12 +115,43 @@ This is a **4-stage pipeline** that transforms raw competitor knowledge into eng
 - Technical dependencies identified
 - Integration points mapped
 - Effort estimates (T-shirt sizing)
+- **Architecture Alignment Notes section** (see below)
 
 **Output Location**: 
 - `registry/MASTER_SKILL_REGISTRY.md` (updated entries)
 - `specs/[category]/SPEC-[SKILL-ID].md` (detailed specs)
 
 **Quality Bar**: Engineering team can create tickets and start building
+
+---
+
+### ⚠️ MANDATORY: Architecture Alignment Notes
+
+**Every specification MUST include an "Architecture Alignment Notes" section** with:
+
+1. **Layer Mapping Table**:
+   | Spec Component | Citadel Layer | Technology | Aligned |
+   |----------------|---------------|------------|---------|
+   | [Component] | Layer X | [Tech] | ✅/⚠️ |
+
+2. **Execution Path Classification**:
+   - Hot Path: AI reasoning, ML inference
+   - Cold Path: Financial transactions, workflow orchestration
+   - Hybrid: Mixed operations
+
+3. **MCP Server Requirements**:
+   ```yaml
+   mcp_servers:
+     - uri: mcp://treasury/create_transfer
+       purpose: [Description]
+   ```
+
+4. **Infrastructure Alignment**:
+   - Verify ECS/Fargate (not Kubernetes)
+   - Verify Rust/Axum for external APIs
+   - Verify TigerBeetle for financial data
+
+**Reference**: `docs/ARCHITECTURE_ALIGNMENT_GUIDE.md`
 
 ---
 
@@ -303,6 +335,11 @@ You ◀──receive───────┘
 - [ ] User stories are actionable
 - [ ] Dependencies identified
 - [ ] Effort estimated
+- [ ] **Architecture Alignment Notes included** ⚠️
+- [ ] **Layer mapping verified against `ARCHITECTURE_ALIGNMENT_GUIDE.md`**
+- [ ] **Hot/Cold/Hybrid execution paths classified**
+- [ ] **MCP server requirements specified**
+- [ ] **Infrastructure decisions aligned (ECS/Fargate, not K8s)**
 - [ ] Ready for sprint planning
 
 ---
@@ -404,6 +441,51 @@ After completing all 4 stages for a gap, you will have:
    - User stories
    - Dependency map
    - Effort estimates
+   - **Architecture Alignment Notes** (ensuring Citadel OS compatibility)
 
 **Your engineering team can then create tickets and start building!**
+
+---
+
+## 📐 Architecture Alignment (Mandatory)
+
+Every skill specification MUST be aligned with the Citadel OS architecture. Reference:
+
+- **Guide**: `docs/ARCHITECTURE_ALIGNMENT_GUIDE.md`
+- **Report**: `docs/MVP_SKILLS_ALIGNMENT_REPORT.md`
+
+### Key Alignment Requirements
+
+| Category | Our Decision | NOT This |
+|----------|--------------|----------|
+| **Cloud** | AWS Primary | - |
+| **Containers** | ECS/Fargate | ❌ Kubernetes/EKS |
+| **Financial DB** | TigerBeetle | ❌ PostgreSQL for financial |
+| **Accounting** | Formance Numscript | ❌ Custom accounting code |
+| **Workflows** | Temporal | ❌ Custom workflow engines |
+| **AI Orchestration** | LangGraph + Suna | ❌ Custom orchestration |
+| **External API** | Rust/Axum | ❌ Direct service exposure |
+| **Vector DB** | MongoDB Atlas Vector Search | ❌ Pinecone (prefer MongoDB) |
+
+### Execution Path Rules
+
+| Operation Type | Path | Technology |
+|---------------|------|------------|
+| AI reasoning, ML inference | **Hot Path** | LangGraph, LangChain, Suna |
+| Financial transactions | **Cold Path** | TigerBeetle via Formance |
+| Workflow orchestration | **Cold Path** | Temporal |
+| Mixed operations | **Hybrid** | AI decision → Financial execution |
+
+### MCP Server Pattern
+
+All skills should interact with Treasury OS and other core systems via MCP servers:
+
+```yaml
+# Standard MCP URIs
+mcp://treasury/create_transfer    # Financial transactions
+mcp://treasury/query_balance      # Balance queries
+mcp://temporal/trigger_workflow   # Workflow initiation
+mcp://vector/semantic_search      # RAG retrieval
+mcp://pms/[operation]             # PMS integrations
+```
 
