@@ -166,18 +166,20 @@
 
 ---
 
-### Group 2: Tenant Screening & Lease Intelligence (8 skills)
+### Group 2: Tenant Screening & Lease Intelligence (8 skills) ✅ COMPLETE
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-142 | AI Tenant Scoring | screening | ⏳ | - | - | - | Pending |
-| SKILL-143 | Fraud Detection | screening | ⏳ | - | - | - | Pending |
-| SKILL-144 | Lease Abstraction AI | screening | ⏳ | - | - | - | Pending |
-| SKILL-145 | Renewal Prediction | screening | ⏳ | - | - | - | Pending |
-| SKILL-146 | Rent Affordability Analysis | screening | ⏳ | - | - | - | Pending |
-| SKILL-147 | Background Check Orchestration | screening | ⏳ | - | - | - | Pending |
-| SKILL-148 | Eviction Risk Scoring | screening | ⏳ | - | - | - | Pending |
-| SKILL-149 | Reference Check Automation | screening | ⏳ | - | - | - | Pending |
+| SKILL-142 | AI Tenant Scoring | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+| SKILL-143 | Fraud Detection | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+| SKILL-144 | Lease Abstraction AI | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+| SKILL-145 | Renewal Prediction | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+| SKILL-146 | Rent Affordability Analysis | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+| SKILL-147 | Background Check Orchestration | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+| SKILL-148 | Eviction Risk Scoring | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+| SKILL-149 | Reference Check Automation | screening | ✅ | ✅ | ✅ | ✅ | **SPECIFIED** |
+
+> **Specification**: `specs/screening/SPEC-SKILL-142-149-TENANT-SCREENING.md` (~2,500 lines)
 
 ---
 

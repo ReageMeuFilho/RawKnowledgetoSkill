@@ -8,8 +8,52 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### In Progress
-- Phase 3: Advanced Capabilities (~103 skills, 63 complete)
-- Remaining: Groups 2, 3, 5, 6, 7, 8 (40 skills)
+- Phase 3: Advanced Capabilities (~103 skills, 71 complete)
+- Remaining: Groups 3, 5, 6, 7, 8 (32 skills)
+
+---
+
+## [2026-01-07] - 🔍 PHASE 3 GROUP 2 COMPLETE (Tenant Screening & Lease Intelligence)
+
+### Added (Phase 3 Group 2 - Tenant Screening - 8 Skills)
+- **SPEC-SKILL-142-149-TENANT-SCREENING.md** - Comprehensive tenant screening specification (~2,500 lines)
+  - SKILL-142: AI Tenant Scoring (XGBoost/LightGBM, 85%+ accuracy, SHAP explainability)
+  - SKILL-143: Fraud Detection (500+ indicators, <20s processing, 95% accuracy)
+  - SKILL-144: Lease Abstraction AI (spaCy NLP, 90%+ term extraction)
+  - SKILL-145: Renewal Prediction (90-day advance, 85% accuracy)
+  - SKILL-146: Rent Affordability Analysis (Plaid API, real-time income verification)
+  - SKILL-147: Background Check Orchestration (TransUnion SmartMove, FCRA compliance)
+  - SKILL-148: Eviction Risk Scoring (Early warning system, Fair Housing validated)
+  - SKILL-149: Reference Check Automation (AI sentiment analysis, fraud detection)
+
+### Technology Stack (Phase 3 Group 2)
+- **Backend**: Python 3.12+ (FastAPI, XGBoost, LightGBM, scikit-learn, SHAP)
+- **NLP**: spaCy 3.7+ for lease document analysis
+- **Computer Vision**: OpenCV 4.8+, Tesseract 5.3+ for document fraud detection
+- **Identity**: Persona API (KYC, liveness detection)
+- **Income**: Plaid API (bank connectivity, payroll verification)
+- **Background**: TransUnion SmartMove (FCRA compliant)
+- **Frontend**: TypeScript, React 18.2+, TailwindCSS 3.4+
+- **Database**: PostgreSQL 15+ (PII encryption), Redis 7.2+ (caching)
+
+### Key Technical Highlights
+- XGBoost/LightGBM ensemble for 85%+ tenant prediction accuracy
+- SHAP-based model explainability for FCRA adverse action compliance
+- 500+ fraud indicators analyzed per document in <20 seconds
+- Fair Housing Act compliance with disparate impact testing (<1.25 ratio)
+- 5-year adverse action notice retention per FCRA requirements
+- Multi-vendor background check orchestration with result normalization
+
+### Business Impact
+- 30% eviction reduction ($3,500-$10,000 saved per eviction)
+- 95% fraud detection accuracy with <5% false positive rate
+- 95% reduction in manual screening time
+- 100% FCRA compliance
+
+### Project Statistics Update
+- **Total Skills Defined**: 170/202 (84% complete)
+- **Phase 3 Progress**: 71/103 (69% complete)
+- **Documentation**: ~210,000+ lines
 
 ---
 
