@@ -290,22 +290,37 @@ A comprehensive **1,580-line** knowledge document with **45+ citations** that re
 
 ---
 
-## 🚀 WHAT'S NEXT: IMPLEMENTATION PHASE
+## 🚀 WHAT'S NEXT: PHASE 2 SKILL SPECIFICATION
 
-### Immediate Actions
+### Phase 2: Enhanced Skills (51 skills across 8 groups)
 
-1. **Start Engineering Implementation**
-   - All specifications are production-ready
-   - Infrastructure decisions are made
-   - Start with Phase 1: Foundation (Q2 2025)
+**Status**: 🎯 Ready to Start!
 
-2. **Implementation Roadmap**
-   | Phase | Timeline | Focus |
-   |-------|----------|-------|
-   | Phase 1 | Q2 2025 | TigerBeetle, Formance, PIX, Teleport |
-   | Phase 2 | Q3 2025 | Voice AI edge, HITL dashboard, MPC |
-   | Phase 3 | Q4 2025-Q1 2026 | SPSAV license, SOC 2, Chaos eng |
-   | Phase 4 | Q2 2026 | EU AI Act, crypto-fiat, EU expansion |
+| Group | Name | Skills | Priority |
+|-------|------|--------|----------|
+| 1 | Advanced Analytics | 6 | High |
+| 2 | Guest Intelligence | 8 | High |
+| 3 | Revenue Optimization | 7 | **HIGHEST** ← Start Here |
+| 4 | Voice & Communication | 6 | High |
+| 5 | Enterprise Operations | 8 | Medium |
+| 6 | Developer Platform | 5 | Medium |
+| 7 | Hospitality Premium | 6 | Medium |
+| 8 | AI Advanced | 5 | High |
+
+**Tracker**: `docs/PHASE2_SKILL_TRACKER.md`
+
+### Recommended Start: Group 3 (Revenue Optimization)
+- Direct revenue impact
+- Builds on Phase 1 Booking & Calendar
+- 7 skills: competitor monitoring, demand sensing, pricing optimization
+
+### Implementation Roadmap (Engineering Build)
+| Phase | Timeline | Focus |
+|-------|----------|-------|
+| Phase 1 | Q2 2025 | TigerBeetle, Formance, PIX, Teleport |
+| Phase 2 | Q3 2025 | Voice AI edge, HITL dashboard, MPC |
+| Phase 3 | Q4 2025-Q1 2026 | SPSAV license, SOC 2, Chaos eng |
+| Phase 4 | Q2 2026 | EU AI Act, crypto-fiat, EU expansion |
 
 3. **Key Infrastructure Decisions Ready**
    - ✅ AWS ECS/Fargate (except TigerBeetle on EC2)
