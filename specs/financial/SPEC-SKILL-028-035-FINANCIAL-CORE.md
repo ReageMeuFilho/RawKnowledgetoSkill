@@ -664,5 +664,65 @@ class PayoutWorkflow:
 
 ---
 
-*Specification complete. Ready for implementation.*
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Payment Processing | Layer 3B (Cold Path) | TigerBeetle via Formance | ✅ |
+| Workflow Orchestration | Layer 3B (Cold Path) | Temporal | ✅ |
+| API Gateway | Layer 2 | Rust/Axum (external), FastAPI (internal) | ✅ |
+| Business Logic | Layer 4 (Skills) | Skill Scripts (Python) | ✅ |
+| Event Streaming | Layer 2 | Redpanda | ✅ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| Payment Collection | **Cold Path** | Financial guarantee required, TigerBeetle |
+| Refund Calculation | **Hybrid** | Policy logic (Hot) → Transaction (Cold) |
+| Authorization Holds | **Cold Path** | Card network compliance |
+| Reconciliation | **Cold Path** | Formance Native, audit trail |
+| Owner Statements | **Hybrid** | Report generation (Hot) → Ledger (Cold) |
+| Payout Processing | **Cold Path** | Temporal workflow, TigerBeetle |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for Financial Core skills
+mcp_servers:
+  - uri: mcp://treasury/create_transfer
+    purpose: TigerBeetle transfer creation
+  - uri: mcp://treasury/query_balance
+    purpose: Account balance queries
+  - uri: mcp://formance/execute_numscript
+    purpose: Programmable accounting logic
+  - uri: mcp://temporal/trigger_workflow
+    purpose: Payout workflow initiation
+  - uri: mcp://temporal/query_workflow
+    purpose: Workflow status queries
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Adjustment Needed |
+|---------------|--------------|-------------------|
+| Kubernetes 1.31+ | **ECS/Fargate** | ✅ Use ECS/Fargate, not EKS |
+| TigerBeetle | TigerBeetle on EC2 | ✅ Aligned (EC2 for TigerBeetle) |
+| Formance | Formance Cloud | ✅ Aligned |
+| Temporal | Temporal Cloud | ✅ Aligned |
+| Multi-cloud | AWS Primary | ✅ AWS with Brazil edge |
+
+### Compliance Verification
+
+- ✅ Financial data stored in TigerBeetle (immutable, auditable)
+- ✅ Accounting logic in Formance Numscript (compliance as code)
+- ✅ Workflows in Temporal (durable, recoverable)
+- ✅ Trust accounting via Formance segregation
+- ✅ PCI DSS via Stripe tokenization (no raw card data)
+
+---
+
+*Specification complete. Architecture aligned with Citadel OS reference. Ready for implementation.*
 

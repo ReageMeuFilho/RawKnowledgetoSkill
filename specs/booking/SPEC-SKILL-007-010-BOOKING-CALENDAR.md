@@ -452,5 +452,73 @@ CREATE TABLE payment_transactions (
 
 ---
 
-*Specification complete. Ready for implementation.*
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Calendar Sync Engine | Layer 4 (Skills) | Python/Node.js scripts | ✅ |
+| Double-Booking Logic | Layer 2 (Database) | PostgreSQL EXCLUSION | ✅ (app data, not financial) |
+| Payment Processing | Layer 3B (Cold Path) | TigerBeetle via Stripe | ✅ |
+| Real-time Updates | Layer 2 | Redis Pub/Sub | ✅ |
+| API Gateway | Layer 2 | Rust/Axum | ✅ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| Calendar Sync | **Hot Path** | API orchestration, no financial guarantee |
+| Double-Booking Check | **Cold Path** | Database constraint, ACID required |
+| Date Blocking | **Hybrid** | User action (Hot) → DB write (Cold) |
+| Payment Collection | **Cold Path** | Financial transaction via TigerBeetle |
+| Booking Creation | **Hybrid** | Validation (Hot) → Transaction (Cold) |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for Booking & Calendar skills
+mcp_servers:
+  - uri: mcp://treasury/create_transfer
+    purpose: Payment processing via TigerBeetle
+  - uri: mcp://temporal/trigger_workflow
+    purpose: Booking workflow orchestration
+  - uri: mcp://vector/query
+    purpose: Property availability RAG
+  - uri: mcp://ota/sync_calendar
+    purpose: OTA channel synchronization
+```
+
+### Database Alignment Clarification
+
+| Data Type | Database | Rationale |
+|-----------|----------|-----------|
+| Booking metadata | PostgreSQL | Non-financial app data |
+| Calendar events | PostgreSQL | Operational data |
+| **Payment transactions** | **TigerBeetle** | Financial data (via Formance) |
+| Sync status cache | Redis | Ephemeral cache |
+
+> **IMPORTANT**: PostgreSQL is correctly used for booking/calendar **metadata** only. 
+> All **payment transactions** flow through TigerBeetle via the Cold Path.
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Status |
+|---------------|--------------|--------|
+| AWS ECS Fargate | ECS/Fargate | ✅ Aligned |
+| PostgreSQL 15+ | PostgreSQL (app data) | ✅ Aligned |
+| Redis 7+ | Redis | ✅ Aligned |
+| Stripe | Stripe Connect | ✅ Aligned |
+
+### Compliance Verification
+
+- ✅ Booking metadata in PostgreSQL (appropriate for non-financial)
+- ✅ Payment data routes to TigerBeetle (immutable, auditable)
+- ✅ PCI DSS via Stripe tokenization
+- ✅ EXCLUSION constraints for data integrity
+- ✅ Targets ECS/Fargate deployment
+
+---
+
+*Specification complete. Architecture aligned with Citadel OS reference. Ready for implementation.*
 
