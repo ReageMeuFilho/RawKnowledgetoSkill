@@ -8,8 +8,44 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### In Progress
-- Phase 3: Advanced Capabilities (~60 skills)
-- Research Prompts created for Groups 1, 2, 4
+- Phase 3: Advanced Capabilities (~103 skills)
+- Research Prompts created for Groups 1, 2, 4, 9
+
+---
+
+## [2026-01-07] - 🏆 PROPERTY FINANCE SKILLS ADDED (Group 9)
+
+### Added (Property Finance Research)
+- **RESEARCH_PROMPT_PHASE3_GROUP9_PROPERTY_FINANCE.md** - Comprehensive prompt for 43 finance skills
+- **PROPERTY_FINANCE_ARCHITECTURE_MAPPING.md** - Maps 31 PMS vendor research to Citadel OS architecture
+- **TREASURY_CAPTURE_PRIORITIZATION.md** - Prioritizes skills by treasury capture value
+
+### Research Analyzed
+- **31 PMS Companies** analyzed from `How to Automate Research and Extract Know-How/` folder
+- **350+ skill candidates** identified
+- **85+ treasury capture hooks** found
+- **43 new skills** extracted for Property Finance (Group 9)
+
+### Group 9: Property Finance Skills (SKILL-194 to SKILL-236)
+- **Control Plane** (9 skills): Policy & Permissioning, Entity Hierarchy, GL Config, Fund Types
+- **Finance Core** (5 skills): Transaction Categorization AI, Three-Way Bank Reconciliation, Month-End Close
+- **Accounts Payable** (6 skills): Invoice OCR, Triage & Coding, Approval Workflow Engine
+- **Accounts Receivable** (6 skills): Rent Roll, Collections Workflow, Late Fee Automation
+- **Trust/Reserves** (6 skills): Trust Compliance Monitor, Security Deposit Lifecycle, Reserve Management
+- **Owner Reporting** (5 skills): Owner Statements, Owner Packets, Budget vs. Actuals
+- **Treasury Operations** (6 skills): Owner Payouts, Payment Batching, ACH Execution
+
+### Treasury Capture Prioritization
+- **11 CRITICAL skills** (direct money movement control)
+- **12 HIGH skills** (approval/validation)
+- **11 MEDIUM skills** (visibility/reporting)
+- **9 FOUNDATION skills** (enables others)
+- **16-week implementation plan** created
+
+### Project Statistics Update
+- **Total Skills Defined**: 99 (specified) + 103 (Phase 3) = 202
+- **Progress**: 49% complete (99/202)
+- **New Documentation**: 2,000+ lines added
 
 ---
 

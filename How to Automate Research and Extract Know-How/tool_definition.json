@@ -1,0 +1,44 @@
+{
+  "name": "fin_002_bank_reconciliation",
+  "description": "Reconcile bank transactions to ledger entries, propose matches, and produce an exception and posting plan with an audit trail.",
+  "input_schema": {
+    "type": "object",
+    "required": ["tenant_id", "entity_id", "period_start", "period_end", "bank_transactions_file", "ledger_entries_file", "policies"],
+    "properties": {
+      "tenant_id": { "type": "string", "description": "The unique identifier for the tenant or workspace." },
+      "entity_id": { "type": "string", "description": "The unique identifier for the property or legal entity being reconciled." },
+      "period_start": { "type": "string", "format": "date", "description": "The start date of the reconciliation period." },
+      "period_end": { "type": "string", "format": "date", "description": "The end date of the reconciliation period." },
+      "bank_transactions_file": { "type": "string", "description": "Path to the CSV file containing bank transactions." },
+      "ledger_entries_file": { "type": "string", "description": "Path to the CSV file containing ledger entries." },
+      "policies": {
+        "type": "object",
+        "required": ["match_tolerance_amount", "match_tolerance_days", "require_human_approval_for_postings"],
+        "properties": {
+          "match_tolerance_amount": { "type": "number", "description": "The maximum amount difference to consider a match." },
+          "match_tolerance_days": { "type": "integer", "description": "The number of days before or after to consider a match." },
+          "require_human_approval_for_postings": { "type": "boolean", "description": "If true, all proposed journal entries must be approved by a human." }
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["summary", "matches", "exceptions", "posting_plan", "audit_log"],
+    "properties": {
+      "summary": {
+        "type": "object",
+        "properties": {
+          "matched_count": { "type": "integer" },
+          "exception_count": { "type": "integer" },
+          "matched_amount": { "type": "number" },
+          "exception_amount": { "type": "number" }
+        }
+      },
+      "matches": { "type": "array", "items": { "type": "object" } },
+      "exceptions": { "type": "array", "items": { "type": "object" } },
+      "posting_plan": { "type": "array", "items": { "type": "object" } },
+      "audit_log": { "type": "array", "items": { "type": "object" } }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 # Phase 3: Advanced Capabilities Tracker
 
 > **Purpose**: Track specification progress for Phase 3 advanced capabilities
-> **Total Skills**: ~60 (Estimated)
+> **Total Skills**: ~103 (Estimated)
 > **Timeline**: Q1-Q2 2026
 > **Last Updated**: January 2026
 > **Prerequisites**: Phase 1 & 2 Complete (99 skills ✅)
@@ -15,12 +15,14 @@
 ║                           PHASE 3: ADVANCED CAPABILITIES                               ║
 ╠═══════════════════════════════════════════════════════════════════════════════════════╣
 ║                                                                                        ║
-║   Total Skills:     ~60                   Progress: ░░░░░░░░░░░░░░░░░░░░ 0%           ║
-║   Groups:           8                     Estimated Hours: ~150                        ║
+║   Total Skills:     103                   Progress: ░░░░░░░░░░░░░░░░░░░░ 0%           ║
+║   Groups:           9                     Estimated Hours: ~250                        ║
 ║                                                                                        ║
-║   ⏳ Pending:       60                                                                 ║
+║   ⏳ Pending:       103                                                                ║
 ║   🔄 In Progress:    0                                                                 ║
 ║   ✅ Complete:       0                                                                 ║
+║                                                                                        ║
+║   🏆 HIGHEST VALUE: Group 9 (Property Finance) - 43 skills                            ║
 ║                                                                                        ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -39,32 +41,124 @@
 | 6 | Legal & Compliance | 6 | ⏳ Pending | - | - |
 | 7 | Marketplace & Ecosystem | 8 | ⏳ Pending | - | - |
 | 8 | Advanced Analytics & BI | 6 | ⏳ Pending | - | - |
+| **9** | **Property Finance (NEW)** | **43** | 🔄 Research Ready | `RESEARCH_PROMPT_PHASE3_GROUP9_PROPERTY_FINANCE.md` ✅ | - |
+
+---
+
+## 🏆 PRIORITY RANKING BY TREASURY VALUE
+
+| Rank | Group | Skills | Treasury Value | Rationale |
+|------|-------|--------|----------------|-----------|
+| **#1** | **Group 9: Property Finance** | 43 | 🔴 CRITICAL | Direct control of AP/AR/Treasury flows |
+| #2 | Group 4: Advanced Fintech | 10 | 🔴 CRITICAL | Crypto payments, yield optimization |
+| #3 | Group 1: Investment Management | 10 | 🟠 HIGH | Investor capital flows |
+| #4 | Group 2: Tenant Screening | 8 | 🟡 MEDIUM | Risk reduction on AR |
+| #5 | Group 5: Commercial Property | 6 | 🟡 MEDIUM | CAM/NNN billing complexity |
+| #6 | Group 6: Legal & Compliance | 6 | 🟡 MEDIUM | Compliance = trust |
+| #7 | Group 3: IoT & Smart Property | 8 | 🟢 LOW | Operational efficiency |
+| #8 | Group 7: Marketplace | 8 | 🟢 LOW | Revenue diversification |
+| #9 | Group 8: Advanced Analytics | 6 | 🟢 LOW | Insights, not transactions |
 
 ---
 
 ## 🔄 PIPELINE STATUS BY SKILL
 
+### Group 9: Property Finance (43 skills) - **HIGHEST PRIORITY**
+
+#### Control Plane Foundation (9 skills)
+
+| Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status | Treasury Value |
+|----------|------|----------|---------|---------|---------|---------|--------|----------------|
+| SKILL-194 | Policy & Permissioning | control-plane | ⏳ | - | - | - | Pending | 🟢 Foundation |
+| SKILL-195 | Entity Hierarchy Management | control-plane | ⏳ | - | - | - | Pending | 🟢 Foundation |
+| SKILL-196 | GL Account Configuration | control-plane | ⏳ | - | - | - | Pending | 🟢 Foundation |
+| SKILL-197 | Fund Type Definition | control-plane | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-198 | Fiscal Period Management | control-plane | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-199 | Bank Account Configuration | control-plane | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-200 | Audit Log & Decision Trace | control-plane | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-201 | Threshold & Limit Configuration | control-plane | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-202 | Integration Credential Management | control-plane | ⏳ | - | - | - | Pending | 🟢 Foundation |
+
+#### Property Finance Core (5 skills)
+
+| Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status | Treasury Value |
+|----------|------|----------|---------|---------|---------|---------|--------|----------------|
+| SKILL-203 | Transaction Categorization AI | finance-core | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-204 | Three-Way Bank Reconciliation | finance-core | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-205 | Reconciliation Exception Handler | finance-core | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-206 | Month-End Close Automation | finance-core | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-207 | Year-End/Tax Preparation | finance-core | ⏳ | - | - | - | Pending | 🟡 Medium |
+
+#### Accounts Payable Automation (6 skills)
+
+| Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status | Treasury Value |
+|----------|------|----------|---------|---------|---------|---------|--------|----------------|
+| SKILL-208 | Invoice Data Extraction (OCR/AI) | ap | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-209 | Invoice Triage & Coding | ap | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-210 | Approval Workflow Engine | ap | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-211 | Duplicate Invoice Detection | ap | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-212 | Vendor Payment Optimization | ap | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-213 | 1099 Vendor Management | ap | ⏳ | - | - | - | Pending | 🟡 Medium |
+
+#### Accounts Receivable & Collections (6 skills)
+
+| Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status | Treasury Value |
+|----------|------|----------|---------|---------|---------|---------|--------|----------------|
+| SKILL-214 | Rent Roll Generation | ar | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-215 | Automated Late Fee Assessment | ar | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-216 | Collections Workflow Engine | ar | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-217 | Tenant Ledger Management | ar | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-218 | NSF/Bounced Payment Handler | ar | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-219 | Payment Plan Management | ar | ⏳ | - | - | - | Pending | 🟡 Medium |
+
+#### Trust/Reserves/Compliance (6 skills)
+
+| Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status | Treasury Value |
+|----------|------|----------|---------|---------|---------|---------|--------|----------------|
+| SKILL-220 | Trust Account Compliance Monitor | trust | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-221 | Security Deposit Lifecycle Manager | trust | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-222 | HOA Reserve Fund Management | trust | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-223 | Reserve Study Integration | trust | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-224 | State-Specific Compliance Engine | trust | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-225 | Trust Liability Reconciliation | trust | ⏳ | - | - | - | Pending | 🔴 Critical |
+
+#### Owner Reporting & Payouts (5 skills)
+
+| Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status | Treasury Value |
+|----------|------|----------|---------|---------|---------|---------|--------|----------------|
+| SKILL-226 | Owner Statement Generation | reporting | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-227 | Owner Packet Automation | reporting | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-228 | Owner Portal Management | reporting | ⏳ | - | - | - | Pending | 🟡 Medium |
+| SKILL-229 | Scheduled Report Distribution | reporting | ⏳ | - | - | - | Pending | 🟢 Low |
+| SKILL-230 | Budget vs. Actuals Reporting | reporting | ⏳ | - | - | - | Pending | 🟡 Medium |
+
+#### Treasury Operations (6 skills)
+
+| Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status | Treasury Value |
+|----------|------|----------|---------|---------|---------|---------|--------|----------------|
+| SKILL-231 | Owner Payout Calculation | treasury | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-232 | Payment Batch Preparation | treasury | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-233 | Negative Balance Handler | treasury | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-234 | Cash Flow Forecasting | treasury | ⏳ | - | - | - | Pending | 🟠 High |
+| SKILL-235 | ACH Payment Execution | treasury | ⏳ | - | - | - | Pending | 🔴 Critical |
+| SKILL-236 | Payment Reconciliation | treasury | ⏳ | - | - | - | Pending | 🔴 Critical |
+
+---
+
 ### Group 1: Investment Management (10 skills)
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-132 | property-valuation-ai | investment | ⏳ | - | - | - | Pending |
-| SKILL-133 | cap-rate-calculator | investment | ⏳ | - | - | - | Pending |
-| SKILL-134 | cash-flow-projections | investment | ⏳ | - | - | - | Pending |
-| SKILL-135 | portfolio-performance-dashboard | investment | ⏳ | - | - | - | Pending |
-| SKILL-136 | investment-waterfall | investment | ⏳ | - | - | - | Pending |
-| SKILL-137 | 1031-exchange-tracker | investment | ⏳ | - | - | - | Pending |
-| SKILL-138 | rent-roll-analysis | investment | ⏳ | - | - | - | Pending |
-| SKILL-139 | asset-disposition-planning | investment | ⏳ | - | - | - | Pending |
-| SKILL-140 | investor-portal | investment | ⏳ | - | - | - | Pending |
-| SKILL-141 | deal-analyzer | investment | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- AI-powered property valuations (CMA automation)
-- Multi-metric portfolio tracking (IRR, CoC, Cap Rate)
-- Cash flow forecasting with Monte Carlo simulation
-- Investment waterfall calculations for syndications
-- 1031 exchange timeline and compliance tracking
+| SKILL-132 | Property Valuation AI | investment | ⏳ | - | - | - | Pending |
+| SKILL-133 | Cap Rate Calculator | investment | ⏳ | - | - | - | Pending |
+| SKILL-134 | Cash Flow Projections | investment | ⏳ | - | - | - | Pending |
+| SKILL-135 | Portfolio Performance Dashboard | investment | ⏳ | - | - | - | Pending |
+| SKILL-136 | Investment Waterfall | investment | ⏳ | - | - | - | Pending |
+| SKILL-137 | 1031 Exchange Tracker | investment | ⏳ | - | - | - | Pending |
+| SKILL-138 | Rent Roll Analysis | investment | ⏳ | - | - | - | Pending |
+| SKILL-139 | Asset Disposition Planning | investment | ⏳ | - | - | - | Pending |
+| SKILL-140 | Investor Portal | investment | ⏳ | - | - | - | Pending |
+| SKILL-141 | Deal Analyzer | investment | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -72,21 +166,14 @@
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-142 | ai-tenant-scoring | screening | ⏳ | - | - | - | Pending |
-| SKILL-143 | fraud-detection | screening | ⏳ | - | - | - | Pending |
-| SKILL-144 | lease-abstraction-ai | screening | ⏳ | - | - | - | Pending |
-| SKILL-145 | renewal-prediction | screening | ⏳ | - | - | - | Pending |
-| SKILL-146 | rent-affordability-analysis | screening | ⏳ | - | - | - | Pending |
-| SKILL-147 | background-check-orchestration | screening | ⏳ | - | - | - | Pending |
-| SKILL-148 | eviction-risk-scoring | screening | ⏳ | - | - | - | Pending |
-| SKILL-149 | reference-check-automation | screening | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- ML-based tenant creditworthiness prediction
-- Document fraud detection (fake pay stubs, IDs)
-- AI lease term extraction for bulk onboarding
-- Tenant renewal probability forecasting
-- Multi-vendor screening aggregation
+| SKILL-142 | AI Tenant Scoring | screening | ⏳ | - | - | - | Pending |
+| SKILL-143 | Fraud Detection | screening | ⏳ | - | - | - | Pending |
+| SKILL-144 | Lease Abstraction AI | screening | ⏳ | - | - | - | Pending |
+| SKILL-145 | Renewal Prediction | screening | ⏳ | - | - | - | Pending |
+| SKILL-146 | Rent Affordability Analysis | screening | ⏳ | - | - | - | Pending |
+| SKILL-147 | Background Check Orchestration | screening | ⏳ | - | - | - | Pending |
+| SKILL-148 | Eviction Risk Scoring | screening | ⏳ | - | - | - | Pending |
+| SKILL-149 | Reference Check Automation | screening | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -94,21 +181,14 @@
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-150 | energy-management | iot | ⏳ | - | - | - | Pending |
-| SKILL-151 | water-leak-detection | iot | ⏳ | - | - | - | Pending |
-| SKILL-152 | occupancy-sensing | iot | ⏳ | - | - | - | Pending |
-| SKILL-153 | hvac-predictive-maintenance | iot | ⏳ | - | - | - | Pending |
-| SKILL-154 | smart-meter-integration | iot | ⏳ | - | - | - | Pending |
-| SKILL-155 | noise-monitoring | iot | ⏳ | - | - | - | Pending |
-| SKILL-156 | air-quality-monitoring | iot | ⏳ | - | - | - | Pending |
-| SKILL-157 | smart-appliance-integration | iot | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- Smart thermostat optimization for utility savings
-- IoT water leak sensor integration with instant alerts
-- HVAC health monitoring and failure prediction
-- Party/noise detection for STR compliance
-- Indoor air quality tracking for guest health
+| SKILL-150 | Energy Management | iot | ⏳ | - | - | - | Pending |
+| SKILL-151 | Water Leak Detection | iot | ⏳ | - | - | - | Pending |
+| SKILL-152 | Occupancy Sensing | iot | ⏳ | - | - | - | Pending |
+| SKILL-153 | HVAC Predictive Maintenance | iot | ⏳ | - | - | - | Pending |
+| SKILL-154 | Smart Meter Integration | iot | ⏳ | - | - | - | Pending |
+| SKILL-155 | Noise Monitoring | iot | ⏳ | - | - | - | Pending |
+| SKILL-156 | Air Quality Monitoring | iot | ⏳ | - | - | - | Pending |
+| SKILL-157 | Smart Appliance Integration | iot | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -116,23 +196,16 @@
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-158 | stablecoin-rent-collection | fintech | ⏳ | - | - | - | Pending |
-| SKILL-159 | on-chain-credit-scoring | fintech | ⏳ | - | - | - | Pending |
-| SKILL-160 | yield-optimization | fintech | ⏳ | - | - | - | Pending |
-| SKILL-161 | international-wire-management | fintech | ⏳ | - | - | - | Pending |
-| SKILL-162 | security-deposit-defi | fintech | ⏳ | - | - | - | Pending |
-| SKILL-163 | invoice-factoring | fintech | ⏳ | - | - | - | Pending |
-| SKILL-164 | insurance-escrow | fintech | ⏳ | - | - | - | Pending |
-| SKILL-165 | property-tokenization | fintech | ⏳ | - | - | - | Pending |
-| SKILL-166 | multi-currency-accounting | fintech | ⏳ | - | - | - | Pending |
-| SKILL-167 | tax-withholding-automation | fintech | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- USDC/USDT rent payment acceptance
-- DeFi credit history integration
-- Idle fund yield optimization
-- Security deposit in yield-bearing protocols
-- Real estate tokenization (fractional ownership)
+| SKILL-158 | Stablecoin Rent Collection | fintech | ⏳ | - | - | - | Pending |
+| SKILL-159 | On-Chain Credit Scoring | fintech | ⏳ | - | - | - | Pending |
+| SKILL-160 | Yield Optimization | fintech | ⏳ | - | - | - | Pending |
+| SKILL-161 | International Wire Management | fintech | ⏳ | - | - | - | Pending |
+| SKILL-162 | Security Deposit DeFi | fintech | ⏳ | - | - | - | Pending |
+| SKILL-163 | Invoice Factoring | fintech | ⏳ | - | - | - | Pending |
+| SKILL-164 | Insurance Escrow | fintech | ⏳ | - | - | - | Pending |
+| SKILL-165 | Property Tokenization | fintech | ⏳ | - | - | - | Pending |
+| SKILL-166 | Multi-Currency Accounting | fintech | ⏳ | - | - | - | Pending |
+| SKILL-167 | Tax Withholding Automation | fintech | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -140,19 +213,12 @@
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-168 | commercial-lease-management | commercial | ⏳ | - | - | - | Pending |
-| SKILL-169 | cam-reconciliation | commercial | ⏳ | - | - | - | Pending |
-| SKILL-170 | tenant-improvement-tracking | commercial | ⏳ | - | - | - | Pending |
-| SKILL-171 | percentage-rent-calculator | commercial | ⏳ | - | - | - | Pending |
-| SKILL-172 | commercial-vacancy-tracking | commercial | ⏳ | - | - | - | Pending |
-| SKILL-173 | lease-expiration-dashboard | commercial | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- Triple-net, gross, modified gross lease management
-- CAM (Common Area Maintenance) billing and reconciliation
-- Tenant improvement allowance tracking
-- Percentage rent calculations for retail
-- Commercial lease rollover planning
+| SKILL-168 | Commercial Lease Management | commercial | ⏳ | - | - | - | Pending |
+| SKILL-169 | CAM Reconciliation | commercial | ⏳ | - | - | - | Pending |
+| SKILL-170 | Tenant Improvement Tracking | commercial | ⏳ | - | - | - | Pending |
+| SKILL-171 | Percentage Rent Calculator | commercial | ⏳ | - | - | - | Pending |
+| SKILL-172 | Commercial Vacancy Tracking | commercial | ⏳ | - | - | - | Pending |
+| SKILL-173 | Lease Expiration Dashboard | commercial | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -160,19 +226,12 @@
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-174 | ai-lease-generation | legal | ⏳ | - | - | - | Pending |
-| SKILL-175 | rent-control-compliance | legal | ⏳ | - | - | - | Pending |
-| SKILL-176 | fair-housing-audit | legal | ⏳ | - | - | - | Pending |
-| SKILL-177 | disclosure-management | legal | ⏳ | - | - | - | Pending |
-| SKILL-178 | eviction-workflow-automation | legal | ⏳ | - | - | - | Pending |
-| SKILL-179 | regulatory-alert-system | legal | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- State-specific lease generation with AI
-- Automatic rent control limit calculations
-- AI-powered fair housing compliance review
-- Required disclosure tracking
-- Regulatory change monitoring
+| SKILL-174 | AI Lease Generation | legal | ⏳ | - | - | - | Pending |
+| SKILL-175 | Rent Control Compliance | legal | ⏳ | - | - | - | Pending |
+| SKILL-176 | Fair Housing Audit | legal | ⏳ | - | - | - | Pending |
+| SKILL-177 | Disclosure Management | legal | ⏳ | - | - | - | Pending |
+| SKILL-178 | Eviction Workflow Automation | legal | ⏳ | - | - | - | Pending |
+| SKILL-179 | Regulatory Alert System | legal | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -180,21 +239,14 @@
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-180 | vendor-marketplace | marketplace | ⏳ | - | - | - | Pending |
-| SKILL-181 | resident-services-marketplace | marketplace | ⏳ | - | - | - | Pending |
-| SKILL-182 | partner-api-ecosystem | marketplace | ⏳ | - | - | - | Pending |
-| SKILL-183 | white-label-reseller-portal | marketplace | ⏳ | - | - | - | Pending |
-| SKILL-184 | affiliate-commission-engine | marketplace | ⏳ | - | - | - | Pending |
-| SKILL-185 | insurance-quote-integration | marketplace | ⏳ | - | - | - | Pending |
-| SKILL-186 | utility-setup-automation | marketplace | ⏳ | - | - | - | Pending |
-| SKILL-187 | moving-services-coordination | marketplace | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- Vendor marketplace for service providers
-- Resident services (insurance, moving, utilities)
-- Partner API ecosystem for third-party apps
-- White-label reseller capabilities
-- Affiliate commission tracking
+| SKILL-180 | Vendor Marketplace | marketplace | ⏳ | - | - | - | Pending |
+| SKILL-181 | Resident Services Marketplace | marketplace | ⏳ | - | - | - | Pending |
+| SKILL-182 | Partner API Ecosystem | marketplace | ⏳ | - | - | - | Pending |
+| SKILL-183 | White-Label Reseller Portal | marketplace | ⏳ | - | - | - | Pending |
+| SKILL-184 | Affiliate Commission Engine | marketplace | ⏳ | - | - | - | Pending |
+| SKILL-185 | Insurance Quote Integration | marketplace | ⏳ | - | - | - | Pending |
+| SKILL-186 | Utility Setup Automation | marketplace | ⏳ | - | - | - | Pending |
+| SKILL-187 | Moving Services Coordination | marketplace | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -202,19 +254,12 @@
 
 | Skill ID | Name | Category | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Status |
 |----------|------|----------|---------|---------|---------|---------|--------|
-| SKILL-188 | custom-report-builder | analytics | ⏳ | - | - | - | Pending |
-| SKILL-189 | data-export-api | analytics | ⏳ | - | - | - | Pending |
-| SKILL-190 | competitive-intelligence-feed | analytics | ⏳ | - | - | - | Pending |
-| SKILL-191 | cohort-analysis | analytics | ⏳ | - | - | - | Pending |
-| SKILL-192 | predictive-revenue-modeling | analytics | ⏳ | - | - | - | Pending |
-| SKILL-193 | natural-language-bi | analytics | ⏳ | - | - | - | Pending |
-
-**Key Features**:
-- Drag-and-drop custom report builder
-- Programmatic data export API
-- Natural language BI ("Ask questions, get charts")
-- Cohort analysis for marketing optimization
-- ML-based revenue forecasting
+| SKILL-188 | Custom Report Builder | analytics | ⏳ | - | - | - | Pending |
+| SKILL-189 | Data Export API | analytics | ⏳ | - | - | - | Pending |
+| SKILL-190 | Competitive Intelligence Feed | analytics | ⏳ | - | - | - | Pending |
+| SKILL-191 | Cohort Analysis | analytics | ⏳ | - | - | - | Pending |
+| SKILL-192 | Predictive Revenue Modeling | analytics | ⏳ | - | - | - | Pending |
+| SKILL-193 | Natural Language BI | analytics | ⏳ | - | - | - | Pending |
 
 ---
 
@@ -229,15 +274,18 @@ docs/prompts/
 ├── RESEARCH_PROMPT_PHASE3_GROUP5_COMMERCIAL.md (pending)
 ├── RESEARCH_PROMPT_PHASE3_GROUP6_LEGAL.md (pending)
 ├── RESEARCH_PROMPT_PHASE3_GROUP7_MARKETPLACE.md (pending)
-└── RESEARCH_PROMPT_PHASE3_GROUP8_ANALYTICS.md (pending)
+├── RESEARCH_PROMPT_PHASE3_GROUP8_ANALYTICS.md (pending)
+└── RESEARCH_PROMPT_PHASE3_GROUP9_PROPERTY_FINANCE.md ✅ (HIGHEST PRIORITY)
 
 specs/
 ├── investment/
 │   └── SPEC-SKILL-132-141-INVESTMENT.md (pending)
 ├── screening/
 │   └── SPEC-SKILL-142-149-SCREENING.md (pending)
-└── fintech/
-    └── SPEC-SKILL-158-167-ADVANCED-FINTECH.md (pending)
+├── fintech/
+│   └── SPEC-SKILL-158-167-ADVANCED-FINTECH.md (pending)
+└── finance/
+    └── SPEC-SKILL-194-236-PROPERTY-FINANCE.md (pending) ⭐ HIGHEST VALUE
 ```
 
 ---
@@ -249,11 +297,29 @@ specs/
 | MVP (P0) | 20 | ✅ Complete |
 | Phase 1 (P1) | 28 | ✅ Complete |
 | Phase 2 (P2) | 51 | ✅ Complete |
-| **Phase 3 (P3)** | ~60 | 🔄 In Progress |
-| **Total** | **~159** | **62% Complete** |
+| **Phase 3 (P3)** | **103** | 🔄 In Progress |
+| **Total** | **202** | **49% Complete** |
+
+---
+
+## 💰 TREASURY CAPTURE SUMMARY
+
+### Critical Treasury Skills (Build First)
+
+| Skill ID | Name | Category | Treasury Hook |
+|----------|------|----------|---------------|
+| **SKILL-210** | Approval Workflow Engine | AP | Own AP approval decisions |
+| **SKILL-231** | Owner Payout Calculation | Treasury | Own owner distribution |
+| **SKILL-235** | ACH Payment Execution | Treasury | Execute payment instructions |
+| **SKILL-204** | Three-Way Bank Reconciliation | Finance | Validate all fund movements |
+| **SKILL-220** | Trust Account Compliance | Trust | Prevent commingling |
+| **SKILL-216** | Collections Workflow Engine | AR | Own collections escalation |
+| **SKILL-232** | Payment Batch Preparation | Treasury | Control payment batching |
+
+**Total Critical Skills**: 11 (out of 43 in Group 9)
 
 ---
 
 **Last Updated**: January 2026
-**Status**: Phase 3 Research Prompts for Groups 1, 2, 4 Created
-
+**Status**: Phase 3 Research Prompts for Groups 1, 2, 4, 9 Created
+**Next Priority**: Group 9 (Property Finance) - Highest Treasury Value

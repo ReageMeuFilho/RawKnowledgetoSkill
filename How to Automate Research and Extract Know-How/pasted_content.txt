@@ -1,0 +1,283 @@
+        "properties": {
+          "match_tolerance_amount": { "type": "number" },
+          "match_tolerance_days": { "type": "integer" },
+          "require_human_approval_for_postings": { "type": "boolean" }
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["summary", "matches", "exceptions", "posting_plan", "audit_log"],
+    "properties": {
+      "summary": {
+        "type": "object",
+        "required": ["matched_count", "exception_count", "matched_amount", "exception_amount"],
+        "properties": {
+          "matched_count": { "type": "integer" },
+          "exception_count": { "type": "integer" },
+          "matched_amount": { "type": "number" },
+          "exception_amount": { "type": "number" }
+        }
+      },
+      "matches": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["bank_txn_id", "ledger_entry_id", "confidence", "match_reason"],
+          "properties": {
+            "bank_txn_id": { "type": "string" },
+            "ledger_entry_id": { "type": "string" },
+            "confidence": { "type": "number" },
+            "match_reason": { "type": "string" }
+          }
+        }
+      },
+      "exceptions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["exception_id", "type", "description", "recommended_action", "requires_human"],
+          "properties": {
+            "exception_id": { "type": "string" },
+            "type": { "type": "string", "enum": ["UNMATCHED_BANK", "UNMATCHED_LEDGER", "AMOUNT_MISMATCH", "DATE_MISMATCH", "DUPLICATE", "SUSPECT_FRAUD"] },
+            "description": { "type": "string" },
+            "recommended_action": { "type": "string" },
+            "requires_human": { "type": "boolean" }
+          }
+        }
+      },
+      "posting_plan": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["action", "gl_account", "amount", "memo", "requires_approval"],
+          "properties": {
+            "action": { "type": "string", "enum": ["PROPOSE_JE", "REQUEST_INFO", "NO_ACTION"] },
+            "gl_account": { "type": "string" },
+            "amount": { "type": "number" },
+            "memo": { "type": "string" },
+            "requires_approval": { "type": "boolean" }
+          }
+        }
+      },
+      "audit_log": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["ts", "event", "details"],
+          "properties": {
+            "ts": { "type": "string" },
+            "event": { "type": "string" },
+            "details": { "type": "object" }
+          }
+        }
+      }
+    }
+  }
+}
+
+C) The “Universal Vendor Research Prompt” (runs across ALL companies)
+
+This is the reusable prompt you asked for. It is designed to:
+
+scrape/collect knowledge from each vendor’s public resources,
+
+normalize into a common schema, and
+
+output skill candidates + training artifacts + evals.
+
+✅ Research Prompt: RESEARCH_PROMPT_PROPERTY_FINANCE_SKILLS_V1.md
+
+Copy/paste this into your research agent (Claude, Manus-style agent, browser agent, etc.) and run it once per vendor.
+
+# RESEARCH_PROMPT_PROPERTY_FINANCE_SKILLS_V1
+
+You are a Research Analyst building a Skills Library for an AI “Digital Workforce Manager + Treasury OS” in the property management vertical:
+- STR (short-term rental)
+- LTR (long-term rental property management)
+- HOA/Condo (community association management)
+
+Your mission:
+1) Extract the best “how-to” operational knowledge from a given vendor ecosystem.
+2) Convert the knowledge into a set of executable Skills (Anthropic/Claude Skills format).
+3) Produce training-grade artifacts and evaluation tests.
+
+## INPUTS
+Vendor Name: {{VENDOR_NAME}}
+Vendor Product(s): {{VENDOR_PRODUCTS}}
+Vertical Coverage: {{STR|LTR|HOA_CONDO|MULTI}}
+Region Focus: {{US|EU|LATAM|OTHER}}
+Recency Window: prioritize content from last 24 months, but include foundational docs if older.
+
+## WHAT TO COLLECT (MANDATORY)
+### A) Workflow primitives (step-by-step)
+For each of these workflows, collect:
+- exact steps
+- required inputs
+- outputs/artifacts produced
+- roles/permissions involved
+- edge cases and exception handling
+- common failure modes
+- screenshots/examples if available (describe, don’t copy images)
+
+Workflows:
+1) Owner statements / owner payouts
+2) Bank reconciliation
+3) AP: invoice intake → coding → approvals → payments
+4) AR: rent roll → collections → notices → adjustments
+5) Trust/escrow/security deposit handling (if applicable)
+6) Reserves (HOA/Condo): operating vs reserves, contributions, restricted spending
+7) Month-end close checklist + reporting pack
+
+### B) Data model + exports
+Collect:
+- key entities (property, unit, owner, tenant, vendor, job/work order, GL account, fund, bank account)
+- report/export formats (CSV/XLSX/PDF)
+- required fields for each report
+- naming conventions and unique identifiers
+- how to map transactions to properties/units/vendors
+
+### C) Permissions + governance
+Collect:
+- user roles and permissions model
+- approval workflows
+- audit logging capabilities
+- controls and segregation concepts (funds separation, restricted accounts)
+
+### D) Integrations + APIs (if public)
+Collect:
+- API endpoints or integration guides
+- webhooks/events (if any)
+- import/export methods
+- SSO/auth details (high level)
+- rate limits (if published)
+
+### E) “Real world” edge-case intelligence
+Collect:
+- common forum/community issues (e.g., statement confusion, reconciliation mismatches, duplicate invoices, vendor disputes)
+- vendor best practices
+- implementation pitfalls
+
+## SOURCES TO SEARCH (IN THIS ORDER)
+1) Official vendor help center / knowledge base / academy / training docs
+2) Vendor webinars + product update posts
+3) Integration docs + API docs
+4) Third-party implementation partners’ guides
+5) Community forums, Reddit, operator blogs (for edge cases)
+
+## OUTPUT FORMAT (MANDATORY)
+Create a single markdown file:
+`knowledge/vendors/{{VENDOR_NAME}}/KD-{{VENDOR_NAME}}-property-finance.md`
+
+Use this structure:
+
+### 1. Vendor Overview (1 page)
+- Products
+- Which verticals
+- Where finance lives in the product
+- Strengths/limitations relevant to finance + treasury capture
+
+### 2. Workflow Deep Dives (repeat for each workflow)
+For each workflow listed above:
+- Purpose
+- Inputs
+- Step-by-step procedure (bulleted, deterministic)
+- Outputs/artifacts (list reports, exports, entries)
+- Roles/permissions and approvals
+- Exceptions & edge cases
+- Metrics (cycle time, error rate, dispute rate)
+
+### 3. Artifacts Catalog (Training data)
+Create a table:
+- Artifact name (e.g., Owner Statement, Rent Roll, Vendor Bill export)
+- Format (CSV/XLSX/PDF)
+- Required fields
+- Example rows (synthetic, do not include private data)
+- Notes on mapping to canonical model
+
+### 4. Skill Candidates (map to library)
+For each candidate skill:
+- Skill ID (suggested, e.g., FIN-002, AP-004)
+- Skill name
+- Objective
+- Inputs/Outputs
+- Deterministic steps
+- Policies/guardrails
+- Failure modes
+- Proposed eval tests (at least 5)
+
+### 5. Canonical Mapping Notes
+Provide mapping guidance from vendor fields → canonical model:
+- property_id, unit_id, owner_id, vendor_id, fund_id, gl_account, bank_txn_id
+
+### 6. “Treasury Capture Hooks”
+Explicitly identify:
+- where approvals happen
+- where “ready-to-pay” is determined
+- where payouts are calculated
+- where funds are segregated
+- what a payments/treasury layer could replace or own
+
+## FINAL DELIVERABLES (PER VENDOR)
+1) The knowledge doc described above
+2) A generated Skills folder list with prioritized build order:
+   - P0 (must build first), P1, P2
+3) A list of 20 synthetic training cases (titles + what they test), such as:
+   - “Unmatched bank txn: duplicate vendor payment”
+   - “Owner payout blocked due to reserve minimum policy”
+   - “Security deposit refund timing exception”
+
+D) How to turn vendor research into an actual Skills build plan (repeatable)
+
+After you run the vendor prompt, you run this compiler step:
+
+Skill Compiler Output (what you should generate automatically)
+
+For each vendor knowledge doc:
+
+Extract workflow steps → convert to Skill README.md steps
+
+Extract artifacts → produce fixtures (synthetic)
+
+Extract edge cases → produce evals.md tests
+
+Extract permissions → feed CP-001 policy schemas
+
+Extract “treasury hooks” → prioritize TRE-003 / TRE-005
+
+E) Recommended “P0” skill set (start here)
+
+If you want the minimum library that creates the treasury wedge fast:
+
+P0 Control Plane
+
+CP-001 Policy & Permissioning
+
+CP-003 Approval Chain Orchestration
+
+CP-005 Evidence Pack Builder
+
+CP-007 Audit Log & Decision Trace
+
+P0 Finance
+
+FIN-002 Bank Reconciliation
+
+REP-001 Owner Statement Generation
+
+AP-002 Invoice Triage & Coding
+
+AP-004 Payables Approval & Scheduling
+
+P0 Treasury (non-custodial to start)
+
+TRE-003 Payment Batch Preparation (recommend + prepare, not initiate)
+
+That’s your “digital workforce in production” starter pack.
+
+If you want, next I can generate:
+
+a complete skills folder tree (30+ folders) with README stubs, tool_definition stubs, eval stubs, and fixtures placeholders, all in one output you can drop into a repo; and
+
+a canonical data model (canonical_model.json) that lets all vendors map cleanly into your skills.

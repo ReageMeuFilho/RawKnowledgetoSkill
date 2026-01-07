@@ -1,0 +1,22 @@
+version: "0.1"
+domain: "property_finance"
+verticals: ["STR", "LTR", "HOA_CONDO"]
+control_plane_first: true
+
+skill_groups:
+  - name: control_plane
+    skills: [CP-001, CP-002, CP-003, CP-004, CP-005, CP-006, CP-007, CP-008, CP-009]
+  - name: integrations
+    skills: [INT-001, INT-002, INT-003, INT-004, INT-005]
+  - name: property_finance_core
+    skills: [FIN-001, FIN-002, FIN-003, FIN-004, FIN-005]
+  - name: ap_ar
+    skills: [AP-001, AP-002, AP-003, AP-004, AR-001, AR-002]
+  - name: trust_reserves_compliance
+    skills: [TR-001, TR-002, TR-003, TR-004]
+  - name: reporting_owner_board
+    skills: [REP-001, REP-002, REP-003]
+  - name: treasury_payments
+    skills: [TRE-001, TRE-002, TRE-003, TRE-004, TRE-005, TRE-006]
+  - name: risk_audit
+    skills: [RA-001, RA-002]
