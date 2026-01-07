@@ -31,14 +31,14 @@
 
 | Group | Name | Skills | Status | Research Prompt | Spec |
 |-------|------|--------|--------|-----------------|------|
-| 1 | Advanced Analytics | 6 | ⏳ Pending | - | - |
-| 2 | Guest Intelligence | 8 | ⏳ Pending | - | - |
-| 3 | Revenue Optimization | 7 | ⏳ Pending | - | - |
-| 4 | Voice & Communication | 6 | ⏳ Pending | - | - |
-| 5 | Enterprise Operations | 8 | ⏳ Pending | - | - |
-| 6 | Developer Platform | 5 | ⏳ Pending | - | - |
-| 7 | Hospitality Premium | 6 | ⏳ Pending | - | - |
-| 8 | AI Advanced | 5 | ⏳ Pending | - | - |
+| 1 | Advanced Analytics | 6 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP1_ANALYTICS.md` ✅ | - |
+| 2 | Guest Intelligence | 8 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP2_GUEST_INTEL.md` ✅ | - |
+| 3 | Revenue Optimization | 7 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP3_REVENUE.md` ✅ | - |
+| 4 | Voice & Communication | 6 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP4_VOICE.md` ✅ | - |
+| 5 | Enterprise Operations | 8 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP5_ENTERPRISE.md` ✅ | - |
+| 6 | Developer Platform | 5 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP6_DEVELOPER.md` ✅ | - |
+| 7 | Hospitality Premium | 6 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP7_HOSPITALITY.md` ✅ | - |
+| 8 | AI Advanced | 5 | ⏳ Pending | `RESEARCH_PROMPT_PHASE2_GROUP8_AI_ADVANCED.md` ✅ | - |
 
 ---
 
