@@ -276,3 +276,63 @@ The Maintenance Brain represents a **paradigm shift** from reactive to proactive
 - Knowledge Document: `knowledge/operations/KD-VEN-001-maintenance-brain.md`
 - Stage 2 Prompt: `docs/prompts/ENGINEERING_SPEC_PROMPT_MAINTENANCE_BRAIN.md`
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Predictive Intelligence (270) | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Vendor Optimization (271) | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Cost Forecasting (272) | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Brain Service | Layer 3A (Hot Path) | LangGraph + LangChain | ✅ |
+| Workflow Engine | Layer 3B (Cold Path) | Temporal | ✅ |
+| Cost Tracking | Layer 3B (Cold Path) | TigerBeetle via Formance | ✅ |
+
+### Execution Path Classification
+
+| Skill | Path | Rationale |
+|-------|------|-----------|
+| SKILL-270 (Predictive) | **Hot Path** | ML predictions, anomaly detection |
+| SKILL-271 (Vendor) | **Hot Path** | Scoring algorithm, dispatch decisions |
+| SKILL-272 (Cost) | **Hybrid** | Forecasting (Hot) → Ledger (Cold) |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for Maintenance Brain
+mcp_servers:
+  - uri: mcp://treasury/forecast_cost
+    purpose: Cost forecasting integration
+  - uri: mcp://treasury/query_history
+    purpose: Historical cost data
+  - uri: mcp://temporal/trigger_workflow
+    purpose: Approval workflow orchestration
+  - uri: mcp://iot/sensor_data
+    purpose: IoT sensor stream processing
+  - uri: mcp://vendor/score_update
+    purpose: Vendor performance updates
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| Kubernetes + Istio | **ECS/Fargate** | Use ECS, not Kubernetes |
+| Flask 3.1 | Flask (internal OK) | Rust/Axum for external |
+| MongoDB | MongoDB | ✅ Aligned |
+| Redis | Redis | ✅ Aligned |
+| InfluxDB | InfluxDB (time-series OK) | ✅ For IoT data |
+| Temporal | Temporal | ✅ Aligned |
+| LangGraph | LangGraph | ✅ Aligned |
+
+### Compliance Verification
+
+- ✅ ML predictions on Hot Path
+- ✅ Cost data routes to TigerBeetle
+- ✅ Approval workflows via Temporal
+- ✅ IoT data processing pipeline
+- ✅ Vendor scoring with audit trail
+

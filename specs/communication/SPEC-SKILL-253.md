@@ -753,6 +753,67 @@ paths:
 
 ---
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| AI Leasing Assistant | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Conversation Engine | Layer 3A (Hot Path) | LangGraph + GPT-4/Claude | ✅ |
+| Lead Qualification | Layer 3A (Hot Path) | ML scoring models | ✅ |
+| Tour Scheduling | Layer 4 (Skills) | Calendar integrations | ✅ |
+| Agent Dashboard | Layer 6 (Applications) | React 19 | ✅ |
+| Knowledge Retrieval | Layer 3A (Hot Path) | MongoDB Atlas Vector Search | ✅ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| Intent Recognition | **Hot Path** | AI inference, NLU |
+| Response Generation | **Hot Path** | LLM response creation |
+| Lead Scoring | **Hot Path** | ML model prediction |
+| Tour Booking | **Hybrid** | UI (Hot) → Calendar sync (Cold) |
+| Escalation to Human | **Hot Path** | Routing decision |
+| Conversation Persistence | **Cold Path** | MongoDB storage |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for AI Leasing Assistant
+mcp_servers:
+  - uri: mcp://calendar/schedule_tour
+    purpose: Tour scheduling with PMS
+  - uri: mcp://pms/get_availability
+    purpose: Real-time unit availability
+  - uri: mcp://vector/semantic_search
+    purpose: Property knowledge retrieval
+  - uri: mcp://crm/create_lead
+    purpose: CRM integration (Salesforce, HubSpot)
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| Docker, Kubernetes | **ECS/Fargate** | Use ECS, not Kubernetes |
+| Pinecone Vector DB | **MongoDB Atlas Vector Search** | Preferred vector DB |
+| FastAPI backend | FastAPI (internal OK) | Rust/Axum for external |
+| Redis cache | Redis | ✅ Aligned |
+| React 19 frontend | React 19 | ✅ Aligned |
+
+### Compliance Verification
+
+- ✅ Conversation AI on Hot Path
+- ✅ No financial transactions (not applicable)
+- ✅ Fair housing compliance via escalation triggers
+- ✅ GDPR/CCPA via data handling policies
+- ✅ Targets ECS/Fargate deployment
+
+---
+
 *This specification serves as the definitive blueprint for implementing the AI Leasing Assistant skill in the CitadelOS platform.*
 
 

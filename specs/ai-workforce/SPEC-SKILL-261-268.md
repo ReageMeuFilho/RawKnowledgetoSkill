@@ -1047,6 +1047,71 @@ SKILL-268 (Policy Engine)
 
 ---
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Voice/AP/Budget/Research Agents | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Agent Orchestration | Layer 3A (Hot Path) | LangGraph + LangChain | ✅ |
+| Policy Engine (SKILL-268) | Layer 3A (Hot Path) | OPA-based evaluation | ✅ |
+| HITL Dashboard | Layer 6 (Applications) | React 19 | ✅ |
+| Invoice Payments | Layer 3B (Cold Path) | TigerBeetle via Formance | ✅ |
+| WebSocket/Real-time | Layer 2 (Infrastructure) | Redis + WebSocket | ✅ |
+
+### Execution Path Classification
+
+| Skill | Path | Rationale |
+|-------|------|-----------|
+| SKILL-261 (Voice Agent) | **Hot Path** | AI reasoning, conversation handling |
+| SKILL-262 (AP Agent) | **Hybrid** | AI processing (Hot) → Payment (Cold) |
+| SKILL-263 (Budget Agent) | **Hot Path** | AI forecasting, scenario modeling |
+| SKILL-264 (Research Agent) | **Hot Path** | RAG retrieval, synthesis |
+| SKILL-265 (HITL Dashboard) | **Hot Path** | UI interactions, real-time updates |
+| SKILL-266 (Scenario Modeling) | **Hot Path** | ML predictions, what-if analysis |
+| SKILL-267 (Outbound Calling) | **Hot Path** | AI-driven call campaigns |
+| SKILL-268 (AI Coverage Policy) | **Hot Path** | Policy evaluation engine |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for AI Workforce skills
+mcp_servers:
+  - uri: mcp://treasury/create_transfer
+    purpose: Invoice payment processing (SKILL-262)
+  - uri: mcp://treasury/query_balance
+    purpose: Balance inquiries (SKILL-261)
+  - uri: mcp://temporal/trigger_workflow
+    purpose: Approval workflows (SKILL-265)
+  - uri: mcp://vector/semantic_search
+    purpose: Knowledge retrieval (SKILL-264)
+  - uri: mcp://hitl/submit_task
+    purpose: HITL queue management (SKILL-265)
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| FastAPI backend | FastAPI (internal OK) | Rust/Axum for external gateway |
+| React 19 frontend | React 19 | ✅ Aligned |
+| Redis cache | Redis | ✅ Aligned |
+| WebSocket updates | Redis Pub/Sub | ✅ Aligned |
+| Container deployment | **ECS/Fargate** | Not Kubernetes |
+
+### Compliance Verification
+
+- ✅ AI operations on Hot Path (LangGraph orchestration)
+- ✅ Financial transactions route to Cold Path (TigerBeetle)
+- ✅ Voice via Twilio (PCI compliant for payments)
+- ✅ Audit logging via immutable trail
+- ✅ Policy engine for AI governance
+
+---
+
 **Specification Complete** ✅
 
 **Next Steps**:

@@ -397,6 +397,68 @@ Email → Summary sent with action items
 
 ---
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Multi-Channel Voice Agent | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Voice Runtime | Layer 3A (Hot Path) | Twilio ConversationRelay | ✅ |
+| AI Conversation Engine | Layer 3A (Hot Path) | LangGraph + Claude 3.5 | ✅ |
+| Payment Processing | Layer 3B (Cold Path) | Twilio `<Pay>` → TigerBeetle | ✅ |
+| Conversation Storage | Layer 2 (Infrastructure) | MongoDB Atlas + Vector Search | ✅ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| ASR Processing | **Hot Path** | Real-time speech recognition |
+| Intent Classification | **Hot Path** | AI inference |
+| TTS Response | **Hot Path** | Voice synthesis |
+| Emergency Detection | **Hot Path** | Critical real-time decision |
+| Payment via Twilio `<Pay>` | **Cold Path** | PCI-compliant, TigerBeetle |
+| Work Order Creation | **Hybrid** | AI (Hot) → PMS sync (Cold) |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for Multi-Channel Voice
+mcp_servers:
+  - uri: mcp://treasury/create_transfer
+    purpose: Payment processing via Twilio Pay
+  - uri: mcp://pms/lookup_resident
+    purpose: Resident authentication
+  - uri: mcp://pms/get_balance
+    purpose: Account balance inquiries
+  - uri: mcp://pms/create_work_order
+    purpose: Maintenance request creation
+  - uri: mcp://vector/semantic_search
+    purpose: Knowledge base retrieval
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| Kubernetes | **ECS/Fargate** | Use ECS, not Kubernetes |
+| MongoDB Atlas | MongoDB Atlas + Vector Search | ✅ Aligned |
+| Redis | Redis | ✅ Aligned |
+| LangGraph | LangGraph | ✅ Aligned |
+| Twilio | Twilio | ✅ Aligned |
+
+### Compliance Verification
+
+- ✅ Voice AI on Hot Path (LangGraph orchestration)
+- ✅ Payments route through Cold Path (Twilio `<Pay>` is PCI DSS)
+- ✅ GDPR compliance via data retention policies
+- ✅ Emergency detection with 100% recall
+- ✅ Voice recordings: 90-day retention
+
+---
+
 **Status**: ✅ **GAP-HOAI-004 COMPLETE** - SKILL-269 Fully Specified
 
 

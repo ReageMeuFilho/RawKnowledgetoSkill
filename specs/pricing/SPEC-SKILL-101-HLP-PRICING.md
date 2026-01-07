@@ -385,6 +385,64 @@ formula: |
 
 ---
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| HLP Market Definition (101) | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Demand Forecasting (102) | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Price Optimization (103) | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| ML Models | Layer 3A (Hot Path) | XGBoost + PyTorch | ✅ |
+| H3 Geo-Indexing | Layer 2 (Infrastructure) | PostgreSQL + PostGIS | ✅ |
+| Pricing Cache | Layer 2 (Infrastructure) | Redis | ✅ |
+
+### Execution Path Classification
+
+| Skill | Path | Rationale |
+|-------|------|-----------|
+| SKILL-101 (Market Definition) | **Hot Path** | Geo-computation, comp set generation |
+| SKILL-102 (Demand Forecasting) | **Hot Path** | ML predictions, time-series analysis |
+| SKILL-103 (Price Optimization) | **Hot Path** | Revenue optimization algorithms |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for HLP Dynamic Pricing
+mcp_servers:
+  - uri: mcp://pricing/calculate_price
+    purpose: Price calculation API
+  - uri: mcp://pricing/get_comp_set
+    purpose: Comparable listings retrieval
+  - uri: mcp://ota/sync_rates
+    purpose: OTA rate distribution
+  - uri: mcp://analytics/log_price_change
+    purpose: Price change audit trail
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| Kubernetes 1.31 | **ECS/Fargate** | Use ECS, not Kubernetes |
+| MongoDB 8.2 | MongoDB | ✅ Aligned (non-financial data) |
+| Redis 7.4 | Redis | ✅ Aligned |
+| Python/Flask | Flask (internal OK) | Rust/Axum for external |
+| PostgreSQL + PostGIS | PostgreSQL | ✅ For H3 geo-indexing |
+
+### Compliance Verification
+
+- ✅ Pricing calculations on Hot Path
+- ✅ Pricing data in MongoDB (not financial)
+- ✅ OTA sync with rate limiting
+- ✅ Audit trail for price changes
+- ✅ Performance: 50M+ calculations/day
+
+---
+
 **Status**: ✅ **GAP-PL-001 COMPLETE** - 3 P0 Skills Fully Specified
 
 

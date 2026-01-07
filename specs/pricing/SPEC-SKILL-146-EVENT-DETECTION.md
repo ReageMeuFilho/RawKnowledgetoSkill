@@ -238,3 +238,60 @@ Distribute to PMS
 - Knowledge Document: `knowledge/pricing/KD-PL-002-event-detection.md`
 - Stage 2 Prompt: `docs/prompts/ENGINEERING_SPEC_PROMPT_EVENT_DETECTION.md`
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Event Detection System | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Four-Way Signal Processing | Layer 3A (Hot Path) | NumPy/Pandas | ✅ |
+| Anomaly Detection | Layer 3A (Hot Path) | scikit-learn (Isolation Forest) | ✅ |
+| Surge Pricing Engine | Layer 4 (Skills) | Integration with SKILL-103 | ✅ |
+| Time-Series Storage | Layer 2 (Infrastructure) | MongoDB (time-series) | ✅ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| Signal Calculation | **Hot Path** | Real-time market analysis |
+| Anomaly Detection | **Hot Path** | ML-based detection |
+| Event Calendar Sync | **Hot Path** | External API integration |
+| Surge Price Calculation | **Hot Path** | Price multiplier computation |
+| Price Distribution | **Cold Path** | PMS rate sync |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for Event Detection
+mcp_servers:
+  - uri: mcp://pricing/apply_surge
+    purpose: Surge multiplier application
+  - uri: mcp://events/fetch_calendar
+    purpose: External event calendar sync
+  - uri: mcp://ota/sync_rates
+    purpose: OTA rate distribution
+  - uri: mcp://analytics/log_event_detection
+    purpose: Event detection audit trail
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| AWS ECS | AWS ECS/Fargate | ✅ Aligned |
+| MongoDB 6.0+ | MongoDB | ✅ Aligned |
+| PostgreSQL | PostgreSQL | ✅ Aligned |
+| Redis 7.2+ | Redis | ✅ Aligned |
+| Python/Flask | Flask (internal OK) | Rust/Axum for external |
+
+### Compliance Verification
+
+- ✅ Signal processing on Hot Path
+- ✅ Event data in MongoDB (not financial)
+- ✅ Four-way signal redundancy
+- ✅ <5% false positive rate
+- ✅ Targets ECS/Fargate deployment
+

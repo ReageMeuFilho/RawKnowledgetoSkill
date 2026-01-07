@@ -291,5 +291,64 @@ evaluation:
 
 ---
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Quote Chaser | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Sequence Engine | Layer 3B (Cold Path) | Temporal | ✅ |
+| Template Engine | Layer 3A (Hot Path) | Liquid templating | ✅ |
+| Multi-Channel Dispatch | Layer 4 (Skills) | SendGrid + Twilio | ✅ |
+| Analytics | Layer 6 (Applications) | React + Recharts | ✅ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| Template Rendering | **Hot Path** | Dynamic content generation |
+| A/B Test Assignment | **Hot Path** | Real-time decision |
+| Sequence Orchestration | **Cold Path** | Temporal durable execution |
+| Message Delivery | **Cold Path** | Reliable delivery guarantee |
+| Analytics Aggregation | **Hot Path** | Real-time metrics |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for Quote Chaser
+mcp_servers:
+  - uri: mcp://pms/get_quote_status
+    purpose: Quote state retrieval
+  - uri: mcp://temporal/trigger_sequence_step
+    purpose: Sequence workflow control
+  - uri: mcp://compliance/check_marketing_consent
+    purpose: GDPR/CAN-SPAM compliance
+  - uri: mcp://analytics/track_event
+    purpose: Conversion tracking
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| AWS ECS | AWS ECS/Fargate | ✅ Aligned |
+| Flask 3.0 | Flask (internal OK) | Rust/Axum for external |
+| MongoDB | MongoDB | ✅ Aligned |
+| Redis | Redis | ✅ Aligned |
+| Temporal | Temporal | ✅ Aligned |
+
+### Compliance Verification
+
+- ✅ Sequence workflows via Temporal (durable)
+- ✅ GDPR consent management
+- ✅ CAN-SPAM unsubscribe handling
+- ✅ TCPA quiet hours for SMS
+- ✅ Targets ECS/Fargate deployment
+
+---
+
 **Status**: ✅ SPECIFIED - Ready for Implementation
 

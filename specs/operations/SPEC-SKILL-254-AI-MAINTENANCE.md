@@ -355,6 +355,69 @@ Based on Vendoroo best practices:
 
 ---
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| AI Maintenance Coordinator | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Brain Layer (Triage, etc.) | Layer 3A (Hot Path) | LangGraph | ✅ |
+| Work Order State Machine | Layer 3B (Cold Path) | Temporal | ✅ |
+| Action Layer (Dispatch) | Layer 4 (Skills) | Integration adapters | ✅ |
+| Data Store | Layer 2 (Infrastructure) | MongoDB | ✅ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| Issue Classification | **Hot Path** | AI inference |
+| Remote Troubleshooting | **Hot Path** | AI conversation |
+| Vendor Selection | **Hot Path** | Scoring algorithm |
+| Work Order Creation | **Cold Path** | Temporal workflow |
+| Vendor Dispatch | **Hybrid** | AI decision (Hot) → Notification (Cold) |
+| Payment Processing | **Cold Path** | TigerBeetle via Formance |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for AI Maintenance Coordinator
+mcp_servers:
+  - uri: mcp://temporal/trigger_workflow
+    purpose: Work order lifecycle management
+  - uri: mcp://pms/create_work_order
+    purpose: PMS integration
+  - uri: mcp://vendor/dispatch
+    purpose: Vendor notification and dispatch
+  - uri: mcp://treasury/create_transfer
+    purpose: Vendor payment processing
+  - uri: mcp://vector/semantic_search
+    purpose: Troubleshooting knowledge base
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| Kubernetes | **ECS/Fargate** | Use ECS, not Kubernetes |
+| FastAPI | FastAPI (internal OK) | Rust/Axum for external |
+| MongoDB | MongoDB | ✅ Aligned |
+| Redis | Redis | ✅ Aligned |
+| Temporal | Temporal | ✅ Aligned |
+| LangGraph | LangGraph | ✅ Aligned |
+
+### Compliance Verification
+
+- ✅ AI triage/troubleshooting on Hot Path
+- ✅ Work order state machine on Cold Path (Temporal)
+- ✅ Financial operations route to TigerBeetle
+- ✅ Emergency detection with escalation
+- ✅ Audit trail for all actions
+
+---
+
 **Status**: ✅ **GAP-AF-002 COMPLETE** - SKILL-254 Fully Specified
 
 

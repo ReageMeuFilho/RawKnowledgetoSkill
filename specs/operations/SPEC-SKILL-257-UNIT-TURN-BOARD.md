@@ -262,3 +262,61 @@ Comprehensive digital platform for managing the unit turnover process between te
 - Knowledge Document: `knowledge/operations/KD-AF-005-unit-turn-board.md`
 - Stage 2 Prompt: `docs/prompts/ENGINEERING_SPEC_PROMPT_UNIT_TURN_BOARD.md`
 
+---
+
+## 📐 Architecture Alignment Notes
+
+### Citadel OS Layer Mapping
+
+| Spec Component | Citadel Layer | Technology | Aligned |
+|----------------|---------------|------------|---------|
+| Unit Turn Board | Layer 4 (Skills) | Claude Skills Framework | ✅ |
+| Auto-Assignment Engine | Layer 3A (Hot Path) | Scoring algorithm | ✅ |
+| Turn State Machine | Layer 3B (Cold Path) | PostgreSQL + Events | ✅ |
+| Kanban UI | Layer 6 (Applications) | React 19 | ✅ |
+| Real-time Sync | Layer 2 (Infrastructure) | Socket.IO + Redis | ✅ |
+| API Gateway | Layer 2 (Infrastructure) | Kong → **Rust/Axum** target | ⚠️ |
+
+### Execution Path Classification
+
+| Operation | Path | Rationale |
+|-----------|------|-----------|
+| Auto-Assignment | **Hot Path** | AI-powered vendor scoring |
+| Task Dependency Calc | **Hot Path** | Critical path algorithm |
+| Turn State Transitions | **Cold Path** | Database state machine |
+| Cost Tracking | **Hybrid** | Calculations (Hot) → TigerBeetle (Cold) |
+| Real-time Board Updates | **Hot Path** | WebSocket push |
+
+### MCP Server Requirements
+
+```yaml
+# Required MCP servers for Unit Turn Board
+mcp_servers:
+  - uri: mcp://pms/sync_turn
+    purpose: PMS lease data synchronization
+  - uri: mcp://vendor/notify
+    purpose: Vendor task assignment
+  - uri: mcp://treasury/track_cost
+    purpose: Turn cost tracking
+  - uri: mcp://temporal/trigger_workflow
+    purpose: Turn lifecycle orchestration
+```
+
+### Infrastructure Alignment
+
+| Incoming Spec | Our Decision | Notes |
+|---------------|--------------|-------|
+| AWS ECS | AWS ECS/Fargate | ✅ Aligned |
+| Kong API Gateway | **Rust/Axum** (target) | Kong OK for MVP |
+| PostgreSQL 16 | PostgreSQL | ✅ Aligned |
+| Redis 8 | Redis | ✅ Aligned |
+| React Native | React Native | ✅ Aligned |
+
+### Compliance Verification
+
+- ✅ Turn state machine persistence
+- ✅ Real-time sync via Socket.IO
+- ✅ Cost tracking routes to Treasury OS
+- ✅ Mobile offline capability
+- ✅ Targets ECS/Fargate deployment
+
