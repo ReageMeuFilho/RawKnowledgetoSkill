@@ -8,12 +8,33 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### In Progress
-- Phase 1 Groups 1, 3, 4, 5, 6 research pending
+- Phase 1 Groups 1, 3, 5, 6 research pending
 - Implementation planning agent prompt ready
 
 ---
 
-## [2026-01-07] - Phase 1 Group 2 Complete
+## [2026-01-07] - Phase 1 Groups 2 & 4 Complete
+
+### Added (Group 4 - Financial Core)
+- **ES-PHASE1-GROUP4-financial-core.md** - 7,568 lines, EXCEPTIONAL (10/10)
+- **SPEC-SKILL-028-035-FINANCIAL-CORE.md** - Final specifications
+
+### Skills Specified (Group 4)
+- **SKILL-028**: Payment Collection - TigerBeetle 8,000+ txn/query, 135+ currencies
+- **SKILL-029**: Refund Processing - Configurable policies, Numscript DSL
+- **SKILL-030**: Security Deposit Handling - VCC, authorization holds
+- **SKILL-031**: Payment Reconciliation - Formance Native, 95%+ auto-match
+- **SKILL-032**: Owner Ledger Management - Trust accounting, 100% segregation
+- **SKILL-035**: Payout Processing - Temporal workflows, 118+ countries
+
+### Technical Highlights (Group 4)
+- TigerBeetle: 1M+ TPS financial database
+- Formance: Programmable double-entry ledger
+- Temporal: Durable workflow orchestration
+- Stripe Connect: 15,000+ platforms integrated
+- Multi-cloud Kubernetes deployment
+
+### Added (Group 2 - Booking & Calendar)
 
 ### Added
 - **ES-PHASE1-GROUP2-booking-calendar.md** - 6,532 lines, EXCEPTIONAL (10/10)

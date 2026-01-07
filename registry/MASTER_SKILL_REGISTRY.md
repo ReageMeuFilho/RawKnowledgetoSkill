@@ -846,22 +846,36 @@ Track sync status and alert on failures with retry logic.
 
 **Category**: financial
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Collect and process guest payments via card and bank transfer.
+Multi-method payment collection with TigerBeetle (1M+ TPS) and Stripe Connect (135+ currencies). Supports split payments, regional methods (ACH, PIX, SEPA), and automated scheduling.
+
+**Specification**: `specs/financial/SPEC-SKILL-028-035-FINANCIAL-CORE.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Guesty Pay™ | ⭐⭐⭐⭐⭐ | PCI compliant, multi-method |
+| Stripe Connect | ✅ | Platform Payments | ⭐⭐⭐⭐⭐ | 15,000+ platforms |
+| Baselane | ✅ | Rent Collection | ⭐⭐⭐⭐ | ACH-focused |
 
-**Capabilities**:
-- [x] Credit/debit cards
-- [x] Bank transfers
-- [x] PayPal
-- [x] Split payments
-- [x] Auto-retry
+**Key Features**:
+- TigerBeetle: 8,000+ transactions per query, zero locks
+- Split payments across up to 10 methods per booking
+- Regional payments: ACH (US), PIX (Brazil), SEPA (EU)
+- Automated scheduling (50% at booking, 50% before arrival)
+- Intelligent failed payment retry logic
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Transaction Throughput | 8,000+ per query |
+| Processing Latency | <100ms (95th percentile) |
+| Availability | 99.9% |
+
+**Knowledge Sources**:
+- Primary: ES-PHASE1-GROUP4-financial-core.md (7,568 lines)
 
 ---
 
@@ -869,15 +883,35 @@ Collect and process guest payments via card and bank transfer.
 
 **Category**: financial
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Process partial or full refunds with reason tracking.
+Automated refund workflows with configurable cancellation policies (strict, moderate, flexible), approval workflows, and Formance Numscript DSL for complex calculations.
+
+**Specification**: `specs/financial/SPEC-SKILL-028-035-FINANCIAL-CORE.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Refunds | ⭐⭐⭐⭐ | Partial support |
+| OwnerRez | ✅ | Policy Engine | ⭐⭐⭐⭐⭐ | Highly configurable |
+
+**Key Features**:
+- Configurable refund policies (strict/moderate/flexible)
+- Partial refunds with fee retention logic
+- Threshold-based approval workflows
+- Tax handling per jurisdiction
+- Immutable refund records in TigerBeetle
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Refund Processing | <24 hours |
+| Policy Calculation | Instant |
+| Audit Trail | 100% immutable |
+
+**Knowledge Sources**:
+- Primary: ES-PHASE1-GROUP4-financial-core.md (7,568 lines)
 
 ---
 
@@ -885,15 +919,36 @@ Process partial or full refunds with reason tracking.
 
 **Category**: financial
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Hold and release security deposits with damage claim integration.
+Advanced pre-authorization management with VCC processing, authorization holds (card network compliant), and damage claim workflows with evidence documentation.
+
+**Specification**: `specs/financial/SPEC-SKILL-028-035-FINANCIAL-CORE.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Deposits | ⭐⭐⭐⭐ | Escrow management |
+| Stripe | ✅ | Authorization Holds | ⭐⭐⭐⭐⭐ | Full lifecycle |
+
+**Key Features**:
+- Authorization holds (Visa 31d, MC 30d, Amex 90d)
+- Virtual Credit Card processing
+- Damage claim workflow with photo evidence
+- Hold extension before expiration
+- Guest dispute handling
+
+**Hold Limits by Network**:
+| Network | Max Days | Extension |
+|---------|----------|-----------|
+| Visa | 31 | Yes |
+| Mastercard | 30 | Yes |
+| Amex | 90 | No |
+| Discover | 10 | Yes |
+
+**Knowledge Sources**:
+- Primary: ES-PHASE1-GROUP4-financial-core.md (7,568 lines)
 
 ---
 
@@ -901,18 +956,35 @@ Hold and release security deposits with damage claim integration.
 
 **Category**: financial
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Match payments to bank deposits with discrepancy detection.
+Formance Native Reconciliation providing automated monitoring of funds under management in ledger vs their accurate and exact existence on financial partners. Eliminates data drifts.
+
+**Specification**: `specs/financial/SPEC-SKILL-028-035-FINANCIAL-CORE.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Reconciliation | ⭐⭐⭐⭐ | Auto-matching |
+| Formance | ✅ | Native Reconciliation | ⭐⭐⭐⭐⭐ | Real-time monitoring |
+
+**Key Features**:
+- 95%+ automated transaction matching
+- OTA payout parsing (Airbnb, Vrbo, Booking.com)
+- Discrepancy flagging within 24 hours
+- Daily/monthly variance analysis reports
+- Eliminates data drifts between systems
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Auto-Match Rate | >95% |
+| Processing Rate | 10,000 txn/hour |
+| Discrepancy SLA | <24 hours |
 
 **Knowledge Sources**:
-- Primary: KG-004 (Owner Statement Format)
+- Primary: ES-PHASE1-GROUP4-financial-core.md (7,568 lines)
 
 ---
 
@@ -920,18 +992,36 @@ Match payments to bank deposits with discrepancy detection.
 
 **Category**: financial
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Track owner account balances with revenue and deductions.
+Trust/escrow accounting model with TigerBeetle ensuring sum of debits and credits is always zero. Separate bank accounts for compliance with state landlord-tenant laws.
+
+**Specification**: `specs/financial/SPEC-SKILL-028-035-FINANCIAL-CORE.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Trust Accounting | ⭐⭐⭐⭐⭐ | Full ledger |
+| Baselane | ✅ | Owner Accounts | ⭐⭐⭐⭐ | FDIC insured |
+
+**Key Features**:
+- 100% trust account segregation (fund commingling PROHIBITED)
+- Professional monthly owner statements (<24hr generation)
+- Multi-owner property support with profit sharing
+- Property-level expense tracking
+- Daily segregation audit
+
+**Account Structure**:
+| Type | Purpose |
+|------|---------|
+| Operating | Platform operational funds |
+| Trust/Escrow | Guest deposits held in trust |
+| Owner Funds | Per-owner segregated balances |
+| Security Deposits | Held security deposits |
 
 **Knowledge Sources**:
-- Primary: KG-004 (Owner Statement Format)
+- Primary: ES-PHASE1-GROUP4-financial-core.md (7,568 lines)
 
 ---
 
@@ -974,15 +1064,43 @@ Collect and track guest taxes by jurisdiction.
 
 **Category**: financial
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Process scheduled or on-demand payouts to property owners.
+Automated disbursement calculations (Income - Expenses - Fees) with Temporal workflow orchestration. Supports 135+ currencies and payouts to 118+ countries via Stripe Connect.
+
+**Specification**: `specs/financial/SPEC-SKILL-028-035-FINANCIAL-CORE.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Payouts | ⭐⭐⭐⭐⭐ | Multi-currency |
+| Stripe Connect | ✅ | Global Payouts | ⭐⭐⭐⭐⭐ | 118+ countries |
+
+**Key Features**:
+- Automated payout calculations with Temporal workflows
+- Rolling reserve management (configurable %)
+- Weekly/biweekly/monthly scheduling
+- Minimum payout thresholds
+- Multi-currency with FX optimization
+- International wire support
+
+**Payout Schedules**:
+| Schedule | Day | Minimum |
+|----------|-----|---------|
+| Weekly | Monday | $100 |
+| Biweekly | 1st, 15th | $250 |
+| Monthly | 1st | $500 |
+
+**Reserve Rules**:
+| Owner Type | Percentage | Duration |
+|------------|------------|----------|
+| New | 10% | 90 days |
+| Established | 5% | 30 days |
+| Premium | 0% | 0 days |
+
+**Knowledge Sources**:
+- Primary: ES-PHASE1-GROUP4-financial-core.md (7,568 lines)
 
 ---
 
