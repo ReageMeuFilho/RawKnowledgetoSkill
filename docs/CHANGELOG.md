@@ -8,8 +8,33 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### In Progress
-- Phase 1 research prompts created (28 skills across 6 groups)
-- Implementation planning agent prompt created
+- Phase 1 Groups 1, 3, 4, 5, 6 research pending
+- Implementation planning agent prompt ready
+
+---
+
+## [2026-01-07] - Phase 1 Group 2 Complete
+
+### Added
+- **ES-PHASE1-GROUP2-booking-calendar.md** - 6,532 lines, EXCEPTIONAL (10/10)
+- **SPEC-SKILL-007-010-BOOKING-CALENDAR.md** - Final specifications
+
+### Skills Specified
+- **SKILL-007**: Calendar Sync Management - Real-time API sync, 60+ channels
+- **SKILL-008**: Double-Booking Prevention - PostgreSQL EXCLUSION constraints
+- **SKILL-009**: Date Blocking - 5 block types, RFC 5545 recurring patterns
+- **SKILL-010**: Direct Reservation Creation - PCI Level 1, multi-currency
+
+### Technical Highlights
+- Zero double-bookings guaranteed via database constraints
+- Complete PostgreSQL schema with GiST indexes
+- Full testing strategy (unit, integration, E2E)
+- AWS ECS/Fargate deployment specifications
+- CI/CD pipeline with GitHub Actions
+
+### Progress Update
+- Phase 1: 4/28 skills specified (14% complete)
+- Total P0 Skills: 24 specified
 
 ---
 

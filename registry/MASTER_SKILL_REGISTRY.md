@@ -317,25 +317,42 @@ Send automated messages on triggers (pre-arrival, check-in, checkout, review req
 
 **Category**: booking
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Maintain unified calendar across all OTA channels with real-time sync.
+Maintain unified calendar across all OTA channels with real-time sync. API connections update instantly (<1 minute) while iCal syncs hourly. Supports 60+ channels.
+
+**Specification**: `specs/booking/SPEC-SKILL-007-010-BOOKING-CALENDAR.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Multi-Calendar | ⭐⭐⭐⭐⭐ | Real-time, multi-property |
+| Hostaway | ✅ | Channel Manager | ⭐⭐⭐⭐⭐ | API-first sync |
+| OwnerRez | ✅ | iCal + API | ⭐⭐⭐⭐ | Hybrid approach |
 
-**Capabilities**:
-- [x] Airbnb sync
-- [x] Booking.com sync
-- [x] Vrbo sync
-- [x] iCal import/export
-- [x] Real-time updates
+**Key Features**:
+- Real-time API sync with Airbnb, Vrbo, Booking.com (<60s latency)
+- iCal fallback for non-API platforms (hourly)
+- Multi-channel consolidation dashboard
+- Timezone management per property
+- Conflict detection and resolution
+
+**Technical Implementation**:
+- PostgreSQL with calendar_events table
+- Socket.IO for real-time updates
+- Node.js sync engine for concurrent I/O
+- Redis caching for availability queries
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| API Sync Latency | <60 seconds |
+| iCal Sync Frequency | 1 hour |
+| Channels Supported | 60+ |
 
 **Knowledge Sources**:
-- Primary: KG-005 (OTA Channel Sync Edge Cases)
+- Primary: ES-PHASE1-GROUP2-booking-calendar.md (6,532 lines)
 
 ---
 
@@ -343,21 +360,48 @@ Maintain unified calendar across all OTA channels with real-time sync.
 
 **Category**: booking
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Detect and prevent calendar conflicts in real-time across all channels.
+Database-level prevention of calendar conflicts using PostgreSQL EXCLUSION constraints. Zero double bookings guaranteed through atomic locking.
+
+**Specification**: `specs/booking/SPEC-SKILL-007-010-BOOKING-CALENDAR.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Conflict Detection | ⭐⭐⭐⭐⭐ | Real-time blocking |
+| Booking.com | ⚠️ | Manual | ⭐⭐ | 25% double-book rate year 1 |
 
-**Capabilities**:
-- [x] Conflict detection
-- [x] Auto-blocking
-- [x] Conflict resolution
-- [x] Alert notifications
+**Key Features**:
+- PostgreSQL EXCLUSION constraint with GiST index
+- Atomic availability locking (<100ms)
+- Concurrent booking race condition prevention
+- Configurable buffer time between stays
+- Automated conflict resolution workflow
+
+**Technical Implementation**:
+```sql
+EXCLUDE USING gist (
+    property_id WITH =,
+    daterange(check_in_date, check_out_date, '[)') WITH &&
+) WHERE (status NOT IN ('CANCELLED_BY_GUEST', 'CANCELLED_BY_HOST'))
+```
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Double-Booking Rate | 0% (guaranteed) |
+| Lock Acquisition | <100ms |
+| Conflict Resolution | <5 minutes |
+
+**Business Impact**:
+- Prevents 25% first-year double-booking rate
+- Protects guest satisfaction and OTA rankings
+- Eliminates relocation costs and penalties
+
+**Knowledge Sources**:
+- Primary: ES-PHASE1-GROUP2-booking-calendar.md (6,532 lines)
 
 ---
 
@@ -365,21 +409,46 @@ Detect and prevent calendar conflicts in real-time across all channels.
 
 **Category**: booking
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Block dates for owner stays, maintenance windows, and cleaning buffers.
+Comprehensive date blocking system for maintenance, owner use, seasonal closures, and compliance restrictions with cross-channel synchronization.
+
+**Specification**: `specs/booking/SPEC-SKILL-007-010-BOOKING-CALENDAR.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Calendar Blocking | ⭐⭐⭐⭐ | Multiple block types |
+| OwnerRez | ✅ | iCal Export | ⭐⭐⭐⭐⭐ | Full cross-channel sync |
 
-**Capabilities**:
-- [x] Owner stay blocks
-- [x] Maintenance windows
-- [x] Cleaning buffers
-- [x] Custom block reasons
+**Key Features**:
+- 5 block types: MAINTENANCE, OWNER_USE, SEASONAL, BUFFER, COMPLIANCE
+- RFC 5545 compliant recurring patterns (RRULE)
+- Cross-channel sync (<1 minute)
+- Revenue impact tracking
+- Conflict detection with existing bookings
+
+**Block Type Enum**:
+```sql
+CREATE TYPE block_type AS ENUM (
+    'MAINTENANCE',  -- Deep cleans, repairs
+    'OWNER_USE',    -- Personal stays
+    'SEASONAL',     -- Off-season closure
+    'BUFFER',       -- Turnaround time
+    'COMPLIANCE'    -- Permit restrictions
+);
+```
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Block Propagation | <1 minute to all channels |
+| Recurring Pattern Support | RFC 5545 RRULE |
+| Conflict Detection | Immediate |
+
+**Knowledge Sources**:
+- Primary: ES-PHASE1-GROUP2-booking-calendar.md (6,532 lines)
 
 ---
 
@@ -387,21 +456,53 @@ Block dates for owner stays, maintenance windows, and cleaning buffers.
 
 **Category**: booking
 **Priority**: P0
-**Status**: NEEDED
+**Status**: ✅ SPECIFIED
 
 **Description**: 
-Create manual bookings outside OTA channels (phone, email, repeat guests).
+Embeddable booking widget with PCI-compliant payment processing. Supports 12+ payment gateways, Apple Pay, Google Pay, and multi-currency.
+
+**Specification**: `specs/booking/SPEC-SKILL-007-010-BOOKING-CALENDAR.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
 |------------|-----|--------------|---------|-------|
 | Guesty | ✅ | Direct Reservations | ⭐⭐⭐⭐ | Full integration with system |
+| Lodgify | ✅ | Booking Widget | ⭐⭐⭐⭐⭐ | Copy-paste embed |
+| OwnerRez | ✅ | PCI Compliant | ⭐⭐⭐⭐⭐ | Level 1 PCI DSS |
 
-**Capabilities**:
-- [x] Manual entry
-- [x] Payment collection
-- [x] Source tracking
-- [x] Full automation integration
+**Key Features**:
+- Copy-paste embeddable widget for any CMS
+- PCI Level 1 DSS compliant (tokenization)
+- 12+ payment gateway support
+- Apple Pay, Google Pay, PayPal
+- Multi-currency pricing
+- Custom payment instructions (ACH, Zelle, Venmo)
+
+**Supported Payment Methods**:
+| Method | Gateway | Status |
+|--------|---------|--------|
+| Credit Cards | Stripe | ✅ |
+| PayPal | PayPal REST | ✅ |
+| Apple Pay | Stripe | ✅ |
+| Google Pay | Stripe | ✅ |
+| Bank Transfer | Manual | ✅ |
+| Custom (Zelle, Venmo) | Instructions | ✅ |
+
+**Performance Targets**:
+| Metric | Target |
+|--------|--------|
+| Widget Load Time | <200ms |
+| Payment Processing | <30 seconds |
+| PCI Compliance | Level 1 DSS |
+
+**Security**:
+- Tokenization (no raw card data stored)
+- SSL/HTTPS encryption
+- 7-year audit trail retention
+- Gateway-provided fraud protection
+
+**Knowledge Sources**:
+- Primary: ES-PHASE1-GROUP2-booking-calendar.md (6,532 lines)
 
 ---
 
