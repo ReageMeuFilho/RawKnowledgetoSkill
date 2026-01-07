@@ -9,7 +9,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 ### In Progress
 - Phase 2 skill specifications in progress
-- 3/8 Phase 2 groups pending
+- 2/8 Phase 2 groups pending (Groups 2 & 7)
+
+---
+
+## [2026-01-07] - 🤖 PHASE 2 GROUP 8 COMPLETE! (AI Advanced)
+
+### Added (Phase 2 Group 8 - AI Advanced)
+- **SPEC-SKILL-112-131-AI-ADVANCED.md** - Comprehensive AI advanced specification (~2,300 lines)
+
+### Skills Specified (Phase 2 Group 8)
+- **SKILL-112**: Causal AI Understanding - DoWhy 4-step pipeline, intervention testing
+- **SKILL-128**: Predictive Maintenance AI - IoT sensor-based, 50% downtime reduction
+- **SKILL-129**: Churn Prediction - XGBoost (92%+ accuracy) + SMOTE + SHAP
+- **SKILL-130**: Anomaly Detection - Isolation Forest (93% accuracy, <100ms)
+- **SKILL-131**: Auto-Optimization - Safe Bayesian with human oversight
+
+### Technical Highlights (Phase 2 Group 8)
+- DoWhy causal inference with Model → Identify → Estimate → Refute
+- IoT predictive maintenance with edge processing
+- SHAP explainability for churn prediction
+- Isolation Forest with O(n*logn) scalability
+- Safe Bayesian optimization with automatic rollback triggers
+- Hot/Cold/Hybrid execution paths aligned with Citadel OS
+- Full Architecture Alignment with Citadel OS
+
+### Progress Update
+- Phase 2: **37/51 skills specified (73%)**
+- Total Skills Specified: **85 (48 P0 + 37 P2)**
+- Groups Complete: 1 (Analytics) + 3 (Revenue) + 4 (Voice) + 5 (Enterprise) + 6 (Developer) + 8 (AI Advanced)
 
 ---
 
