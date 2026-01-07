@@ -8,8 +8,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### In Progress
-- Phase 1 Groups 1, 3 research pending
+- Phase 1 Group 3 (Channel Distribution) research pending
 - Implementation planning agent prompt ready
+
+---
+
+## [2026-01-07] - Phase 1 Group 1 Complete (Core Communication)
+
+### Added (Group 1 - Core Communication)
+- **SPEC-SKILL-001-006-046-085-CORE-COMMUNICATION.md** - Comprehensive communication platform specification
+
+### Skills Specified (Group 1)
+- **SKILL-001**: Unified Inbox Management - Multi-channel aggregation, <1s sync latency
+- **SKILL-002**: Message Triage & Routing - AI sentiment analysis, emergency detection
+- **SKILL-006**: Automated Messaging - 90%+ automation, Temporal workflows, saves 60+ hrs/month
+- **SKILL-046**: Guest Profile Management - Identity resolution 95%+ accuracy, GDPR compliant
+- **SKILL-085**: No-App Guest Messaging - WhatsApp first ($0.005), SMS fallback ($0.0079)
+
+### Technical Highlights (Group 1)
+- Real-time WebSocket updates to unified inbox UI
+- OpenAI GPT-4 for sentiment analysis and priority detection
+- Temporal workflows for message automation
+- GDPR compliance with TigerBeetle audit trail
+- Cost-optimized multi-channel delivery
+- Full MCP server integration specified
+- ECS/Fargate deployment aligned with Citadel OS
+
+### Progress Update
+- Phase 1: **24/28 skills specified (86% complete)**
+- Total P0 Skills: **44 specified**
+- Groups remaining: 3 (Channel Distribution) only!
 
 ---
 
