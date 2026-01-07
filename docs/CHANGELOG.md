@@ -8,8 +8,33 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 ### In Progress
-- Phase 1 Groups 1, 3, 5, 6 research pending
+- Phase 1 Groups 1, 3, 6 research pending
 - Implementation planning agent prompt ready
+
+---
+
+## [2026-01-07] - Phase 1 Group 5 Complete (Operations Basics)
+
+### Added (Group 5 - Operations Basics)
+- **SPEC-SKILL-017-022-OPERATIONS-BASICS.md** - Comprehensive operations specification
+
+### Skills Specified (Group 5)
+- **SKILL-017**: Task Auto-Generation - Event-driven scheduling, 60-day window
+- **SKILL-018**: Task Assignment - Multi-algorithm (round-robin, proximity, skill-based)
+- **SKILL-019**: Task Progress Tracking - Real-time GPS, photo verification
+- **SKILL-021**: Maintenance Request Handling - AI-powered triage, multi-channel intake
+- **SKILL-022**: Smart Lock Integration - 80+ brands via Seam Universal API
+
+### Technical Highlights (Group 5)
+- ECS/Fargate deployment aligned with Citadel OS
+- Hot/Cold/Hybrid execution paths classified
+- MCP server requirements specified
+- MongoDB/DocumentDB for app data
+- Offline-first mobile architecture
+
+### Progress Update
+- Phase 1: **15/28 skills specified (54% complete)**
+- Total P0 Skills: **35 specified**
 
 ---
 
@@ -53,9 +78,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - AWS ECS/Fargate deployment specifications
 - CI/CD pipeline with GitHub Actions
 
-### Progress Update
-- Phase 1: 4/28 skills specified (14% complete)
-- Total P0 Skills: 24 specified
+### Progress Update (after Groups 2 & 4)
+- Phase 1: 10/28 skills specified (36% complete)
+- Total P0 Skills: 30 specified
 
 ---
 

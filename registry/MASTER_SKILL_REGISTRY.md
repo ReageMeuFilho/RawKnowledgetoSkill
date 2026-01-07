@@ -629,10 +629,12 @@ Manage length-of-stay discounts (weekly, monthly rates).
 
 **Category**: operations
 **Priority**: P0
-**Status**: NEEDED
+**Status**: SPECIFIED ✅
 
 **Description**: 
 Automatically create cleaning/maintenance tasks from reservation events.
+
+**Specification**: `specs/operations/SPEC-SKILL-017-022-OPERATIONS-BASICS.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
@@ -655,10 +657,12 @@ Automatically create cleaning/maintenance tasks from reservation events.
 
 **Category**: operations
 **Priority**: P0
-**Status**: NEEDED
+**Status**: SPECIFIED ✅
 
 **Description**: 
 Assign tasks to staff/vendors with notifications and tracking.
+
+**Specification**: `specs/operations/SPEC-SKILL-017-022-OPERATIONS-BASICS.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
@@ -674,10 +678,12 @@ Assign tasks to staff/vendors with notifications and tracking.
 
 **Category**: operations
 **Priority**: P0
-**Status**: NEEDED
+**Status**: SPECIFIED ✅
 
 **Description**: 
 Track task completion with photo verification and checklists.
+
+**Specification**: `specs/operations/SPEC-SKILL-017-022-OPERATIONS-BASICS.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
@@ -709,10 +715,12 @@ Escalate overdue or failed tasks to manager.
 
 **Category**: operations
 **Priority**: P0
-**Status**: NEEDED
+**Status**: SPECIFIED ✅
 
 **Description**: 
 Handle guest-reported maintenance issues with vendor coordination.
+
+**Specification**: `specs/operations/SPEC-SKILL-017-022-OPERATIONS-BASICS.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
@@ -728,10 +736,12 @@ Handle guest-reported maintenance issues with vendor coordination.
 
 **Category**: operations
 **Priority**: P0
-**Status**: NEEDED
+**Status**: SPECIFIED ✅
 
 **Description**: 
 Manage smart lock access codes with automatic generation and delivery.
+
+**Specification**: `specs/operations/SPEC-SKILL-017-022-OPERATIONS-BASICS.md`
 
 **Competitor Coverage**:
 | Competitor | Has | Feature Name | Quality | Notes |
